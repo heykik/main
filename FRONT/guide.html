@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<!-- E : mobile -->
+<title>가이드</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+<script type="text/javascript" src="assets/js/jquery-2.2.4.js"></script>
+<script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style type="text/css">
+body {overflow:auto; background:#fff; font-family:"돋움", sans-serif}
+@font-face {
+	font-family: 'Material Symbols Outlined';
+	font-style: normal;
+	font-weight: 100 700;
+	src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v114/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2) format('woff2');
+}
+i {
+	font-family: 'Material Symbols Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}
+.guideHeader {position:fixed; z-index:1000; border-bottom:2px solid #ed7101; width:100%; background-color:#fff; padding:0 50px 0 25px; overflow:hidden;}
+.guideHeader h1 {width:100%; height:68px; background:url("assets/images/common/logo.png") no-repeat left center}
+.guideBody {padding:70px 0 0 250px; min-height:700px}
+.guideBody .side {overflow:hidden; position:fixed; top:68px; left:0; bottom:0; z-index:50; width:230px !important; border-top:2px solid #2d71b8; border-right:1px solid #eaeaea; background:#fff}
+.guideBody .side ul {overflow-y:scroll; width:250px}
+.guideBody .side ul li a {display:block; padding:0 30px; border-bottom:1px solid #eaeaea; line-height:50px; font-size:15px; color:#333; transition:all 0.2s; -webkit-transition:all 0.2s; -moz-transition:all 0.2s}
+.guideBody .side ul li a:hover {border-bottom:1px solid #2d71b8; color:#2d71b8; background:#eaf1f8}
+.guideBody .side ul li.on a {border-bottom:1px solid #133692; color:#fff; background:#133692}
+.guideBody > .contWrap > .cont {padding:50px 40px}
+.guideBody > .contWrap > .cont.hide {position:absolute; top:-99999px; left:-99999px; opacity:0}
+.guideBody > .contWrap > .cont .contWrap {display:flex; flex-direction:row; flex-wrap:wrap; margin:-15px}
+.guideBody > .contWrap > .cont .contWrap .cont {display:block !important; flex:1; margin:15px; padding:35px 30px; border-radius:10px; box-shadow:0 0 16px rgba(206, 206, 206, 0.08); background:#fff}
+.guideBody > .contWrap > .cont .contWrap .cont.col1 {min-width:calc(37% - 30px); max-width:calc(37% - 30px)}
+.guideBody > .contWrap > .cont .contWrap .cont.col2 {min-width:calc(63% - 30px); max-width:calc(63% - 30px)}
+.guideBody > .contWrap > .cont .contWrap + .contWrap {margin-top:15px}
+.guideBody .guideList {margin-bottom:60px;}
+.guideBody .guideList > dt {color:#ed7101; padding-bottom:10px; position:relative; font-size:20px; font-weight:900; border-bottom:1px solid #bfbfbf;}
+.guideBody .guideList > dt > a {display:inline-block; position:absolute; top:0; right:5px; line-height:30px; font-size:16px; font-weight:600; color:#66ae2f}
+.guideBody .guideList > dt > a i {font-size:30px; vertical-align:middle}
+.guideBody .guideList > dd .guideView {padding-top:20px; width:100%; margin-bottom:10px}
+.guideBody .guideList > dd .guideView:after {display:block; content:""; clear:both}
+.guideBody .guideList > dd .guideView > strong {display:block; margin-bottom:12px; font-size:15px; color:#db3128}
+.guideBody .guideList > dd .guideView > .pointTxt {margin-bottom:20px; font-size:14px; color:#999}
+.guideBody .guideList > dd .guideView .GuideNumList {overflow:hidden;}
+.guideBody .guideList > dd .guideView .GuideNumList li {min-height:40px; float:left; position:relative; padding-left:20px; margin:0 15px 10px 0}
+.guideBody .guideList > dd .guideView .GuideNumList li .Guidenum {position:absolute; top:2px; left:0; font-size:11px; color:#000}
+.guideBody .guideList > dd .guideCode {position:relative; display:none; background:#fff}
+.guideBody .guideList > dd .guideCode.on {display:block;}
+.guideBody .guideList > dd xmp {border:1px solid #bfbfbf; ; font-family:'Noto Sans KR', Dotum, Arial, sans-serif; white-space:pre-wrap; margin:0; line-height:18px;}
+.closeCodeArea {width:40px; height:40px; position:absolute; top:-1px; right:-1px; line-height:40px; text-align:center; font-size:20px; color:#fff; background:#ed7101}
+.closeCodeArea i {vertical-align:sub}
+#container {min-height:inherit !important}
+@media (max-width: 900px){
+	.guideBody  {overflow:hidden; padding:0; min-height:inherit}
+	.guideBody .side {position:static; margin-top:66px; border-bottom:1px solid #eaeaea; width:100% !important; height:auto !important}
+	.guideBody .side ul {overflow:hidden; margin:0 -1px -1px; width:100% !important; height:auto !important}
+	.guideBody .side ul li {float:left; width:25%; border-right:1px solid #eaeaea}
+	.guideBody .side ul li.on {border-right:1px solid #db3128}
+}
+
+@media (max-width: 500px){
+	.guideBody .side ul li {width:50%}
+}
+</style>
+<!--[if lt IE 9]>
+
+<script type="text/javascript" src="../js/respond.min.js"></script>
+
+<![endif]-->
+<script type="text/javascript">
+$(function(){
+	var btnGnb = $(".side a"),
+		cont = $(".guideBody > .contWrap > .cont"),
+		i = $(".side .on").index(); 
+	
+	cont.addClass("hide").eq(i).removeClass("hide");
+	btnGnb.click(function(e){
+		e.preventDefault();
+		var i = $(this).parent().index(); 
+		if($(this).parent().hasClass("on")){
+			btnGnb.parent().removeClass("on");
+			cont.addClass("hide");
+		}else{
+			btnGnb.parent().removeClass("on");
+			cont.addClass("hide");
+			$(this).parent().addClass("on");
+			cont.eq(i).removeClass("hide");
+		}
+	});
+
+	var btnShowCode = $(".guideList dt a");
+	btnShowCode.click(function(e){
+		e.preventDefault();
+		var guideCode = $(this).closest(".guideList").find(".guideCode");
+		guideCode.slideToggle(200);
+	});
+
+	var btnClose = $(".closeCodeArea");
+	$(document).on('click', '.closeCodeArea', function(e){
+		e.preventDefault();
+		var guideCode = $(this).parent(".guideCode");
+		guideCode.slideUp(200);
+	});
+	$('.guideList').each(function(){
+		const code = $(this).find('.guideView').html();
+		$(this).find('.guideView').after(`<div class="guideCode"><xmp>${code}</xmp><a href="#" class="closeCodeArea"><i>close</i></a></div>`)
+	});
+});
+</script>
+<script type="text/javascript" src="assets/js/common.js"></script>
+<!-- E : 가이드 용 -->
+</head>
+<body>
+	<div class="guideHeader">
+		<h1></h1>
+	</div>
+	<div class="guideBody">
+		<div class="side mCustomScrollbar">
+			<ul>
+				<li class="on"><a href="#">가이드1</a></li>
+				<li><a href="#">가이드2</a></li>
+				<li><a href="#">가이드3</a></li>
+				<li><a href="#">가이드4</a></li>
+				<li><a href="#">가이드5</a></li>
+				<li><a href="#">가이드6</a></li>
+			</ul>
+		</div>
+
+		<div class="contWrap">
+			<!-- 가이드1 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>가이드1<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+						<div class="guideView">
+							
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 가이드1 -->
+			<!-- 가이드2 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>가이드2<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+						<div class="guideView">
+							
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 가이드2 -->
+			<!-- 가이드3 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>가이드3<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+						<div class="guideView">
+							
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 가이드3 -->
+			<!-- 가이드4 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>가이드4<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+						<div class="guideView">
+							
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 가이드4 -->
+			<!-- 가이드5 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>가이드5<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+						<div class="guideView">
+							
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 가이드5 -->
+			<!-- 가이드6 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>가이드6<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+						<div class="guideView">
+							
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 가이드6 -->
+		</div>
+	</div>
+</body>
+</html>

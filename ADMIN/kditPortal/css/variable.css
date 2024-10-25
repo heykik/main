@@ -1,0 +1,25 @@
+:root {
+    /* input, select, textarea */
+    --font-input: 16px;
+    --color-input: #101010;
+    --color-placeholder: #707070;
+    --border-input: #DBDBDB;
+    --border-radius: 4px;
+    --bg-input: #fff;
+
+    /* border */
+    --border-color: #DBDBDB;
+
+    /* background */
+    --bg-color: #f6f6f6;
+
+    /* color */
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gray: #999;
+    --color-red: #E60024;
+    --color-blue: #0F53F5;
+    --color-base: #454545;
+    --color-primary:#133692;
+    --color-point:#ed7101;
+}

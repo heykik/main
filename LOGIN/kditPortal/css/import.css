@@ -1,0 +1,5 @@
+@charset "utf-8";
+@import url('./variable.css'); /* root */
+@import url('./reset.css'); /* 리셋 */
+@import url('./style.css'); /* 레이아웃 */
+@import url('./sub.css'); /* 공통 및 서브 */

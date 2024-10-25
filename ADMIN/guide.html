@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<!-- E : mobile -->
+<title>가이드</title>
+<link rel="stylesheet" type="text/css" href="kditPortal/css/import.css" />
+<script type="text/javascript" src="kditPortal/js/jquery-3.7.1.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style type="text/css">
+body {overflow:auto; background:#fff; font-family:"돋움", sans-serif}
+@font-face {
+	font-family: 'Material Symbols Outlined';
+	font-style: normal;
+	font-weight: 100 700;
+	src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v114/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2) format('woff2');
+}
+i {
+	font-family: 'Material Symbols Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}
+.guideHeader {position:fixed; z-index:1000; border-bottom:2px solid #133692; width:100%; background-color:#fff; padding:0 50px 0 25px; overflow:hidden;}
+.guideHeader h1 {width:100%; height:68px; background:url("kditPortal/img/logo.svg") no-repeat left center/160px auto}
+.guideBody {padding:70px 0 0 250px; min-height:700px}
+.guideBody .side {overflow:hidden; position:fixed; top:68px; left:0; bottom:0; z-index:50; width:230px !important; border-top:2px solid #2d71b8; border-right:1px solid #eaeaea; background:#fff}
+.guideBody .side ul {overflow-y:scroll; width:250px}
+.guideBody .side ul li a {display:block; padding:0 30px; border-bottom:1px solid #eaeaea; line-height:50px; font-size:15px; color:#333; transition:all 0.2s; -webkit-transition:all 0.2s; -moz-transition:all 0.2s}
+.guideBody .side ul li a:hover {border-bottom:1px solid #2d71b8; color:#2d71b8; background:#eaf1f8}
+.guideBody .side ul li.on a {border-bottom:1px solid #133692; color:#fff; background:#133692}
+.guideBody > .contWrap > .cont {padding:50px 40px}
+.guideBody > .contWrap > .cont.hide {position:absolute; top:-99999px; left:-99999px; opacity:0}
+.guideBody > .contWrap > .cont .contWrap {display:flex; flex-direction:row; flex-wrap:wrap; margin:-15px}
+.guideBody > .contWrap > .cont .contWrap .cont {display:block !important; flex:1; margin:15px; padding:35px 30px; border-radius:10px; box-shadow:0 0 16px rgba(206, 206, 206, 0.08); background:#fff}
+.guideBody > .contWrap > .cont .contWrap .cont.col1 {min-width:calc(37% - 30px); max-width:calc(37% - 30px)}
+.guideBody > .contWrap > .cont .contWrap .cont.col2 {min-width:calc(63% - 30px); max-width:calc(63% - 30px)}
+.guideBody > .contWrap > .cont .contWrap + .contWrap {margin-top:15px}
+.guideBody .guideList {margin-bottom:60px;}
+.guideBody .guideList > dt {color:#133692; padding-bottom:10px; position:relative; font-size:20px; font-weight:900; border-bottom:1px solid #bfbfbf;}
+.guideBody .guideList > dt > a {display:inline-block; position:absolute; top:0; right:5px; line-height:30px; font-size:16px; font-weight:600; color:#ED7101}
+.guideBody .guideList > dt > a i {font-size:30px; vertical-align:middle}
+.guideBody .guideList > dd .guideView {padding-top:20px; width:100%; margin-bottom:10px}
+.guideBody .guideList > dd .guideView:after {display:block; content:""; clear:both}
+.guideBody .guideList > dd .guideView > strong {display:block; margin-bottom:12px; font-size:15px; color:#db3128}
+.guideBody .guideList > dd .guideView > .pointTxt {margin-bottom:20px; font-size:14px; color:#999}
+.guideBody .guideList > dd .guideView .GuideNumList {overflow:hidden;}
+.guideBody .guideList > dd .guideView .GuideNumList li {min-height:40px; float:left; position:relative; padding-left:20px; margin:0 15px 10px 0}
+.guideBody .guideList > dd .guideView .GuideNumList li .Guidenum {position:absolute; top:2px; left:0; font-size:11px; color:#000}
+.guideBody .guideList > dd .guideCode {position:relative; display:none; background:#fff}
+.guideBody .guideList > dd .guideCode.on {display:block;}
+.guideBody .guideList > dd xmp {border:1px solid #bfbfbf; ; font-family:'Noto Sans KR', Dotum, Arial, sans-serif; white-space:pre-wrap; margin:0; line-height:18px;}
+.closeCodeArea {width:40px; height:40px; position:absolute; top:-1px; right:-1px; line-height:40px; text-align:center; font-size:20px; color:#fff; background:#133692}
+.closeCodeArea i {vertical-align:sub}
+#container {min-height:inherit !important}
+@media (max-width: 900px){
+	.guideBody  {overflow:hidden; padding:0; min-height:inherit}
+	.guideBody .side {position:static; margin-top:66px; border-bottom:1px solid #eaeaea; width:100% !important; height:auto !important}
+	.guideBody .side ul {overflow:hidden; margin:0 -1px -1px; width:100% !important; height:auto !important}
+	.guideBody .side ul li {float:left; width:25%; border-right:1px solid #eaeaea}
+	.guideBody .side ul li.on {border-right:1px solid #db3128}
+}
+
+@media (max-width: 500px){
+	.guideBody .side ul li {width:50%}
+}
+</style>
+<!--[if lt IE 9]>
+
+<script type="text/javascript" src="../js/respond.min.js"></script>
+
+<![endif]-->
+<script type="text/javascript">
+$(function(){
+	var btnGnb = $(".side a"),
+		cont = $(".guideBody > .contWrap > .cont"),
+		i = $(".side .on").index(); 
+	
+	cont.addClass("hide").eq(i).removeClass("hide");
+	btnGnb.click(function(e){
+		e.preventDefault();
+		var i = $(this).parent().index(); 
+		if($(this).parent().hasClass("on")){
+			btnGnb.parent().removeClass("on");
+			cont.addClass("hide");
+		}else{
+			btnGnb.parent().removeClass("on");
+			cont.addClass("hide");
+			$(this).parent().addClass("on");
+			cont.eq(i).removeClass("hide");
+		}
+	});
+
+	var btnShowCode = $(".guideList dt a");
+	btnShowCode.click(function(e){
+		e.preventDefault();
+		var guideCode = $(this).closest(".guideList").find(".guideCode");
+		$(".guideCode").slideToggle(200);
+	});
+
+	var btnClose = $(".closeCodeArea");
+	$(document).on('click', '.closeCodeArea', function(e){
+		e.preventDefault();
+		var guideCode = $(this).parent(".guideCode");
+		guideCode.slideUp(200);
+	});
+	$('.guideList').each(function(){
+		const code = $(this).find('.guideView').html();
+		$(this).find('.guideView').after(`<div class="guideCode"><xmp>${code}</xmp><a href="#" class="closeCodeArea"><i>close</i></a></div>`)
+	})
+});
+</script>
+<script type="text/javascript" src="assets/js/common.js"></script>
+<!-- E : 가이드 용 -->
+</head>
+<body>
+	<div class="guideHeader">
+		<h1></h1>
+	</div>
+	<div class="guideBody">
+		<div class="side">
+			<ul>
+				<li class="on"><a href="#">레이아웃</a></li>
+				<li><a href="#">버튼</a></li>
+				<li><a href="#">타이틀</a></li>
+				<li><a href="#">검색영역</a></li>
+				<li><a href="#">테이블</a></li>
+			</ul>
+		</div>
+
+		<div class="contWrap">
+			<!-- 레이아웃 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>레이아웃<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+                        <img src="layout.jpg" alt="">
+						<img src="layout_code.jpg" alt="">
+						<div class="guideView">
+							<!-- wrapper -->
+							<div id="wrapper" style="display: none;">
+								<!-- header -->
+								<div id="header">
+									<div class="inner">
+										<h1><a href="/kditPortal/admin/dashboard/Dashboard.do">경남 디지털혁신거점 GYUNGNAM DIGITAL INNOVATION HUB</a></h1>
+										<!-- util -->
+										<div class="util">
+											<a href="#" class="tid"><img src="/kditPortal/img/admin/ico_man.png" alt=""><strong>퍼블관리자</strong> 님</a>
+											<a href="/kditPortal/logout.do" class="mybtn">로그아웃</a>
+										</div>
+										<!--// util -->
+									</div>
+								</div>
+								<!--// header -->
+								<!-- gnb -->
+								<div id="gnb">
+									<div class="left">
+										<div class="left-in">
+											<!-- lnb -->
+											<ul class="lnb">
+												GNB 영역
+											</ul>
+											<!--// lnb -->
+										</div>
+									</div>
+									<!--// left -->
+									<button type="button" class="btnMenu">메뉴 닫기</button>
+								</div>
+								<!--// gnb -->
+								<!-- container -->
+								<div id="container">
+									<!-- content-in -->
+									<div class="content-in">
+										<!-- titArea -->
+										<div class="titArea">
+											<div class="tit">
+												<h2 class="cont-tit">타이틀</h2>
+												<div class="caution_txt">타이틀 안내 문구 타이틀 안내 문구</div>
+											</div>
+											<ol class="location">
+												<li>KDIT 포털</li>
+												<li>Depth01</li>
+												<li>Depth02</li>
+											</ol>
+										</div>
+										<!--// titArea -->
+										<!-- contWrap -->
+										<div class="contWrap">
+											<!-- cont -->
+											<div class="cont">
+												콘텐츠 영역
+											</div>
+											<!--// cont -->
+										</div>
+										<!--// contWrap -->
+									</div>
+									<!--// content-in -->
+									<p class="copy">COPYRIGHT © 2024. ALL RIGHTS RESERVED.</p>
+								</div>
+								<!--// container -->
+							</div>
+							<!--// wrapper -->
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 레이아웃 -->
+            <!-- 버튼 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>버튼<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+                        <div class="guideView">
+                            <button type="button" class="btn">버튼</button>
+                            <button type="button" class="btn btnS">버튼 S</button>
+                        </div>
+					</dd>
+				</dl>
+                <dl class="guideList">
+					<dt>버튼 색상<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+                        <div class="guideView">
+                            <button type="button" class="btn btnlNavy">버튼</button>
+                            <button type="button" class="btn btnNavy">버튼</button>
+                            <button type="button" class="btn btnBlue">버튼</button>
+                            <button type="button" class="btn btnGray">버튼</button>
+                        </div>
+					</dd>
+				</dl>
+                <dl class="guideList">
+					<dt>버튼 정렬<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+                        <div class="guideView">
+                            <!-- btn_wrap -->
+                            <div class="btn_wrap">
+                                <div>
+                                    <button type="button" class="btn btnNavy">버튼</button>
+                                </div>
+                            </div>
+                            <!--// btn_wrap -->
+                            <!-- btn_wrap -->
+                            <div class="btn_wrap">
+                                <div class="left">
+                                    <button type="button" class="btn btnlNavy">목록</button>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btn btnNavy">등록</button>
+                                </div>
+                            </div>
+                            <!--// btn_wrap -->
+                            <!-- btn_wrap -->
+                            <div class="btn_wrap">
+                                <!-- page_nation -->
+                                <div class="page_nation">
+                                    <a href="#" title="처음" class="arrow pprev" id="btnFirst"></a>
+                                    <a href="#" title="이전" class="arrow prev" id="btnPrev"></a>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#" class="arrow next" id="btnNext" title="다음"></a>
+                                    <a href="#" class="arrow nnext" id="btnLast" title="마지막"></a>
+                                </div>
+                                <!--// page_nation -->
+                                <div class="right">
+                                    <button class="btn btnNavy" onclick="location.href='/kditPortal/admin/auth/authWrite.do'">등록</button>
+                                </div>
+                            </div>
+                            <!--// btn_wrap -->
+                        </div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 버튼 -->
+            <!-- 타이틀 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>타이틀<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+                        <div class="guideView">
+                            <!-- titArea -->
+                            <div class="titArea">
+                                <div class="tit">
+                                    <h2 class="cont-tit">타이틀</h2>
+                                    <div class="caution_txt">타이틀 안내 문구 타이틀 안내 문구</div>
+                                </div>
+                                <ol class="location">
+                                    <li>KDIT 포털</li>
+                                    <li>Depth01</li>
+                                    <li>Depth02</li>
+                                </ol>
+                            </div>
+                            <!--// titArea -->
+                        </div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 타이틀 -->
+            <!-- 검색영역 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>검색영역<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+                        <div class="guideView">
+                            <!-- search_box -->
+                            <div class="search_box">
+                                <div class="sb_tit">상위 코드</div>
+                                <div class="sb_in">
+                                    <input type="text" class="input w184" name="codeId" id="codeId" placeholder="상위코드값" title="상위코드값">
+                                    <input type="text" class="input" name="groupCodeNm" id="groupCodeNm" placeholder="코드이름" title="코드이름">
+                                    <input type="text" class="input w320" name="groupCodeDc" id="groupCodeDc" placeholder="코드설명" title="코드설명">
+                                    <button class="btn btnNavy" id="reg">상위코드등록</button>
+                                </div>
+                            </div>
+                            <!--// search_box -->
+                        </div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 검색영역 -->
+            <!-- 테이블 -->
+			<div class="cont">
+				<dl class="guideList">
+					<dt>데이터 테이블<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+                        <div class="guideView">
+                            <div class="list_cnt">전체 <div class="cnt_num">4</div></div>
+                            <!-- colTable -->
+                            <div class="colTable">
+                                <table class="r_table tb_board">
+                                    <colgroup>
+                                        <col style="width: 5%;">
+                                        <col style="width: 10%;">
+                                        <col style="width: auto;">
+                                        <col style="width: auto;">
+                                        <col style="width: 12%;">
+                                        <col style="width: 12%;">
+                                        <col style="width: 12%;">
+                                        <col style="width: 12%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>아이디</th>
+                                            <th>이름</th>
+                                            <th>기업/기관명</th>
+                                            <th>회원유형</th>
+                                            <th>가입일</th>
+                                            <th>사용여부</th>
+                                            <th>사용여부변경</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                
+                                
+                                        <tr>
+                                            <td>1</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>
+                                                <button class="btn btnS btnBlue btn_useyn" data-memberid="test25" data-useyn="Y">사용으로변경</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>테스트</td>
+                                            <td>
+                                                <button class="btn btnS btnGray btn_useyn" data-memberid="test24" data-useyn="N">사용중지로변경</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// colTable -->
+                        </div>
+					</dd>
+				</dl>
+                <dl class="guideList">
+					<dt>입력 테이블<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+                        <div class="guideView">
+                            <!-- inputTable -->
+                            <div class="inputTable">
+                                <table class="f_table">
+                                    <colgroup>
+                                        <col style="width: 200px;">
+                                        <col style="width: auto;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><label class="star" for="userId">아이디</label></th>
+                                            <td class="tleft">
+                                                <!-- flex -->
+                                                <div class="flex">
+                                                    <input type="text" class="input disable" value="" id="userId" name="userId" onkeyup="this.value=this.value.replace(/[^A-Za-z0-9]/g,'');">
+                                                    <input type="button" class="btn btnNavy" id="userIdChk" value="중복확인">
+                                                </div>
+                                                <!-- flex -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="userNm">이름</label></th>
+                                            <td class="tleft">
+                                                <input type="text" class="input" value="" id="userNm" name="userNm"onkeyup="this.value=this.value.replace(/[^가-힣]/g,'');">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="pswd">비밀번호</label></th>
+                                            <td class="tleft">
+                                                <input type="password" class="input" value="" id="pswd" name="pswd">
+                                                <span id="pswdStr" style="border:0px !important; font-size:15px"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="pswdChkStr">비밀번호 확인</label></th>
+                                            <td class="tleft">
+                                                <input type="password" class="input" value="" id="pswdChk">
+                                                <span id="pswdChkStr" style="border:0px !important; font-size:15px"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="mmrTp">회원유형</label></th>
+                                            <td class="tleft">
+                                                <!-- checkboxWrap -->
+                                                <div class="checkboxWrap radio">
+                                                    <div class="checkbox">
+                                                        <input type="radio" name="mmrTp" value="MP001" title="기업" id="MP001">
+                                                        <label for="MP001">기업</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <input type="radio" name="mmrTp" value="MP002" title="기관" id="MP002">
+                                                        <label for="MP002">기관</label>
+                                                    </div>
+                                                </div>
+                                                <!--// checkboxWrap -->
+                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="hpNo">휴대전화</label></th>
+                                            <td class="tleft">
+                                                <!-- tel -->
+                                                <div class="tel">
+                                                    <input type="text" class="input w7" value="010" maxlength="3" id="hpNo_fst"
+                                                        onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                                                    <span>-</span>
+                                                    <input type="text" class="input w7" value="" maxlength="4" id="hpNo_scd"
+                                                        onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                                                    <span>-</span>
+                                                    <input type="text" class="input w7" value="" maxlength="4" id="hpNo_thd"
+                                                        onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                                                </div>
+                                                <!--// tel -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="" for="telNo">회사전화</label></th>
+                                            <td class="tleft">
+                                                <!-- tel -->
+                                                <div class="tel">
+                                                    <select name="" id="telNo_fst" style="overflow: scroll;" class="select w7" title="지역번호">
+                                                        <option value="02">02</option>
+                                                        <option value="031">031</option>
+                                                        <option value="032">032</option>
+                                                        <option value="033">033</option>
+                                                        <option value="041">041</option>
+                                                        <option value="042">042</option>
+                                                        <option value="043">043</option>
+                                                        <option value="051">051</option>
+                                                        <option value="052">052</option>
+                                                        <option value="053">053</option>
+                                                        <option value="054">054</option>
+                                                        <option value="055">055</option>
+                                                        <option value="061">061</option>
+                                                        <option value="062">062</option>
+                                                        <option value="063">063</option>
+                                                        <option value="064">064</option>
+                                                    </select>
+                                                    <span>-</span>
+                                                    <input type="text" class="input w7" value="" maxlength="4" id="telNo_scd"
+                                                        onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                                                    <span>-</span>
+                                                    <input type="text" class="input w7" value="" maxlength="4" id="telNo_thd"
+                                                        onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                                                </div>
+                                                <!--// tel -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="eml">이메일</label></th>
+                                            <td class="tleft">
+                                                <!-- email -->
+                                                <div class="email">
+                                                    <input type="text" class="input" value="" id="emlFront">
+                                                    <span>@</span>
+                                                    <select name="" id="emlDomain" class="select w120" title="도메인">
+                                                        <option value="self">직접입력</option>
+                                                        <option value="naver.com">naver.com</option>
+                                                        <option value="hanmail.net">hanmail.net</option>
+                                                        <option value="nate.com">nate.com</option>
+                                                        <option value="gmail.com">gmail.com</option>
+                                                    </select>
+                                                    <input type="text" class="input" style="" value="" id="emlDomainInput">
+                                                </div>
+                                                <!--// email -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="entNm">기업/기관명</label></th>
+                                            <td class="tleft">
+                                                <!-- 추후 DB에서 selected해올 예정 -->
+                                                <select name="" id="entNm" class="select w120" title="년도 선택">
+                                                    <option value="test" selected="selected"></option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="brno">사업자등록번호/기관코드</label></th>
+                                            <td class="tleft">
+                                                <!-- 기업/기관명 selected해오면서 가져오기 -->
+                                                <input type="text" class="input disable" style="" value="123456790" id="brno" name="brno" maxlength="10"
+                                                    disabled="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="deptNm">부서</label></th>
+                                            <td class="tleft">
+                                                <input type="text" class="input" value="" id="deptNm" name="deptNm">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="zip">소재지</label></th>
+                                            <td class="tleft">
+                                                <!-- address -->
+                                                <div class="address">
+                                                    <!-- flex -->
+                                                    <div class="flex">
+                                                        <input type="text" class="input disable" value="" id="zip" name="zip" disabled="">
+                                                        <button type="button" class="btn btnNavy btn-lg" onclick="findAddr()">우편번호 검색</button>
+                                                    </div>
+                                                    <!--// flex -->
+                                                    <input type="text" class="input disable wfull" value="" id="addr" name="addr" disabled="">
+                                                    <input type="text" class="input wfull" value="" id="daddr" name="daddr">
+                                                </div>
+                                                <!--// address -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="star" for="useYn">사용여부</label></th>
+                                            <td class="tleft">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="useYn" name="useYn" checked="checked">
+                                                    <label for="useYn">사용여부 체크</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="files">첨부파일</label></th>
+                                            <td class="tleft">
+                                                <div class="file_list">
+                                                    <input type="hidden" name="fileCount" id="fileCount" value="1">
+                                                    <ul class="fileSetBoxList">
+                                                        <li>
+                                                            <div class="fileSelBox viewMode">
+                                                                <p class="fileNameBox">240711_수정배너 (1).png (35kb)</p>
+                                                                <a href="#" class="fileListDelBtn" title="삭제" onclick="deleteFile(24)">삭제</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="fileSelBox">
+                                                                <div class="fileBox">
+                                                                    <input type="file" title="파일선택">
+                                                                    <input type="text" title="첨부파일 명" placeholder="선택된 파일없음">
+                                                                    <!-- <input type="file" id="file" name="files[0]" class="upload_hidden"
+                                                                        onchange="javascript:document.getElementById('fileNameBox').value = this.value ">
+                                                                    <input type="hidden" class="fileNameBox upload_name" id="fileNameBox" placeholder="파일을 선택해주세요."
+                                                                        readonly="readonly"> -->
+                                                                </div>
+                                                                <a href="#" class="fileAddBtn" title="추가">추가</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="fileSelBox">
+                                                                <div class="fileBox">
+                                                                    <input type="file" title="파일선택">
+                                                                    <input type="text" title="첨부파일 명" placeholder="선택된 파일없음">
+                                                                </div>
+                                                                <!-- <input type="file" id="file[2]" name="files[2]" class="upload_hidden" onchange="javascript:document.getElementById(&quot;fileNameBox2&quot;).value = this.value">
+                                                                <input type="hidden" class="fileNameBox upload_name" id="fileNameBox2" placeholder="파일을 선택해주세요." readonly="readonly"> -->
+                                                                <a href="#" class="fileDelBtn" title="삭제">삭제</a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>교육기간</th>
+                                            <td class="tleft">
+                                                <!-- date -->
+                                                <div class="date">
+                                                    <input type="text" id="bgngDate" name="bgngDate" class="input hasDatepicker" title="시작일자" autocomplete="off" value="">
+                                                    <span>~</span>
+                                                    <input type="text" id="endDate" name="endDate" class="input hasDatepicker" title="종료일자" autocomplete="off" value="">
+                                                </div>
+                                                <!--// date -->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- inputTable -->
+                        </div>
+					</dd>
+				</dl>
+                <dl class="guideList">
+					<dt>페이징<a href="#"><i>visibility</i> Code View</a></dt>
+					<dd>
+                        <div class="guideView">
+                            <!-- page_nation -->
+                            <div class="page_nation">
+                                <a href="#" title="처음" class="arrow pprev" id="btnFirst"></a>
+                                <a href="#" title="이전" class="arrow prev" id="btnPrev"></a>
+                                <a href="#" class="active">1</a>
+                                <a href="#" class="arrow next" id="btnNext" title="다음"></a>
+                                <a href="#" class="arrow nnext" id="btnLast" title="마지막"></a>
+                            </div>
+                            <!--// page_nation -->
+                        </div>
+					</dd>
+				</dl>
+			</div>
+			<!--// 테이블 -->
+		</div>
+	</div>
+</body>
+</html>

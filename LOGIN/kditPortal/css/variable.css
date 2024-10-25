@@ -1,0 +1,29 @@
+:root {
+    /* input, select, textarea */
+    --font-input: 16px;
+    --color-input: #101010;
+    --color-placeholder: #707070;
+    --border-input: #DBDBDB;
+    --border-radius: 4px;
+    --bg-input: #fff;
+
+    /* border */
+    --border-color: #DBDBDB;
+
+    /* background */
+    --bg-color: #f6f6f6;
+
+    /* color */
+    --color-black: #000;
+    --color-white: #fff;
+    --color-base: #454545;
+
+    --color-primary:#0060BB;
+    --color-secondary:#003667;
+    --color-gray:#747474;
+    --color-lightGray:#eee;
+    --color-success: green;
+    --color-error: #E4022D;
+    --color-warning: yellow;
+    --color-info: #555;
+}
