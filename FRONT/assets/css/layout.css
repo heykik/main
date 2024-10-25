@@ -11,7 +11,7 @@
   -o-transition: all 0.2s;
 }
 #header.scroll h1 a {
-  background: url(/assets/images/common/logo-on.svg) no-repeat center center/contain;
+  background: url(../images/common/logo-on.svg) no-repeat center center/contain;
 }
 
 .headerArn {
@@ -24,7 +24,7 @@
   width: 263px;
   height: 38px;
   text-indent: -9999px;
-  background: url(/assets/images/common/logo.svg) no-repeat center center/contain;
+  background: url(../images/common/logo.svg) no-repeat center center/contain;
 }
 .headerArn .util {
   display: flex;
@@ -65,7 +65,7 @@
   z-index: 0;
 }
 #header.scroll .headerArn h1 img {
-  content: url("/assets/images/common/logo-on.svg");
+  content: url("../images/common/logo-on.svg");
 }
 #header.scroll .headerArn .link-login {
   border-color: #707070;
@@ -176,9 +176,6 @@
 #footer {
   background: var(--color-black);
 }
-#footer .inner {
-  padding: 0;
-}
 
 .footerTop {
   display: flex;
@@ -197,12 +194,14 @@
 }
 .footerTop .footerMenu a {
   display: block;
-  position: relative;
   line-height: 20px;
   font-size: 17px;
   color: #ccc;
 }
-.footerTop .footerMenu a:before {
+.footerTop .footerMenu p {
+  position: relative;
+}
+.footerTop .footerMenu p:before {
   content: "";
   position: absolute;
   top: 5px;
@@ -211,7 +210,7 @@
   height: 10px;
   background: #aaa;
 }
-.footerTop .footerMenu .prvcPlcy {
+.footerTop .footerMenu .prvcPlcy a {
   font-weight: 700;
   color: var(--color-white);
 }
@@ -221,6 +220,18 @@
 .footerTop .footerMenu ul {
   display: flex;
   gap: 52px;
+}
+.footerTop .footerMenu ul li {
+  position: relative;
+}
+.footerTop .footerMenu ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -26px;
+  width: 1px;
+  height: 10px;
+  background: #aaa;
 }
 .footerTop .familySite {
   position: relative;
@@ -233,7 +244,7 @@
   font-size: 17px;
   font-weight: 700;
   color: var(--color-white);
-  background: url("/assets/images/common/ico-more.svg") no-repeat center right/14px auto;
+  background: url("../images/common/ico-more.svg") no-repeat center right/14px auto;
 }
 .footerTop .familySite ul {
   display: none;
@@ -282,7 +293,7 @@
   width: 264px;
   height: 38px;
   text-indent: -9999px;
-  background: url("/assets/images/common/logo-footer.png") no-repeat center/100% auto;
+  background: url("../images/common/logo-footer.png") no-repeat center/100% auto;
 }
 .footerBottom .footerInfo .address {
   line-height: 1.5;
@@ -333,22 +344,23 @@
 }
 .footerBottom .footerSns a {
   display: block;
+  overflow: hidden;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   text-indent: -9999px;
 }
 .footerBottom .footerSns li.facebook a {
-  background: #333 url("/assets/images/common/ico-facebook.svg") no-repeat center/100% auto;
+  background: #333 url("../images/common/ico-facebook.svg") no-repeat center/100% auto;
 }
 .footerBottom .footerSns li.youtube a {
-  background: #333 url("/assets/images/common/ico-youtube.svg") no-repeat center/100% auto;
+  background: #333 url("../images/common/ico-youtube.svg") no-repeat center/100% auto;
 }
 .footerBottom .footerSns li.twitter a {
-  background: #333 url("/assets/images/common/ico-twitter.svg") no-repeat center/100% auto;
+  background: #333 url("../images/common/ico-twitter.svg") no-repeat center/100% auto;
 }
 .footerBottom .footerSns li.instagram a {
-  background: #333 url("/assets/images/common/ico-instagram.svg") no-repeat center/100% auto;
+  background: #333 url("../images/common/ico-instagram.svg") no-repeat center/100% auto;
 }
 
 @media (max-width: 767px) {
@@ -362,20 +374,11 @@
     align-items: flex-start;
     gap: 20px;
   }
-  .footerTop .footerMenu a:before {
+  .footerTop .footerMenu p:before {
     display: none;
   }
-  .footerTop .footerMenu ul li {
-    position: relative;
-  }
-  .footerTop .footerMenu ul li + li:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: -26px;
-    width: 1px;
-    height: 10px;
-    background: #aaa;
+  .footerTop .footerMenu ul li:first-child:before {
+    display: none;
   }
   .footerTop .familySite {
     width: 100%;
@@ -443,7 +446,7 @@
   }
   #header h1 a {
     text-indent: -9999px;
-    background: url(/assets/images/common/ico-header-logo-mo.svg) no-repeat center center/contain;
+    background: url(../images/common/ico-header-logo-mo.svg) no-repeat center center/contain;
     width: 219px;
     height: 28px;
   }
@@ -451,7 +454,7 @@
     display: none;
   }
   #header.active .mMenuBtn {
-    background: url(/assets/images/common/ico-close.svg) center center/contain;
+    background: url(../images/common/ico-close.svg) center center/contain;
   }
   #header.active .headerArn::after {
     right: 0;
@@ -466,16 +469,16 @@
     display: block;
     width: 30px;
     height: 30px;
-    background: url(/assets/images/common/ico-menu-mo.svg) no-repeat center center/contain;
+    background: url(../images/common/ico-menu-mo.svg) no-repeat center center/contain;
     text-indent: -9999px;
     overflow: hidden;
     padding: 0;
   }
   #header.scroll:not(.active) .mMenuBtn {
-    background: url(/assets/images/common/ico-menu-mo-bk.svg) no-repeat center center/contain;
+    background: url(../images/common/ico-menu-mo-bk.svg) no-repeat center center/contain;
   }
   #header.active h1 a, #header.scroll h1 a {
-    background: url(/assets/images/common/ico-header-logo-mo-bk.svg) no-repeat center center/contain;
+    background: url(../images/common/ico-header-logo-mo-bk.svg) no-repeat center center/contain;
   }
   #header .util {
     display: flex;
@@ -628,9 +631,6 @@
   #header nav .depth03 > li:last-child a {
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 8px;
-  }
-  #footer .inner {
-    padding: 0 24px;
   }
 }
 @media screen and (max-width: 1320px) {

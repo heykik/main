@@ -86,12 +86,6 @@ const fn_contents = () => {
         })
         currEvent(currIndex);
     })
-
-    // 스크롤 영역
-	$('.tabTit ul').mCustomScrollbar({
-        // theme: 'dark'
-		// axis:'yx'
-	});
 }
 
 $(window).ready(function(){
@@ -144,5 +138,4 @@ $(window).ready(function(){
             $('.gnbOpen').slideUp(200);
         }))
     }
-    $('.depth01 li:nth-child(2) .gnbOpen').slideDown(0)
 });

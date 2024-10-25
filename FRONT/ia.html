@@ -1,82 +1,102 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<title>타이틀 IA</title>
-	<link rel="stylesheet" href="assets/css/common.css" />
-	<script src="assets/js/jquery-2.2.4.js"></script>
-	<style type="text/css">
-	body {display:block !important; overflow:auto; min-width:1600px; box-sizing:border-box}
-	* {box-sizing:border-box}
-	caption {display:none}
-	#wrap {overflow:hidden; width:100%; min-width:1024px; margin-bottom:50px}
-	#header {overflow:hidden; padding:50px; width:100%}
-	#header .tit_area {position:relative; overflow:hidden}
-	#header .tit_area h1 {overflow:hidden; padding-bottom:20px; line-height:50px; font-size:40px}
-	#header .tit_area strong {display:block; overflow:hidden; width:169px; line-height:23px; text-align:center; font-size:15px; color:#fff; text-align:center; background:#000}
-	#header .tit_area strong:before {display:block; overflow:hidden; position:absolute; bottom:23px; left:0; content:""; width:100%; border-top:2px solid #000}
-	#header .tit_area strong span {overflow:hidden}
-	#header .intro {position:absolute; top:60px; right:50px; overflow:hidden}
-	#header .intro p {overflow:hidden; font-size:10px; line-height:15px; text-align:right}
-
-	#contents {position:relative; overflow:hidden; padding:0 450px 50px 50px}
-	#contents iframe {overflow:auto; position:fixed; right:50px; border:1px solid #ccc; width:375px; height:600px; background:#fff}
-	#contents .table_style01 {width:100%; max-width:100%; border-top:3px solid #f00; border-bottom:1px solid #000}
-	#contents .table_style01 table {min-width:100%; width:auto; table-layout:fixed}
-	#contents .table_style01 table thead {border-left:1px solid #444}
-	#contents .table_style01 table tr th {padding:10px; border-right:1px solid #444; font-size:13px; text-align:left; color:#fff; background:#000}
-	#contents .table_style01 table tr td {padding:10px; border-top:1px solid #eaeaea; border-right:1px solid #eaeaea; font-size:13px; text-align:left; color:#000}
-	#contents .table_style01 table tr td:first-child {border-left:1px solid #eaeaea}
-	#contents .table_style01 table tr td a {text-decoration:underline; color:#fa9999}
-	#contents .table_style01 table tr td a:visited {color:#00f}
-	#contents .table_style01 table tr.today td {border-color:#fccfcf; background:#fcf2f2}
-	#contents .table_style01 table tr.today td + td + td + td + td + td + td {color:#ff0000}
-	#contents .table_style01 table tr.depth td {border-top:1px solid #f00}/* 메뉴 구분 */
-	#contents .table_style01 table tr.point td {border:1px solid #f8b9b9; background:#ffe7e7} /* 중요 내용 */
-	.noneSb td {background:#f8fbc4}
-	.modi td {background:#ffd8d8}
-	.bgGray td {color:#ddd !important; background:#fafafa}
-	.bgGray td a {color:#ddd !important}
-	</style>
-	<script>
-	$(function() {
-		$(".btnIframe").click(function(e) {
-			e.preventDefault(); 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>경남디지털혁신튜브 IA</title>
+<link rel="stylesheet" href="assets/css/common.css" />
+<script src="assets/js/jquery-2.2.4.js"></script>
+<style type="text/css">
+* {box-sizing:border-box}
+body {display:block !important; overflow:auto; box-sizing:border-box}
+caption {display:none}
+#wrap {overflow:hidden; width:100%}
+#header {margin:0 auto; padding:50px 20px; width:1860px; max-width:100%}
+#header .tit_area {display:flex; align-items:center; justify-content:space-between; padding-bottom:20px; border-bottom:2px solid #000}
+#header .tit_area h1 {line-height:50px; font-size:40px}
+#header .tit_area .intro p {text-align:right; letter-spacing:0; font-size:10px; line-height:15px}
+#header .type_area ul {display:flex}
+#header .type_area ul li + li {border-left:1px solid #fff}
+#header .type_area ul li {width:170px; text-align:center; line-height:23px; font-size:15px; color:#fff; background:#000}
+#contents {position:relative; margin:0 auto; padding:0 20px 50px; width:1860px; max-width:100%}
+#contents .flex_area.on {display:flex; justify-content:space-between; gap:20px}
+#contents .flex_area.on .table_style01 {width:75% !important;}
+#contents .table_style01 {width:100%}
+#contents .table_style01 table {table-layout:fixed; border-top:3px solid #f00; border-bottom:1px solid #000; width:auto; min-width:100%}
+#contents .table_style01 table thead {border-left:1px solid #444}
+#contents .table_style01 table tr th {padding:10px; border-right:1px solid #444; text-align:left; font-size:13px; color:#fff; background:#000}
+#contents .table_style01 table tr td {padding:10px; border-top:1px solid #eaeaea; border-right:1px solid #eaeaea; text-align:left; font-size:13px; color:#000}
+#contents .table_style01 table tr td:first-child {border-left:1px solid #eaeaea}
+#contents .table_style01 table tr td a {text-decoration:underline; color:#fa9999}
+#contents .table_style01 table tr td a:visited {color:#00f}
+#contents .table_style01 table tr.today td {border-color:#fccfcf; background:#fcf2f2} /* 수정했을 때 */
+#contents .table_style01 table tr.today td:nth-child(n+6) {color:#ff0000} /* 3depth 기준 */
+#contents .table_style01 table tr.point td {border-color:#d9d9e2; background:#f2f2fc} /* 추가적인 표시가 필요할 때 */
+#contents .table_style01 table tr.bgGray td {color:#ddd !important; background:#fafafa} /* 퍼블리싱이 필요없을 때 */
+#contents .table_style01 table tr.bgGray td a {color:#ddd !important}
+#contents .iframe_area {display:none; position:relative; padding-top:30px}
+#contents .iframe_area a {display:block; position:absolute; top:1px; left:0; border:1px solid #ccc; width:30px; height:30px; text-indent:-9999px; background:url("assets/images/ia/btn-close-iframe.png") no-repeat center/20px auto}
+#contents .flex_area.on .iframe_area {display:block; width:25%}
+#contents .flex_area.on .iframe_area iframe {overflow:auto; border:1px solid #ccc; width:100%; height:600px; background:#fff}
+@media (max-width: 767px) {
+	#contents .table_style01 {overflow-x:auto}
+	#contents .table_style01 table {min-width:767px}
+}
+</style>
+<script>
+$(function() {
+	$(".btnIframe").click(function(e) {
+		e.preventDefault();
+		if($(window).width() > 767){
 			var i = $(this).attr("href"); 
-			$("iframe").attr("src",i); 
-		}); 
-	})
-	</script>
+			$("iframe").attr("src",i);
+			$(this).addClass("on");
+			$(".flex_area").addClass("on");
+		}
+	});
+	$(".iframe_area > a").click(function(e){
+		e.preventDefault();
+		$(".flex_area").removeClass("on");
+	});
+}) 
+</script>
 </head>
 
 <body>
-	<!-- wrap -->
-	<div id="wrap">
-		
-		<!-- header -->
-		<header id="header">
-			<div class="tit_area">
-				<h1>타이틀 IA  :) </h1>
-				<strong>국문 <span>(RESPONSIVE)</span></strong>
-			</div>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="header">
+		<div class="tit_area">
+			<h1>경남디지털혁신튜브 IA  :-)</h1>
 			<div class="intro">
 				<p>HTML5 / utf-8</p>
 				<p>Browser - IE10.0, Crome</p>
 			</div>
-		</header>
-		<!--// header -->
+		</div>
+		<div class="type_area">
+			<ul>
+				<li>국문</li>
+				<!-- <li>영문</li> -->
+				<!-- <li>WEB</li> -->
+				<li>RESPONSIVE</li>
+			</ul>
+		</div>
+	</header>
+	<!--// header -->
 
-		<!-- section -->
-		<section id="contents">
-			<iframe src="" frameborder="0"></iframe>
-			<!-- 메뉴 구조도 -->
+	<!-- section -->
+	<section id="contents">
+		<!-- 메뉴 구조도 -->
+		<div class="flex_area">
 			<div class="table_style01">
-				<table summary="1depth, 2depth, 3depth, URL, 미리보기, 완료날짜, 수정날짜, 진행상태, 기타사항 항목으로 구성된 IA 표입니다.">
+				<table summary="1depth, 2depth, 3depth, 4depth, URL, 미리보기, 완료날짜, 수정날짜, 진행상태, 기타사항 항목으로 구성된 IA 표입니다.">
 					<caption>타이틀 IA</caption>
 					<colgroup>
+						<col style="width:8%"/>
 						<col style="width:8%"/>
 						<col style="width:8%"/>
 						<col style="width:8%"/>
@@ -93,6 +113,7 @@
 							<th scope="col">1depth</th>
 							<th scope="col">2depth</th>
 							<th scope="col">3depth</th>
+							<th scope="col">4depth</th>
 							<th scope="col">URL</th>
 							<th scope="col">미리보기</th>
 							<th scope="col">완료날짜</th>
@@ -103,11 +124,660 @@
 					</thead>
 					<tbody>
 						<tr>
+							<td>공통</td>
+							<td>Main</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0100.html" target="_blank" title="새창으로 열기">UI-F-0100.html</a></td>
+							<td><a href="html/UI-F-0100.html" class="btnIframe" onclick="">미리보기</a></td>
+							<td>2024-10-25</td>
+							<td></td>
+							<td>완료</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Layout</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0101.html" target="_blank" title="새창으로 열기">UI-F-0101.html</a></td>
+							<td><a href="html/UI-F-0101.html" class="btnIframe">미리보기</a></td>
 							<td></td>
 							<td></td>
 							<td></td>
-							<td><a href="html/aaa.html" target="_blank" title="새창으로 열기">aaa.html</a></td>
-							<td><a href="html/aaa.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>기본팝업</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0102.html" target="_blank" title="새창으로 열기">UI-F-0102.html</a></td>
+							<td><a href="html/UI-F-0102.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td>회원서비스</td>
+							<td>로그인</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0200.html" target="_blank" title="새창으로 열기">UI-F-0200.html</a></td>
+							<td><a href="html/UI-F-0200.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>회원가입</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0201.html" target="_blank" title="새창으로 열기">UI-F-0201.html</a></td>
+							<td><a href="html/UI-F-0201.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>이용약관동의</td>
+							<td></td>
+							<td><a href="html/UI-F-0202.html" target="_blank" title="새창으로 열기">UI-F-0202.html</a></td>
+							<td><a href="html/UI-F-0202.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>본인확인</td>
+							<td></td>
+							<td><a href="html/UI-F-0203.html" target="_blank" title="새창으로 열기">UI-F-0203.html</a></td>
+							<td><a href="html/UI-F-0203.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td>소개</td>
+							<td>경남정보산업 진흥본부소개</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0300.html" target="_blank" title="새창으로 열기">UI-F-0300.html</a></td>
+							<td><a href="html/UI-F-0300.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>포털소개</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0301.html" target="_blank" title="새창으로 열기">UI-F-0301.html</a></td>
+							<td><a href="html/UI-F-0301.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>오시는길</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0302.html" target="_blank" title="새창으로 열기">UI-F-0302.html</a></td>
+							<td><a href="html/UI-F-0302.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td>디지털혁신인프라</td>
+							<td>혁신거점허브</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0400.html" target="_blank" title="새창으로 열기">UI-F-0400.html</a></td>
+							<td><a href="html/UI-F-0400.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>혁신거점 브릿지</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0401.html" target="_blank" title="새창으로 열기">UI-F-0401.html</a></td>
+							<td><a href="html/UI-F-0401.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>SW 미래채움</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0402.html" target="_blank" title="새창으로 열기">UI-F-0402.html</a></td>
+							<td><a href="html/UI-F-0402.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>AI 실증랩</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0403.html" target="_blank" title="새창으로 열기">UI-F-0403.html</a></td>
+							<td><a href="html/UI-F-0403.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>경남 VR,AR 제작거점센터</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0404.html" target="_blank" title="새창으로 열기">UI-F-0404.html</a></td>
+							<td><a href="html/UI-F-0404.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>동남권 품질역량강화센터</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0405.html" target="_blank" title="새창으로 열기">UI-F-0405.html</a></td>
+							<td><a href="html/UI-F-0405.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>정보보안 테스트베드</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0406.html" target="_blank" title="새창으로 열기">UI-F-0406.html</a></td>
+							<td><a href="html/UI-F-0406.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td>디지털 혁신 지원서비스</td>
+							<td>기술지원체계도</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0500.html" target="_blank" title="새창으로 열기">UI-F-0500.html</a></td>
+							<td><a href="html/UI-F-0500.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>수요공급기업</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0501.html" target="_blank" title="새창으로 열기">UI-F-0501.html</a></td>
+							<td><a href="html/UI-F-0501.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>수요공급기업검색</td>
+							<td>상세</td>
+							<td><a href="html/UI-F-0502.html" target="_blank" title="새창으로 열기">UI-F-0502.html</a></td>
+							<td><a href="html/UI-F-0502.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>매칭서비스</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0503.html" target="_blank" title="새창으로 열기">UI-F-0503.html</a></td>
+							<td><a href="html/UI-F-0503.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>전문가 기술상담서비스</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0504.html" target="_blank" title="새창으로 열기">UI-F-0504.html</a></td>
+							<td><a href="html/UI-F-0504.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>공동장비활용</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0505.html" target="_blank" title="새창으로 열기">UI-F-0505.html</a></td>
+							<td><a href="html/UI-F-0505.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>상세</td>
+							<td></td>
+							<td><a href="html/UI-F-0506.html" target="_blank" title="새창으로 열기">UI-F-0506.html</a></td>
+							<td><a href="html/UI-F-0506.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>시설예약</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0507.html" target="_blank" title="새창으로 열기">UI-F-0507.html</a></td>
+							<td><a href="html/UI-F-0507.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>상세</td>
+							<td></td>
+							<td><a href="html/UI-F-0508.html" target="_blank" title="새창으로 열기">UI-F-0508.html</a></td>
+							<td><a href="html/UI-F-0508.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>신청</td>
+							<td></td>
+							<td><a href="html/UI-F-0509.html" target="_blank" title="새창으로 열기">UI-F-0509.html</a></td>
+							<td><a href="html/UI-F-0509.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td>알림마당</td>
+							<td>디지털 우수기업 및 기술 소개</td>
+							<td>우수기업</td>
+							<td></td>
+							<td><a href="html/UI-F-0600.html" target="_blank" title="새창으로 열기">UI-F-0600.html</a></td>
+							<td><a href="html/UI-F-0600.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>우수기술</td>
+							<td></td>
+							<td><a href="html/UI-F-0601.html" target="_blank" title="새창으로 열기">UI-F-0601.html</a></td>
+							<td><a href="html/UI-F-0601.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>사업공모안내</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0602.html" target="_blank" title="새창으로 열기">UI-F-0602.html</a></td>
+							<td><a href="html/UI-F-0602.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>상세</td>
+							<td></td>
+							<td><a href="html/UI-F-0603.html" target="_blank" title="새창으로 열기">UI-F-0603.html</a></td>
+							<td><a href="html/UI-F-0603.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>네트워킹 행사안내</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0604.html" target="_blank" title="새창으로 열기">UI-F-0604.html</a></td>
+							<td><a href="html/UI-F-0604.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>상세</td>
+							<td></td>
+							<td><a href="html/UI-F-0605.html" target="_blank" title="새창으로 열기">UI-F-0605.html</a></td>
+							<td><a href="html/UI-F-0605.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>교육프로그램</td>
+							<td>ICT 이노베이션 스퀘어</td>
+							<td>목록</td>
+							<td><a href="html/UI-F-0606.html" target="_blank" title="새창으로 열기">UI-F-0606.html</a></td>
+							<td><a href="html/UI-F-0606.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>상세</td>
+							<td><a href="html/UI-F-0607.html" target="_blank" title="새창으로 열기">UI-F-0607.html</a></td>
+							<td><a href="html/UI-F-0607.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>미래채움</td>
+							<td>목록</td>
+							<td><a href="html/UI-F-0608.html" target="_blank" title="새창으로 열기">UI-F-0608.html</a></td>
+							<td><a href="html/UI-F-0608.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>상세</td>
+							<td><a href="html/UI-F-0609.html" target="_blank" title="새창으로 열기">UI-F-0609.html</a></td>
+							<td><a href="html/UI-F-0609.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>AI 노바투스 아카데미아 교육</td>
+							<td></td>
+							<td></td>
+							<td><a href="html/UI-F-0610.html" target="_blank" title="새창으로 열기">UI-F-0610.html</a></td>
+							<td><a href="html/UI-F-0610.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td>고객지원</td>
+							<td>공지사항</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0700.html" target="_blank" title="새창으로 열기">UI-F-0700.html</a></td>
+							<td><a href="html/UI-F-0700.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>상세</td>
+							<td></td>
+							<td><a href="html/UI-F-0701.html" target="_blank" title="새창으로 열기">UI-F-0701.html</a></td>
+							<td><a href="html/UI-F-0701.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>자료실</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0702.html" target="_blank" title="새창으로 열기">UI-F-0702.html</a></td>
+							<td><a href="html/UI-F-0702.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>상세</td>
+							<td></td>
+							<td><a href="html/UI-F-0703.html" target="_blank" title="새창으로 열기">UI-F-0703.html</a></td>
+							<td><a href="html/UI-F-0703.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>사업제안하기</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0704.html" target="_blank" title="새창으로 열기">UI-F-0704.html</a></td>
+							<td><a href="html/UI-F-0704.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>등록</td>
+							<td></td>
+							<td><a href="html/UI-F-0705.html" target="_blank" title="새창으로 열기">UI-F-0705.html</a></td>
+							<td><a href="html/UI-F-0705.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>상세</td>
+							<td></td>
+							<td><a href="html/UI-F-0706.html" target="_blank" title="새창으로 열기">UI-F-0706.html</a></td>
+							<td><a href="html/UI-F-0706.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>수정</td>
+							<td></td>
+							<td><a href="html/UI-F-0707.html" target="_blank" title="새창으로 열기">UI-F-0707.html</a></td>
+							<td><a href="html/UI-F-0707.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>교육수료증발급</td>
+							<td>인증</td>
+							<td></td>
+							<td><a href="html/UI-F-0708.html" target="_blank" title="새창으로 열기">UI-F-0708.html</a></td>
+							<td><a href="html/UI-F-0708.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>수료목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0709.html" target="_blank" title="새창으로 열기">UI-F-0709.html</a></td>
+							<td><a href="html/UI-F-0709.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>신청목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0710.html" target="_blank" title="새창으로 열기">UI-F-0710.html</a></td>
+							<td><a href="html/UI-F-0710.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td>마이페이지</td>
+							<td>기본정보</td>
+							<td>상세</td>
+							<td></td>
+							<td><a href="html/UI-F-0800.html" target="_blank" title="새창으로 열기">UI-F-0800.html</a></td>
+							<td><a href="html/UI-F-0800.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td></td>
+							<td>수정</td>
+							<td></td>
+							<td><a href="html/UI-F-0801.html" target="_blank" title="새창으로 열기">UI-F-0801.html</a></td>
+							<td><a href="html/UI-F-0801.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>매칭내역서비스</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0802.html" target="_blank" title="새창으로 열기">UI-F-0802.html</a></td>
+							<td><a href="html/UI-F-0802.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>전문가기술 상담서비스 내역</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0803.html" target="_blank" title="새창으로 열기">UI-F-0803.html</a></td>
+							<td><a href="html/UI-F-0803.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>시설예약 내역</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0804.html" target="_blank" title="새창으로 열기">UI-F-0804.html</a></td>
+							<td><a href="html/UI-F-0804.html" class="btnIframe">미리보기</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+                        <tr>
+							<td></td>
+							<td>사업제안 내역</td>
+							<td>목록</td>
+							<td></td>
+							<td><a href="html/UI-F-0805.html" target="_blank" title="새창으로 열기">UI-F-0805.html</a></td>
+							<td><a href="html/UI-F-0805.html" class="btnIframe">미리보기</a></td>
 							<td></td>
 							<td></td>
 							<td></td>
@@ -116,11 +786,15 @@
 					</tbody>
 				</table>
 			</div>
-			<!--// 메뉴 구조도 -->
-		</section>
-		<!--// section -->
-	</div>
-	<!--// wrap -->
-
+			<div class="iframe_area">
+				<iframe src="" frameborder="0"></iframe>
+				<a href="">닫기</a>
+			</div>
+		</div>
+		<!--// 메뉴 구조도 -->
+	</section>
+	<!--// section -->
+</div>
+<!--// wrap -->
 </body>
 </html>

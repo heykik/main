@@ -27,6 +27,7 @@
 
 /* 타이틀 */
 h3 {
+    line-height: 1.6;
     font-size: 40px;
     font-weight: 700;
     color: var(--color-black);
@@ -69,6 +70,24 @@ h3 {
 /* 탭 */
 .tabTit {
     overflow-x: auto;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    // &::-webkit-scrollbar {
+    //     height: 9px;
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //     border: 3px solid transparent;
+    //     border-left: 0;
+    //     border-radius: 10px;
+    //     background: rgba(0, 0, 0, 0.6); /* 스크롤바의 색상 */
+    //     background-clip: padding-box;
+    // }
+    // &::-webkit-scrollbar-track {
+    //     background: var(--color-white); /*스크롤바 뒷 배경 색상*/
+    // }
     ul {
         display: flex;
         height: 50px;

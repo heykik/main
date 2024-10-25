@@ -21,7 +21,7 @@
   width: 40px;
   height: 40px;
   text-indent: -9999px;
-  background: url("/assets/images/main/btn-prev-circle.png") no-repeat center/100% auto;
+  background: url("../images/main/btn-prev-circle.png") no-repeat center/100% auto;
 }
 .swiperBtn .swiper-button-next {
   top: 0;
@@ -30,7 +30,7 @@
   width: 40px;
   height: 40px;
   text-indent: -9999px;
-  background: url("/assets/images/main/btn-next-circle.png") no-repeat center/100% auto;
+  background: url("../images/main/btn-next-circle.png") no-repeat center/100% auto;
 }
 
 @media (max-width: 1160px) {
@@ -55,7 +55,8 @@
 .visualSwiper .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .visualSwiper .scrollDown {
   position: absolute;
@@ -66,7 +67,7 @@
   font-size: 14px;
   font-weight: 700;
   color: var(--color-white);
-  background: url("/assets/images/main/ico-mouse.svg") no-repeat center top/40px auto;
+  background: url("../images/main/ico-mouse.svg") no-repeat center top/40px auto;
   transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -108,6 +109,7 @@
 .visualTxt strong {
   display: block;
   margin: 16px 0 40px;
+  line-height: 1.3;
   font-size: 80px;
   font-weight: 700;
   color: var(--color-white);
@@ -151,7 +153,7 @@
   width: 20px;
   height: 20px;
   text-indent: -9999px;
-  background: url("/assets/images/main/btn-prev.svg") no-repeat center/16px auto;
+  background: url("../images/main/btn-prev.svg") no-repeat center/16px auto;
 }
 .visualSwiperBtn .swiper-button-next {
   position: static;
@@ -159,24 +161,33 @@
   width: 20px;
   height: 20px;
   text-indent: -9999px;
-  background: url("/assets/images/main/btn-next.svg") no-repeat center/16px auto;
+  background: url("../images/main/btn-next.svg") no-repeat center/16px auto;
 }
 .visualSwiperBtn .swiper-button-stop {
   width: 20px;
   height: 20px;
   text-indent: -9999px;
-  background: url("/assets/images/main/btn-stop.svg") no-repeat center/16px auto;
+  background: url("../images/main/btn-stop.svg") no-repeat center/16px auto;
   cursor: pointer;
 }
 .visualSwiperBtn .swiper-button-stop.start {
-  background-image: url("/assets/images/main/btn-start.svg");
+  background-image: url("../images/main/btn-start.svg");
 }
 
+@media (max-width: 1160px) {
+  .visualTxt p {
+    font-size: 28px;
+  }
+  .visualTxt strong {
+    font-size: 68px;
+  }
+}
 @media (max-width: 767px) {
   .visualSwiper .scrollDown {
     display: none;
   }
   .visualTxt {
+    top: 12%;
     left: 24px;
     padding: 0;
     transform: none;
@@ -191,12 +202,15 @@
     font-size: 55px;
   }
   .visualSwiperBtn {
+    top: 50%;
     left: 0;
     padding: 0 24px;
-    transform: none;
-    -ms-transform: none;
-    -moz-transform: none;
-    -webkit-transform: none;
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 390px) {
+  .visualTxt strong {
+    font-size: 48px;
   }
 }
 /* 메인 2단 */
@@ -216,7 +230,8 @@
 .infoSwiper .swiper-slide .imgBox-main img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .infoSwiper .swiper-slide .imgBox-main .txtBox-main {
   position: absolute;
@@ -328,7 +343,7 @@
   line-height: 1.2;
   font-size: 30px;
   color: var(--color-black);
-  background: url("/assets/images/main/ico-arrow-right-40.png") no-repeat left bottom/40px auto;
+  background: url("../images/main/ico-arrow-right-40.png") no-repeat left bottom/40px auto;
 }
 .serviceSwiper .swiper-slide img {
   margin-left: auto;
@@ -402,7 +417,8 @@
   display: block;
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .insightWrap .swiper-slide .insightTxt {
   display: flex;
@@ -410,7 +426,7 @@
   gap: 10px;
   padding: 20px 40px 52px 20px;
   border: 1px solid #eee;
-  background: #fff url("/assets/images/main/ico-arrow-right-40.png") no-repeat right 40px bottom 20px/40px auto;
+  background: #fff url("../images/main/ico-arrow-right-40.png") no-repeat right 40px bottom 20px/40px auto;
 }
 .insightWrap .swiper-slide .insightTxt span {
   display: block;
@@ -529,7 +545,7 @@
   width: 96px;
   font-size: 15px;
   color: var(--color-black);
-  background: url("/assets/images/main/ico-arrow-right-20.png") no-repeat center right/20px auto;
+  background: url("../images/main/ico-arrow-right-20.png") no-repeat center right/20px auto;
 }
 .cmntySwiper .swiper-slide .cmnty a img {
   position: absolute;
@@ -549,7 +565,7 @@
   color: var(--color-white);
 }
 .cmntySwiper .swiper-slide .cmnty a:first-child em {
-  background-image: url("/assets/images/main/ico-arrow-right-20-white.png");
+  background-image: url("../images/main/ico-arrow-right-20-white.png");
 }
 .cmntySwiper .swiper-slide .cmnty a:nth-child(2) {
   background: #D9E8FF;
@@ -605,8 +621,9 @@
 }
 /* 메인 6단 */
 .spaceCont {
+  padding-top: 120px;
   height: 820px;
-  background: url("/assets/images/main/bg-02.png") no-repeat center/cover;
+  background: url("../images/main/bg-02.png") no-repeat center/cover;
 }
 .spaceCont .inner {
   height: 100%;
@@ -614,7 +631,6 @@
 .spaceCont .spaceArn {
   display: flex;
   gap: 50px;
-  padding-top: 120px;
   height: 100%;
 }
 .spaceCont .spaceArn .lt {
@@ -631,6 +647,7 @@
   margin-left: auto;
   width: 100%;
   max-width: 1080px;
+  height: 100%;
 }
 .spaceCont .spaceArn .rt ul {
   display: grid;
@@ -651,10 +668,8 @@
 
 @media (max-width: 1500px) {
   .spaceCont {
-    height: 68vw;
-  }
-  .spaceCont .spaceArn {
     padding-top: 100px;
+    height: 68vw;
   }
   .spaceCont .spaceArn .rt ul {
     grid-template-columns: repeat(auto-fill, minmax(160px, 160px));
@@ -667,24 +682,43 @@
 }
 @media (max-width: 1160px) {
   .spaceCont {
+    padding: 80px 0;
     height: 810px;
+    box-sizing: content-box;
+  }
+  .spaceCont .spaceArn {
+    flex-direction: column;
   }
   .spaceCont .spaceArn .lt p {
     font-size: 36px;
   }
+  .spaceCont .spaceArn .rt ul {
+    justify-content: center;
+  }
 }
 @media (max-width: 767px) {
+  .spaceCont {
+    padding: 50px 0;
+  }
   .spaceCont .spaceArn {
-    flex-direction: column;
     gap: 30px;
-    padding-top: 50px;
   }
   .spaceCont .spaceArn .lt p {
     font-size: 30px;
   }
   .spaceCont .spaceArn .rt ul {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(100px, 100px));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 100px));
     gap: 20px;
+  }
+}
+@media (max-width: 390px) {
+  .spaceCont {
+    padding-bottom: 0;
+  }
+  .spaceCont .spaceArn .rt ul {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 80px));
+    grid-template-rows: repeat(auto-fill, minmax(80px, 80px));
+    gap: 10px;
   }
 }

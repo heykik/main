@@ -29,6 +29,7 @@
 }
 /* 타이틀 */
 h3 {
+  line-height: 1.6;
   font-size: 40px;
   font-weight: 700;
   color: var(--color-black);
@@ -52,7 +53,7 @@ h3 {
   padding-right: 50px;
   font-size: 21px;
   color: var(--color-white);
-  background: url("/assets/images/common/btn-arrow.png") no-repeat center right/20px auto;
+  background: url("../images/common/btn-arrow.png") no-repeat center right/20px auto;
 }
 
 @media (max-width: 767px) {
@@ -63,6 +64,10 @@ h3 {
 /* 탭 */
 .tabTit {
   overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabTit::-webkit-scrollbar {
+  display: none;
 }
 .tabTit ul {
   display: flex;
