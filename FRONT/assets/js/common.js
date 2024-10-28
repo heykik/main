@@ -2,34 +2,89 @@ $(function () {
     // base
     fn_common()
     // gnb
-    fn_layout()
+    // fn_layout()
     // contents
     fn_contents()
+    // heaer, footer import
+    // 퍼블리싱을 위한 작업이며 개발 시 하기 스크립트 주석처리 또는 제거 후 상단 fn_layout()만 실행
+    fn_layoutImport();
 })
+
+const fn_gnb = () => {
+    // 0105 gnb event
+    const gnb = $("#header .gnb");
+    // $(gnb).find('li:nth-child(4').addClass("on");
+    // $(gnb).find('li:nth-child(4').children("div").stop().slideDown(200);
+    // gnb.children("li:not('.sitemapBtn')").on('mouseenter focusin',function(){
+    //     console.log('test');
+    // 	$(this).addClass("on");
+    // 	$(this).children("div").stop().slideDown(200);
+    // });
+    // gnb.children("li:not('.sitemapBtn')").on('mouseleave focusout',function(){
+    // 	$(this).removeClass("on");
+    // 	$(this).children("div").stop().slideUp(200);
+    // });
+    if (1160 >= $(window).width()) {
+        $('nav .gnbOpen').hide();
+        $('.mMenuBtn').on('click', (() => {
+            $('html').toggleClass('unscroll');
+            $('#header').toggleClass('active');
+            $('nav').toggleClass('active');
+        }))
+        $('.depth01 > li > a').on('click', ((e) => {
+            e.preventDefault();
+            const target = $(e.currentTarget).parent('li');
+            const depth = $(target).find('ul[class*="depth"]').length;
+            const showState = $(target).hasClass('active');
+
+            if (depth > 0 && !showState) {
+                $(target).siblings('li').removeClass('active').find('.gnbOpen').slideUp(200);;
+                $(target).addClass('active').find('.gnbOpen').slideDown(200);
+            } else if (depth > 0 && showState) {
+                $(target).removeClass('active').find('.gnbOpen').slideUp(200);
+            }
+        }));
+    } else if ($(window).width() > 1160) {
+        console.log('sizing')
+        gnb.find(' > li > a').on('mouseenter hover focus', ((e) => {
+            const depth = $(e.currentTarget).parent('li').find('.gnbOpen');
+            $('#header').addClass('scroll');
+            gnb.addClass('open');
+            $(e.currentTarget).parent('li').siblings().find('.gnbOpen').slideUp();
+            $(depth).slideDown(200);
+        }))
+        gnb.find('.gnbOpen').on('mouseleave focusout', ((e) => {
+            $('#header').removeClass('scroll');
+            gnb.removeClass('open');
+            // gnb.find('.gnbOpen').slideUp(200);
+            $('.gnbOpen').slideUp(200);
+        }))
+    }
+}
 
 const fn_layout = () => {
     let header = $('#header'),
         familySite = $('.familySite');
 
     // 헤더 스크롤
-    $(window).scroll(function(){
-        if($(window).scrollTop() > 0) header.addClass('scroll');
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 0) header.addClass('scroll');
         else header.removeClass('scroll');
     });
 
     // 관련사이트
-    familySite.on('click', '.site', function(e){
+    familySite.on('click', '.site', function (e) {
         e.preventDefault();
-        if($(this).hasClass('open')){
+        if ($(this).hasClass('open')) {
             $(this).removeClass('open');
             $(this).siblings('ul').slideUp(200);
-        }else{
+        } else {
             $(this).addClass('open');
-			$(this).siblings('ul').slideDown(200);
+            $(this).siblings('ul').slideDown(200);
         }
     });
 
-    familySite.on("click", "ul li a", function(e){
+    familySite.on("click", "ul li a", function (e) {
         e.preventDefault();
         $(".site").removeClass("on");
         $(this).closest("ul").slideUp(200);
@@ -39,6 +94,7 @@ const fn_layout = () => {
         familySite.find(".site").text($txt);
         btnMove.attr("href", $src);
     });
+    fn_gnb();
 }
 
 const fn_common = () => {
@@ -88,54 +144,17 @@ const fn_contents = () => {
     })
 }
 
-$(window).ready(function(){
-	// 0105 gnb event
-    const gnb = $("#header .gnb");
-    // $(gnb).find('li:nth-child(4').addClass("on");
-    // $(gnb).find('li:nth-child(4').children("div").stop().slideDown(200);
-	// gnb.children("li:not('.sitemapBtn')").on('mouseenter focusin',function(){
-    //     console.log('test');
-	// 	$(this).addClass("on");
-	// 	$(this).children("div").stop().slideDown(200);
-	// });
-	// gnb.children("li:not('.sitemapBtn')").on('mouseleave focusout',function(){
-	// 	$(this).removeClass("on");
-	// 	$(this).children("div").stop().slideUp(200);
-	// });
-    if(1160 >= $(window).width() ){
-        $('nav .gnbOpen').hide();
-        $('.mMenuBtn').on('click', (()=>{
-            $('html').toggleClass('unscroll');
-            $('#header').toggleClass('active');
-            $('nav').toggleClass('active');
-        }))
-        $('.depth01 > li > a').on('click', ((e)=>{
-            e.preventDefault();
-            const target = $(e.currentTarget).parent('li');
-            const depth = $(target).find('ul[class*="depth"]').length;
-            const showState = $(target).hasClass('active');
+const fn_layoutImport = () => {
+    const _importHeader = $('#header-import');
+    const _importFooter = $('#footer-import');
 
-            if(depth > 0 && !showState){
-                $(target).siblings('li').removeClass('active').find('.gnbOpen').slideUp(200);;
-                $(target).addClass('active').find('.gnbOpen').slideDown(200);
-            }else if(depth > 0 && showState){
-                $(target).removeClass('active').find('.gnbOpen').slideUp(200);
-            }
+    if (_importHeader.length > 0 && _importFooter.length > 0) {
+        _importFooter.load('layout.html #footer');
+        _importHeader.load('layout.html #header', (() => {
+            fn_layout()
         }));
-    }else if($(window).width() > 1160){
-        console.log('sizing')
-        gnb.find(' > li > a').on('mouseenter hover focus', ((e)=>{
-            const depth = $(e.currentTarget).parent('li').find('.gnbOpen');
-            $('#header').addClass('scroll');
-            gnb.addClass('open');
-            $(e.currentTarget).parent('li').siblings().find('.gnbOpen').slideUp();
-            $(depth).slideDown(200);
-        }))
-        gnb.find('.gnbOpen').on('mouseleave focusout', ((e)=>{
-            $('#header').removeClass('scroll');
-            gnb.removeClass('open');
-            // gnb.find('.gnbOpen').slideUp(200);
-            $('.gnbOpen').slideUp(200);
-        }))
+    } else {
+        // import 된 div 없어도 gnb 스크립트 실행
+        fn_layout()
     }
-});
+}
