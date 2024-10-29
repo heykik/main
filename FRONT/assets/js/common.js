@@ -53,7 +53,9 @@ const fn_gnb = () => {
             $(depth).slideDown(200);
         }))
         gnb.find('.gnbOpen').on('mouseleave focusout', ((e) => {
-            $('#header').removeClass('scroll');
+            if(!$('#container'.length > 0)){
+                $('#header').removeClass('scroll');
+            }
             gnb.removeClass('open');
             // gnb.find('.gnbOpen').slideUp(200);
             $('.gnbOpen').slideUp(200);
@@ -157,7 +159,7 @@ const fn_layoutImport = () => {
         _importHeader.load('layout.html #header', (() => {
             fn_layout()
             if($('#container').length > 0) $('#header').addClass('scroll');
-
+            return false;
         }));
     } else {
         // import 된 div 없어도 gnb 스크립트 실행
