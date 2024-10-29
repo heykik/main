@@ -41,6 +41,14 @@ h3 {
     }
 }
 
+/* position */
+.pRel{position:relative}
+
+/* textAlign */
+.txtl{text-align:left;}
+.txtc{text-align:center;}
+.txtr{text-align:right;}
+
 /* 버튼 */
 .btnBox{
     display:flex;
@@ -55,6 +63,9 @@ h3 {
         @media screen and (min-width:1160px){
             flex:0 0 auto;
         }
+    }
+    &[class*="sideRight"]{
+        justify-content:flex-end;
     }
     
 }
@@ -78,12 +89,32 @@ h3 {
         line-height:normal;
         font-size:15px;
     }
+    &[class*="lg"]{
+        padding:12px 16px;
+        height:56px;
+        line-height:1.5;
+        font-size:20px;
+    }
 }
+
 .btnDefault{
+    border:1px solid var(--color-dark);
     font-weight:var(--regular);
     color:var(--color-dark);
-    border:1px solid var(--color-dark);
 }
+
+.btnGray{
+    font-weight:var(--bold);
+    color:var(--color-white);
+    background:var(--gray50);
+}
+
+.btnRed{
+    font-weight:var(--bold);
+    color:var(--color-white);
+    background:var(--color-red);
+}
+
 .btnLink {
     display: inline-block;
     padding: 16px 20px;
@@ -98,11 +129,23 @@ h3 {
         background: url("/assets/images/common/btn-arrow.png") no-repeat center right/20px auto;
     }
 }
-.btnRed{
-    font-weight:var(--bold);
-    color:var(--color-white);
-    background:var(--color-red);
+
+.btnRemove{
+    display:block;
+    position:absolute;
+    top:50%;
+    right:12px;
+    overflow:hidden;
+    width:20px;
+    height:20px;
+    text-indent:-9999px;
+    background:url(../images/ico-file-remove.svg) no-repeat center center / contain;
+    transform:translateY(-50%);
 }
+/* //버튼 */
+
+br.moOnly{display:initial;}
+
 
 @media (max-width: 1160px) {
     
@@ -181,7 +224,9 @@ h3 {
 /* flex box */
 [class*="flexBox"] {
     display: flex;
-
+    &[class*="Col"]{
+        flex-direction:column;
+    }
     &[class*="As"]{
         align-items: flex-start;
     }
@@ -269,6 +314,21 @@ h3 {
         color:var(--color-dark);
     }
 }
+/* 교육수료증 발급 - 비회원 로그인 ui */
+.certificateBox{
+    padding:20px 40px;
+    .txt{
+        white-space:nowrap;
+        margin-top:20px;
+        line-height:1.5;
+        font-size:20px;
+        font-weight:var(--regular);
+        color:var(--color-dark);
+    }
+    .btnBox{
+        margin-top:60px;
+    }
+}
 
 /* tableDefault */
 .tableDefault{
@@ -329,16 +389,31 @@ h3 {
                     color:var(--color-dark);
                     box-sizing:border-box;
                     &::placeholder{
-                        color:var(--color-placeholder);
+                        color:var(--color-text);
                     }
                 }
                 input{
                     padding:6px 10px;
                 }
+                .prevFileInput{
+                    margin-top:8px;
+                    color:var(--color-disabled);
+                    background:var(--gray5);
+                    border-style:none;
+                }
                 textarea{
                     padding:10px;
                     min-height:168px;
+                    font-family:inherit;
                     resize:none;
+                }
+                p{
+                    padding:6px 10px;
+                    line-height:1.2;
+                    letter-spacing:-0.03em;
+                    font-size:17px;
+                    font-weight:var(--regular);
+                    color:var(--color-text);
                 }
                 .withFileBtn{
                     gap:0 8px;
@@ -346,12 +421,32 @@ h3 {
                         max-width:320px;
                     }
                 }
+                a[download]{
+                    position:relative;
+                    line-height:1.2;
+                    letter-spacing:-0.03em;
+                    font-size:17px;
+                    font-weight:var(--regular);
+                    color:var(--color-text);
+                    &::after{
+                        display:block;
+                        content:"";
+                        position:absolute;
+                        bottom:0;
+                        left:0;
+                        width:100%;
+                        height:1px;
+                        background:var(--color-text);
+                    }
+                }
             }
         }
     }
 }
 
+/* pc */
 @media screen and (min-width:1160px) {
+    br.moOnly{display:none;}
     #container{
         margin:100px auto 0;
         padding:0 0 120px;
@@ -365,6 +460,7 @@ h3 {
             margin: 0 0 80px;
         }
     }
+    /* tableDefault-pc */
     .tableDefault{
         tbody{
             tr{
@@ -372,21 +468,40 @@ h3 {
                 th,
                 td{         
                     display:table-cell;
-                    text-align:center;
-                    vertical-align:middle;
                     min-height:56px;
                 }
                 th{
-                    width:200px;
                     border-right:1px solid var(--border-color);
+                    width:200px;
+                    text-align:center;
+                    vertical-align:middle;
                 }
                 td{
                     width:1320px;
+                    &.divide{
+                        width:306px;
+                        &:not(:last-child){
+                            border-right:1px solid var(--table-border);
+                        }
+                    }
                     textarea{
-                        height:216px;
+                        min-height:240px;
+                        resize:inherit;
                     }
                 }
             }
+            .hMin240{
+                min-height:216px;
+            }
+        }
+    }
+    /* // tableDefault-pc */
+
+    /* 교육수료증 발급 - 비회원 로그인 ui */
+    .certificateBox{
+        .txt{
+        }
+        .btnBox{
         }
     }
 }

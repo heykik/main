@@ -21,7 +21,7 @@
     --color-red: #E60024;
     --color-lightGray:#707070;
     --color-dark:#1d1d1d;
-    --color-placeholder:#555555;
+    --color-text:#555555;
     /* --color-base: #454545; */
     /* --color-primary:#133692; */
     --table-bg:#FFF8F9;
@@ -29,6 +29,10 @@
     --table-border:#D8D8D8;
 
     --text-color: #555;
+    --text-disabled:#717171;
+
+    --gray5:#F8F8F8;
+    --gray50:#BEBEBE;
 
     --thin:100;
     --light:300;
