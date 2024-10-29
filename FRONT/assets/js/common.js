@@ -45,7 +45,6 @@ const fn_gnb = () => {
             }
         }));
     } else if ($(window).width() > 1160) {
-        console.log('sizing')
         gnb.find(' > li > a').on('mouseenter hover focus', ((e) => {
             const depth = $(e.currentTarget).parent('li').find('.gnbOpen');
             $('#header').addClass('scroll');
@@ -70,6 +69,11 @@ const fn_layout = () => {
     $(window).scroll(function () {
         if ($(window).scrollTop() > 0) header.addClass('scroll');
         else header.removeClass('scroll');
+        // main 아닐 시 header에 scroll 클래스 추가하여 ui상태 변경하는 스크립트
+        // 개발 시 확인 후 삭제 또는 활용 필요 
+        if($('#container').length > 0){
+            $('#header').addClass('scroll');
+        }
     });
 
     // 관련사이트
@@ -145,13 +149,15 @@ const fn_contents = () => {
 }
 
 const fn_layoutImport = () => {
-    const _importHeader = $('#header-import');
-    const _importFooter = $('#footer-import');
+    const _importHeader = $('#headerImport');
+    const _importFooter = $('#footerImport');
 
     if (_importHeader.length > 0 && _importFooter.length > 0) {
         _importFooter.load('layout.html #footer');
         _importHeader.load('layout.html #header', (() => {
             fn_layout()
+            if($('#container').length > 0) $('#header').addClass('scroll');
+
         }));
     } else {
         // import 된 div 없어도 gnb 스크립트 실행
