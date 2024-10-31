@@ -398,8 +398,47 @@ h3 {
 [class*=tit][class*=Ico][class*=GiveFile]::before {
   background: url(../images/ico-giveFile-50.svg) no-repeat center center/contain;
 }
+[class*=tit][class*=Ico][class*=CycleMedal]::before {
+  background: url(../images/ico-cycleMedal-50.svg) no-repeat center center/contain;
+}
+
+/* description color */
+.cRed {
+  color: var(--color-red) !important;
+}
+
+.cDark {
+  color: var(--color-dark) !important;
+}
+
+.cBlack {
+  color: var(--color-black) !important;
+}
+
+.cText {
+  color: var(--color-text) !important;
+}
+
+.cWhite {
+  color: var(--color-white) !important;
+}
+
+.cLG {
+  color: var(--color-lightGray) !important;
+}
 
 /* text description */
+.descDeft p {
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: var(--regular);
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+.descDeft p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .txtDotList {
   padding: 10px 0;
 }
@@ -413,7 +452,7 @@ h3 {
   gap: 0 12px;
   line-height: 1.5;
   font-size: 20px;
-  font-weight: vaR(--regular);
+  font-weight: var(--regular);
   letter-spacing: -0.05em;
   color: var(--color-text);
 }
@@ -741,7 +780,7 @@ h3 {
   -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
   overflow: hidden; /* 넘치는 텍스트 숨김 */
   text-overflow: ellipsis; /* 말줄임 표시(...) 설정 */
-  -webkit-line-clamp: 2; /* 표시할 줄 수 (여기서는 2줄) */
+  line-clamp: 2; /* 표시할 줄 수 (여기서는 2줄) */
   line-height: 1.5;
   font-size: 17px;
   font-weight: var(--regular);
@@ -805,7 +844,9 @@ h3 {
 }
 
 /* custom */
-/* 교육수료증 발급 > 사원 제안하기 > 사업공모안내*/
+/* 교육수료증 발급 > 사원 제안하기 > 사업공모안내
+                                 > 교육수료증 발급
+*/
 .listCont {
   padding: 24px;
   border-radius: 16px;
@@ -892,6 +933,64 @@ h3 {
   .listCont + .inputWrap .btn::before {
     content: none;
   }
+}
+.listCont .circList {
+  padding: 10px 0;
+}
+@media screen and (min-width: 1160px) {
+  .listCont .circList ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 32px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .listCont .circList li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+.listCont .circList li:not(:last-child) {
+  margin: 0 auto 24px;
+}
+@media screen and (min-width: 1160px) {
+  .listCont .circList li:not(:last-child) {
+    margin: 0;
+  }
+}
+.listCont .circList li:not(:last-child)::after {
+  content: "";
+  display: block;
+  margin: 24px auto;
+  width: 32px;
+  height: 32px;
+  background: url(../images/visual-arrow-dot.svg) no-repeat center center/auto;
+  transform: rotate(90deg);
+}
+@media screen and (min-width: 1160px) {
+  .listCont .circList li:not(:last-child)::after {
+    margin: 36px 0 0 32px;
+    transform: inherit;
+  }
+}
+.listCont .circList li p::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+}
+.listCont .circList li:first-child p::before {
+  background: url(../images/visual-file-with-pen.svg) no-repeat #fff center center/auto;
+}
+.listCont .circList li:nth-child(2) p::before {
+  background: url(../images/visual-file-in-letter.svg) no-repeat #fff center center/auto;
+}
+.listCont .circList li:last-child p::before {
+  background: url(../images/visual-file-with-medal.svg) no-repeat #fff center center/auto;
 }
 
 /* 교육수료증 발급 - 비회원 로그인 ui */
