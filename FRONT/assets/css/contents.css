@@ -524,20 +524,16 @@ h3 {
   border-bottom: 1px solid var(--table-border);
   width: 100%;
 }
-@media screen and (min-width: 1160px) {
-  .tableDefault tbody {
-    display: inline-table;
+@media screen and (max-width: 1159px) {
+  .tableDefault tbody tr {
+    display: block;
   }
-}
-.tableDefault tbody tr {
-  display: block;
 }
 .tableDefault tbody tr:not(:first-child) {
   border-top: 1px solid var(--table-border);
 }
 .tableDefault tbody tr th,
 .tableDefault tbody tr td {
-  display: block;
   text-align: left;
   line-height: 1.2;
   font-size: 17px;
@@ -549,6 +545,12 @@ h3 {
   .tableDefault tbody tr td {
     display: table-cell;
     min-height: 56px;
+  }
+}
+@media screen and (max-width: 1159px) {
+  .tableDefault tbody tr th,
+  .tableDefault tbody tr td {
+    display: block;
   }
 }
 .tableDefault tbody tr th {
@@ -639,14 +641,15 @@ h3 {
 }
 
 /* tableBaord */
-[class*=table][class*=boardList] thead {
-  display: none;
-}
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] thead {
-    display: table-header-group;
     background: var(--table-bg);
     width: 100%;
+  }
+}
+@media screen and (max-width: 1159px) {
+  [class*=table][class*=boardList] thead {
+    display: none;
   }
 }
 [class*=table][class*=boardList] tbody {
@@ -667,14 +670,18 @@ h3 {
   }
 }
 [class*=table][class*=boardList] tbody tr td {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding: 10px 12px;
 }
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] tbody tr td {
     display: table-cell;
+  }
+}
+@media screen and (max-width: 1159px) {
+  [class*=table][class*=boardList] tbody tr td {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 }
 [class*=table][class*=boardList] tbody tr td .cellTit {
@@ -733,7 +740,7 @@ h3 {
 
 @media screen and (min-width: 1160px) {
   .pcW64 {
-    width: 190px;
+    width: 64px;
   }
 }
 

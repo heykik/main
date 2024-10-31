@@ -557,16 +557,17 @@ h3 {
         border-bottom:1px solid var(--table-border);
         width:100%;
         @media screen and (min-width:1160px) {
-            display:inline-table;
+            // display:inline-table;
         }
         tr{
-            display:block;
+            @media screen and (max-width:1159px) {
+                display:block;                
+            }
             &:not(:first-child){
                 border-top:1px solid var(--table-border);
             }
             th,
             td{
-                display:block;
                 text-align:left;
                 line-height:1.2;
                 font-size:17px;
@@ -575,6 +576,9 @@ h3 {
                 @media screen and (min-width:1160px){
                     display:table-cell;
                     min-height:56px;
+                }
+                @media screen and (max-width:1159px) {
+                    display:block;
                 }
             }
             th{
@@ -661,11 +665,12 @@ h3 {
 /* tableBaord */
 [class*="table"][class*="boardList"]{
     thead{
-        display:none;
         @media screen and (min-width:1160px) {
-            display:table-header-group;
             background:var(--table-bg);
             width:100%;
+        }
+        @media screen and (max-width:1159px) {
+            display:none;
         }
         th{
             @media screen and (min-width:1160px) {
@@ -687,12 +692,14 @@ h3 {
                 background:initial;
             }
             td{
-                display:flex;
-                align-items:flex-start;
-                justify-content:flex-start;
                 padding:10px 12px;
                 @media screen and (min-width:1160px) {
                     display:table-cell;
+                }
+                @media screen and (max-width:1159px) {
+                    display:flex;
+                    align-items:flex-start;
+                    justify-content:flex-start;
                 }
                 .cellTit{
                     display:inline-flex;
@@ -753,7 +760,7 @@ h3 {
 }
 .pcW64{
     @media screen and (min-width:1160px) {
-        width:190px;
+        width:64px;
     }
 }
 .pcW976{
