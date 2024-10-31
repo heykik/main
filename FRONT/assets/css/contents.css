@@ -84,6 +84,7 @@ h3 {
   justify-content: center;
   padding: 18px;
   border-radius: 8px;
+  width: -moz-max-content;
   width: max-content;
   height: 48px;
   line-height: 1.5;
@@ -134,11 +135,11 @@ h3 {
   color: var(--color-text);
 }
 .btnBorder::after {
+  display: block;
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  display: block;
   width: 100%;
   height: 1px;
 }
@@ -189,21 +190,23 @@ h3 {
 }
 .inputBox input,
 .inputBox select {
-  line-height: 1.5;
-  font-size: 20px;
-  font-weight: var(--regular);
-  letter-spacing: -0.03em;
-  color: var(--color-dark);
   padding: 0 10px;
+  border: 1px solid var(--gray60);
+  border-radius: 8px;
   width: 100%;
   height: 48px;
-  border-radius: 8px;
-  border: 1px solid var(--gray60);
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 20px;
+  font-weight: var(--regular);
+  color: var(--color-dark);
   box-sizing: border-box;
 }
 .inputBox select {
   background: url(../images/ico-arrow-dark-24.svg) no-repeat calc(100% - 10px) center/auto;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .inputBox input {
   display: flex;
@@ -364,17 +367,17 @@ h3 {
 }
 
 .titS h5 {
+  margin-bottom: 16px;
   line-height: 1.5;
+  letter-spacing: -0.03em;
   font-size: 20px;
   font-weight: var(--bold);
-  letter-spacing: -0.03em;
   color: var(--color-dark);
-  margin-bottom: 16px;
 }
 @media screen and (min-width: 1160px) {
   .titS h5 {
-    font-size: 24px;
     margin-bottom: 20px;
+    font-size: 24px;
   }
 }
 
@@ -386,9 +389,9 @@ h3 {
   gap: 0 10px;
 }
 [class*=tit][class*=Ico]::before {
-  content: "";
-  flex: 0 0 50px;
   display: block;
+  flex: 0 0 50px;
+  content: "";
   width: 50px;
   height: 50px;
 }
@@ -451,6 +454,7 @@ h3 {
   justify-content: flex-start;
   gap: 0 12px;
   line-height: 1.5;
+  letter-spacing: -0.05em;
   font-size: 20px;
   font-weight: var(--regular);
   letter-spacing: -0.05em;
@@ -460,30 +464,30 @@ h3 {
   margin-bottom: 12px;
 }
 .txtDotList li p::before {
-  content: "";
-  flex: 0 0 auto;
   display: block;
+  flex: 0 0 auto;
+  content: "";
   margin: 12px 4px;
+  border-radius: 20px;
   width: 6px;
   height: 6px;
   background: var(--color-red);
-  border-radius: 20px;
 }
 .txtDotList li.subMore span::before {
-  content: "-";
   display: inline-block;
+  content: "-";
 }
 .txtDotList li span {
   display: flex;
   align-items: baseline;
   justify-content: flex-start;
   gap: 0 4px;
+  padding: 0 0 0 20px;
   line-height: 1.5;
+  letter-spacing: -0.03em;
   font-size: 17px;
   font-weight: var(--regular);
-  letter-spacing: -0.03em;
   color: var(--color-text);
-  padding: 0 0 0 20px;
 }
 .txtDotList li span:not(:last-child) {
   margin-bottom: 4px;
@@ -491,49 +495,71 @@ h3 {
 
 /* paging */
 .paging {
-  margin-top: 24px;
+  margin-top: 34px;
 }
-.paging .inner {
+@media screen and (min-width: 1160px) {
+  .paging {
+    margin-top: 30px;
+  }
+}
+.paging .pageBox {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0 8px;
 }
-.paging .inner [class*=btn] {
+.paging .pageBox [class*=btn] {
   overflow: hidden;
+  width: 30px;
+  height: 30px;
   text-indent: -9999px;
-  width: 32px;
-  height: 40px;
 }
-.paging .inner [class*=btn][class*=First] {
-  background: url(../images/ico-dubbleArrow-gray-left.svg) no-repeat 4px center/auto;
+.paging .pageBox [class*=btn][class*=First] {
+  background: url(../images/ico-dubbleArrow-gray-left.svg) no-repeat center/auto;
 }
-.paging .inner [class*=btn][class*=Prev] {
-  background: url(../images/ico-arrow-gray-left-20.svg) no-repeat 4px center/auto;
+.paging .pageBox [class*=btn][class*=Prev] {
+  background: url(../images/ico-arrow-gray-left-20.svg) no-repeat center/auto;
 }
-.paging .inner [class*=btn][class*=Next] {
-  background: url(../images/ico-arrow-gray-right-20.svg) no-repeat calc(100% - 4px) center/auto;
+.paging .pageBox [class*=btn][class*=Next] {
+  background: url(../images/ico-arrow-gray-right-20.svg) no-repeat center/auto;
 }
-.paging .inner [class*=btn][class*=Last] {
-  background: url(../images/ico-dubbleArrow-gray-right.svg) no-repeat calc(100% - 4px) center/auto;
+.paging .pageBox [class*=btn][class*=Last] {
+  background: url(../images/ico-dubbleArrow-gray-right.svg) no-repeat center/auto;
 }
-.paging .inner .page strong {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  white-space: nowrap;
+@media screen and (min-width: 1160px) {
+  .paging .pageBox [class*=btn] {
+    width: 40px;
+    height: 40px;
+  }
 }
-.paging .inner .page .slashDash {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 40px;
+.paging .pageBox .page {
+  display: flex;
+  gap: 8px;
 }
-
+.paging .pageBox .page strong {
+  border-bottom: 2px solid var(--color-red);
+  font-weight: var(--bold);
+  color: var(--color-red);
+}
+.paging .pageBox .page * {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 17px;
+  color: var(--text-color);
+}
+@media screen and (min-width: 1160px) {
+  .paging .pageBox .page * {
+    width: 40px;
+    height: 40px;
+  }
+}
+.paging .pageBox .page .omission {
+  text-indent: -9999px;
+  background: url("../images/ico-omission.svg") no-repeat center/auto;
+}
 /* tableDefault */
 .tableDefault {
   position: relative;
@@ -573,11 +599,11 @@ h3 {
 }
 .tableDefault tbody tr th,
 .tableDefault tbody tr td {
+  width: 100%;
   text-align: left;
   line-height: 1.2;
   font-size: 17px;
   color: var(--color-dark);
-  width: 100%;
 }
 @media screen and (min-width: 1160px) {
   .tableDefault tbody tr th,
@@ -619,6 +645,9 @@ h3 {
   color: var(--color-dark);
   box-sizing: border-box;
 }
+.tableDefault tbody tr td input::-moz-placeholder, .tableDefault tbody tr td textarea::-moz-placeholder {
+  color: var(--color-text);
+}
 .tableDefault tbody tr td input::placeholder,
 .tableDefault tbody tr td textarea::placeholder {
   color: var(--color-text);
@@ -628,9 +657,9 @@ h3 {
 }
 .tableDefault tbody tr td .prevFileInput {
   margin-top: 8px;
+  border-style: none;
   color: var(--color-disabled);
   background: var(--gray5);
-  border-style: none;
 }
 .tableDefault tbody tr td textarea {
   padding: 10px;
@@ -682,8 +711,8 @@ h3 {
 /* tableBaord */
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] thead {
-    width: 100%;
     border-bottom: 1px solid var(--talbe-border);
+    width: 100%;
     background: var(--table-bg);
   }
 }
@@ -693,12 +722,12 @@ h3 {
   }
 }
 [class*=table][class*=boardList] thead tr th {
+  padding: 11px 0;
   line-height: 1.5;
+  letter-spacing: -0.03em;
   font-size: 17px;
   font-weight: var(--bold);
   color: var(--color-dark);
-  letter-spacing: -0.03em;
-  padding: 11px 0;
 }
 [class*=table][class*=boardList] tbody {
   border-bottom: 1px solid var(--color-dark);
@@ -733,8 +762,8 @@ h3 {
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] tbody tr td {
     display: table-cell;
-    border-style: none;
     padding: 15px 12px;
+    border-style: none;
   }
 }
 @media screen and (max-width: 1159px) {
@@ -749,16 +778,16 @@ h3 {
   align-items: center;
   justify-content: flex-start;
   flex: 0 0 80px;
-  line-height: 1.5;
-  font-size: 17px;
-  font-weight: var(--bold);
-  letter-spacing: -0.03em;
-  color: var(--color-dark);
-  padding: 8px 4px;
   margin-right: 8px;
+  padding: 8px 4px;
+  border-right: 1px solid var(--table-border);
   width: 80px;
   height: 100%;
-  border-right: 1px solid var(--table-border);
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 17px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
   box-sizing: border-box;
 }
 @media screen and (min-width: 1160px) {
@@ -767,8 +796,8 @@ h3 {
   }
 }
 [class*=table][class*=boardList] tbody tr td p {
-  line-height: 1.5;
   padding: 10px 0;
+  line-height: 1.5;
 }
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] tbody tr td p {
@@ -777,18 +806,18 @@ h3 {
 }
 [class*=table][class*=boardList] tbody tr td .titHover {
   display: -webkit-box; /* 플렉스박스처럼 박스를 만듭니다 */
-  -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
   overflow: hidden; /* 넘치는 텍스트 숨김 */
   text-overflow: ellipsis; /* 말줄임 표시(...) 설정 */
-  line-clamp: 2; /* 표시할 줄 수 (여기서는 2줄) */
-  line-height: 1.5;
-  font-size: 17px;
-  font-weight: var(--regular);
-  letter-spacing: -0.03em;
-  color: var(--color-text);
   margin: 10px 0;
   max-height: 3em;
   text-decoration: underline;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--color-text);
+  -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
+  -webkit-line-clamp: 2; /* 표시할 줄 수 (여기서는 2줄) */
   text-decoration-color: var(--color-text);
 }
 @media screen and (min-width: 1160px) {
@@ -848,10 +877,10 @@ h3 {
                                  > 교육수료증 발급
 */
 .listCont {
+  margin-bottom: 64px;
   padding: 24px;
   border-radius: 16px;
   background: var(--gray5);
-  margin-bottom: 64px;
 }
 @media screen and (min-width: 1160px) {
   .listCont {
@@ -868,8 +897,8 @@ h3 {
   position: relative;
 }
 .listCont > div:first-child::after {
-  content: "";
   display: block;
+  content: "";
   margin: 24px 0;
   width: 100%;
   height: 1px;
@@ -892,17 +921,17 @@ h3 {
 }
 @media screen and (min-width: 1160px) {
   .listCont + .inputWrap {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    position: relative;
     margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 1160px) {
   .listCont + .inputWrap select {
-    width: 120px;
     margin-right: 10px;
+    width: 120px;
   }
 }
 @media screen and (min-width: 1160px) {
@@ -911,23 +940,23 @@ h3 {
   }
 }
 .listCont + .inputWrap .btn::before {
-  content: "";
   display: block;
+  content: "";
+  margin-right: 4px;
   width: 20px;
   height: 20px;
   background: url(../images/ico-search-white-20.svg) no-repeat center center/contain;
-  margin-right: 4px;
 }
 @media screen and (min-width: 1160px) {
   .listCont + .inputWrap .btn {
     position: absolute;
     top: 13px;
     right: 10px;
-    text-indent: -9999px;
     overflow: hidden;
     padding: 0;
     width: 24px;
     height: 24px;
+    text-indent: -9999px;
     background: url(../images/ico-search-24.svg) #fff no-repeat center center/contain;
   }
   .listCont + .inputWrap .btn::before {

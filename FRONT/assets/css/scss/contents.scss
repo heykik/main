@@ -118,12 +118,12 @@ h3 {
     font-size:17px;
     font-weight:var(--regular);
     color:var(--color-text);
-    &::after{
+    &::after{    
+        display:block;
         content:"";
         position:absolute;
         bottom:0;
-        left:0;    
-        display:block;
+        left:0;
         width:100%;
         height:1px;
     }
@@ -177,16 +177,16 @@ h3 {
     margin-bottom:10px;
     input,
     select{
-        line-height:1.5;
-        font-size:20px;
-        font-weight:var(--regular);
-        letter-spacing:-0.03em;
-        color:var(--color-dark);
         padding:0 10px;
+        border:1px solid var(--gray60);
+        border-radius:8px;
         width:100%;
         height:48px;
-        border-radius:8px;
-        border:1px solid var(--gray60);
+        line-height:1.5;
+        letter-spacing:-0.03em;
+        font-size:20px;
+        font-weight:var(--regular);
+        color:var(--color-dark);
         box-sizing:border-box;
     }
     select{
@@ -388,15 +388,15 @@ h3 {
 // }
 .titS{
     h5{
+        margin-bottom:16px;
         line-height:1.5;
+        letter-spacing:-0.03em;
         font-size:20px;   
         font-weight:var(--bold);
-        letter-spacing:-0.03em;
         color:var(--color-dark);
-        margin-bottom:16px;
         @media screen and (min-width:1160px) {
-            font-size:24px;
             margin-bottom:20px;
+            font-size:24px;
         }
     }
 }
@@ -409,9 +409,9 @@ h3 {
         justify-content:flex-start;
         gap:0 10px;
         &::before{
-            content:"";
-            flex:0 0 50px;
             display:block;
+            flex:0 0 50px;
+            content:"";
             width:50px;
             height:50px;
         }
@@ -461,6 +461,7 @@ h3 {
             justify-content:flex-start;
             gap:0 12px;
             line-height:1.5;
+            letter-spacing:-0.05em;
             font-size:20px;
             font-weight:var(--regular);
             letter-spacing:-0.05em;
@@ -469,21 +470,21 @@ h3 {
                 margin-bottom:12px;
             }
             &::before{
-                content:"";
-                flex:0 0 auto;
                 display:block;
+                flex:0 0 auto;
+                content:"";
                 margin:12px 4px;
+                border-radius:20px;
                 width:6px;
                 height:6px;
                 background:var(--color-red);
-                border-radius:20px;
             }
         }
         &.subMore{
             span{
                 &::before{
-                    content:"-";
                     display:inline-block;
+                    content:"-";
                 }
             }
         }
@@ -492,12 +493,12 @@ h3 {
             align-items:baseline;
             justify-content:flex-start;
             gap:0 4px;
+            padding: 0 0 0 20px;
             line-height:1.5;
+            letter-spacing:-0.03em;
             font-size:17px;
             font-weight:var(--regular);
-            letter-spacing:-0.03em;
             color:var(--color-text);
-            padding: 0 0 0 20px;
             &:not(:last-child){
                 margin-bottom:4px;
             }
@@ -507,48 +508,66 @@ h3 {
 
 /* paging */
 .paging{
-    margin-top:24px;
-    .inner{
+    margin-top:34px;
+    @media screen and (min-width:1160px) {
+        margin-top:30px;
+    }
+    .pageBox{
         display:flex;
         align-items:center;
-        justify-content:center;
+        justify-content:center; 
         gap:0 8px;
         [class*="btn"]{
             overflow:hidden;
+            width:30px;
+            height:30px;
             text-indent:-9999px;
-            width:32px;
-            height:40px;
             &[class*="First"]{
-                background:url(../images/ico-dubbleArrow-gray-left.svg) no-repeat 4px center / auto;
+                background:url(../images/ico-dubbleArrow-gray-left.svg) no-repeat center / auto;
             }
             &[class*="Prev"]{
-                background:url(../images/ico-arrow-gray-left-20.svg) no-repeat 4px center / auto;
+                background:url(../images/ico-arrow-gray-left-20.svg) no-repeat center / auto;
             }
             &[class*="Next"]{
-                background:url(../images/ico-arrow-gray-right-20.svg) no-repeat calc(100% - 4px) center / auto;
+                background:url(../images/ico-arrow-gray-right-20.svg) no-repeat center / auto;
             }
             &[class*="Last"]{
-                background:url(../images/ico-dubbleArrow-gray-right.svg) no-repeat calc(100% - 4px) center / auto;
+                background:url(../images/ico-dubbleArrow-gray-right.svg) no-repeat center / auto;
+            }
+            @media screen and (min-width:1160px) {
+                width:40px;
+                height:40px;
             }
         }
         .page{
+            display: flex;
+            gap: 8px;
             strong{
-                display:inline-flex;
-                align-items:center;
-                justify-content:center;
-                padding:10px;
-                width:40px;
-                height:40px;
-                white-space:nowrap;
+                border-bottom: 2px solid var(--color-red);
+                font-weight: var(--bold);
+                color: var(--color-red);
             }
-            .slashDash{
-                display:inline-flex;
-                align-items:center;
-                justify-content:center;            
-                width:20px;
-                height:40px;
+            * {
+                display: block;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                font-size: 17px;
+                color: var(--text-color);
+                @media screen and (min-width:1160px) {
+                    width:40px;
+                    height:40px;
+                }
+            }
+            .omission {
+                text-indent: -9999px;
+                background: url("../images/ico-omission.svg") no-repeat center / auto;
             }
         }
+    }
+    @media screen and (min-width:1160px) {
+
     }
 }
 
@@ -591,11 +610,11 @@ h3 {
             }
             th,
             td{
+                width:100%;
                 text-align:left;
                 line-height:1.2;
                 font-size:17px;
                 color:var(--color-dark);
-                width:100%;
                 @media screen and (min-width:1160px){
                     display:table-cell;
                     min-height:56px;
@@ -636,9 +655,9 @@ h3 {
                 }
                 .prevFileInput{
                     margin-top:8px;
+                    border-style:none;
                     color:var(--color-disabled);
                     background:var(--gray5);
-                    border-style:none;
                 }
                 textarea{
                     padding:10px;
@@ -689,8 +708,8 @@ h3 {
 [class*="table"][class*="boardList"]{
     thead{
         @media screen and (min-width:1160px) {
-            width:100%;
             border-bottom:1px solid var(--talbe-border);
+            width:100%;
             background:var(--table-bg);
         }
         @media screen and (max-width:1159px) {
@@ -698,12 +717,12 @@ h3 {
         }
         tr{
             th{
+                padding:11px 0;
                 line-height:1.5;
+                letter-spacing:-0.03em;
                 font-size:17px;
                 font-weight:var(--bold);
                 color:var(--color-dark);
-                letter-spacing:-0.03em;
-                padding:11px 0;
             }
         }
     }
@@ -730,8 +749,8 @@ h3 {
                 padding:10px 12px;
                 @media screen and (min-width:1160px) {
                     display:table-cell;
-                    border-style:none;
                     padding:15px 12px;
+                    border-style:none;
                 }
                 @media screen and (max-width:1159px) {
                     display:flex;
@@ -742,43 +761,43 @@ h3 {
                     display:inline-flex;
                     align-items:center;
                     justify-content:flex-start;
-                    flex:0 0 80px;
-                    line-height:1.5;
-                    font-size:17px;
-                    font-weight:var(--bold);
-                    letter-spacing:-0.03em;
-                    color:var(--color-dark);
-                    padding:8px 4px;      
-                    margin-right:8px;  
+                    flex:0 0 80px;      
+                    margin-right:8px;
+                    padding:8px 4px;
+                    border-right:1px solid var(--table-border);  
                     width:80px;          
                     height:100%;
-                    border-right:1px solid var(--table-border);
+                    line-height:1.5;
+                    letter-spacing:-0.03em;
+                    font-size:17px;
+                    font-weight:var(--bold);
+                    color:var(--color-dark);
                     box-sizing:border-box;
                     @media screen and (min-width:1160px) {
                         display:none;
                     }
                 }
                 p{
-                    line-height:1.5;
                     padding:10px 0;
+                    line-height:1.5;
                     @media screen and (min-width:1160px) {
                         padding:0;
                     }
                 }
                 .titHover{
                     display: -webkit-box;        /* 플렉스박스처럼 박스를 만듭니다 */
-                    -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
                     overflow: hidden;             /* 넘치는 텍스트 숨김 */
                     text-overflow: ellipsis;      /* 말줄임 표시(...) 설정 */
-                    line-clamp: 2;        /* 표시할 줄 수 (여기서는 2줄) */
-                    line-height:1.5;
-                    font-size:17px;
-                    font-weight:var(--regular);
-                    letter-spacing:-0.03em;
-                    color:var(--color-text);
                     margin:10px 0;
                     max-height: calc(1.5em * 2); 
                     text-decoration:underline;
+                    line-height:1.5;
+                    letter-spacing:-0.03em;
+                    font-size:17px;
+                    font-weight:var(--regular);
+                    color:var(--color-text);
+                    -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
+                    -webkit-line-clamp: 2;        /* 표시할 줄 수 (여기서는 2줄) */
                     text-decoration-color:var(--color-text);
                     @media screen and (min-width:1160px) {
                         margin:0;
@@ -837,10 +856,10 @@ h3 {
                                  > 교육수료증 발급
 */
 .listCont{
+    margin-bottom:64px;
     padding:24px;
     border-radius:16px;
     background:var(--gray5);
-    margin-bottom:64px;
     @media screen and (min-width:1160px) {
         display:flex;
         align-items:flex-start;
@@ -853,8 +872,8 @@ h3 {
     > div:first-child{
         position:relative;
         &::after{
-            content:"";
             display:block;
+            content:"";
             margin:24px 0;
             width:100%;
             height:1px;
@@ -876,16 +895,16 @@ h3 {
     }
     + .inputWrap{
         @media screen and (min-width:1160px) {
-            position:relative;
             display:flex;
             align-items:center;
             justify-content:flex-end;
+            position:relative;
             margin-bottom:40px;
         }
         select{
             @media screen and (min-width:1160px) {
-                width:120px;
-                margin-right:10px;            
+                margin-right:10px;
+                width:120px;            
             }
         }
         input{
@@ -895,12 +914,12 @@ h3 {
         }
         .btn{
             &::before{
-                content:"";
                 display:block;
+                content:"";
+                margin-right:4px;
                 width:20px;
                 height:20px;
                 background:url(../images/ico-search-white-20.svg) no-repeat center center / contain;
-                margin-right:4px;
             }
             @media screen and (min-width:1160px) {
                 &::before{
@@ -909,11 +928,11 @@ h3 {
                 position:absolute;
                 top:13px;
                 right:10px;
-                text-indent:-9999px;
                 overflow:hidden;
                 padding:0;
                 width:24px;
                 height:24px;
+                text-indent:-9999px;
                 background:url(../images/ico-search-24.svg) #fff no-repeat center center / contain;
             }
         }
