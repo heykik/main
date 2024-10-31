@@ -666,24 +666,36 @@ h3 {
 [class*="table"][class*="boardList"]{
     thead{
         @media screen and (min-width:1160px) {
-            background:var(--table-bg);
             width:100%;
+            border-bottom:1px solid var(--talbe-border);
+            background:var(--table-bg);
         }
         @media screen and (max-width:1159px) {
             display:none;
         }
-        th{
-            @media screen and (min-width:1160px) {
-                
+        tr{
+            th{
+                line-height:1.5;
+                font-size:17px;
+                font-weight:var(--bold);
+                color:var(--color-dark);
+                letter-spacing:-0.03em;
+                padding:11px 0;
             }
         }
     }
     tbody{
         border-bottom:1px solid var(--color-dark);
+        @media screen and (min-width:1160px) {
+            border-bottom:1px solid var(--table-border);
+        }
         tr{
             background:var(--table-bg);
             &:not(:last-child){
                 border-bottom:1px solid var(--color-dark);
+                @media screen and (min-width:1160px) {
+                    border-bottom:1px solid var(--table-border);
+                }
             }
             &:nth-child(2n){
                 background:var(--color-white);
@@ -695,6 +707,8 @@ h3 {
                 padding:10px 12px;
                 @media screen and (min-width:1160px) {
                     display:table-cell;
+                    border-style:none;
+                    padding:15px 12px;
                 }
                 @media screen and (max-width:1159px) {
                     display:flex;
@@ -724,6 +738,9 @@ h3 {
                 p{
                     line-height:1.5;
                     padding:10px 0;
+                    @media screen and (min-width:1160px) {
+                        padding:0;
+                    }
                 }
                 .titHover{
                     display: -webkit-box;        /* 플렉스박스처럼 박스를 만듭니다 */
@@ -740,11 +757,19 @@ h3 {
                     max-height: calc(1.5em * 2); 
                     text-decoration:underline;
                     text-decoration-color:var(--color-text);
+                    @media screen and (min-width:1160px) {
+                        margin:0;
+                    }
                     &:hover,
                     &:active,
                     &:focus{
                         color:var(--color-red);
                         text-decoration-color:var(--color-red);
+                    }
+                }
+                &:not(:has(.titHover)){
+                    @media screen and (min-width:1160px) {
+                        text-align:center;
                     }
                 }
             }
