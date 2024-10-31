@@ -66,8 +66,7 @@ h3 {
     }
     &[class*="sideRight"]{
         justify-content:flex-end;
-    }
-    
+    }   
 }
 .btn{
     display:inline-flex;
@@ -79,8 +78,7 @@ h3 {
     height:48px;
     line-height:1.5;
     font-size:17px;
-    box-sizing:border-box;
-    
+    box-sizing:border-box;    
     &[class*="sm"]{
         white-space:nowrap;
         padding:8px 10px;
@@ -95,26 +93,47 @@ h3 {
         line-height:1.5;
         font-size:20px;
     }
+    &[class*="full"]{
+        width:100%;
+    }
 }
-
 .btnDefault{
     border:1px solid var(--color-dark);
     font-weight:var(--regular);
     color:var(--color-dark);
 }
-
 .btnGray{
     font-weight:var(--bold);
     color:var(--color-white);
     background:var(--gray50);
 }
-
 .btnRed{
     font-weight:var(--bold);
     color:var(--color-white);
     background:var(--color-red);
 }
-
+.btnBorder{
+    position:relative;
+    line-height:normal;
+    font-size:17px;
+    font-weight:var(--regular);
+    color:var(--color-text);
+    &::after{
+        content:"";
+        position:absolute;
+        bottom:0;
+        left:0;    
+        display:block;
+        width:100%;
+        height:1px;
+    }
+    &[class*="gray"]::after{
+        background:var(--color-text);
+    }
+    &[class*="red"]::after{
+        background:var(--color-text);
+    }
+}
 .btnLink {
     display: inline-block;
     padding: 16px 20px;
@@ -129,7 +148,6 @@ h3 {
         background: url("/assets/images/common/btn-arrow.png") no-repeat center right/20px auto;
     }
 }
-
 .btnRemove{
     display:block;
     position:absolute;
@@ -143,10 +161,6 @@ h3 {
     transform:translateY(-50%);
 }
 /* //버튼 */
-
-br.moOnly{display:initial;}
-
-
 @media (max-width: 1160px) {
     
 }
@@ -155,6 +169,35 @@ br.moOnly{display:initial;}
         span {
             font-size: 21px
         }
+    }
+}
+
+/* inputBox default */
+.inputBox{
+    margin-bottom:10px;
+    input,
+    select{
+        line-height:1.5;
+        font-size:20px;
+        font-weight:var(--regular);
+        letter-spacing:-0.03em;
+        color:var(--color-dark);
+        padding:0 10px;
+        width:100%;
+        height:48px;
+        border-radius:8px;
+        border:1px solid var(--gray60);
+        box-sizing:border-box;
+    }
+    select{
+        background:url(../images/ico-arrow-dark-24.svg) no-repeat calc(100% - 10px) center / auto;
+        appearance:none;
+    }
+    input{
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+        text-align:left;        
     }
 }
 
@@ -254,7 +297,12 @@ br.moOnly{display:initial;}
     margin-top:80px;
     padding:24px 16px 120px;
     width:100%;
+    max-width:1520px;
     min-height:50vh;
+    @media screen and (min-width:1160px) {
+        margin:100px auto 0;
+        padding:0 0 120px;
+    }
 }
 
 /* sitemap */
@@ -301,10 +349,18 @@ br.moOnly{display:initial;}
             background:url(../images/common/ico-sitemap-home.svg) no-repeat center center / contain;
         }
     }
+    @media screen and (min-width:1160px){
+        padding: 40px 0;
+    }
 }
 
 /* content */
 .content{
+    
+}
+
+/* titles */
+.titL{
     h2{
         margin-bottom:64px;
         line-height:1.5;
@@ -312,21 +368,164 @@ br.moOnly{display:initial;}
         font-size:32px;
         font-weight:var(--bold);
         color:var(--color-dark);
+        @media screen and (min-width:1160px){
+            margin: 0 0 80px;
+        }
     }
 }
-/* 교육수료증 발급 - 비회원 로그인 ui */
-.certificateBox{
-    padding:20px 40px;
-    .txt{
-        white-space:nowrap;
-        margin-top:20px;
+// .titM{ 모바일 미정
+//     h2{
+//         line-height:1.5;
+//         letter-spacing:-0.03em;
+//         font-size:32px;
+//         font-weight:var(--bold);
+//         color:var(--color-dark);
+//         margin-bottom:64px;
+//         @media screen and (min-width:1160px){
+//             margin: 0 0 80px;
+//         }
+//     }
+// }
+.titS{
+    h5{
         line-height:1.5;
-        font-size:20px;
-        font-weight:var(--regular);
+        font-size:20px;   
+        font-weight:var(--bold);
+        letter-spacing:-0.03em;
         color:var(--color-dark);
+        margin-bottom:16px;
+        @media screen and (min-width:1160px) {
+            font-size:24px;
+            margin-bottom:20px;
+        }
     }
-    .btnBox{
-        margin-top:60px;
+}
+
+/* icon titles */
+[class*="tit"]{
+    &[class*="Ico"]{
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+        gap:0 10px;
+        &::before{
+            content:"";
+            flex:0 0 50px;
+            display:block;
+            width:50px;
+            height:50px;
+        }
+        &[class*="Puzzle"]::before{
+            background:url(../images/ico-puzzle-50.svg) no-repeat center center / contain;
+        }
+        &[class*="GiveFile"]::before{
+            background:url(../images/ico-giveFile-50.svg) no-repeat center center /contain;
+        }
+        // &[class*="]::before{
+
+        // }
+    }
+}
+
+/* text description */
+.txtDotList{
+    padding:10px 0;
+    li{
+        margin-bottom:12px;
+        p{
+            display:flex;
+            align-items:flex-start;
+            justify-content:flex-start;
+            gap:0 12px;
+            line-height:1.5;
+            font-size:20px;
+            font-weight:vaR(--regular);
+            letter-spacing:-0.05em;
+            color:var(--color-text);
+            &:not(:last-child){
+                margin-bottom:12px;
+            }
+            &::before{
+                content:"";
+                flex:0 0 auto;
+                display:block;
+                margin:12px 4px;
+                width:6px;
+                height:6px;
+                background:var(--color-red);
+                border-radius:20px;
+            }
+        }
+        &.subMore{
+            span{
+                &::before{
+                    content:"-";
+                    display:inline-block;
+                }
+            }
+        }
+        span{
+            display:flex;
+            align-items:baseline;
+            justify-content:flex-start;
+            gap:0 4px;
+            line-height:1.5;
+            font-size:17px;
+            font-weight:var(--regular);
+            letter-spacing:-0.03em;
+            color:var(--color-text);
+            padding: 0 0 0 20px;
+            &:not(:last-child){
+                margin-bottom:4px;
+            }
+        }
+    }
+}
+
+/* paging */
+.paging{
+    margin-top:24px;
+    .inner{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:0 8px;
+        [class*="btn"]{
+            overflow:hidden;
+            text-indent:-9999px;
+            width:32px;
+            height:40px;
+            &[class*="First"]{
+                background:url(../images/ico-dubbleArrow-gray-left.svg) no-repeat 4px center / auto;
+            }
+            &[class*="Prev"]{
+                background:url(../images/ico-arrow-gray-left-20.svg) no-repeat 4px center / auto;
+            }
+            &[class*="Next"]{
+                background:url(../images/ico-arrow-gray-right-20.svg) no-repeat calc(100% - 4px) center / auto;
+            }
+            &[class*="Last"]{
+                background:url(../images/ico-dubbleArrow-gray-right.svg) no-repeat calc(100% - 4px) center / auto;
+            }
+        }
+        .page{
+            strong{
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                padding:10px;
+                width:40px;
+                height:40px;
+                white-space:nowrap;
+            }
+            .slashDash{
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;            
+                width:20px;
+                height:40px;
+            }
+        }
     }
 }
 
@@ -345,7 +544,7 @@ br.moOnly{display:initial;}
     }
     table{
         border-top:1px solid var(--table-top);
-        border-bottom:1px solid vaR(--border-bottom);
+        border-bottom:1px solid var(--border-bottom);
         width:100%;
         .required::before{
             content:"*";
@@ -355,8 +554,11 @@ br.moOnly{display:initial;}
         }
     }
     tbody{
-        display:block;
         border-bottom:1px solid var(--table-border);
+        width:100%;
+        @media screen and (min-width:1160px) {
+            display:inline-table;
+        }
         tr{
             display:block;
             &:not(:first-child){
@@ -369,12 +571,22 @@ br.moOnly{display:initial;}
                 line-height:1.2;
                 font-size:17px;
                 color:var(--color-dark);
+                width:100%;
+                @media screen and (min-width:1160px){
+                    display:table-cell;
+                    min-height:56px;
+                }
             }
             th{
                 padding:12px 8px;
                 font-weight:var(--bold);
                 background:var(--table-bg);
-
+                @media screen and (min-width:1160px){
+                    border-right:1px solid var(--border-color);
+                    width:200px;
+                    text-align:center;
+                    vertical-align:middle;
+                }
             }
             td{
                 padding:12px;
@@ -406,6 +618,10 @@ br.moOnly{display:initial;}
                     min-height:168px;
                     font-family:inherit;
                     resize:none;
+                    @media screen and (min-width:1160px){
+                        min-height:240px;
+                        resize:inherit;
+                    }
                 }
                 p{
                     padding:6px 10px;
@@ -422,21 +638,106 @@ br.moOnly{display:initial;}
                     }
                 }
                 a[download]{
-                    position:relative;
                     line-height:1.2;
                     letter-spacing:-0.03em;
+                }
+                @media screen and (min-width:1160px){
+                    width:auto;
+                    &:not(:last-child){
+                        border-right:1px solid vaR(--table-border);
+                    }
+                }
+            }
+            @media screen and (min-width:1160px) {
+                display:table-row;
+                .hMin240{
+                    min-height:216px;
+                }
+            }
+        }
+    }
+}
+
+/* tableBaord */
+[class*="table"][class*="boardList"]{
+    thead{
+        display:none;
+        @media screen and (min-width:1160px) {
+            display:table-header-group;
+            background:var(--table-bg);
+            width:100%;
+        }
+        th{
+            @media screen and (min-width:1160px) {
+                
+            }
+        }
+    }
+    tbody{
+        border-bottom:1px solid var(--color-dark);
+        tr{
+            background:var(--table-bg);
+            &:not(:last-child){
+                border-bottom:1px solid var(--color-dark);
+            }
+            &:nth-child(2n){
+                background:var(--color-white);
+            }
+            @media screen and (min-width:1160px) {
+                background:initial;
+            }
+            td{
+                display:flex;
+                align-items:flex-start;
+                justify-content:flex-start;
+                padding:10px 12px;
+                @media screen and (min-width:1160px) {
+                    display:table-cell;
+                }
+                .cellTit{
+                    display:inline-flex;
+                    align-items:center;
+                    justify-content:flex-start;
+                    flex:0 0 80px;
+                    line-height:1.5;
+                    font-size:17px;
+                    font-weight:var(--bold);
+                    letter-spacing:-0.03em;
+                    color:var(--color-dark);
+                    padding:8px 4px;      
+                    margin-right:8px;  
+                    width:80px;          
+                    height:100%;
+                    border-right:1px solid var(--table-border);
+                    box-sizing:border-box;
+                    @media screen and (min-width:1160px) {
+                        display:none;
+                    }
+                }
+                p{
+                    line-height:1.5;
+                    padding:10px 0;
+                }
+                .titHover{
+                    display: -webkit-box;        /* 플렉스박스처럼 박스를 만듭니다 */
+                    -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
+                    overflow: hidden;             /* 넘치는 텍스트 숨김 */
+                    text-overflow: ellipsis;      /* 말줄임 표시(...) 설정 */
+                    -webkit-line-clamp: 2;        /* 표시할 줄 수 (여기서는 2줄) */
+                    line-height:1.5;
                     font-size:17px;
                     font-weight:var(--regular);
+                    letter-spacing:-0.03em;
                     color:var(--color-text);
-                    &::after{
-                        display:block;
-                        content:"";
-                        position:absolute;
-                        bottom:0;
-                        left:0;
-                        width:100%;
-                        height:1px;
-                        background:var(--color-text);
+                    margin:10px 0;
+                    max-height: calc(1.5em * 2); 
+                    text-decoration:underline;
+                    text-decoration-color:var(--color-text);
+                    &:hover,
+                    &:active,
+                    &:focus{
+                        color:var(--color-red);
+                        text-decoration-color:var(--color-red);
                     }
                 }
             }
@@ -444,64 +745,135 @@ br.moOnly{display:initial;}
     }
 }
 
-/* pc */
-@media screen and (min-width:1160px) {
-    br.moOnly{display:none;}
-    #container{
-        margin:100px auto 0;
-        padding:0 0 120px;
-        width:1520px;
+/* table cell size */
+.pcW360{
+    @media screen and (min-width:1160px){
+        width:360px !important;
     }
-    .sitemap{
-        padding: 40px 0;
+}
+.pcW64{
+    @media screen and (min-width:1160px) {
+        width:190px;
     }
-    .titWrap{
-        h2{
-            margin: 0 0 80px;
-        }
+}
+.pcW976{
+    @media screen and (min-width:1160px) {
+        width:976px;
     }
-    /* tableDefault-pc */
-    .tableDefault{
-        tbody{
-            tr{
-                display:table-row;
-                th,
-                td{         
-                    display:table-cell;
-                    min-height:56px;
-                }
-                th{
-                    border-right:1px solid var(--border-color);
-                    width:200px;
-                    text-align:center;
-                    vertical-align:middle;
-                }
-                td{
-                    width:1320px;
-                    &.divide{
-                        width:306px;
-                        &:not(:last-child){
-                            border-right:1px solid var(--table-border);
-                        }
-                    }
-                    textarea{
-                        min-height:240px;
-                        resize:inherit;
-                    }
-                }
-            }
-            .hMin240{
-                min-height:216px;
-            }
-        }
+}
+.pcW120{
+    @media screen and (min-width:1160px) {
+        width:120px;
     }
-    /* // tableDefault-pc */
+}
+.pcW240{
+    @media screen and (min-width:1160px) {
+        width:240px;
+    }
+}
+.pcW120{
+    @media screen and (min-width:1160px) {
+        width:120px;
+    }
+}
 
-    /* 교육수료증 발급 - 비회원 로그인 ui */
-    .certificateBox{
-        .txt{
+/* custom */
+/* 교육수료증 발급 > 사원 제안하기 > 사업공모안내*/
+.listCont{
+    padding:24px;
+    border-radius:16px;
+    background:var(--gray5);
+    margin-bottom:64px;
+    @media screen and (min-width:1160px) {
+        display:flex;
+        align-items:flex-start;
+        justify-content:space-between;
+        margin-bottom:80px;
+    }
+    > div {
+        flex:0 0 calc(50% - 24px);
+    }
+    > div:first-child{
+        position:relative;
+        &::after{
+            content:"";
+            display:block;
+            margin:24px 0;
+            width:100%;
+            height:1px;
+            background:var(--table-border);
+            @media screen and (min-width:1160px) {
+                position:absolute;
+                top:0;
+                right:-24px;
+                margin:0;
+                width:1px;
+                height:100%;
+            }
         }
-        .btnBox{
+    }
+    .txtDotList{
+        @media screen and (min-width:1160px) {
+            padding:10px 16px;
+        }        
+    }
+    + .inputWrap{
+        @media screen and (min-width:1160px) {
+            position:relative;
+            display:flex;
+            align-items:center;
+            justify-content:flex-end;
+            margin-bottom:40px;
         }
+        select{
+            @media screen and (min-width:1160px) {
+                width:120px;
+                margin-right:10px;            
+            }
+        }
+        input{
+            @media screen and (min-width:1160px) {
+                width:360px;
+            }
+        }
+        .btn{
+            &::before{
+                content:"";
+                display:block;
+                width:20px;
+                height:20px;
+                background:url(../images/ico-search-white-20.svg) no-repeat center center / contain;
+                margin-right:4px;
+            }
+            @media screen and (min-width:1160px) {
+                &::before{
+                    content:none;
+                }
+                position:absolute;
+                top:13px;
+                right:10px;
+                text-indent:-9999px;
+                overflow:hidden;
+                padding:0;
+                width:24px;
+                height:24px;
+                background:url(../images/ico-search-24.svg) #fff no-repeat center center / contain;
+            }
+        }
+    }
+}
+/* 교육수료증 발급 - 비회원 로그인 ui */
+.certificateBox{
+    padding:20px 40px;
+    .txt{
+        white-space:nowrap;
+        margin-top:20px;
+        line-height:1.5;
+        font-size:20px;
+        font-weight:var(--regular);
+        color:var(--color-dark);
+    }
+    .btnBox{
+        margin-top:60px;
     }
 }
