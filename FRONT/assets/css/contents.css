@@ -643,8 +643,9 @@ h3 {
 /* tableBaord */
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] thead {
-    background: var(--table-bg);
     width: 100%;
+    border-bottom: 1px solid var(--talbe-border);
+    background: var(--table-bg);
   }
 }
 @media screen and (max-width: 1159px) {
@@ -652,14 +653,32 @@ h3 {
     display: none;
   }
 }
+[class*=table][class*=boardList] thead tr th {
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+  letter-spacing: -0.03em;
+  padding: 11px 0;
+}
 [class*=table][class*=boardList] tbody {
   border-bottom: 1px solid var(--color-dark);
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody {
+    border-bottom: 1px solid var(--table-border);
+  }
 }
 [class*=table][class*=boardList] tbody tr {
   background: var(--table-bg);
 }
 [class*=table][class*=boardList] tbody tr:not(:last-child) {
   border-bottom: 1px solid var(--color-dark);
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr:not(:last-child) {
+    border-bottom: 1px solid var(--table-border);
+  }
 }
 [class*=table][class*=boardList] tbody tr:nth-child(2n) {
   background: var(--color-white);
@@ -675,6 +694,8 @@ h3 {
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] tbody tr td {
     display: table-cell;
+    border-style: none;
+    padding: 15px 12px;
   }
 }
 @media screen and (max-width: 1159px) {
@@ -710,6 +731,11 @@ h3 {
   line-height: 1.5;
   padding: 10px 0;
 }
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr td p {
+    padding: 0;
+  }
+}
 [class*=table][class*=boardList] tbody tr td .titHover {
   display: -webkit-box; /* 플렉스박스처럼 박스를 만듭니다 */
   -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
@@ -726,9 +752,19 @@ h3 {
   text-decoration: underline;
   text-decoration-color: var(--color-text);
 }
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr td .titHover {
+    margin: 0;
+  }
+}
 [class*=table][class*=boardList] tbody tr td .titHover:hover, [class*=table][class*=boardList] tbody tr td .titHover:active, [class*=table][class*=boardList] tbody tr td .titHover:focus {
   color: var(--color-red);
   text-decoration-color: var(--color-red);
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr td:not(:has(.titHover)) {
+    text-align: center;
+  }
 }
 
 /* table cell size */
