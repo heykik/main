@@ -59,6 +59,7 @@
 			gnb = $("#gnb"),
 			btnMenu = gnb.find(".btnMenu");
 		btnMenu.click(function(){
+            console.log("aaa");
 			depth01.find("> li").eq(dep01).addClass("curr").find("> ul > li").eq(dep02).addClass("curr").find("> ul > li").eq(dep03).addClass("curr").find("> ul > li").eq(dep04).addClass("curr");
 			depth01.find("li.more > a i:last-child").text("add");
 			depth03.find(">li.more > a i:last-child").text("expand_more");

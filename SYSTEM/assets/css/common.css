@@ -97,6 +97,9 @@ img {
 a {
     text-decoration: none;
 }
+button {
+    border: 0;
+}
 
 /* 디자인스크롤 */
 .mCustomScrollbar .mCustomScrollBox {position:relative; overflow:hidden; height:100%; max-width:100%; outline:none; direction:ltr}
