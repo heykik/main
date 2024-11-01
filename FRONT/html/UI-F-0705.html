@@ -68,8 +68,9 @@
                             <th scope="row" class="required">첨부파일</th>
                             <td>
                                 <div class="flexBoxAcJs withFileBtn">
-                                    <button type="upload" class="btn btnRed sm">파일선택</button>
-                                    <input type="input" id="fileInput" placeholder="파일을 선택해주세요." readonly>
+                                    <button type="button" class="btn btnRed sm">파일선택</button>
+                                    <input type="file" tabindex="-1">
+                                    <input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>                                 
                                 </div>
                             </td>
                         </tr>
@@ -94,5 +95,10 @@
 <script src="../assets/js/jquery.mCustomScrollbar.js"></script>
 <script src="../assets/js/common.js"></script>
 <script src="../assets/js/main.js"></script>
+<script>
+    $('.withFileBtn .btnRed').on('click', (()=>{
+            $('[type="file"]').click();
+        }))
+</script>
 </body>
 </html>
