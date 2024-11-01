@@ -7,8 +7,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <!-- E : mobile -->
 <title>가이드</title>
-<link rel="stylesheet" type="text/css" href="kditPortal/css/import.css" />
-<script type="text/javascript" src="kditPortal/js/jquery-3.7.1.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+<script type="text/javascript" src="assets/js/jquery-3.7.1.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style type="text/css">
 body {overflow:auto; background:#fff; font-family:"돋움", sans-serif}
@@ -34,7 +34,7 @@ i {
 	-webkit-font-smoothing: antialiased;
 }
 .guideHeader {position:fixed; z-index:1000; border-bottom:2px solid #133692; width:100%; background-color:#fff; padding:0 50px 0 25px; overflow:hidden;}
-.guideHeader h1 {width:100%; height:68px; background:url("kditPortal/img/logo.svg") no-repeat left center/160px auto}
+.guideHeader h1 {width:100%; height:68px; background:url("assets/images/logo.svg") no-repeat left center/160px auto}
 .guideBody {padding:70px 0 0 250px; min-height:700px}
 .guideBody .side {overflow:hidden; position:fixed; top:68px; left:0; bottom:0; z-index:50; width:230px !important; border-top:2px solid #2d71b8; border-right:1px solid #eaeaea; background:#fff}
 .guideBody .side ul {overflow-y:scroll; width:250px}
@@ -132,8 +132,7 @@ $(function(){
 	<div class="guideBody">
 		<div class="side">
 			<ul>
-				<li class="on"><a href="#">레이아웃</a></li>
-				<li><a href="#">버튼</a></li>
+				<li class="on"><a href="#">버튼</a></li>
 				<li><a href="#">타이틀</a></li>
 				<li><a href="#">검색영역</a></li>
 				<li><a href="#">테이블</a></li>
@@ -141,82 +140,6 @@ $(function(){
 		</div>
 
 		<div class="contWrap">
-			<!-- 레이아웃 -->
-			<div class="cont">
-				<dl class="guideList">
-					<dt>레이아웃<a href="#"><i>visibility</i> Code View</a></dt>
-					<dd>
-                        <img src="layout.jpg" alt="">
-						<img src="layout_code.jpg" alt="">
-						<div class="guideView">
-							<!-- wrapper -->
-							<div id="wrapper" style="display: none;">
-								<!-- header -->
-								<div id="header">
-									<div class="inner">
-										<h1><a href="/kditPortal/admin/dashboard/Dashboard.do">경남 디지털혁신거점 GYUNGNAM DIGITAL INNOVATION HUB</a></h1>
-										<!-- util -->
-										<div class="util">
-											<a href="#" class="tid"><img src="/kditPortal/img/admin/ico_man.png" alt=""><strong>퍼블관리자</strong> 님</a>
-											<a href="/kditPortal/logout.do" class="mybtn">로그아웃</a>
-										</div>
-										<!--// util -->
-									</div>
-								</div>
-								<!--// header -->
-								<!-- gnb -->
-								<div id="gnb">
-									<div class="left">
-										<div class="left-in">
-											<!-- lnb -->
-											<ul class="lnb">
-												GNB 영역
-											</ul>
-											<!--// lnb -->
-										</div>
-									</div>
-									<!--// left -->
-									<button type="button" class="btnMenu">메뉴 닫기</button>
-								</div>
-								<!--// gnb -->
-								<!-- container -->
-								<div id="container">
-									<!-- content-in -->
-									<div class="content-in">
-										<!-- titArea -->
-										<div class="titArea">
-											<div class="tit">
-												<h2 class="cont-tit">타이틀</h2>
-												<div class="caution_txt">타이틀 안내 문구 타이틀 안내 문구</div>
-											</div>
-											<ol class="location">
-												<li>KDIT 포털</li>
-												<li>Depth01</li>
-												<li>Depth02</li>
-											</ol>
-										</div>
-										<!--// titArea -->
-										<!-- contWrap -->
-										<div class="contWrap">
-											<!-- cont -->
-											<div class="cont">
-												콘텐츠 영역
-											</div>
-											<!--// cont -->
-										</div>
-										<!--// contWrap -->
-									</div>
-									<!--// content-in -->
-									<p class="copy">COPYRIGHT © 2024. ALL RIGHTS RESERVED.</p>
-								</div>
-								<!--// container -->
-							</div>
-							<!--// wrapper -->
-						</div>
-					</dd>
-				</dl>
-			</div>
-			<!--// 레이아웃 -->
             <!-- 버튼 -->
 			<div class="cont">
 				<dl class="guideList">

@@ -23,12 +23,12 @@
 #gnb .copy span {display:inline-block}
 #gnb .copy em {position:relative; z-index:1}
 #gnb .copy:before {display:block; content:""; position:absolute; bottom:0; left:0; width:100%; height:101px; background:#fff}
-#gnb .inner {position:absolute; top:50px; left:0; right:0; bottom:0}
+#gnb .inner {position:absolute; top:0; left:0; right:0; bottom:0}
 #gnb .inner:before,
 #gnb .inner:after {display:block; content:""; position:absolute; left:0; right:0; z-index:1}
 #gnb .inner:before {top:0; height:20px; background:linear-gradient(#fff, 80%, rgba(0,0,0,0))}
 #gnb .inner:after {bottom:100px; z-index:0; height:20px; background:linear-gradient(rgba(0,0,0,0), 20%, #fff)}
-#gnb .inner .depth01 {padding:50px 0 120px}
+#gnb .inner .depth01 {padding:20px 0 120px}
 #gnb .inner .depth01 li.more > a {padding-right:24px !important}
 #gnb .inner .depth01 > li + li {border-top:1px solid #ddd}
 #gnb .inner .depth01 > li a {display:block; position:relative; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
@@ -69,7 +69,7 @@
 #gnb .inner .depth04 > li.curr > a,
 #gnb .inner .depth04 > li.on > a,
 #gnb .inner .depth04 > li > a:hover {font-weight:500; color:#66ae2f}
-#gnb .btnMenu {display:flex; align-items:center; justify-content:center; position:absolute; top:55px; right:-15px; z-index:100; border:none; border-radius:50%; width:30px; height:30px; color:#fff; background:#ed7101; transition:all 0.2s; -webkit-transition:all 0.2s; -moz-transition:all 0.2s} 
+#gnb .btnMenu {display:flex; align-items:center; justify-content:center; position:absolute; top:16px; right:-16px; z-index:100; width:32px; height:32px; text-indent:-9999px; background:url("../images/btn-close.svg") no-repeat center/100% auto; transition:all 0.2s; -webkit-transition:all 0.2s; -moz-transition:all 0.2s} 
 #gnb .btnMenu i {font-size:12px} 
 #wrap.menuIco {padding-left:94px}
 #wrap.menuIco #gnb {width:94px}
