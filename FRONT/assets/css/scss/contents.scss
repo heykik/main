@@ -90,7 +90,7 @@ h3 {
         white-space:nowrap;
         padding:8px 10px;
         border-radius:4px;
-        max-width:80px;
+        max-width:72px;
         height:32px;
         line-height:normal;
         font-size:15px;
@@ -345,11 +345,11 @@ h3 {
     margin-top:80px;
     padding:24px 16px 120px;
     width:100%;
-    max-width:1520px;
+    max-width:calc(1520px + 24px + 24px);
     min-height:50vh;
     @media screen and (min-width:1160px) {
         margin:100px auto 0;
-        padding:0 0 120px;
+        padding:0 24px 120px;
     }
 }
 
@@ -422,19 +422,19 @@ h3 {
         }
     }
 }
-// .titM{ 모바일 미정
-//     h2{
-//         line-height:1.5;
-//         letter-spacing:-0.03em;
-//         font-size:32px;
-//         font-weight:var(--bold);
-//         color:var(--color-dark);
-//         margin-bottom:64px;
-//         @media screen and (min-width:1160px){
-//             margin: 0 0 80px;
-//         }
-//     }
-// }
+.titM{ //모바일 미정
+    h3{
+        line-height:1.5;
+        letter-spacing:-0.03em;
+        font-size:32px;
+        font-weight:var(--bold);
+        color:var(--color-dark);
+        margin-bottom:64px;
+        @media screen and (min-width:1160px){
+            margin: 0 0 80px;
+        }
+    }
+}
 .titS{
     h5{
         margin-bottom:16px;
@@ -515,7 +515,7 @@ h3 {
             display:flex;
             align-items:flex-start;
             justify-content:flex-start;
-            gap:0 12px;
+            gap:0 4px;
             line-height:1.5;
             letter-spacing:-0.05em;
             font-size:20px;
@@ -542,15 +542,17 @@ h3 {
                 &:first-of-type{
                     margin-top:8px;
                 }
-                &[class*="dash"]::before{
+                &::before{
                     display:inline-block;
-                    content:"-";
                     padding:0;
+                    margin: 0 2px 0 0;
+                }
+
+                &[class*="dash"]::before{
+                    content:"-";
                 }
                 &[class*="astaric"]::before{
-                    display:inline-block;
                     content:"*";
-                    padding:0;
                 }
             }
         }
@@ -734,16 +736,16 @@ h3 {
                     position:relative;
                     display:flex;
                     align-items:center;
-                    justify-content:space-between;
+                    // justify-content:space-between;
+                    justify-content:flex-start;
                     gap:0 8px;
                     margin:8px 0 0;
                     @media screen and (min-width:1160px) {
-                        justify-content:flex-start;
                     }
                     div{
                         flex-grow:1;
+                        max-width:320px;
                         @media screen and (min-width:1160px) {
-                            max-width:320px;
                         }
                     }
                     input{
@@ -755,10 +757,10 @@ h3 {
                     &::before{
                         content:"";
                         display:block;
-                        max-width:80px;
+                        max-width:72px;
                         width:auto;
                         height:32px;
-                        flex:0 0 80px;                        
+                        flex:0 0 72px;                        
                     }
                 }
                 textarea{
@@ -780,9 +782,20 @@ h3 {
                     color:var(--color-text);
                 }
                 .withFileBtn{
+                    position:relative;
                     gap:0 8px;
-                    [placeholder="파일을 선택해주세요."]{
+                    input{
                         max-width:320px;
+                    }
+                    [type="file"]{
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        opacity:0;
+                        margin:0;
+                        padding:0;
+                        width:1px;
+                        height:1px;
                     }
                 }
                 a[download]{

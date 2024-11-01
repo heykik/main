@@ -105,7 +105,7 @@ h3 {
   white-space: nowrap;
   padding: 8px 10px;
   border-radius: 4px;
-  max-width: 80px;
+  max-width: 72px;
   height: 32px;
   line-height: normal;
   font-size: 15px;
@@ -341,13 +341,13 @@ h3 {
   margin-top: 80px;
   padding: 24px 16px 120px;
   width: 100%;
-  max-width: 1520px;
+  max-width: 1568px;
   min-height: 50vh;
 }
 @media screen and (min-width: 1160px) {
   #container {
     margin: 100px auto 0;
-    padding: 0 0 120px;
+    padding: 0 24px 120px;
   }
 }
 
@@ -409,6 +409,20 @@ h3 {
 @media screen and (min-width: 1160px) {
   .titL h2 {
     font-size: 40px;
+    margin: 0 0 80px;
+  }
+}
+
+.titM h3 {
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 32px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+  margin-bottom: 64px;
+}
+@media screen and (min-width: 1160px) {
+  .titM h3 {
     margin: 0 0 80px;
   }
 }
@@ -506,7 +520,7 @@ h3 {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 0 12px;
+  gap: 0 4px;
   line-height: 1.5;
   letter-spacing: -0.05em;
   font-size: 20px;
@@ -533,15 +547,16 @@ h3 {
 .txtDotList li.subMore span:first-of-type {
   margin-top: 8px;
 }
-.txtDotList li.subMore span[class*=dash]::before {
+.txtDotList li.subMore span::before {
   display: inline-block;
-  content: "-";
   padding: 0;
+  margin: 0 2px 0 0;
+}
+.txtDotList li.subMore span[class*=dash]::before {
+  content: "-";
 }
 .txtDotList li.subMore span[class*=astaric]::before {
-  display: inline-block;
   content: "*";
-  padding: 0;
 }
 .txtDotList li span {
   display: flex;
@@ -733,22 +748,13 @@ h3 {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 0 8px;
   margin: 8px 0 0;
 }
-@media screen and (min-width: 1160px) {
-  .tableDefault tbody tr td .prevFileInput {
-    justify-content: flex-start;
-  }
-}
 .tableDefault tbody tr td .prevFileInput div {
   flex-grow: 1;
-}
-@media screen and (min-width: 1160px) {
-  .tableDefault tbody tr td .prevFileInput div {
-    max-width: 320px;
-  }
+  max-width: 320px;
 }
 .tableDefault tbody tr td .prevFileInput input {
   color: var(--gray60);
@@ -759,10 +765,10 @@ h3 {
 .tableDefault tbody tr td .prevFileInput::before {
   content: "";
   display: block;
-  max-width: 80px;
+  max-width: 72px;
   width: auto;
   height: 32px;
-  flex: 0 0 80px;
+  flex: 0 0 72px;
 }
 .tableDefault tbody tr td textarea {
   padding: 10px;
@@ -785,10 +791,21 @@ h3 {
   color: var(--color-text);
 }
 .tableDefault tbody tr td .withFileBtn {
+  position: relative;
   gap: 0 8px;
 }
-.tableDefault tbody tr td .withFileBtn [placeholder="파일을 선택해주세요."] {
+.tableDefault tbody tr td .withFileBtn input {
   max-width: 320px;
+}
+.tableDefault tbody tr td .withFileBtn [type=file] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
 }
 .tableDefault tbody tr td a[download] {
   line-height: 1.2;

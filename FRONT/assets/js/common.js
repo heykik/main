@@ -155,8 +155,8 @@ const fn_layoutImport = () => {
     const _importFooter = $('#footerImport');
 
     if (_importHeader.length > 0 && _importFooter.length > 0) {
-        _importFooter.load('layout.html #footer');
-        _importHeader.load('layout.html #header', (() => {
+        _importFooter.load('UI-F-0100.html #footer');
+        _importHeader.load('UI-F-0100.html #header', (() => {
             fn_layout()
             if($('#container').length > 0) $('#header').addClass('scroll');
             return false;

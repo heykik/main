@@ -77,15 +77,16 @@
                             <td>
                                 <!-- withFileBtn -->
                                 <div class="flexBoxAcJs withFileBtn">
-                                    <button type="upload" class="btn btnRed sm">파일선택</button>
-                                    <input type="input" id="fileInput" placeholder="파일을 선택해주세요." readonly>                                       
+                                    <button type="button" class="btn btnRed sm">파일선택</button>
+                                    <input type="file" tabindex="-1">
+                                    <input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>                                 
                                 </div>
                                 <!-- // withFileBtn -->
 
                                 <!-- prevFileInput -->
                                 <div class="prevFileInput">
                                     <div class="pRel">
-                                        <input type="text" class="" value="자료실.pdf" readonly>
+                                        <input type="text" class="" value="자료실.pdf" title="첨부파일명" readonly>
                                         <button class="btnRemove">삭제하기</button>
                                     </div>
                                 </div> 
@@ -117,5 +118,13 @@
 <script src="../assets/js/jquery.mCustomScrollbar.js"></script>
 <script src="../assets/js/common.js"></script>
 <script src="../assets/js/main.js"></script>
+     
+<script>
+    $(document).ready(()=>{
+        $('.withFileBtn .btnRed').on('click', (()=>{
+            $('[type="file"]').click();
+        }))
+    })
+</script> 
 </body>
 </html>
