@@ -58,16 +58,26 @@ h3 {
   text-align: right;
 }
 
+/* margin */
+.mb20 {
+  margin-bottom: 20px;
+}
+
 /* 버튼 */
 .btnBox {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 0 10px;
   margin-top: 32px;
 }
+@media screen and (min-width: 1160px) {
+  .btnBox {
+    justify-content: space-between;
+  }
+}
 .btnBox[class*=half] > * {
-  flex: 1 0 auto;
+  flex: 0 1 50%;
 }
 @media screen and (min-width: 1160px) {
   .btnBox[class*=resize] > * {
@@ -84,17 +94,18 @@ h3 {
   justify-content: center;
   padding: 18px;
   border-radius: 8px;
-  width: -moz-max-content;
   width: max-content;
   height: 48px;
   line-height: 1.5;
   font-size: 17px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .btn[class*=sm] {
   white-space: nowrap;
   padding: 8px 10px;
   border-radius: 4px;
+  max-width: 80px;
   height: 32px;
   line-height: normal;
   font-size: 15px;
@@ -108,11 +119,27 @@ h3 {
 .btn[class*=full] {
   width: 100%;
 }
+@media screen and (min-width: 1160px) {
+  .btn[class*=pcReFill] {
+    padding: 10px 8px;
+    width: auto;
+  }
+}
 
 .btnDefault {
   border: 1px solid var(--color-dark);
   font-weight: var(--regular);
   color: var(--color-dark);
+}
+.btnDefault:hover, .btnDefault:focus {
+  background: var(--gray5);
+}
+.btnDefault:active {
+  background: var(--gray30);
+}
+.btnDefault[disabled] {
+  background: var(--gray30);
+  bordeR-color: var(--gray50);
 }
 
 .btnGray {
@@ -120,21 +147,41 @@ h3 {
   color: var(--color-white);
   background: var(--gray50);
 }
+.btnGray:hover, .btnGray:focus {
+  background: var(--gray60);
+}
+.btnGray:active {
+  background: var(--gray70);
+}
+.btnGray[disabled] {
+  color: vaR(--gray60);
+  background: #D8D8D8;
+}
 
 .btnRed {
   font-weight: var(--bold);
   color: var(--color-white);
   background: var(--color-red);
 }
+.btnRed:hover, .btnRed:focus {
+  background: #B9131E;
+}
+.btnRed:active {
+  background: #8B0E16;
+}
+.btnRed[disabled] {
+  color: vaR(--gray60);
+  background: #D8D8D8;
+}
 
-.btnBorder {
+.btnUnder {
   position: relative;
   line-height: normal;
   font-size: 17px;
   font-weight: var(--regular);
   color: var(--color-text);
 }
-.btnBorder::after {
+.btnUnder::after {
   display: block;
   content: "";
   position: absolute;
@@ -143,10 +190,10 @@ h3 {
   width: 100%;
   height: 1px;
 }
-.btnBorder[class*=gray]::after {
+.btnUnder[class*=gray]::after {
   background: var(--color-text);
 }
-.btnBorder[class*=red]::after {
+.btnUnder[class*=red]::after {
   background: var(--color-text);
 }
 
@@ -176,6 +223,7 @@ h3 {
   text-indent: -9999px;
   background: url(../images/ico-file-remove.svg) no-repeat center center/contain;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 /* //버튼 */
@@ -203,10 +251,8 @@ h3 {
   box-sizing: border-box;
 }
 .inputBox select {
-  background: url(../images/ico-arrow-dark-24.svg) no-repeat calc(100% - 10px) center/auto;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  background: url(../images/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
+  appearance: none;
 }
 .inputBox input {
   display: flex;
@@ -362,6 +408,7 @@ h3 {
 }
 @media screen and (min-width: 1160px) {
   .titL h2 {
+    font-size: 40px;
     margin: 0 0 80px;
   }
 }
@@ -431,15 +478,22 @@ h3 {
 }
 
 /* text description */
-.descDeft p {
+.descDeft * {
   line-height: 1.5;
+  letter-spacing: -0.03em;
   font-size: 20px;
   font-weight: var(--regular);
-  letter-spacing: 0.03em;
   color: var(--color-text);
 }
-.descDeft p:not(:last-child) {
+.descDeft *:not(:last-child) {
   margin-bottom: 16px;
+}
+.descDeft[class*=sm] * {
+  font-size: 15px;
+  color: var(--gray60);
+}
+.descDeft[class*=sm] *:not(:last-child) {
+  margin-bottom: 4px;
 }
 
 .txtDotList {
@@ -457,10 +511,9 @@ h3 {
   letter-spacing: -0.05em;
   font-size: 20px;
   font-weight: var(--regular);
-  letter-spacing: -0.05em;
   color: var(--color-text);
 }
-.txtDotList li p:not(:last-child) {
+.txtDotList li p:not(:last-of-type) {
   margin-bottom: 12px;
 }
 .txtDotList li p::before {
@@ -473,9 +526,22 @@ h3 {
   height: 6px;
   background: var(--color-red);
 }
-.txtDotList li.subMore span::before {
+.txtDotList li.subMore span {
+  display: block;
+  padding: 0 0 0 20px;
+}
+.txtDotList li.subMore span:first-of-type {
+  margin-top: 8px;
+}
+.txtDotList li.subMore span[class*=dash]::before {
   display: inline-block;
   content: "-";
+  padding: 0;
+}
+.txtDotList li.subMore span[class*=astaric]::before {
+  display: inline-block;
+  content: "*";
+  padding: 0;
 }
 .txtDotList li span {
   display: flex;
@@ -585,6 +651,17 @@ h3 {
   line-height: 1.5;
   color: var(--color-red);
 }
+.tableDefault table .bgTableThick {
+  background: var(--table-bg-thick);
+}
+.tableDefault table .bgTable {
+  background: var(--table-bg);
+}
+@media screen and (min-width: 1160px) {
+  .tableDefault table .bgTable[class*=pcRest] {
+    background-color: initial;
+  }
+}
 .tableDefault tbody {
   border-bottom: 1px solid var(--table-border);
   width: 100%;
@@ -645,9 +722,6 @@ h3 {
   color: var(--color-dark);
   box-sizing: border-box;
 }
-.tableDefault tbody tr td input::-moz-placeholder, .tableDefault tbody tr td textarea::-moz-placeholder {
-  color: var(--color-text);
-}
 .tableDefault tbody tr td input::placeholder,
 .tableDefault tbody tr td textarea::placeholder {
   color: var(--color-text);
@@ -656,10 +730,39 @@ h3 {
   padding: 6px 10px;
 }
 .tableDefault tbody tr td .prevFileInput {
-  margin-top: 8px;
-  border-style: none;
-  color: var(--color-disabled);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 8px;
+  margin: 8px 0 0;
+}
+@media screen and (min-width: 1160px) {
+  .tableDefault tbody tr td .prevFileInput {
+    justify-content: flex-start;
+  }
+}
+.tableDefault tbody tr td .prevFileInput div {
+  flex-grow: 1;
+}
+@media screen and (min-width: 1160px) {
+  .tableDefault tbody tr td .prevFileInput div {
+    max-width: 320px;
+  }
+}
+.tableDefault tbody tr td .prevFileInput input {
+  color: var(--gray60);
+  max-width: 320px;
   background: var(--gray5);
+  border-style: none;
+}
+.tableDefault tbody tr td .prevFileInput::before {
+  content: "";
+  display: block;
+  max-width: 80px;
+  width: auto;
+  height: 32px;
+  flex: 0 0 80px;
 }
 .tableDefault tbody tr td textarea {
   padding: 10px;
@@ -723,6 +826,7 @@ h3 {
 }
 [class*=table][class*=boardList] thead tr th {
   padding: 11px 0;
+  vertical-align: middle;
   line-height: 1.5;
   letter-spacing: -0.03em;
   font-size: 17px;
@@ -737,9 +841,6 @@ h3 {
     border-bottom: 1px solid var(--table-border);
   }
 }
-[class*=table][class*=boardList] tbody tr {
-  background: var(--table-bg);
-}
 [class*=table][class*=boardList] tbody tr:not(:last-child) {
   border-bottom: 1px solid var(--color-dark);
 }
@@ -748,16 +849,8 @@ h3 {
     border-bottom: 1px solid var(--table-border);
   }
 }
-[class*=table][class*=boardList] tbody tr:nth-child(2n) {
-  background: var(--color-white);
-}
-@media screen and (min-width: 1160px) {
-  [class*=table][class*=boardList] tbody tr {
-    background: initial;
-  }
-}
 [class*=table][class*=boardList] tbody tr td {
-  padding: 10px 12px;
+  padding: 10px 8px;
 }
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] tbody tr td {
@@ -769,26 +862,25 @@ h3 {
 @media screen and (max-width: 1159px) {
   [class*=table][class*=boardList] tbody tr td {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-start;
   }
 }
 [class*=table][class*=boardList] tbody tr td .cellTit {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  flex: 0 0 80px;
+  flex-shrink: 0;
   margin-right: 8px;
-  padding: 8px 4px;
+  padding: 0 8px 0 0;
   border-right: 1px solid var(--table-border);
   width: 80px;
-  height: 100%;
   line-height: 1.5;
   letter-spacing: -0.03em;
   font-size: 17px;
   font-weight: var(--bold);
   color: var(--color-dark);
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] tbody tr td .cellTit {
@@ -796,7 +888,7 @@ h3 {
   }
 }
 [class*=table][class*=boardList] tbody tr td p {
-  padding: 10px 0;
+  padding: 0;
   line-height: 1.5;
 }
 @media screen and (min-width: 1160px) {
@@ -808,7 +900,6 @@ h3 {
   display: -webkit-box; /* 플렉스박스처럼 박스를 만듭니다 */
   overflow: hidden; /* 넘치는 텍스트 숨김 */
   text-overflow: ellipsis; /* 말줄임 표시(...) 설정 */
-  margin: 10px 0;
   max-height: 3em;
   text-decoration: underline;
   line-height: 1.5;
@@ -817,7 +908,7 @@ h3 {
   font-weight: var(--regular);
   color: var(--color-text);
   -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
-  -webkit-line-clamp: 2; /* 표시할 줄 수 (여기서는 2줄) */
+  line-clamp: 2; /* 표시할 줄 수 (여기서는 2줄) */
   text-decoration-color: var(--color-text);
 }
 @media screen and (min-width: 1160px) {
@@ -834,23 +925,72 @@ h3 {
     text-align: center;
   }
 }
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr td .inputWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+[class*=table][class*=boardList] tbody tr td .email {
+  margin: 0 0 8px;
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr td .email {
+    margin: 0;
+  }
+}
+[class*=table][class*=boardList] tbody tr td .email input,
+[class*=table][class*=boardList] tbody tr td .email select {
+  padding: 0 10px;
+  border: 1px solid var(--table-border);
+  border-radius: 4px;
+  height: 32px;
+  font-size: inherit;
+  background: #fff;
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr td .email input,
+  [class*=table][class*=boardList] tbody tr td .email select {
+    width: 160px;
+  }
+}
+[class*=table][class*=boardList] tbody tr td .email:has([type=text]) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+[class*=table][class*=boardList] tbody tr td .email:has([type=text])::after {
+  flex-shrink: 0;
+  content: "@";
+  margin: 0 0 0 8px;
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr td .email:has([type=text])::after {
+    margin: 0 8px;
+  }
+}
+[class*=table][class*=boardList] tbody tr td .email select {
+  background: url(../images/ico-arrow-gray80-20.svg) no-repeat #fff calc(100% - 10px) center/auto;
+}
+
+/* tableBackground 2n custom */
+[class*=table][class*=BgCustom2n] table tr {
+  background: var(--table-bg);
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=BgCustom2n] table tr {
+    background: vaR(--white);
+  }
+}
+[class*=table][class*=BgCustom2n] table tr:nth-child(2n) {
+  background: var(--white);
+}
 
 /* table cell size */
 @media screen and (min-width: 1160px) {
-  .pcW360 {
-    width: 360px !important;
-  }
-}
-
-@media screen and (min-width: 1160px) {
   .pcW64 {
     width: 64px;
-  }
-}
-
-@media screen and (min-width: 1160px) {
-  .pcW976 {
-    width: 976px;
   }
 }
 
@@ -867,8 +1007,32 @@ h3 {
 }
 
 @media screen and (min-width: 1160px) {
-  .pcW120 {
-    width: 120px;
+  .pcW285 {
+    width: 285px;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .pcW360 {
+    width: 360px !important;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .pcW375 {
+    width: 375px;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .pcW556 {
+    width: 556px;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .pcW976 {
+    width: 976px;
   }
 }
 
@@ -919,50 +1083,6 @@ h3 {
     padding: 10px 16px;
   }
 }
-@media screen and (min-width: 1160px) {
-  .listCont + .inputWrap {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    margin-bottom: 40px;
-  }
-}
-@media screen and (min-width: 1160px) {
-  .listCont + .inputWrap select {
-    margin-right: 10px;
-    width: 120px;
-  }
-}
-@media screen and (min-width: 1160px) {
-  .listCont + .inputWrap input {
-    width: 360px;
-  }
-}
-.listCont + .inputWrap .btn::before {
-  display: block;
-  content: "";
-  margin-right: 4px;
-  width: 20px;
-  height: 20px;
-  background: url(../images/ico-search-white-20.svg) no-repeat center center/contain;
-}
-@media screen and (min-width: 1160px) {
-  .listCont + .inputWrap .btn {
-    position: absolute;
-    top: 13px;
-    right: 10px;
-    overflow: hidden;
-    padding: 0;
-    width: 24px;
-    height: 24px;
-    text-indent: -9999px;
-    background: url(../images/ico-search-24.svg) #fff no-repeat center center/contain;
-  }
-  .listCont + .inputWrap .btn::before {
-    content: none;
-  }
-}
 .listCont .circList {
   padding: 10px 0;
 }
@@ -990,8 +1110,8 @@ h3 {
   }
 }
 .listCont .circList li:not(:last-child)::after {
-  content: "";
   display: block;
+  content: "";
   margin: 24px auto;
   width: 32px;
   height: 32px;
@@ -1005,12 +1125,12 @@ h3 {
   }
 }
 .listCont .circList li p::before {
-  content: "";
   display: block;
-  width: 100px;
-  height: 100px;
+  content: "";
   margin: 0 auto 8px;
   border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 .listCont .circList li:first-child p::before {
   background: url(../images/visual-file-with-pen.svg) no-repeat #fff center center/auto;
@@ -1020,6 +1140,51 @@ h3 {
 }
 .listCont .circList li:last-child p::before {
   background: url(../images/visual-file-with-medal.svg) no-repeat #fff center center/auto;
+}
+
+@media screen and (min-width: 1160px) {
+  .inputWrap.boardTop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .inputWrap.boardTop select {
+    margin-right: 10px;
+    width: 120px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .inputWrap.boardTop input {
+    width: 360px;
+  }
+}
+.inputWrap.boardTop .btn::before {
+  display: block;
+  content: "";
+  margin-right: 4px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/ico-search-white-20.svg) no-repeat center center/contain;
+}
+@media screen and (min-width: 1160px) {
+  .inputWrap.boardTop .btn {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    overflow: hidden;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    text-indent: -9999px;
+    background: url(../images/ico-search-24.svg) #fff no-repeat center center/contain;
+  }
+  .inputWrap.boardTop .btn::before {
+    content: none;
+  }
 }
 
 /* 교육수료증 발급 - 비회원 로그인 ui */
@@ -1036,4 +1201,33 @@ h3 {
 }
 .certificateBox .btnBox {
   margin-top: 60px;
+}
+
+/* 교육수료증 발급 - 교육과정 수료목록 */
+.titCus h5 {
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-size: 24px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+@media screen and (min-width: 1160px) {
+  .titCus h5 {
+    font-size: 36px;
+  }
+}
+.titCus p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--color-text);
+}
+.titCus strong {
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+
+.infoTxtSub {
+  margin: 28px 0 0;
 }

@@ -32,6 +32,7 @@
     <!--// header -->
     
     <div id="container">
+        <!-- sitemap -->
         <div class="sitemap">
             <ul>
                 <li class="home"><a href="javascript:void(0);">홈</a></li>
@@ -39,10 +40,16 @@
                 <li><a href="javscript:void(0)">교육수료증발급</a></li>
             </ul>
         </div>
+        <!-- // sitemap -->
+
         <div class="content">
+            <!-- titL -->
             <div class="titL">
                 <h2 class="">titL</h2>
             </div>
+            <!-- // titL -->
+
+            <!-- text Dot List -->
             <div class="txtDotList">
                 <ul>
                     <li>
@@ -63,6 +70,9 @@
                     </li>
                 </ul>
             </div>
+            <!-- //text Dot List -->
+
+            <!-- text Dot List -->
             <div class="txtDotList">
                 <ul>
                     <li>
@@ -83,10 +93,19 @@
                     </li>
                 </ul>
             </div>
-            <div class="descDeft">
+            <!-- //text Dot List -->
+
+            <!-- Description Default -->
+            <div class="descDeft mb20">
                 <p>Description Default Text</p>
             </div>
-            <div class="tableDefault">
+            <!-- // Description Default -->
+
+            <div class="titS">
+                <h5>기본 테이블</h5>
+            </div>
+            <!-- tableDefault -->
+            <div class="tableDefault mb20">
                 <table>
                     <colgroup>
                         <col>
@@ -116,6 +135,109 @@
                     </tbody>
                 </table>
             </div>
+            <!-- //tableDefault -->
+
+            <!-- table Board -->
+             <div class="titS">
+                <h5>게시판 형태 테이블</h5>
+             </div>
+            <div class="tableDefault boardList mb20">
+                <table>
+                    <caption>someTextInCaption</caption>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">sampleTH</th>
+                            <th scope="col">sampleTH</th>
+                            <th scope="col">sampleTH</th>
+                            <th scope="col" class="bgTableThick">sampleTH</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="cellTit">cellTitle</span>
+                                sampleTD
+                            </td>
+                            <td>
+                                <span class="cellTit">cellTitle</span>
+                                sampleTD
+                            </td>
+                            <td>
+                                <span class="cellTit">cellTitle</span>
+                                sampleTD
+                            </td>
+                            <td>
+                                <span class="cellTit">cellTitle</span>
+                                sampleTD
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="cellTit">cellTitle</span>
+                                sampleTD
+                            </td>
+                            <td>
+                                <span class="cellTit">cellTitle</span>
+                                sampleTD
+                            </td>
+                            <td>
+                                <span class="cellTit">cellTitle</span>
+                                sampleTD
+                            </td>
+                            <td>
+                                <span class="cellTit">cellTitle</span>
+                                sampleTD
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- // table Board -->
+
+            <!-- table input -->
+             <div class="titS">
+                <h5>input 테이블(게시판 쓰기)</h5>
+             </div>
+             <div class="tableDefault mb20">
+                <table>
+                    <caption>someTextInCaption</caption>
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">sampleTH</th>
+                            <td>
+                                <input type="text" placeholder="input" title="input" value="input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">sampleTH</th>
+                            <td>
+                                <textarea title="textarea">textarea</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="required">첨부파일</th>
+                            <td>
+                                <div class="flexBoxAcJs withFileBtn">
+                                    <button type="upload" class="btn btnRed sm">파일선택</button>
+                                    <input type="input" id="fileInput" placeholder="파일을 선택해주세요." readonly>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+            <!-- // table input -->
+
         </div>
     </div>
 

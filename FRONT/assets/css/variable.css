@@ -25,14 +25,18 @@
     /* --color-base: #454545; */
     /* --color-primary:#133692; */
     --table-bg:#FFF8F9;
+    --table-bg-thick:#FBEAEB;
     --table-top:#2d2d2d;
     --table-border:#D8D8D8;
 
     --text-color: #555;
-    --gray60:#717171;
 
     --gray5:#F8F8F8;
+    --gray30:#D8D8D8;
     --gray50:#BEBEBE;
+    --gray60:#717171;
+    --gray70:#555;
+    --gray80:#2D2D2D;
 
     --thin:100;
     --light:300;

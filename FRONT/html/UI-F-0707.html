@@ -31,7 +31,9 @@
     </div>
     <!--// header -->
     
+    <!-- 서브페이지 내용 -->
     <div id="container">
+        <!-- sitemap -->
         <div class="sitemap">
             <ul>
                 <li class="home"><a href="javascript:void(0);">홈</a></li>
@@ -39,22 +41,67 @@
                 <li><a href="javscript:void(0)">교육수료증발급</a></li>
             </ul>
         </div>
+        <!-- // sitemap -->
+
+        <!-- content -->
         <div class="content">
+            <!-- titL -->
             <div class="titL">
-                <h2 class="">교육수료증 발급</h2>
+                <h2 class="">사업제안하기</h2>
             </div>
-            <div class="certificateBox">
-                <div class="txtc">
-                    <div class="flexBoxAcJc">
-                        <img src="../assets/images/visual-certificate.svg" alt="">
-                    </div>
-                    <p class="txt">회원가입없이 교육수료증 신청이<br class="moV"/> 가능합니다.</p>
-                    <div class="btnBox flexBoxAcJc">
-                        <a href="javascript:void(0)" class="btn btnRed lg">비회원 로그인</a>
-                    </div>
+            <!-- // titL -->
+
+            <!-- tableDefault -->
+            <div class="tableDefault">
+                <table>
+                    <caption>제목, 제안내용 입력 필드와 파일첨부로 이루어진 표</caption>
+                    <colgroup>
+                        <col class="thRow" style="width:234px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="required">제목</th>
+                            <td>
+                                <input type="text" placeholder="제목" title="제목">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="required">내용</th>
+                            <td>
+                                <textarea title="내용"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="required">첨부파일</th>
+                            <td>
+                                <!-- withFileBtn -->
+                                <div class="flexBoxAcJs withFileBtn">
+                                    <button type="upload" class="btn btnRed sm">파일선택</button>
+                                    <input type="input" id="fileInput" placeholder="파일을 선택해주세요." readonly>                                       
+                                </div>
+                                <!-- // withFileBtn -->
+
+                                <!-- prevFileInput -->
+                                <div class="prevFileInput">
+                                    <div class="pRel">
+                                        <input type="text" class="" value="자료실.pdf" readonly>
+                                        <button class="btnRemove">삭제하기</button>
+                                    </div>
+                                </div> 
+                                <!-- // prevFileInput -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btnBox half resize sideRight">
+                    <a href="javscript:void(0)" class="btn btnGray">취소</a>
+                    <a href="javscript:void(0)" class="btn btnRed">수정</a>
                 </div>
             </div>
+            <!-- // tableDefault -->
         </div>
+        <!-- // content -->
     </div>
 
     <!-- footer -->

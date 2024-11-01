@@ -32,21 +32,30 @@
     <!--// header -->
     
     <div id="container">
+        <!-- sitemap -->
         <div class="sitemap">
             <ul>
                 <li class="home"><a href="javascript:void(0);">홈</a></li>
-                <li><a href="javscript:void(0)">고객지원</a></li>
-                <li><a href="javscript:void(0)">교육수료증발급</a></li>
+                <li><a href="javscript:void(0)">경로</a></li>
             </ul>
         </div>
+        <!-- // sitemap -->
+
+        <!-- content -->
         <div class="content">
+            <!-- titL -->
             <div class="titL">
-                <h2 class="">titL</h2>
+                <h2 class="">공지사항</h2>
             </div>
+            <!-- // titL -->
+
+            <!-- tableDefault -->
             <div class="tableDefault">
                 <table>
-                    <!-- 2024-10-31 -->
+                    <caption>제목, 작성자, 작성일, 조회수, 내용으로 이루어진 표</caption>
                     <colgroup>
+                        <col class="thRow">
+                        <col>
                         <col>
                         <col>
                         <col>
@@ -54,29 +63,47 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row"><p>sample TH</p></th>
-                            <td><p>sample TD</p></td>
-                            <td><p>sample TD</p></td>
-                            <td><p>sample TD</p></td>
+                            <th scope="row">제목</th>
+                            <td colspan="5">
+                                <p>자료실</p>
+                            </td>
                         </tr>
                         <tr>
-                            <th scope="row"><p>sample TH</p></th>
-                            <td><p>sample TD</p></td>
-                            <td><p>sample TD</p></td>
-                            <td><p>sample TD</p></td>
+                            <th scope="row">작성자</th>
+                            <td class="pcW360">
+                                <p>홍길동</p>
+                            </td>
+                            <th scope="row">작성일</th>
+                            <td class="pcW360">
+                                <p>2024-00-00</p>
+                            </td>
+                            <th scope="row">조회수</th>
+                            <td class="pcW360">
+                                <p>10</p>
+                            </td>
                         </tr>
                         <tr>
-                            <th scope="row"><p>sample TH</p></th>
-                            <td><p>sample TD</p></td>
-                            <td><p>sample TD</p></td>
-                            <td><p>sample TD</p></td>
+                            <th scope="row">내용</th>
+                            <td colspan="5">
+                                <div class="hMin240">
+                                    <p>
+                                        게시판 내용 영역입니다.<br />
+                                        테이블 셀의 최소 높이값은 240px.<br />
+                                        내용이 길어지면 내용에 맞게 높이값이 늘어납니다.
+                                    </p>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="btnBox half resize">
+                    <a href="javscript:void(0)" class="btn btnDefault">목록</a>
+                </div>
             </div>
+            <!-- // tableDefault -->
         </div>
+        <!-- // content -->
     </div>
-
     <!-- footer -->
     <div id="footerImport">
     </div>
