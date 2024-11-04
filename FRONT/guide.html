@@ -8,7 +8,7 @@
 <!-- E : mobile -->
 <title>가이드</title>
 <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-<script type="text/javascript" src="assets/js/jquery-2.2.4.js"></script>
+<script type="text/javascript" src="assets/js/jquery-3.7.1.js"></script>
 <script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style type="text/css">
@@ -133,8 +133,8 @@ $(function(){
 	<div class="guideBody">
 		<div class="side mCustomScrollbar">
 			<ul>
-				<li class="on"><a href="#">가이드1</a></li>
-				<li><a href="#">가이드2</a></li>
+				<li><a href="#">Button</a></li>
+				<li class="on"><a href="#">input Type</a></li>
 				<li><a href="#">가이드3</a></li>
 				<li><a href="#">가이드4</a></li>
 				<li><a href="#">가이드5</a></li>
@@ -143,30 +143,153 @@ $(function(){
 		</div>
 
 		<div class="contWrap">
-			<!-- 가이드1 -->
+			<!-- Button -->
 			<div class="cont">
 				<dl class="guideList">
-					<dt>가이드1<a href="#"><i>visibility</i> Code View</a></dt>
+					<dt>Button<a href="#"><i>visibility</i> Code View</a></dt>
 					<dd>
 						<div class="guideView">
-							
+							<style>
+								.sample-box .btnBox{padding-bottom:20px;margin-bottom:82px;border-bottom:1px solid #ccc;}
+							</style>							
+							<div class="sample-box">
+								<div class="btnBox">
+									<button type="button" class="btn btnRed lg">RedLg</button>
+									<button type="button" class="btn btnRed">Red</button>
+									<button type="button" class="btn btnRed sm">RedSm</button>
+									<button type="button" class="btn btnRed" disabled>disabledRed</button>
+								</div>
+								<!-- // btnRed  -->
+
+								<div class="btnBox">
+									<button type="button" class="btn btnGray lg">GrayLg</button>
+									<button type="button" class="btn btnGray">Gray</button>
+									<button type="button" class="btn btnGray sm">GraySm</button>
+									<button type="button" class="btn btnGray" disabled>GrayDisabled</button>
+								</div>
+								<!-- btnGray -->
+
+								<div class="btnBox">
+									<button type="button" class="btn btnDefault lg">DefaultLg</button>
+									<button type="button" class="btn btnDefault">Default</button>
+									<button type="button" class="btn btnDefault sm">DefaultSm</button>
+									<button type="button" class="btn btnDefault" disabled>DefaultDisabled</button>
+								</div>
+								<!-- btnDefault -->
+
+								<div class="btnBox">
+									<button type="button" class="btn btnUnder red">underLine</button>
+								</div>
+								<!-- // btnUnder -->
+
+								<div class="btnBox">
+									<button type="button" class="btn btnRed full">full</button>
+								</div>
+								<!-- // btnFull -->
+
+								<div class="btnBox">
+									<button type="button" class="btn btnRed full pcReFill">for pc resizing</button>
+								</div>
+								<!-- // btnFull.pcReFill -->
+
+								<p>btnBox</p>
+								<div class="btnBox">
+									<button type="button" class="btn btnDefault">기본 레이아웃</button>
+									<button type="button" class="btn btnDefault">기본 레이아웃</button>
+								</div>
+								<!-- // btnBox -->
+
+								<p>btnBox.half</p>
+								<div class="btnBox half">
+									<button type="button" class="btn btnGray">half</button>
+									<button type="button" class="btn btnGray">half</button>
+								</div>
+								<!-- // btnBox.half -->
+
+								<p>btnBox.resize</p>
+								<div  class="btnBox resize">
+									<button type="button" class="btn btnRed">resize</button>
+									<button type="button" class="btn btnRed">resize</button>
+								</div>
+								<!-- //btnBox.resize -->
+
+								<p>btnBox.sideLeft</p>
+								<div  class="btnBox sideLeft">
+									<button type="button" class="btn btnDefault">sideLeft</button>
+									<button type="button" class="btn btnDefault">sideLeft</button>
+								</div>
+								<!-- //btnBox.sideLeft -->
+
+								<p>btnBox.sideRight</p>
+								<div  class="btnBox sideRight">
+									<button type="button" class="btn btnDefault">sideRight</button>
+									<button type="button" class="btn btnDefault">sideRight</button>
+								</div>
+								<!-- //btnBox.sideRight -->
+
+								<p>icoBtn</p>
+								<div  class="btnBox sideLeft">
+									<button type="button" class="btnLocation">내 위치</button>
+									<button type="button" class="btn btnDefault withIcoLink">장비대여</button>
+									<div class="pRel">
+										<p style="padding-right:34px;color:var(--gray50)">absolute이므로 relative속성을 가진 부모와 함께 사용 필요</p>
+										<button type="button" class="btnRemove">삭제하기</button>
+									</div>
+								</div>
+								<!-- //icoBtn -->
+							</div>
 						</div>
 					</dd>
 				</dl>
 			</div>
-			<!--// 가이드1 -->
-			<!-- 가이드2 -->
+			<!--// Button -->
+
+			<!-- input Type -->
 			<div class="cont">
 				<dl class="guideList">
-					<dt>가이드2<a href="#"><i>visibility</i> Code View</a></dt>
+					<dt>input Type<a href="#"><i>visibility</i> Code View</a></dt>
 					<dd>
 						<div class="guideView">
-							
+							<div class="inputWrap">
+								<div class="inputBox">
+									<input type="text" placeholder="default" title="title">
+								</div>
+								<div class="inputBox succcess">
+									<input type="text" placeholder="succcess" title="succcess">
+									<p>사용가능</p>
+								</div>
+								<div class="inputBox error">
+									<input type="text" placeholder="error" title="error">
+									<p>아이디를 입력해주세요.</p>
+									<p>6~20자 이내로 설정해주세요.</p>
+									<p>사용할 수 없는 아이디 입니다. 다른 아이디를 입력해주세요.</p>
+								</div>
+								<div class="tableDefault">
+									<table>
+										<tbody>
+											<th>sample</th>
+											<td>
+												<div class="flexBoxAcJs withFileBtn">
+													<button type="button" class="btn btnRed sm">파일추가</button>
+													<input type="file" tabindex="-1">	
+													<input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>
+												</div>
+												<div class="prevFileInput">
+													<div class="pRel">
+														<input type="text" title="첨부파일명" readonly>
+														<button class="btnRemove">삭제하기</button>
+													</div>
+												</div>
+											</td>
+										</tbody>
+									</table>
+								</div>								
+							</div>
 						</div>
 					</dd>
 				</dl>
 			</div>
-			<!--// 가이드2 -->
+			<!--// input Type -->
 			<!-- 가이드3 -->
 			<div class="cont">
 				<dl class="guideList">

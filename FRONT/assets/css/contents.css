@@ -84,15 +84,22 @@ h3 {
     flex: 0 0 auto;
   }
 }
+.btnBox[class*=sideLeft] {
+  justify-content: flex-start;
+}
 .btnBox[class*=sideRight] {
   justify-content: flex-end;
+}
+
+button[class*=btn][type=button] {
+  cursor: pointer;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px;
+  padding: 16px 12px;
   border-radius: 8px;
   width: max-content;
   height: 48px;
@@ -105,7 +112,6 @@ h3 {
   white-space: nowrap;
   padding: 8px 10px;
   border-radius: 4px;
-  max-width: 72px;
   height: 32px;
   line-height: normal;
   font-size: 15px;
@@ -130,6 +136,7 @@ h3 {
   border: 1px solid var(--color-dark);
   font-weight: var(--regular);
   color: var(--color-dark);
+  background: var(--color-white);
 }
 .btnDefault:hover, .btnDefault:focus {
   background: var(--gray5);
@@ -138,8 +145,9 @@ h3 {
   background: var(--gray30);
 }
 .btnDefault[disabled] {
+  border-color: var(--gray50);
+  color: var(--gray60);
   background: var(--gray30);
-  bordeR-color: var(--gray50);
 }
 
 .btnGray {
@@ -154,8 +162,9 @@ h3 {
   background: var(--gray70);
 }
 .btnGray[disabled] {
-  color: vaR(--gray60);
-  background: #D8D8D8;
+  border-color: #8E8E8E;
+  color: var(--gray60);
+  background: var(--gray30);
 }
 
 .btnRed {
@@ -176,10 +185,13 @@ h3 {
 
 .btnUnder {
   position: relative;
+  padding: 8px 4px;
+  height: auto;
   line-height: normal;
   font-size: 17px;
   font-weight: var(--regular);
   color: var(--color-text);
+  background: none;
 }
 .btnUnder::after {
   display: block;
@@ -189,12 +201,13 @@ h3 {
   left: 0;
   width: 100%;
   height: 1px;
-}
-.btnUnder[class*=gray]::after {
   background: var(--color-text);
 }
-.btnUnder[class*=red]::after {
-  background: var(--color-text);
+.btnUnder:hover, .btnUnder:focus {
+  color: var(--color-red);
+}
+.btnUnder:hover::after, .btnUnder:focus::after {
+  background: var(--color-red);
 }
 
 .btnLink {
@@ -223,7 +236,40 @@ h3 {
   text-indent: -9999px;
   background: url(../images/ico-file-remove.svg) no-repeat center center/contain;
   transform: translateY(-50%);
-  cursor: pointer;
+}
+
+.btnLocation {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  text-indent: -9999px;
+  background: url(../images/ico-location.svg) no-repeat var(--color-red) center center/auto;
+}
+.btnLocation:hover, .btnLocation:focus {
+  background-color: #B9131E;
+}
+.btnLocation:active {
+  background-color: #8B0E16;
+}
+.btnLocation[disabled] {
+  color: vaR(--gray60);
+  background-color: #D8D8D8;
+}
+
+[class*=withIco] {
+  color: #000B17;
+}
+[class*=withIco]::before {
+  display: block;
+  content: "";
+  margin-right: 4px;
+  width: 20px;
+  height: 20px;
+}
+[class*=withIco][class*=Link]::before {
+  background: url(../images/ico-go-to-link.svg) no-repeat center center/contain;
 }
 
 /* //버튼 */
@@ -259,6 +305,32 @@ h3 {
   align-items: center;
   justify-content: flex-start;
   text-align: left;
+}
+.inputBox .required {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.inputBox .required::before {
+  display: inline-block;
+  content: "*";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color-red);
+}
+.inputBox p {
+  margin-top: 8px;
+  line-height: 1.2;
+  font-size: 15px;
+  font-weight: var(--regular);
+}
+.inputBox.succcess p {
+  color: var(--success);
+}
+.inputBox.error p {
+  color: var(--color-red);
 }
 
 /* 탭 */
@@ -325,6 +397,9 @@ h3 {
 [class*=flexBox][class*=Ae] {
   align-items: flex-end;
 }
+[class*=flexBox][class*=Ab] {
+  align-items: space-between;
+}
 [class*=flexBox][class*=Js] {
   justify-content: flex-start;
 }
@@ -333,6 +408,9 @@ h3 {
 }
 [class*=flexBox][class*=Je] {
   justify-content: flex-end;
+}
+[class*=flexBox][class*=Jb] {
+  justify-content: space-between;
 }
 
 /* container */
@@ -408,18 +486,18 @@ h3 {
 }
 @media screen and (min-width: 1160px) {
   .titL h2 {
-    font-size: 40px;
     margin: 0 0 80px;
+    font-size: 40px;
   }
 }
 
 .titM h3 {
+  margin-bottom: 64px;
   line-height: 1.5;
   letter-spacing: -0.03em;
   font-size: 32px;
   font-weight: var(--bold);
   color: var(--color-dark);
-  margin-bottom: 64px;
 }
 @media screen and (min-width: 1160px) {
   .titM h3 {
@@ -549,8 +627,8 @@ h3 {
 }
 .txtDotList li.subMore span::before {
   display: inline-block;
-  padding: 0;
   margin: 0 2px 0 0;
+  padding: 0;
 }
 .txtDotList li.subMore span[class*=dash]::before {
   content: "-";
@@ -745,11 +823,11 @@ h3 {
   padding: 6px 10px;
 }
 .tableDefault tbody tr td .prevFileInput {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0 8px;
+  position: relative;
   margin: 8px 0 0;
 }
 .tableDefault tbody tr td .prevFileInput div {
@@ -757,18 +835,18 @@ h3 {
   max-width: 320px;
 }
 .tableDefault tbody tr td .prevFileInput input {
-  color: var(--gray60);
   max-width: 320px;
+  color: var(--gray60);
   background: var(--gray5);
   border-style: none;
 }
 .tableDefault tbody tr td .prevFileInput::before {
-  content: "";
   display: block;
-  max-width: 72px;
-  width: auto;
-  height: 32px;
   flex: 0 0 72px;
+  content: "";
+  width: auto;
+  max-width: 72px;
+  height: 32px;
 }
 .tableDefault tbody tr td textarea {
   padding: 10px;
@@ -791,8 +869,11 @@ h3 {
   color: var(--color-text);
 }
 .tableDefault tbody tr td .withFileBtn {
-  position: relative;
   gap: 0 8px;
+  position: relative;
+}
+.tableDefault tbody tr td .withFileBtn .btnRed {
+  width: 72px;
 }
 .tableDefault tbody tr td .withFileBtn input {
   max-width: 320px;
@@ -801,11 +882,11 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
   margin: 0;
   padding: 0;
   width: 1px;
   height: 1px;
+  opacity: 0;
 }
 .tableDefault tbody tr td a[download] {
   line-height: 1.2;
