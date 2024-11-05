@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>우리씨앤씨 관리 시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.4.1.min.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/echarts.min.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+$(function(){
+	fn_gnb(0);
+})
+</script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<h1><a href=""><img src="../assets/images/common/logo.svg" alt="WOORI C&amp;C"></a></h1>
+			<!-- util -->
+			<div class="util">
+				<strong class="homeName">
+					<span><i>home</i></span>
+					우리씨앤씨 관리 시스템
+				</strong>
+				<strong class="userName">
+					<span><i>person</i></span>
+					홍길동 <em>님</em>
+					<button type="button" class="btnLogout">
+						<i>logout</i>
+					</button>
+				</strong>
+				<div class="notice on"><!-- 알림 있을 경우 on class 추가 -->
+					<a href=""><i>notifications</i></a>
+					<ul>
+						<li class="new"><a href="">게시물 01이 수정 되었습니다.게시물 01이 수정 되었습니다.게시물 01이 수정 되었습니다.</a></li><!-- 새로운 알림일 경우 new class 추가 -->
+						<li><a href="">게시물 01이 수정 되었습니다.</a></li>
+						<li><a href="">게시물 01이 수정 되었습니다.</a></li>
+						<li><a href="">게시물 01이 수정 되었습니다.</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--// util -->
+		</div>
+		<!--// inner -->
+	</div>
+	<!--// header -->
+
+	<!-- gnb -->
+	<div id="gnb">
+		<!-- searchArea -->
+		<div class="searchArea">
+			<input type="text" title="검색" placeholder="검색">
+			<button type="button"><i>search</i></button>
+		</div>
+		<!--// searchArea -->
+		<!-- inner -->
+		<div class="inner">
+			<ul class="depth01">
+				<li>
+					<a href="">
+						<i>home</i>
+						<span>메뉴01</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i>list_alt_add</i>
+						<span>메뉴02</span>
+					</a>
+					<ul class="depth02">
+						<li><a href="">DEPTH0201</a>
+							<ul class="depth03">
+								<li><a href="">DEPTH020101</a></li>
+								<li><a href="">DEPTH020102</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH02010201</a></li>
+										<li><a href="">DEPTH02010202</a></li>
+										<li><a href="">DEPTH02010203</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH020103</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH02010301</a></li>
+										<li><a href="">DEPTH02010302</a></li>
+										<li><a href="">DEPTH02010303</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH020103</a></li>
+							</ul>
+						</li>
+						<li><a href="">DEPTH0202</a>
+							<ul class="depth03">
+								<li><a href="">DEPTH020201</a></li>
+								<li><a href="">DEPTH020202</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH02020201</a></li>
+										<li><a href="">DEPTH02020202</a></li>
+										<li><a href="">DEPTH02020203</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH020203</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH02020301</a></li>
+										<li><a href="">DEPTH02020302</a></li>
+										<li><a href="">DEPTH02020303</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH020203</a></li>
+							</ul>
+						</li>
+						<li><a href="">DEPTH0203</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="">
+						<i>edit_square</i>
+						<span>메뉴03</span>
+					</a>
+					<ul class="depth02">
+						<li><a href="">DEPTH0301</a>
+							<ul class="depth03">
+								<li><a href="">DEPTH030101</a></li>
+								<li><a href="">DEPTH030102</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH03010201</a></li>
+										<li><a href="">DEPTH03010202</a></li>
+										<li><a href="">DEPTH03010203</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH030103</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH03010301</a></li>
+										<li><a href="">DEPTH03010302</a></li>
+										<li><a href="">DEPTH03010303</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH030103</a></li>
+							</ul>
+						</li>
+						<li><a href="">DEPTH0302</a>
+							<ul class="depth03">
+								<li><a href="">DEPTH030201</a></li>
+								<li><a href="">DEPTH030202</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH03020201</a></li>
+										<li><a href="">DEPTH03020202</a></li>
+										<li><a href="">DEPTH03020203</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH030203</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH03020301</a></li>
+										<li><a href="">DEPTH03020302</a></li>
+										<li><a href="">DEPTH03020303</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH030203</a></li>
+							</ul>
+						</li>
+						<li><a href="">DEPTH0303</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="">
+						<i>insert_chart</i>
+						<span>메뉴04</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i>settings</i>
+						<span>메뉴05</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--// inner -->
+		<p class="copy"><em>COPYRIGHT &copy; 2022. <span>ALL RIGHTS</span> RESERVED.</em></p>
+		<button type="button" class="btnMenu"><i>arrow_back_ios_new</i></button>
+	</div>
+	<!--// gnb -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+			<!-- contWrap -->
+			<div class="contWrap">
+				<!-- cont -->
+				<div class="cont icoBox v1">
+					<i>person</i>
+					<div>
+						<a href="">215</a>
+						<strong>월간 방문자 수</strong>
+					</div>
+				</div>
+				<!--// cont -->
+				<!-- cont -->
+				<div class="cont icoBox v2">
+					<i>person</i>
+					<div>
+						<a href="">215</a>
+						<strong>월간 방문자 수</strong>
+					</div>
+				</div>
+				<!--// cont -->
+				<!-- cont -->
+				<div class="cont icoBox v3">
+					<i>help</i>
+					<div>
+						<a href="">Q&amp;A</a>
+						<strong>최다 조회수 게시물</strong>
+					</div>
+				</div>
+				<!--// cont -->
+				<!-- cont -->
+				<div class="cont icoBox v4">
+					<i>notifications</i>
+					<div>
+						<a href="">공지사항</a>
+						<strong>최다 조회수 게시물</strong>
+					</div>
+				</div>
+				<!--// cont -->
+			</div>
+			<!--// contWrap -->
+			<!-- contWrap -->
+			<div class="contWrap">
+				<!-- cont -->
+				<div class="cont col2">
+					<!-- listTop -->
+					<div class="listTop">
+						<!-- left -->
+						<div class="left">
+							<!-- tabWrap -->
+							<div class="tabWrap tabFunc">
+								<ul>
+									<li class="curr"><a href="">방문자 수</a></li>
+									<li><a href="">회원 수</a></li>
+								</ul>
+							</div>
+							<!--// tabWrap -->
+						</div>
+						<!--// left -->
+						<!-- right -->
+						<div class="right">
+							<!-- tabWrap -->
+							<div class="tabWrap sub tabFunc">
+								<ul>
+									<li class="curr"><a href="">연도별</a></li>
+									<li><a href="">월별</a></li>
+									<li><a href="">일별</a></li>
+								</ul>
+							</div>
+							<!--// tabWrap -->
+						</div>
+						<!--// right -->
+					</div>
+					<!--// listTop -->
+				</div>
+				<!--// cont -->
+				<!-- cont -->
+				<div class="cont col1">
+					<!-- titArea -->
+					<div class="titArea">
+						<h3>3 March</h3>
+					</div>
+					<!--// titArea -->
+				</div>
+				<!--// cont -->
+			</div>
+			<!--// contWrap -->
+			<!-- contWrap -->
+			<div class="contWrap">
+				<!-- cont -->
+				<div class="cont">
+					<!-- titArea -->
+					<div class="titArea">
+						<h3>Q&amp;A</h3>
+						<!-- right -->
+						<div class="right">
+							<button type="button" class="btnMore"><i>add</i><span class="hide">더보기</span></button>
+						</div>
+						<!--// right -->
+					</div>
+					<!--// titArea -->
+					<!-- noticeList -->
+					<div class="noticeList">
+						<ul>
+							<li><a href=""><span class="label v1">문의</span>제목영역입니다. <em>2021.02.01</em></a></li>
+							<li><a href=""><span class="label v1">단순</span>제목영역입니다. 제목영역입니다. 제목영역입니다. 제목영역입니다. 제목영역입니다. 제목영역입니다. <em>2021.02.01</em></a></li>
+							<li><a href=""><span class="label v1">결제</span>제목영역입니다. <em>2021.02.01</em></a></li>
+							<li><a href=""><span class="label v1">결제</span>제목영역입니다. <em>2021.02.01</em></a></li>
+						</ul>
+					</div>
+					<!--// noticeList -->
+				</div>
+				<!--// cont -->
+				<!-- cont -->
+				<div class="cont">
+					<!-- titArea -->
+					<div class="titArea">
+						<h3>공지사항</h3>
+						<!-- right -->
+						<div class="right">
+							<button type="button" class="btnMore"><i>add</i><span class="hide">더보기</span></button>
+						</div>
+						<!--// right -->
+					</div>
+					<!--// titArea --><!-- noticeList -->
+					<div class="noticeList">
+						<ul>
+							<li><a href=""><span class="label v2">안내</span>제목영역입니다. 제목영역입니다. 제목영역입니다. 제목영역입니다. 제목영역입니다. 제목영역입니다. 제목영역입니다. 제목영역입니다. <em>2021.02.01</em></a></li>
+							<li><a href=""><span class="label v2">공지</span>제목영역입니다. <em>2021.02.01</em></a></li>
+							<li><a href=""><span class="label v2">공지</span>제목영역입니다. <em>2021.02.01</em></a></li>
+							<li><a href=""><span class="label v2">공지</span>제목영역입니다. <em>2021.02.01</em></a></li>
+						</ul>
+					</div>
+					<!--// noticeList -->
+				</div>
+				<!--// cont -->
+			</div>
+			<!--// contWrap -->
+		</div>	
+		<!--// contents -->
+	</div>
+	<!--// container -->
+</div>
+<!--// wrap -->
+</body>
+</html>
