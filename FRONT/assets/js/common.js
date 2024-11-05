@@ -121,6 +121,11 @@ const fn_common = () => {
         skipNav.removeClass('on')
     })
 
+    // file add
+    $('.withFileBtn .btnRed').on('click', (()=>{
+        $('[type="file"]').click();
+    }))
+
 }
 
 const fn_contents = () => {
