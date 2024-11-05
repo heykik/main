@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>우리씨앤씨 관리 시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.4.1.min.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/echarts.min.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+$(function(){
+	fn_gnb(1,1,1,1);
+})
+</script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<h1><a href=""><img src="../assets/images/common/logo.svg" alt="WOORI C&amp;C"></a></h1>
+			<!-- util -->
+			<div class="util">
+				<strong class="homeName">
+					<span><i>home</i></span>
+					우리씨앤씨 관리 시스템
+				</strong>
+				<strong class="userName">
+					<span><i>person</i></span>
+					홍길동 <em>님</em>
+					<button type="button" class="btnLogout">
+						<i>logout</i>
+					</button>
+				</strong>
+				<div class="notice on"><!-- 알림 있을 경우 on class 추가 -->
+					<a href=""><i>notifications</i></a>
+					<ul>
+						<li class="new"><a href="">게시물 01이 수정 되었습니다.게시물 01이 수정 되었습니다.게시물 01이 수정 되었습니다.</a></li><!-- 새로운 알림일 경우 new class 추가 -->
+						<li><a href="">게시물 01이 수정 되었습니다.</a></li>
+						<li><a href="">게시물 01이 수정 되었습니다.</a></li>
+						<li><a href="">게시물 01이 수정 되었습니다.</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--// util -->
+		</div>
+		<!--// inner -->
+	</div>
+	<!--// header -->
+
+	<!-- gnb -->
+	<div id="gnb">
+		<!-- searchArea -->
+		<div class="searchArea">
+			<input type="text" title="검색" placeholder="검색">
+			<button type="button"><i>search</i></button>
+		</div>
+		<!--// searchArea -->
+		<!-- inner -->
+		<div class="inner">
+			<ul class="depth01">
+				<li>
+					<a href="">
+						<i>home</i>
+						<span>메뉴01메뉴01메뉴01메뉴01메뉴01메뉴01</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i>list_alt_add</i>
+						<span>메뉴1111</span>
+					</a>
+					<ul class="depth02">
+						<li><a href="">DEPTH0201</a>
+							<ul class="depth03">
+								<li><a href="">DEPTH020101</a></li>
+								<li><a href="">DEPTH020102</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH02010201</a></li>
+										<li><a href="">DEPTH02010202</a></li>
+										<li><a href="">DEPTH02010203</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH020103</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH02010301</a></li>
+										<li><a href="">DEPTH02010302</a></li>
+										<li><a href="">DEPTH02010303</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH020103</a></li>
+							</ul>
+						</li>
+						<li><a href="">DEPTH0202</a>
+							<ul class="depth03">
+								<li><a href="">DEPTH020201</a></li>
+								<li><a href="">DEPTH020202</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH02020201</a></li>
+										<li><a href="">DEPTH02020202</a></li>
+										<li><a href="">DEPTH02020203</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH020203</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH02020301</a></li>
+										<li><a href="">DEPTH02020302</a></li>
+										<li><a href="">DEPTH02020303</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH020203</a></li>
+							</ul>
+						</li>
+						<li><a href="">DEPTH0203</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="">
+						<i>edit_square</i>
+						<span>메뉴03</span>
+					</a>
+					<ul class="depth02">
+						<li><a href="">DEPTH0301</a>
+							<ul class="depth03">
+
+								<li><a href="">DEPTH030101</a></li>
+								<li><a href="">DEPTH030102</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH03010201</a></li>
+										<li><a href="">DEPTH03010202</a></li>
+										<li><a href="">DEPTH03010203</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH030103</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH03010301</a></li>
+										<li><a href="">DEPTH03010302</a></li>
+										<li><a href="">DEPTH03010303</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH030103</a></li>
+							</ul>
+						</li>
+						<li><a href="">DEPTH0302</a>
+							<ul class="depth03">
+								<li><a href="">DEPTH030201</a></li>
+								<li><a href="">DEPTH030202</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH03020201</a></li>
+										<li><a href="">DEPTH03020202</a></li>
+										<li><a href="">DEPTH03020203</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH030203</a>
+									<ul class="depth04">
+										<li><a href="">DEPTH03020301</a></li>
+										<li><a href="">DEPTH03020302</a></li>
+										<li><a href="">DEPTH03020303</a></li>
+									</ul>
+								</li>
+								<li><a href="">DEPTH030203</a></li>
+							</ul>
+						</li>
+						<li><a href="">DEPTH0303</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="">
+						<i>insert_chart</i>
+						<span>메뉴04</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i>settings</i>
+						<span>메뉴05</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--// inner -->
+		<p class="copy"><em>COPYRIGHT &copy; 2022. <span>ALL RIGHTS</span> RESERVED.</em></p>
+		<button type="button" class="btnMenu"><i>arrow_back_ios_new</i></button>
+	</div>
+	<!--// gnb -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+			<h2>등록</h2>
+			<ol class="location">
+				<li><i>home</i></li>
+				<li>DEPTH01</li>
+				<li>DEPTH02</li>
+			</ol>
+			<!-- contWrap -->
+			<div class="contWrap">
+				<!-- cont -->
+				<div class="cont">
+					<!-- titArea -->
+					<div class="titArea">
+						<h3>페이지 이동시 예시</h3>
+					</div>
+					<!--// titArea -->
+
+					<!-- tabWrap -->
+					<div class="tabWrap nav">
+						<ul>
+							<li class="curr"><a href="">메뉴01</a></li>
+							<li><a href="">메뉴02</a></li>
+							<li><a href="">메뉴03</a></li>
+						</ul>
+					</div>
+					<!--// tabWrap -->
+					<!-- listTop -->
+					<div class="listTop">
+						<!-- left -->
+						<div class="left">
+							<p class="total">총 <span class="cPoint">10</span>건</p>
+						</div>
+						<!--// left -->
+						<!-- right -->
+						<div class="right">
+							<!-- tabWrap -->
+							<div class="tabWrap sub tabFunc">
+								<ul>
+									<li class="curr"><a href="">전체</a></li>
+									<li><a href="">사용중</a></li>
+									<li><a href="">미사용</a></li>
+								</ul>
+							</div>
+							<!--// tabWrap -->
+							<select title="리스트 노출 갯수" class="w80">
+								<option value="">10</option>
+								<option value="">20</option>
+								<option value="">50</option>
+								<option value="">100</option>
+							</select>
+						</div>
+						<!--// right -->
+					</div>
+					<!--// listTop -->
+					<!-- listTable -->
+					<div class="listTable">
+						<table>
+							<caption>전체선택, 번호, 분류, 제목, 첨부파일, 등록일, 조회수 항목으로 구성된 (표 제목) 표입니다.</caption>
+							<colgroup>
+								<col span="3" style="width:80px"> 
+								<col style="width:auto">
+								<col style="width:100px"> 
+								<col style="width:150px"> 
+								<col style="width:100px"> 
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<span class="checkbox only">
+											<input type="checkbox" id="chkAll">
+											<label for="chkAll">전체선택</label>
+										</span>
+									</th>
+									<th scope="col">번호</th>
+									<th scope="col">분류</th>
+									<th scope="col">제목</th>
+									<th scope="col">첨부파일</th>
+									<th scope="col">등록일</th>
+									<th scope="col">조회수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<span class="checkbox only">
+											<input type="checkbox" id="chk0103">
+											<label for="chk0103">선택</label>
+										</span>
+									</td>
+									<td><span class="label v2">공지</span></td>
+									<td>전체</td>
+									<td><a href="">제목영역입니다.</a></td>
+									<td><button type="button" class="btnIco"><i>sim_card_download</i><span class="hide">파일 다운로드</span></button></td>
+									<td>2023.05.25 10:00:00</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="checkbox only">
+											<input type="checkbox" id="chk0102">
+											<label for="chk0102">선택</label>
+										</span>
+									</td>
+									<td><span class="label v2">공지</span></td>
+									<td>전체</td>
+									<td><a href="">제목영역입니다.</a></td>
+									<td><button type="button" class="btnIco"><i>sim_card_download</i><span class="hide">파일 다운로드</span></button></td>
+									<td>2023.05.25 10:00:00</td>
+									<td>100</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--// listTable -->
+					<!-- paging -->
+					<div class="paging">
+						<a href="" class="btnFirst">첫 페이지</a>
+						<a href="" class="btnPrev">이전 페이지</a>
+						<a href="">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a href="">4</a>
+						<strong>5</strong>
+						<a href="">6</a>
+						<a href="">7</a>
+						<a href="">8</a>
+						<a href="">9</a>
+						<a href="">10</a>
+						<a href="" class="btnNext">다음 페이지</a>
+						<a href="" class="btnLast">마지막 페이지</a>
+					</div>
+					<!--// paging -->
+				</div>
+				<!--// cont -->
+			</div>
+			<!--// contWrap -->
+			<!-- contWrap -->
+			<div class="contWrap">
+				<!-- cont -->
+				<div class="cont">
+					<!-- titArea -->
+					<div class="titArea">
+						<h3>현 페이지에서 탭 기능 예시</h3>
+					</div>
+					<!--// titArea -->
+
+					<!-- tabWrap -->
+					<div class="tabWrap tabFunc">
+						<ul>
+							<li class="curr"><a href="">메뉴01</a></li>
+							<li><a href="">메뉴02</a></li>
+						</ul>
+						<!-- tabBox -->
+						<div class="tabBox">
+							<!-- 메뉴01 -->
+							<div>
+								<!-- listTable -->
+								<div class="listTable">
+									<table>
+										<caption>전체선택, 번호, 분류, 제목, 첨부파일, 등록일, 조회수 항목으로 구성된 (표 제목) 표입니다.</caption>
+										<colgroup>
+											<col span="3" style="width:80px"> 
+											<col style="width:auto">
+											<col style="width:100px"> 
+											<col style="width:150px"> 
+											<col style="width:100px"> 
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">
+													<span class="checkbox only">
+														<input type="checkbox" id="chkAll02">
+														<label for="chkAll02">전체선택</label>
+													</span>
+												</th>
+												<th scope="col">번호</th>
+												<th scope="col">분류</th>
+												<th scope="col">제목</th>
+												<th scope="col">첨부파일</th>
+												<th scope="col">등록일</th>
+												<th scope="col">조회수</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<span class="checkbox only">
+														<input type="checkbox" id="chk0203">
+														<label for="chk0203">선택</label>
+													</span>
+												</td>
+												<td><span class="label v2">공지</span></td>
+												<td>전체</td>
+												<td><a href="">메뉴01 메뉴01 메뉴01 제목영역입니다.</a></td>
+												<td><button type="button" class="btnIco"><i>sim_card_download</i><span class="hide">파일 다운로드</span></button></td>
+												<td>2023.05.25 10:00:00</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>
+													<span class="checkbox only">
+														<input type="checkbox" id="chk0202">
+														<label for="chk0202">선택</label>
+													</span>
+												</td>
+												<td><span class="label v2">공지</span></td>
+												<td>전체</td>
+												<td><a href="">메뉴01 메뉴01 메뉴01 제목영역입니다.</a></td>
+												<td><button type="button" class="btnIco"><i>sim_card_download</i><span class="hide">파일 다운로드</span></button></td>
+												<td>2023.05.25 10:00:00</td>
+												<td>100</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!--// listTable -->
+								<!-- paging -->
+								<div class="paging">
+									<a href="" class="btnFirst">첫 페이지</a>
+									<a href="" class="btnPrev">이전 페이지</a>
+									<a href="">1</a>
+									<a href="">2</a>
+									<a href="">3</a>
+									<a href="">4</a>
+									<strong>5</strong>
+									<a href="">6</a>
+									<a href="">7</a>
+									<a href="">8</a>
+									<a href="">9</a>
+									<a href="">10</a>
+									<a href="" class="btnNext">다음 페이지</a>
+									<a href="" class="btnLast">마지막 페이지</a>
+								</div>
+								<!--// paging -->
+							</div>
+							<!--// 메뉴01 -->
+							<!-- 메뉴02 -->
+							<div>
+								<!-- listTable -->
+								<div class="listTable">
+									<table>
+										<caption>전체선택, 번호, 분류, 제목, 첨부파일, 등록일, 조회수 항목으로 구성된 (표 제목) 표입니다.</caption>
+										<colgroup>
+											<col span="3" style="width:80px"> 
+											<col style="width:auto">
+											<col style="width:100px"> 
+											<col style="width:150px"> 
+											<col style="width:100px"> 
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">
+													<span class="checkbox only">
+														<input type="checkbox" id="chkAll03">
+														<label for="chkAll03">전체선택</label>
+													</span>
+												</th>
+												<th scope="col">번호</th>
+												<th scope="col">분류</th>
+												<th scope="col">제목</th>
+												<th scope="col">첨부파일</th>
+												<th scope="col">등록일</th>
+												<th scope="col">조회수</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<span class="checkbox only">
+														<input type="checkbox" id="chk0303">
+														<label for="chk0303">선택</label>
+													</span>
+												</td>
+												<td><span class="label v2">공지</span></td>
+												<td>전체</td>
+												<td><a href="">메뉴02 메뉴02 메뉴02 메뉴02 메뉴02 제목영역입니다.</a></td>
+												<td><button type="button" class="btnIco"><i>sim_card_download</i><span class="hide">파일 다운로드</span></button></td>
+												<td>2023.05.25 10:00:00</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>
+													<span class="checkbox only">
+														<input type="checkbox" id="chk0302">
+														<label for="chk0302">선택</label>
+													</span>
+												</td>
+												<td><span class="label v2">공지</span></td>
+												<td>전체</td>
+												<td><a href="">메뉴02 메뉴02 메뉴02 메뉴02 메뉴02 제목영역입니다.</a></td>
+												<td><button type="button" class="btnIco"><i>sim_card_download</i><span class="hide">파일 다운로드</span></button></td>
+												<td>2023.05.25 10:00:00</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>
+													<span class="checkbox only">
+														<input type="checkbox" id="chk0304">
+														<label for="chk0304">선택</label>
+													</span>
+												</td>
+												<td><span class="label v2">공지</span></td>
+												<td>전체</td>
+												<td><a href="">메뉴02 메뉴02 메뉴02 메뉴02 메뉴02 제목영역입니다.</a></td>
+												<td><button type="button" class="btnIco"><i>sim_card_download</i><span class="hide">파일 다운로드</span></button></td>
+												<td>2023.05.25 10:00:00</td>
+												<td>100</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!--// listTable -->
+								<!-- paging -->
+								<div class="paging">
+									<a href="" class="btnFirst">첫 페이지</a>
+									<a href="" class="btnPrev">이전 페이지</a>
+									<a href="">1</a>
+									<a href="">2</a>
+									<a href="">3</a>
+									<a href="">4</a>
+									<strong>5</strong>
+									<a href="">6</a>
+									<a href="">7</a>
+									<a href="">8</a>
+									<a href="">9</a>
+									<a href="">10</a>
+									<a href="" class="btnNext">다음 페이지</a>
+									<a href="" class="btnLast">마지막 페이지</a>
+								</div>
+								<!--// paging -->
+							</div>
+							<!--// 메뉴02 -->
+						</div>
+						<!--// tabBox -->
+					</div>
+					<!--// tabWrap -->
+				</div>
+				<!--// cont -->
+			</div>
+			<!--// contWrap -->
+		</div>	
+		<!--// contents -->
+	</div>
+	<!--// container -->
+</div>
+<!--// wrap -->
+</body>
+</html>

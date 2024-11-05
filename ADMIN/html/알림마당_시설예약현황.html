@@ -416,30 +416,51 @@
                 </div>
             </div>
             <!-- graphWrap -->
+            <!-- 2024-11-05 -->
             <!-- search_box -->
             <div class="search_box">
-                <div class="sb_in">
-                    <select name="" id="" class="w120">
-                        <option value="">시설 전체</option>
-                    </select>
-                    <select name="" id="" class="w120">
-                        <option value="">전체 상태</option>
-                    </select>
-                    <!-- date -->
-                    <div class="date">
-                        <input type="text" class="input hasDatepicker" title="시작일자" autocomplete="off" value="">
+                <!-- seachWrap -->
+                <div class="seachWrap">
+                    <div class="sb_in">
+                        <input type="hidden" id="page" value="1"> 
+                        <input type="hidden" id="totcnt" value="9"> 
+                        <span>시설명</span>
+                        <select id="fclInfoSn" name="fclInfoSn" class="select mar w120" title="시설 검색 조건">
+                            <option value="all">전체</option>
+                            
+                                <option value="1">시설명1</option>
+                            
+                                <option value="2">시설명2</option>
+                            
+                        </select> 
+        
+                        <span>예약상태</span>
+                        <select id="rsvtStts" name="rsvtStts" class="select mar w120" title="글 검색 조건">
+                            <option value="all">전체</option>
+                            <option value="Y">예약완료</option>
+                            <option value="N">예약취소</option>
+                        </select> 
+                        
+                        <span>기간</span>
+                        <input type="text" id="bgngDate" name="bgngDate" class="ipt_datepicker hasDatepicker" value="" title="조회 시작일자" placeholder="조회 시작일자" autocomplete="off" readonly="">
                         <span>~</span>
-                        <input type="text" class="input hasDatepicker" title="종료일자" autocomplete="off" value="">
+                        <input type="text" id="endDate" name="endDate" class="ipt_datepicker hasDatepicker" value="" title="조회 종료일자" placeholder="조회 종료일자" autocomplete="off" readonly="">
+                        <button class="btn btnltNavy" id="resetDate">날짜초기화</button>
+                        
                     </div>
-                    <!--// date -->
-                    <select name="" id="" class="w120">
-                        <option value="">전체</option>
-                    </select>
-                    <input type="text" placeholder="검색어 입력">
-					<button class="btn btnNavy" id="searchBtn">검색</button>
-				</div>
-            </div>
+                    <div class="sb_in">
+                        <select id="searchType" name="searchType" class="select mar w100" title="글 검색 조건">
+                            <option value="rgtrNm">예약자</option>
+                            <option value="entNm">기업명</option>
+                        </select> 
+                        <input type="text" class="input w180 mar" id="searchTxt" value="" placeholder="검색어 입력" title="검색어">
+                        <button class="btn btnNavy" id="searchBtn">검색</button>
+                    </div>
+                </div>
+                <!--// seachWrap -->
+			</div>
             <!--// search_box -->
+            <!--// 2024-11-05 -->
             <!-- contWrap -->
             <div class="contWrap">
                 <!-- cont -->
