@@ -541,38 +541,122 @@ button[class*="btn"][type="button"]{
 /* flex box */
 [class*="flexBox"] {
     display: flex;
-    &[class*="Wp"]{
-        flex-wrap:wrap;
+
+    /* Flex Wrap */
+    &[class*="Wp"] {
+        flex-wrap: wrap;
     }
-    &[class*="Col"]{
-        flex-direction:column;
+    &[class*="Wn"] {
+        flex-wrap: nowrap;
     }
-    &[class*="As"]{
+    &[class*="Wr"] {
+        flex-wrap: wrap-reverse;
+    }
+    /* Flex Direction */
+    &[class*="Col"] {
+        flex-direction: column;
+    }
+    &[class*="Row"] {
+        flex-direction: row;
+    }
+    &[class*="ColRev"] {
+        flex-direction: column-reverse;
+    }
+    &[class*="RowRev"] {
+        flex-direction: row-reverse;
+    }
+    /* Align Items */
+    &[class*="As"] {
         align-items: flex-start;
     }
-    &[class*="Ac"]{
+    &[class*="Ac"] {
         align-items: center;
-    }    
-    &[class*="Ae"]{
+    }
+    &[class*="Ae"] {
         align-items: flex-end;
     }
-    &[class*="Ab"]{
-        align-items:space-between;
+    &[class*="Ab"] {
+        align-items: space-between;
     }
-    &[class*="Js"]{
-        justify-content:flex-start;
+    &[class*="Ast"] {
+        align-items: stretch;
     }
-    &[class*="Jc"]{
-        justify-content:center;
+    /* Align Content */
+    &[class*="Acs"] {
+        align-content: flex-start;
     }
-    &[class*="Je"]{
-        justify-content:flex-end;
+    &[class*="Acc"] {
+        align-content: center;
     }
-    &[class*="Jb"]{
-        justify-content:space-between;
+    &[class*="Ace"] {
+        align-content: flex-end;
+    }
+    &[class*="Acb"] {
+        align-content: space-between;
+    }
+    &[class*="Aca"] {
+        align-content: space-around;
+    }
+    &[class*="Acst"] {
+        align-content: stretch;
+    }
+    /* Justify Content */
+    &[class*="Js"] {
+        justify-content: flex-start;
+    }
+    &[class*="Jc"] {
+        justify-content: center;
+    }
+    &[class*="Je"] {
+        justify-content: flex-end;
+    }
+    &[class*="Jb"] {
+        justify-content: space-between;
+    }
+    &[class*="Ja"] {
+        justify-content: space-around;
+    }
+    &[class*="Jeven"] {
+        justify-content: space-evenly;
     }
 }
+/* Flex 컨테이너 */
+[class*="flexBox"] {
+    display: flex;
+    /* 컨테이너에 필요한 속성들만 남기기 */
+    &[class*="Wp"] {
+        flex-wrap: wrap;
+    }
+    &[class*="Col"] {
+        flex-direction: column;
+    }
+    /* ... 나머지 컨테이너 속성 */
+}
 
+/* 개별 자식 요소 */
+[class*="flexItem"] {
+    &[class*="Sfs"] {
+        align-self: flex-start;
+    }
+    &[class*="Sfc"] {
+        align-self: center;
+    }
+    &[class*="Sfe"] {
+        align-self: flex-end;
+    }
+    &[class*="G1"] {
+        flex-grow: 1;
+    }
+    &[class*="S0"] {
+        flex-shrink: 0;
+    }
+    &[class*="Bauto"] {
+        flex-basis: auto;
+    }
+    &[class*="B0"] {
+        flex-basis: 0;
+    }
+}
 
 /* container */
 #container{
@@ -583,6 +667,7 @@ button[class*="btn"][type="button"]{
     max-width:calc(1520px + 24px + 24px);
     min-height:50vh;
     @media screen and (min-width:1160px) {
+        overflow:inherit;
         margin:100px auto 0;
         padding:0 24px 120px;
     }
@@ -658,7 +743,7 @@ button[class*="btn"][type="button"]{
     }
 }
 .titM{ //모바일 미정
-    h3{
+    *{
         margin-bottom:64px;
         line-height:1.5;
         letter-spacing:-0.03em;
@@ -671,7 +756,7 @@ button[class*="btn"][type="button"]{
     }
 }
 .titS{
-    h5{
+    *{
         margin-bottom:16px;
         line-height:1.5;
         letter-spacing:-0.03em;
@@ -740,16 +825,46 @@ button[class*="btn"][type="button"]{
         }
         &[class*="ChartFindArrow"]::before{
             background:url(../images/icon/ico-chart-find-arrow-50.svg) no-repeat center center / contain;
-         }
-         &[class*="SecurityComplete"]::before{
+        }
+        &[class*="SecurityComplete"]::before{
             background:url(../images/icon/ico-security-complete-50.svg) no-repeat center center / contain;
-         }
-         &[class*="Server"]::before{
+        }
+        &[class*="Server"]::before{
             background:url(../images/icon/ico-server-50.svg) no-repeat center center / contain;
-         }
-        // &[class*=""]::before{
-        //    background:url(../images/icon/ico-airplane-50.svg) no-repeat center center / contain;
-        // }
+        }
+        &[class*="ChartOnHand"]::before{
+           background:url(../images/icon/ico-chart-on-hand-50.svg) no-repeat center center / contain;
+        }
+        &[class*="VideoCall"]::before{
+           background:url(../images/icon/ico-video-call-50.svg) no-repeat center center / contain;
+        }
+        &[class*="Teamwork"]::before{
+           background:url(../images/icon/ico-teamwork-50.svg) no-repeat center center / contain;
+        }
+        &[class*="FileOnMoniter"]::before{
+           background:url(../images/icon/ico-file-on-moniter-50.svg) no-repeat center center / contain;
+        }
+        &[class*="Notice"]::before{
+           background:url(../images/icon/ico-notice-50.svg) no-repeat center center / contain;
+        }
+        &[class*="InfoFile"]::before{
+           background:url(../images/icon/ico-info-file-50.svg) no-repeat center center / contain;
+        }
+        &[class*="Bubbles"]::before{
+           background:url(../images/icon/ico-bubbles-50.svg) no-repeat center center / contain;
+        }
+        &[class*="GlobalSettings"]::before{
+           background:url(../images/icon/ico-global-settings-50.svg) no-repeat center center / contain;
+        }
+        &[class*="EditFile"]::before{
+           background:url(../images/icon/ico-edit-file-50.svg) no-repeat center center / contain;
+        }
+        &[class*="List"]::before{
+           background:url(../images/icon/ico-list-50.svg) no-repeat center center / contain;
+        }
+        &[class*="PersonCheck"]::before{
+           background:url(../images/icon/ico-person-check-50.svg) no-repeat center center / contain;
+        }
     }
 }
 
@@ -761,8 +876,90 @@ button[class*="btn"][type="button"]{
 .cWhite{color:var(--color-white) !important}
 .cLG{color:var(--color-lightGray) !important}
 
+/* Layout Default */
+.layout{
+    .titL{
+        h2{
+            margin-bottom:32px;
+        }
+    }
+    .titM,
+    .titS{
+        h3,
+        h5{
+            margin-bottom:20px;
+        }
+    }
+    .imgTit{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+        margin-bottom:120px;
+        width:100%;
+        height:540px;
+        border-radius:40px;
+        background:url(../images/sample-bg.png) no-repeat #000 center center / 100% auto;
+        .titBox{
+            h3{
+                text-align:center;
+                line-height:1.5;
+                font-size:52px;
+                font-weight:var(--bold);
+                letter-spacing:-0.03em;
+                margin-bottom:10px;
+                color:var(--color-white);
+            }
+            .sub{
+                text-align:center;
+                line-height:1.5;
+                font-size:20px;
+                font-weight:var(--regular);
+                letter-spacing:-0.03em;
+                color:var(--color-white);
+            }
+        }
+    }
+    &.outTxt{
+        [class*="tit"] + div{
+            margin-bottom:32px;
+        }
+    }
+    .wrap{
+        display:flex;
+        align-items:flex-start;
+        justify-content:space-between;
+        gap:0 32px;
+        margin-bottom:40px;
+        > *{
+            flex: 0 1 calc(50% - 16px);
+            height:360px;
+            border-radius:20px;
+            &.shrink{
+                flex-basis:auto;
+            }
+        }
+        .imgCont{
+            overflow:hidden;
+            height:360px;
+            border-radius:20px;
+        }
+        .sortDown{
+            display:flex;
+            align-items:flex-end;
+            justify-content:space-between;
+        }
+    }
+}
+
+// sample-remove
+.sample{
+    background:url(../images/sample-ico.png) no-repeat var(--gray30) center center / auto;
+}
+
 /* text description */
 .descDeft{ //description Default
+    margin-bottom:20px;
     * {
         line-height:1.5;
         letter-spacing:-0.03em;
@@ -780,7 +977,28 @@ button[class*="btn"][type="button"]{
             margin-bottom:4px;
         }
     }
-
+    &.tag{
+        p{
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:flex-start;
+            gap:16px 8px;
+            width:100%;
+            strong{
+                flex-shrink:0;
+                font-weight:var(--bold);
+                color:var(--color-red);
+            }
+        }
+        &.colLine{
+            p{
+                flex-direction:column;
+                align-items:flex-start;
+                justify-content:center;
+            }
+        }
+    }
 }
 
 /* dot list */
@@ -1307,6 +1525,74 @@ button[class*="btn"][type="button"]{
 }
 
 /* custom */
+
+/* 디지털 혁신 지원 서비스 > 서비스 지원제도 */
+.serviceMap{
+    .titHeader{
+        padding:40px 0 60px;
+        line-height:1.3;
+        text-align:center;
+        font-size:52px;
+        font-weight:var(--bold);
+        letter-spacing:-0.03em;
+        color:var(--color-dark);
+    }
+    .structureWrap{
+        position:relative;
+        padding:80px 0 0;
+        &::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:calc(((-100vw) + 1520px) / 2);
+            z-index:-1;
+            display:block;
+            width:100vw;
+            height:552px;
+            background:url(../images/bg-servicemap-header.png) no-repeat center center / 100% auto;
+        }
+        .wrap{
+            padding:70px 0;
+            border-radius:40px;
+            background:#fff;
+        }
+        .dotListWrap{
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:center;
+            gap:6px;
+            margin: 0 auto 32px;
+            padding:0 40px;
+            width:240px;
+            height:110px;
+            background:var(--gray5);
+            border-radius:16px;
+            p{
+                display:flex;
+                align-items:center;
+                justify-content:flex-start;
+                gap:0 4px;
+                line-height:1.5;
+                font-size:19px;
+                font-weight:vaR(--medium);
+                letter-spacing:-0.03em;
+                color:var(--color-dark);
+                &::before{
+                    content:"";
+                    display:block;
+                    margin:0 4px;
+                    width:6px;
+                    height:6px;
+                    background:var(--color-red);
+                    border-radius:50%;
+                }
+            }
+        }
+    }
+
+}
+
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내
                                  > 교육수료증 발급
 */
