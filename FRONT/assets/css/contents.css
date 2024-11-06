@@ -661,7 +661,15 @@ button[class*=btn][type=button] {
   align-items: center;
   justify-content: flex-start;
   gap: 0 4px;
-  padding-bottom: 40px;
+  padding: 0 0 40px;
+}
+@media screen and (min-width: 1160px) {
+  .sitemap ul {
+    padding: 0;
+  }
+}
+.sitemap li {
+  white-space: nowrap;
 }
 .sitemap li:not(:last-child)::after {
   display: inline-flex;
@@ -883,26 +891,26 @@ button[class*=btn][type=button] {
   justify-content: center;
   overflow: hidden;
   margin-bottom: 120px;
+  border-radius: 40px;
   width: 100%;
   height: 540px;
-  border-radius: 40px;
   background: url(../images/sample-bg.png) no-repeat #000 center center/100% auto;
 }
 .layout .imgTit .titBox h3 {
+  margin-bottom: 10px;
   text-align: center;
   line-height: 1.5;
+  letter-spacing: -0.03em;
   font-size: 52px;
   font-weight: var(--bold);
-  letter-spacing: -0.03em;
-  margin-bottom: 10px;
   color: var(--color-white);
 }
 .layout .imgTit .titBox .sub {
   text-align: center;
   line-height: 1.5;
+  letter-spacing: -0.03em;
   font-size: 20px;
   font-weight: var(--regular);
-  letter-spacing: -0.03em;
   color: var(--color-white);
 }
 .layout.outTxt [class*=tit] + div {
@@ -917,16 +925,16 @@ button[class*=btn][type=button] {
 }
 .layout .wrap > * {
   flex: 0 1 calc(50% - 16px);
-  height: 360px;
   border-radius: 20px;
+  height: 360px;
 }
 .layout .wrap > *.shrink {
   flex-basis: auto;
 }
 .layout .wrap .imgCont {
   overflow: hidden;
-  height: 360px;
   border-radius: 20px;
+  height: 360px;
 }
 .layout .wrap .sortDown {
   display: flex;
@@ -1528,33 +1536,87 @@ button[class*=btn][type=button] {
 /* custom */
 /* 디지털 혁신 지원 서비스 > 서비스 지원제도 */
 .serviceMap .titHeader {
-  padding: 40px 0 60px;
-  line-height: 1.3;
+  padding: 20px 0 60px;
+}
+.serviceMap .titHeader h3 {
   text-align: center;
-  font-size: 52px;
-  font-weight: var(--bold);
+  line-height: 1.3;
+  font-size: 36px;
   letter-spacing: -0.03em;
+  font-weight: var(--bold);
   color: var(--color-dark);
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .titHeader h3 {
+    padding: 40px 0 60px;
+    font-size: 52px;
+  }
+}
+.serviceMap .titM h5 {
+  font-size: 24px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .titM h5 {
+    font-size: 36px;
+  }
 }
 .serviceMap .structureWrap {
   position: relative;
-  padding: 80px 0 0;
+  margin: 0 -16px 0;
+  padding: 64px 16px 0;
+  background: url(../images/bg-structure.png) no-repeat top center/100%;
 }
-.serviceMap .structureWrap::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc((-100vw + 1520px) / 2);
-  z-index: -1;
+@media screen and (min-width: 1160px) {
+  .serviceMap .structureWrap {
+    margin: 0 auto 68px;
+    padding: 80px 0 0;
+    background: initial;
+  }
+  .serviceMap .structureWrap::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    width: 100vw;
+    height: 552px;
+    background: url(../images/bg-servicemap-header.png) no-repeat center center/auto;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1160px) and (min-width: 1520px) {
+  .serviceMap .structureWrap::before {
+    left: calc((-100vw + 1520px) / 2);
+    transform: initial;
+  }
+}
+.serviceMap .structureWrap::after {
   display: block;
+  content: "";
+  margin: 0 0 0 -16px;
   width: 100vw;
-  height: 552px;
-  background: url(../images/bg-servicemap-header.png) no-repeat center center/100% auto;
+  height: 78px;
+  background: url(../images/visual-arrow-large.svg) no-repeat center center/contain;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .structureWrap::after {
+    margin: 0 auto;
+    width: 726px;
+    height: 152px;
+  }
 }
 .serviceMap .structureWrap .wrap {
-  padding: 70px 0;
+  margin: 0 0 104px;
+  padding: 40px 0;
   border-radius: 40px;
   background: #fff;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .structureWrap .wrap {
+    margin: 0;
+    padding: 70px 0;
+  }
 }
 .serviceMap .structureWrap .dotListWrap {
   display: flex;
@@ -1562,12 +1624,19 @@ button[class*=btn][type=button] {
   align-items: flex-start;
   justify-content: center;
   gap: 6px;
-  margin: 0 auto 32px;
+  margin: 0 auto 24px;
   padding: 0 40px;
-  width: 240px;
-  height: 110px;
-  background: var(--gray5);
   border-radius: 16px;
+  width: 220px;
+  height: 100px;
+  background: var(--gray5);
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .structureWrap .dotListWrap {
+    margin: 0 auto 32px;
+    width: 240px;
+    height: 110px;
+  }
 }
 .serviceMap .structureWrap .dotListWrap p {
   display: flex;
@@ -1575,19 +1644,504 @@ button[class*=btn][type=button] {
   justify-content: flex-start;
   gap: 0 4px;
   line-height: 1.5;
-  font-size: 19px;
-  font-weight: vaR(--medium);
   letter-spacing: -0.03em;
+  font-size: 17px;
+  font-weight: var(--medium);
   color: var(--color-dark);
+  white-space: nowrap;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .structureWrap .dotListWrap p {
+    font-size: 19px;
+  }
 }
 .serviceMap .structureWrap .dotListWrap p::before {
-  content: "";
   display: block;
+  content: "";
   margin: 0 4px;
+  border-radius: 50%;
   width: 6px;
   height: 6px;
   background: var(--color-red);
-  border-radius: 50%;
+}
+.serviceMap .structureWrap .circleWrap {
+  text-align: center;
+  margin: 0 auto 24px;
+}
+.serviceMap .structureWrap .circleWrap .moV {
+  display: block;
+  max-width: 326px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .structureWrap .circleWrap .moV {
+    display: none;
+  }
+}
+.serviceMap .structureWrap .circleWrap .pcV {
+  max-width: 1520px;
+}
+.serviceMap .dbWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .dbWrap {
+    flex-direction: row;
+    margin-top: -12px;
+  }
+}
+.serviceMap .dbWrap div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-red);
+  border-radius: 100px;
+  width: 220px;
+  height: 60px;
+  background: var(--table-bg);
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .dbWrap div {
+    height: 70px;
+  }
+}
+.serviceMap .dbWrap div p {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+  font-size: 15px;
+  font-weight: var(--medium);
+  color: var(--color-dark);
+}
+.serviceMap .dbWrap div p::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon/ico-coin-24.svg) no-repeat center center/contain;
+}
+.serviceMap .cardList {
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 0 64px;
+  padding: 0 0 40px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .cardList {
+    gap: 0 24px;
+  }
+}
+.serviceMap .cardList li {
+  flex: 0 0 calc(50% - 8px);
+  padding: 24px 0;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 20px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+  height: auto;
+  background: var(--gray5);
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .cardList li {
+    flex: initial;
+    font-size: 24px;
+    padding: 44px 66px;
+    height: 240px;
+  }
+}
+.serviceMap .cardList li::before {
+  display: block;
+  content: "";
+  border-radius: 100%;
+  margin: 0 auto 10px;
+  width: 80px;
+  height: 80px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .cardList li::before {
+    margin: 0 auto 16px;
+    width: 100px;
+    height: 100px;
+  }
+}
+.serviceMap .cardList li:nth-child(1)::before {
+  background: url(../images/visual-cardList-01.svg) no-repeat #fff center center/auto;
+}
+.serviceMap .cardList li:nth-child(2)::before {
+  background: url(../images/visual-cardList-02.svg) no-repeat #fff center center/auto;
+}
+.serviceMap .cardList li:nth-child(3)::before {
+  background: url(../images/visual-cardList-03.svg) no-repeat #fff center center/auto;
+}
+.serviceMap .cardList li:nth-child(4)::before {
+  background: url(../images/visual-cardList-04.svg) no-repeat #fff center center/auto;
+}
+.serviceMap .cardList li:nth-child(5)::before {
+  background: url(../images/visual-cardList-05.svg) no-repeat #fff center center/auto;
+}
+.serviceMap .cardList li:nth-child(6)::before {
+  background: url(../images/visual-cardList-06.svg) no-repeat #fff center center/auto;
+}
+.serviceMap .needWrap {
+  margin-bottom: 104px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .needWrap {
+    margin-bottom: 120px;
+  }
+}
+.serviceMap .needWrap .highWrap {
+  position: relative;
+}
+.serviceMap .needWrap .highWrap::after {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  display: block;
+  content: "";
+  width: 6px;
+  height: 40px;
+  background: url(../images/visual-shCard-dash.svg) no-repeat center bottom/auto;
+  transform: translate(-50%, 100%);
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .needWrap .highWrap::after {
+    position: static;
+    margin: 24px auto 18px;
+    width: 1036px;
+    height: 34px;
+    background: url(../images/visual-shCard-dash-pc.svg) no-repeat center bottom/auto;
+    transform: initial;
+  }
+}
+.serviceMap .needWrap .highWrap div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 40px;
+  padding: 18px 0;
+  width: 100%;
+  max-width: 440px;
+  height: 64px;
+  background: var(--table-bg);
+  border: 1px solid var(--color-red);
+  border-radius: 100px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .needWrap .highWrap div {
+    margin: 0 auto;
+    font-size: 24px;
+    height: 74px;
+  }
+}
+.serviceMap .needWrap .highWrap p {
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 20px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+.serviceMap .needWrap .wrap {
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .needWrap .wrap {
+    flex-direction: row;
+  }
+}
+.serviceMap .needWrap .wrap .shCard {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 20px;
+  padding: 38px 32px;
+  width: 100%;
+  height: 140px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .needWrap .wrap .shCard {
+    padding: 32px 60px;
+    width: initial;
+    height: 200px;
+  }
+}
+.serviceMap .needWrap .wrap .shCard:not(:last-child)::before {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  display: block;
+  content: "";
+  width: 6px;
+  height: 25px;
+  background: url(../images/visual-shCard-dash.svg) no-repeat center bottom/auto;
+  transform: translate(-50%, 100%);
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .needWrap .wrap .shCard:not(:last-child)::before {
+    content: none;
+  }
+}
+.serviceMap .needWrap .wrap .shCard strong {
+  line-height: 1.5;
+  letter-spacing: 0.03;
+  font-size: 20px;
+  font-weight: var(--bold);
+  color: var(--color-red);
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .needWrap .wrap .shCard strong {
+    font-size: 24px;
+  }
+}
+.serviceMap .needWrap .wrap .shCard p {
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--color-text);
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .needWrap .wrap .shCard p {
+    font-size: 20px;
+  }
+}
+.serviceMap .targetWrap {
+  position: relative;
+  padding: 40px 0;
+  background: var(--gray5);
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .targetWrap {
+    background: initial;
+  }
+  .serviceMap .targetWrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc((-100vw + 1520px) / 2);
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+    background: var(--gray5);
+  }
+}
+.serviceMap .targetWrap .wrap {
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .targetWrap .wrap {
+    flex-direction: row;
+  }
+}
+.serviceMap .targetWrap .wrap div {
+  position: relative;
+  padding: 20px 32px;
+  width: 100%;
+  height: 260px;
+  border-radius: 20px;
+  background: var(--color-white);
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .targetWrap .wrap div {
+    padding: 40px 32px 20px;
+  }
+}
+.serviceMap .targetWrap .wrap div::before {
+  position: absolute;
+  top: -86px;
+  left: -48px;
+  display: block;
+  line-height: 1.5;
+  font-size: 180px;
+  font-weight: var(--bold);
+  letter-spacing: -0.03em;
+  color: var(--color-dark);
+  opacity: 0.03;
+}
+.serviceMap .targetWrap .wrap div::after {
+  content: "";
+  display: block;
+  margin: 0 0 0 auto;
+  width: 80px;
+  height: 80px;
+}
+.serviceMap .targetWrap .wrap div:nth-child(1)::before {
+  content: "01";
+}
+.serviceMap .targetWrap .wrap div:nth-child(1)::after {
+  background: url(../images/icon/ico-file-check-80.svg) no-repeat center center/contain;
+}
+.serviceMap .targetWrap .wrap div:nth-child(2)::before {
+  content: "02";
+}
+.serviceMap .targetWrap .wrap div:nth-child(2)::after {
+  background: url(../images/icon/ico-moniter-setting-80.svg) no-repeat center center/contain;
+}
+.serviceMap .targetWrap .wrap div:nth-child(3)::before {
+  content: "03";
+}
+.serviceMap .targetWrap .wrap div:nth-child(3)::after {
+  background: url(../images/icon/ico-cloud-server-80.svg) no-repeat center center/contain;
+}
+.serviceMap .targetWrap .wrap div:nth-child(4)::before {
+  content: "04";
+}
+.serviceMap .targetWrap .wrap div:nth-child(4)::after {
+  background: url(../images/icon/ico-fix-tool-80.svg) no-repeat center center/contain;
+}
+.serviceMap .targetWrap .wrap div .num {
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 24px;
+  font-weight: var(--bold);
+  color: var(--color-red);
+}
+.serviceMap .targetWrap .wrap div .txt {
+  margin: 8px auto 16px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 20px;
+  font-weight: var(--regular);
+  color: var(--color-text);
+  min-height: 60px;
+}
+.serviceMap .serviceWrap {
+  padding: 64px 0 0;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap {
+    padding: 80px 0 40px;
+  }
+}
+.serviceMap .serviceWrap .wrap {
+  flex-direction: column;
+  gap: 32px;
+  padding: 20px 0 0;
+  margin: 32px 0 0;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap {
+    flex-direction: row;
+    gap: 0 80px;
+    margin: 16px 0 0;
+    padding: 20px 0;
+  }
+}
+.serviceMap .serviceWrap .wrap div {
+  height: 320px;
+  margin-bottom: 0;
+}
+.serviceMap .serviceWrap .wrap .imgWrap {
+  flex: 0 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 200px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap .imgWrap {
+    flex: 0 0 520px;
+    height: 320px;
+  }
+}
+.serviceMap .serviceWrap .wrap .imgWrap::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  z-index: -1;
+  display: block;
+  width: 280px;
+  height: 160px;
+  background: #F3F8FE;
+  border-radius: 20px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap .imgWrap::before {
+    top: auto;
+    bottom: -40px;
+  }
+}
+.serviceMap .serviceWrap .wrap .descDeft {
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap .descDeft strong {
+    font-size: 24px;
+  }
+}
+.serviceMap .serviceWrap .wrap .descDeft p {
+  gap: 20px;
+}
+.serviceMap .serviceWrap .wrap:nth-child(2) .imgWrap {
+  background: url(../images/visual-service-wrap-01.png) no-repeat center left/100%;
+}
+.serviceMap .serviceWrap .wrap:nth-child(3) .imgWrap {
+  background: url(../images/visual-service-wrap-02.png) no-repeat center left/100%;
+}
+.serviceMap .serviceWrap .wrap:nth-child(4) .imgWrap {
+  background: url(../images/visual-service-wrap-03.png) no-repeat center left/100%;
+}
+.serviceMap .serviceWrap .wrap:nth-child(5) .imgWrap {
+  background: url(../images/visual-service-wrap-04.png) no-repeat center left/100%;
+}
+.serviceMap .serviceWrap .wrap:nth-child(6) .imgWrap {
+  background: url(../images/visual-service-wrap-05.png) no-repeat center left/100%;
+}
+.serviceMap .serviceWrap .wrap:nth-child(odd) {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap:nth-child(odd) {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap:nth-child(odd) .imgWrap {
+    margin-right: 60px;
+  }
+}
+.serviceMap .serviceWrap .wrap:nth-child(odd) .imgWrap::before {
+  right: -16px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap:nth-child(odd) .imgWrap::before {
+    right: -60px;
+  }
+}
+.serviceMap .serviceWrap .wrap:nth-child(even) {
+  justify-content: flex-start;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap:nth-child(even) .imgWrap {
+    margin-left: 60px;
+  }
+}
+.serviceMap .serviceWrap .wrap:nth-child(even) .imgWrap::before {
+  left: -16px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap:nth-child(even) .imgWrap::before {
+    left: -60px;
+  }
 }
 
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내

@@ -21,7 +21,7 @@
     --color-red: #E60024;
     --color-lightGray:#707070;
     --color-dark:#1d1d1d;
-    --color-text:#555555;
+    --color-text:#555555; /* gray70 */
     /* --color-base: #454545; */
     /* --color-primary:#133692; */
     --table-bg:#FFF8F9;
@@ -29,14 +29,14 @@
     --table-top:#2d2d2d;
     --table-border:#D8D8D8; /* gray50 */
 
-    --text-color: #555;
+    --text-color: #555; /* gray70 */
     --success:#008A1E;
 
     --gray5:#F8F8F8;
     --gray30:#D8D8D8; /* table-border */
     --gray50:#BEBEBE;
     --gray60:#717171;
-    --gray70:#555;
+    --gray70:#555; /* color-text, text-color */
     --gray80:#2D2D2D;
 
     --thin:100;
