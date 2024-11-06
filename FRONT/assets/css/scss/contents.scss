@@ -60,11 +60,13 @@ h3 {
     justify-content:center;
     gap:0 10px;
     margin-top:32px;
+    width:100%;
     @media screen and (min-width:1160px) {
+        margin-top:40px;
         justify-content:space-between;
     }
     &[class*="half"] > *{
-        flex:0 1 50%;
+        flex:0 1 calc(50% - 5px);
     }
     &[class*="resize"] > *{
         @media screen and (min-width:1160px){
@@ -409,7 +411,7 @@ button[class*="btn"][type="button"]{
 .checkBox{
     display:inline-flex;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
     position:relative;
     padding:20px 0;
     &:not(:last-child){
@@ -435,6 +437,7 @@ button[class*="btn"][type="button"]{
             justify-content:flex-start;
             gap:0 6px;
             line-height:1.5;
+            letter-spacing:-0.03em;
             font-size:17px;
             font-weight:var(--regular);
             color:var(--text-color);
@@ -618,6 +621,9 @@ button[class*="btn"][type="button"]{
     }
     &[class*="Jeven"] {
         justify-content: space-evenly;
+    }
+    &[class*="Gp10"]{
+        gap:10px;
     }
 }
 /* Flex 컨테이너 */
@@ -1155,11 +1161,22 @@ button[class*="btn"][type="button"]{
         border-top:1px solid var(--table-top);
         border-bottom:1px solid var(--border-bottom);
         width:100%;
-        .required::before{
-            content:"*";
-            margin-right:2px;
-            line-height:1.5;
-            color:var(--color-red);
+        .required{
+            position:relative;
+            display:inline-block;
+            width:10px;
+            overflow:hidden;
+            text-indent:-9999px;
+            &::after{
+                position:absolute;
+                top:0;
+                left:0;
+                display:block;
+                content:"*";
+                line-height:1.5;
+                color:var(--color-red);
+                text-indent:0;
+            }
         }
         .bgTableThick{
             background:var(--table-bg-thick);
@@ -1308,6 +1325,25 @@ button[class*="btn"][type="button"]{
                     width:auto;
                     &:not(:last-child){
                         border-right:1px solid vaR(--table-border);
+                    }
+                }
+                .tableCheck{
+                    display:flex;
+                    flex-wrap:wrap;
+                    align-items:flex-start;
+                    justify-content:space-between;
+                    padding: 6px 10px;
+                    gap: 16px;
+                    @media screen and (min-width:1160px) {
+                        justify-content:flex-start;
+                    }
+                    .checkBox{
+                        flex: 1 0 calc(50% - 16px);
+                        padding:0;
+                        margin:0;
+                        @media screen and (min-width:1160px) {
+                            flex:0 0 164px;
+                        }
                     }
                 }
             }
@@ -1692,6 +1728,10 @@ button[class*="btn"][type="button"]{
                 font-size:15px;
                 font-weight:var(--medium);
                 color:var(--color-dark);
+                letter-spacing:-0.03em;
+                @media screen and (min-width:1160px) {
+                    font-size:19px;
+                }
                 &::before{
                     display:block;
                     content:"";
@@ -1918,6 +1958,7 @@ button[class*="btn"][type="button"]{
                     position:absolute;
                     top:-86px;
                     left:-48px;
+                    z-index:0;
                     display:block;
                     line-height:1.5;
                     font-size:180px;
@@ -1928,8 +1969,6 @@ button[class*="btn"][type="button"]{
                 }
                 &::after{
                     content:"";
-                    // bottom:20px;
-                    // right:32px;
                     display:block;
                     margin:0 0 0 auto;
                     width:80px;
@@ -1968,6 +2007,7 @@ button[class*="btn"][type="button"]{
                     }
                 }
                 .num{
+                    position:relative;
                     line-height:1.5;
                     letter-spacing:-0.03em;
                     font-size:24px;
@@ -1975,6 +2015,7 @@ button[class*="btn"][type="button"]{
                     color:var(--color-red);
                 }
                 .txt{
+                    position:relative;
                     margin:8px auto 16px;
                     line-height:1.5;
                     letter-spacing:-0.03em;
@@ -2103,6 +2144,48 @@ button[class*="btn"][type="button"]{
         }
     }
 }
+/* 디지털 혁신 지원 서비스 > 기술지원서비스 */
+.serviceList{
+    flex-direction:column-reverse;
+    @media screen and (min-width:1160px) {
+        flex-direction:row;
+    }
+    [class*="flexBox"]{
+        flex-wrap:wrap;
+        width:100%;
+        @media screen and (min-width:1160px) {
+            flex-wrap:nowrap;
+            width:auto;
+        }
+        p{
+            width:100%;
+            line-height:normal;
+            letter-spacing:0;
+            font-size:17px;
+            font-weight:var(--regular);
+            color:var(--text-color);
+            @media screen and (min-width:1160px) {
+                width:auto;
+            }
+        }
+        .btnBox{
+            margin:0 0 32px;
+            @media screen and (min-width:1160px) {
+                margin:0;
+                width:auto;
+            }
+            .btn{
+                padding:16px 0;
+                white-space:nowrap;
+                @media screen and (min-width:1160px) {
+                    padding:16px 12px;
+                }
+            }
+        }
+    }
+    
+}
+
 
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내
                                  > 교육수료증 발급
@@ -2263,7 +2346,7 @@ button[class*="btn"][type="button"]{
 }
 
 /* 교육수료증 발급 - 교육과정 수료목록 */
-.titCus{
+.tableTit{
     h5{
         margin-bottom:24px;
         line-height:1.5;
