@@ -63,6 +63,10 @@ h3 {
 }
 
 /* margin */
+.mt10 {
+  margin-top: 10px !important;
+}
+
 .mb20 {
   margin-bottom: 20px;
 }
@@ -263,6 +267,19 @@ button[class*=btn][type=button] {
   background-color: #D8D8D8;
 }
 
+.btnDropdown {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(../images/icon/ico-arrow-up-dark-20.svg) no-repeat center center/contain;
+  transition: transform 0.2s;
+}
+.btnDropdown.on {
+  transform: rotate(180deg);
+}
+
 [class*=withIco] {
   color: #000B17;
 }
@@ -283,12 +300,34 @@ button[class*=btn][type=button] {
     font-size: 21px;
   }
 }
+.req {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 10px;
+  height: auto;
+}
+.req::before {
+  display: inline-block;
+  content: "*";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color-red);
+  text-indent: 0;
+}
+
 /* inputBox default */
 .inputBox {
   margin-bottom: 10px;
 }
+.inputBox:last-child {
+  margin-bottom: 0;
+}
 .inputBox input,
-.inputBox select {
+.inputBox select,
+.inputBox textarea {
   padding: 0 10px;
   border: 1px solid var(--gray60);
   border-radius: 8px;
@@ -296,10 +335,17 @@ button[class*=btn][type=button] {
   height: 48px;
   line-height: 1.5;
   letter-spacing: -0.03em;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: var(--regular);
   color: var(--color-dark);
   box-sizing: border-box;
+}
+@media screen and (min-width: 1160px) {
+  .inputBox input,
+  .inputBox select,
+  .inputBox textarea {
+    font-size: 20px;
+  }
 }
 .inputBox select {
   background: url(../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
@@ -310,20 +356,6 @@ button[class*=btn][type=button] {
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-}
-.inputBox .required {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  text-indent: -9999px;
-}
-.inputBox .required::before {
-  display: inline-block;
-  content: "*";
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: var(--color-red);
 }
 .inputBox p {
   margin-top: 4px;
@@ -345,6 +377,11 @@ button[class*=btn][type=button] {
 .inputBox.error p {
   margin-top: 8px;
   color: #D50136;
+}
+.inputBox textarea {
+  padding: 10px;
+  height: auto;
+  min-height: 200px;
 }
 
 /* radio */
@@ -400,7 +437,7 @@ button[class*=btn][type=button] {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background: var(--white);
+  background: var(--color-white);
   transform: translate(-50%, -50%);
 }
 .radioBox [type=radio]:checked + label::before {
@@ -922,20 +959,37 @@ button[class*=btn][type=button] {
 .layout.outTxt [class*=tit] + div {
   margin-bottom: 32px;
 }
-.layout .wrap {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0 32px;
-  margin-bottom: 40px;
+@media screen and (min-width: 1160px) {
+  .layout .wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0 32px;
+    margin-bottom: 40px;
+  }
 }
-.layout .wrap > * {
-  flex: 0 1 calc(50% - 16px);
-  border-radius: 20px;
-  height: 360px;
+@media screen and (min-width: 1160px) {
+  .layout .wrap > * {
+    flex: 0 1 calc(50% - 16px);
+    border-radius: 20px;
+    height: 360px;
+  }
 }
-.layout .wrap > *.shrink {
-  flex-basis: auto;
+@media screen and (min-width: 1160px) {
+  .layout .wrap > *.auto {
+    flex-basis: auto;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .layout .wrap > *.autoW {
+    flex-basis: auto;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .layout .wrap > *.autoH {
+    height: auto;
+  }
 }
 .layout .wrap .imgCont {
   overflow: hidden;
@@ -990,6 +1044,27 @@ button[class*=btn][type=button] {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+.descDeft.tag [class*=ico] strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 4px;
+}
+.descDeft.tag [class*=ico] strong::before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+}
+.descDeft.tag [class*=ico].icoLoca strong::before {
+  background: url(../images/icon/ico-location-red-20.svg) no-repeat center center/contain;
+}
+.descDeft.tag [class*=ico].icoCall strong::before {
+  background: url(../images/icon/ico-call-red-20.svg) no-repeat center center/contain;
+}
+.descDeft.tag [class*=ico].icoBag strong::before {
+  background: url(../images/icon/ico-bag-red-20.svg) no-repeat center center/contain;
 }
 
 /* dot list */
@@ -1143,14 +1218,14 @@ button[class*=btn][type=button] {
   border-bottom: 1px solid var(--border-bottom);
   width: 100%;
 }
-.tableDefault table .required {
+.tableDefault table .req {
   position: relative;
   display: inline-block;
   width: 10px;
   overflow: hidden;
   text-indent: -9999px;
 }
-.tableDefault table .required::after {
+.tableDefault table .req::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -1221,22 +1296,31 @@ button[class*=btn][type=button] {
   padding: 12px;
 }
 .tableDefault tbody tr td input,
+.tableDefault tbody tr td select,
 .tableDefault tbody tr td textarea {
   display: block;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   width: 100%;
+  height: 32px;
   font-size: 17px;
   font-weight: var(--regular);
   color: var(--color-dark);
   box-sizing: border-box;
 }
 .tableDefault tbody tr td input::placeholder,
+.tableDefault tbody tr td select::placeholder,
 .tableDefault tbody tr td textarea::placeholder {
   color: var(--color-text);
 }
 .tableDefault tbody tr td input {
   padding: 6px 10px;
+}
+.tableDefault tbody tr td input.dateInput {
+  background: url(../images/icon/ico-calendar-20.svg) no-repeat calc(100% - 10px) center/auto;
+}
+.tableDefault tbody tr td input.timeInput {
+  background: url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center/auto;
 }
 .tableDefault tbody tr td .prevFileInput {
   display: flex;
@@ -1467,6 +1551,7 @@ button[class*=btn][type=button] {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 320px;
   }
 }
 [class*=table][class*=boardList] tbody tr td .email {
@@ -1517,11 +1602,65 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   [class*=table][class*=BgCustom2n] table tr {
-    background: vaR(--white);
+    background: var(--color-white);
   }
 }
 [class*=table][class*=BgCustom2n] table tr:nth-child(2n) {
-  background: var(--white);
+  background: var(--color-white);
+}
+
+/* table input max 320 */
+[class*=table][class*=inputMax] .inputWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=inputMax] .inputWrap {
+    max-width: 320px;
+  }
+}
+[class*=table][class*=inputMax] .inputWrap .phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 8px;
+}
+[class*=table][class*=inputMax] .inputWrap .phone span {
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-size: 17px;
+  font-weight: var(regular);
+  color: var(--color-gray);
+}
+[class*=table][class*=inputMax] .inputWrap .phone input {
+  width: calc((100% - 96px) / 3);
+}
+[class*=table][class*=inputMax] .inputWrap .email {
+  width: calc((100% - 28px) / 2);
+  margin: 0;
+}
+[class*=table][class*=inputMax] .inputWrap .email:first-child {
+  display: flex;
+}
+[class*=table][class*=inputMax] .inputWrap .email:first-child::after {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  content: "@";
+  margin: 0 8px;
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=inputMax] .inputWrap .email:first-child::after {
+    margin: 0 8px;
+  }
+}
+[class*=table][class*=inputMax] .inputWrap .email * {
+  width: 100%;
+}
+[class*=table][class*=inputMax] .inputWrap input {
+  flex: 1 0 auto;
+  width: auto;
 }
 
 /* table cell size */
@@ -2244,6 +2383,341 @@ button[class*=btn][type=button] {
   }
 }
 
+/* 디지털 혁신 지원 서비스 > 1:1 매칭 서비스 신청 */
+.matchServ .listCont {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1160px) {
+  .matchServ .listCont {
+    width: 600px;
+  }
+}
+.matchServ .txtDotList {
+  padding: 0;
+}
+.matchServ .txtDotList li p {
+  font-size: 17px;
+}
+@media screen and (min-width: 1160px) {
+  .matchServ .txtDotList li p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .matchServ .detailWrap {
+    width: 820px;
+  }
+}
+.matchServ .detailWrap > div:first-child {
+  margin: 0 0 24px;
+}
+@media screen and (min-width: 1160px) {
+  .matchServ .detailWrap > div:first-child {
+    margin: 0 0 32px;
+  }
+}
+.matchServ .titInputWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 6px;
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+
+/* 디지털 혁신 지원 서비스 > 1:1 매칭 서비스 */
+.matchChat {
+  border: 1px solid var(--gray30);
+  border-top-color: var(--gray80);
+  background: var(--gray5);
+}
+@media screen and (min-width: 1160px) {
+  .matchChat {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+}
+.matchChat .companyWrap {
+  padding: 24px;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .companyWrap {
+    flex: 0 0 400px;
+    background: var(--color-white);
+    border-right: 1px solid var(--gray30);
+  }
+}
+.matchChat .companyWrap .compInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.matchChat .companyWrap .compInfo div {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .companyWrap .compInfo div {
+    flex-direction: column;
+  }
+}
+.matchChat .companyWrap .compInfo div img {
+  width: 40px;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .companyWrap .compInfo div img {
+    width: auto;
+  }
+}
+.matchChat .companyWrap .compInfo div strong {
+  line-height: 1.5;
+  font-size: 19px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+.matchChat .companyWrap .compInfo div .compInfo {
+  display: none;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .companyWrap .compInfo div .compInfo {
+    display: block;
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+    text-align: center;
+    font-size: 17px;
+    font-weight: var(--regular);
+    color: var(--gray70);
+  }
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .companyWrap .compInfo button {
+    display: none;
+  }
+}
+.matchChat .companyWrap .compLoca {
+  padding: 16px;
+  background: var(--color-white);
+  border-radius: 10px;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .companyWrap .compLoca {
+    padding: 16px 24px;
+    background: var(--table-bg);
+  }
+}
+.matchChat .companyWrap .compLoca .descDeft {
+  margin: 0;
+}
+.matchChat .companyWrap .compLoca .descDeft p {
+  gap: 10px 16px;
+  font-size: 15px;
+}
+.matchChat .companyWrap .compLoca .descDeft p:not(:last-child) {
+  margin: 0 0 10px;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .companyWrap .compLoca .descDeft p:not(:last-child) {
+    margin: 0 0 16px;
+  }
+}
+.matchChat .companyWrap .compLoca .descDeft p strong {
+  font-size: 15px;
+}
+.matchChat .chatWrap {
+  padding-top: 0;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .chatWrap {
+    flex: 1 0 auto;
+  }
+}
+.matchChat .chatWrap .chatTit {
+  padding: 16px 24px;
+  background: vaR(--color-white);
+  border-top: 1px solid var(--gray30);
+  border-bottom: 1px solid var(--gray30);
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .chatWrap .chatTit {
+    padding: 24px 32px;
+  }
+}
+.matchChat .chatWrap .chatTit p {
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-size: 19px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+.matchChat .chatLogWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  overflow-y: auto;
+  padding: 24px;
+  height: 523px;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .chatLogWrap {
+    height: 459px;
+    padding: 24px 32px;
+  }
+}
+.matchChat .chatLogWrap:-webkit-scrollbar {
+  display: none;
+}
+.matchChat .chatLogWrap {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.matchChat .chatLogWrap .dateSort {
+  text-align: center;
+}
+.matchChat .chatLogWrap .dateSort span {
+  display: inline-block;
+  padding: 4px 16px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 13px;
+  font-weight: var(--regular);
+  color: var(--text-color);
+  background: var(--color-white);
+  border-radius: 50px;
+}
+.matchChat .chatLogWrap [class*=chat] {
+  width: 100%;
+}
+.matchChat .chatLogWrap [class*=chat] .info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .chatLogWrap [class*=chat] .info {
+    align-items: flex-start;
+  }
+}
+.matchChat .chatLogWrap [class*=chat] .info img {
+  width: 40px;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .chatLogWrap [class*=chat] .info img {
+    width: 60px;
+  }
+}
+.matchChat .chatLogWrap [class*=chat] .info span {
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 15px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+.matchChat .chatLogWrap [class*=chat] .detail {
+  display: flex;
+  align-items: flex-end;
+  gap: 0 8px;
+}
+.matchChat .chatLogWrap [class*=chat] .detail:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .chatLogWrap [class*=chat] .detail:nth-child(2) {
+    margin-top: -28px;
+  }
+}
+.matchChat .chatLogWrap [class*=chat] .detail p {
+  flex: 0 1 auto;
+  padding: 10px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 15px;
+  font-weight: var(--regular);
+  border-radius: 12px;
+}
+.matchChat .chatLogWrap [class*=chat] .detail .condition {
+  flex: 0 0 auto;
+}
+.matchChat .chatLogWrap [class*=chat] .detail .condition span {
+  display: block;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  font-size: 13px;
+  font-weight: var(--regular);
+  color: var(--gray60);
+}
+.matchChat .chatLogWrap .chatMe .detail {
+  justify-content: flex-end;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .chatLogWrap .chatMe .detail {
+    margin-right: 70px;
+  }
+}
+.matchChat .chatLogWrap .chatMe .detail p {
+  background: var(--gray80);
+  border-top-right-radius: 0;
+  color: var(--color-white);
+}
+.matchChat .chatLogWrap .chatMe .info {
+  justify-content: flex-end;
+}
+.matchChat .chatLogWrap .chatMe .detail {
+  text-align: right;
+}
+.matchChat .chatLogWrap .chatComp .detail {
+  justify-content: flex-start;
+}
+@media screen and (min-width: 1160px) {
+  .matchChat .chatLogWrap .chatComp .detail {
+    margin-left: 70px;
+  }
+}
+.matchChat .chatLogWrap .chatComp .detail p {
+  background: var(--color-white);
+  border-top-left-radius: 0;
+  color: var(--gray80);
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
+}
+.matchChat .chatLogWrap .chatComp .info {
+  justify-content: flex-start;
+}
+.matchChat .messageInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 10px;
+  padding: 0 24px 24px;
+}
+.matchChat .messageInput input {
+  flex: 1;
+  padding: 0 24px;
+  min-width: 0;
+  height: 48px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--gray60);
+  border-radius: 50px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray30);
+}
+.matchChat .messageInput .btnLocation {
+  flex: 0 0 auto;
+}
+
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내
                                  > 교육수료증 발급
 */
@@ -2260,6 +2734,12 @@ button[class*=btn][type=button] {
     justify-content: space-between;
     margin-bottom: 80px;
   }
+}
+.listCont.only > div {
+  flex: 0 0 100%;
+}
+.listCont.only > div:first-child::after {
+  content: none;
 }
 .listCont > div {
   flex: 0 0 calc(50% - 24px);
@@ -2437,4 +2917,14 @@ button[class*=btn][type=button] {
 
 .infoTxtSub {
   margin: 28px 0 0;
+}
+.infoTxtSub .noteSymbol {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.infoTxtSub .noteSymbol::before {
+  display: block;
+  content: "※";
+  margin-right: 4px;
 }
