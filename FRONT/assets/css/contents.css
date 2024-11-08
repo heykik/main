@@ -100,6 +100,9 @@ h3 {
 .btnBox[class*=sideRight] {
   justify-content: flex-end;
 }
+.btnBox[class*=center] {
+  justify-content: center;
+}
 
 button[class*=btn][type=button] {
   cursor: pointer;
@@ -400,12 +403,9 @@ button[class*=btn][type=button] {
   justify-content: flex-start;
   gap: 16px;
 }
-.inputBox:has(.checkBox).full .checkBox {
-  width: 100%;
-}
-@media screen and (min-width: 1160px) {
+@media screen and (max-width: 1159px) {
   .inputBox:has(.checkBox).full .checkBox {
-    width: auto;
+    flex-basis: 100%;
   }
 }
 
@@ -482,7 +482,7 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .checkBox {
-    flex: 1 1 calc(14.2857142857% - 16px);
+    flex: 1 1 calc(16.6666666667% - 16px);
   }
 }
 .checkBox input[type=checkbox] {
@@ -2832,17 +2832,48 @@ button[class*=btn][type=button] {
   border-radius: 16px;
   background: var(--gray5);
 }
+@media screen and (min-width: 1160px) {
+  .categoryCont .cateWrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 24px 0;
+  }
+}
 .categoryCont .cateWrap:not(:last-child) {
   border-bottom: 1px solid var(--gray30);
 }
+@media screen and (min-width: 1160px) {
+  .categoryCont .cateWrap:first-child {
+    padding: 0 0 24px;
+  }
+}
 .categoryCont .cateWrap:first-child .tit {
   padding: 0 0 18px;
+}
+@media screen and (min-width: 1160px) {
+  .categoryCont .cateWrap:first-child .tit {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .categoryCont .cateWrap:has(input[type=text]) .tit {
+    padding: 14px 0 0;
+  }
 }
 .categoryCont .cateWrap .tit {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 18px 0;
+}
+@media screen and (min-width: 1160px) {
+  .categoryCont .cateWrap .tit {
+    flex: 0 1 58px;
+    padding: 0;
+    white-space: nowrap;
+  }
 }
 .categoryCont .cateWrap .tit span {
   line-height: 1.2;
@@ -2851,8 +2882,28 @@ button[class*=btn][type=button] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
+@media screen and (min-width: 1160px) {
+  .categoryCont .cateWrap .tit .btnDropdown {
+    display: none;
+  }
+}
 .categoryCont .cateWrap .inputBox {
-  padding: 10px 0;
+  padding: 0 0 20px;
+}
+@media screen and (min-width: 1160px) {
+  .categoryCont .cateWrap .inputBox {
+    flex-grow: 1;
+    padding: 0;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .categoryCont .cateWrap .inputBox .checkBox {
+    flex-grow: 0;
+  }
+}
+.categoryCont .cateWrap .inputBox:has(input[type=text]) {
+  display: block;
 }
 
 .resultCont .cntWrap {
@@ -2865,10 +2916,26 @@ button[class*=btn][type=button] {
   font-weight: var(--regular);
   color: var(--color-dark);
 }
+@media screen and (min-width: 1160px) {
+  .resultCont .resultWrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+  }
+}
 .resultCont .prdtBox {
   overflow: hidden;
+  margin-top: 24px;
   border: 1px solid var(--gray30);
   border-radius: 20px;
+}
+@media screen and (min-width: 1160px) {
+  .resultCont .prdtBox {
+    margin: 0;
+    flex: 0 0 calc((100% - 64px) / 3);
+  }
 }
 .resultCont .prdtBox .imgBox {
   display: flex;
@@ -2897,6 +2964,12 @@ button[class*=btn][type=button] {
 }
 .resultCont .prdtBox .txtBox {
   padding: 24px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1160px) {
+  .resultCont .prdtBox .txtBox {
+    padding: 24px 40px;
+  }
 }
 .resultCont .prdtBox .txtBox .prdtNm {
   margin: 0 0 20px;
@@ -2911,6 +2984,11 @@ button[class*=btn][type=button] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
+@media screen and (min-width: 1160px) {
+  .resultCont .prdtBox .txtBox .prdtNm strong {
+    font-size: 20px;
+  }
+}
 .resultCont .prdtBox .txtBox .prdtNm span {
   display: inline-block;
   line-height: 1.5;
@@ -2918,6 +2996,11 @@ button[class*=btn][type=button] {
   font-size: 15px;
   font-weight: var(--regular);
   color: var(--gray70);
+}
+@media screen and (min-width: 1160px) {
+  .resultCont .prdtBox .txtBox .prdtNm span {
+    font-size: 17px;
+  }
 }
 .resultCont .prdtBox .txtBox .connectBox {
   display: flex;
@@ -2942,6 +3025,11 @@ button[class*=btn][type=button] {
 .resultCont .prdtBox .txtBox .connectBox .btnBox {
   flex: 0;
   margin: 0;
+}
+
+/* 디지털 혁신 지원 서비스 > 공동장비활용 검색 예약 상세 */
+.prdtWrap .imgWrap {
+  background: var(--gray5);
 }
 
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내

@@ -79,7 +79,10 @@ h3 {
     }
     &[class*="sideRight"]{
         justify-content:flex-end;
-    }   
+    }
+    &[class*="center"]{
+        justify-content:center;
+    }
 }
 button[class*="btn"][type="button"]{
     cursor:pointer;
@@ -387,9 +390,8 @@ button[class*="btn"][type="button"]{
         gap:16px;
         &.full{
             .checkBox{
-                width:100%;
-                @media screen and (min-width:1160px) {
-                    width:auto;
+                @media screen and (max-width:1159px) {
+                    flex-basis:100%;
                 }
             }
         }
@@ -473,7 +475,7 @@ button[class*="btn"][type="button"]{
     flex:1 1 calc(50% - 16px);
     position:relative;
     @media screen and (min-width:1160px) {
-        flex:1 1 calc((100% / 7) - 16px);
+        flex:1 1 calc((100% / 6) - 16px);
     }
     input[type="checkbox"]{
         position:absolute;
@@ -2748,12 +2750,32 @@ button[class*="btn"][type="button"]{
     border-radius:16px;
     background:var(--gray5);
     .cateWrap{
+        @media screen and (min-width:1160px) {
+            display:flex;
+            align-items:flex-start;
+            justify-content:flex-start;
+            gap:24px;
+            padding:24px 0;
+        }
         &:not(:last-child){
             border-bottom:1px solid var(--gray30);
         }
         &:first-child{
+            @media screen and (min-width:1160px) {
+                padding:0 0 24px;
+            }
             .tit{
                 padding:0 0 18px;
+                @media screen and (min-width:1160px) {
+                    padding:0;
+                }
+            }
+        }
+        &:has(input[type="text"]){
+            .tit{
+                @media screen and (min-width:1160px) {
+                    padding:14px 0 0;
+                }
             }
         }
         .tit{
@@ -2761,6 +2783,11 @@ button[class*="btn"][type="button"]{
             align-items:center;
             justify-content:space-between;
             padding:18px 0;
+            @media screen and (min-width:1160px) {
+                flex:0 1 58px;
+                padding:0;
+                white-space:nowrap;
+            }
             span{
                 line-height:1.2;
                 letter-spacing:-0.03em;
@@ -2768,9 +2795,27 @@ button[class*="btn"][type="button"]{
                 font-weight:var(--bold);
                 color:var(--color-dark);
             }
+            @media screen and (min-width:1160px) {
+                .btnDropdown{
+                    display:none;
+                }
+            }
         }
         .inputBox{
-            padding:10px 0;
+            padding:0 0 20px;
+            @media screen and (min-width:1160px) {
+                flex-grow:1;
+                padding:0;
+                white-space:nowrap;
+            }
+            .checkBox{
+                @media screen and (min-width:1160px) {
+                    flex-grow:0;
+                }
+            }
+            &:has(input[type="text"]){
+                display:block;
+            }
         }
     }
 }
@@ -2785,10 +2830,24 @@ button[class*="btn"][type="button"]{
             color:var(--color-dark);
         }
     }
+    .resultWrap{
+        @media screen and (min-width:1160px) {
+            display:flex;
+            flex-wrap:wrap;
+            align-items:flex-start;
+            justify-content:space-between;
+            gap:32px;
+        }
+    }
     .prdtBox{
         overflow:hidden;
+        margin-top:24px;
         border:1px solid var(--gray30);
         border-radius:20px;
+        @media screen and (min-width:1160px) {
+            margin:0;
+            flex:0 0 calc((100% - 64px) / 3);
+        }
         .imgBox{
             display:flex;
             align-items:center;
@@ -2818,6 +2877,10 @@ button[class*="btn"][type="button"]{
         }
         .txtBox{
             padding:24px;
+            box-sizing:border-box;
+            @media screen and (min-width:1160px) {
+                padding:24px 40px;
+            }
             .prdtNm{
                 margin:0 0 20px;
                 padding:0 0 20px;
@@ -2829,6 +2892,9 @@ button[class*="btn"][type="button"]{
                     font-size:20px;
                     font-weight:var(--bold);
                     color:var(--color-dark);
+                    @media screen and (min-width:1160px) {
+                        font-size:20px;
+                    }
                 }
                 span{
                     display:inline-block;
@@ -2837,6 +2903,9 @@ button[class*="btn"][type="button"]{
                     font-size:15px;
                     font-weight:var(--regular);
                     color:var(--gray70);
+                    @media screen and (min-width:1160px) {
+                        font-size:17px;
+                    }
                 }
             }
             .connectBox{
@@ -2864,6 +2933,13 @@ button[class*="btn"][type="button"]{
                 }
             }
         }
+    }
+}
+
+/* 디지털 혁신 지원 서비스 > 공동장비활용 검색 예약 상세 */
+.prdtWrap{
+    .imgWrap{
+        background:var(--gray5);
     }
 }
 
