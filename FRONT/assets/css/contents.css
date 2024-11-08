@@ -739,6 +739,7 @@ button[class*=btn][type=button] {
 /* sitemap */
 .sitemap ul {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   gap: 0 4px;
@@ -804,6 +805,9 @@ button[class*=btn][type=button] {
     margin: 0 0 80px;
     font-size: 40px;
   }
+}
+.titL.narrow h2 {
+  margin-bottom: 32px;
 }
 
 .titM * {

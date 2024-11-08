@@ -756,6 +756,7 @@ button[class*="btn"][type="button"]{
 .sitemap{
     ul{
         display:flex;
+        flex-wrap:wrap;
         align-items:center;
         justify-content:flex-start;
         gap:0 4px;
@@ -822,6 +823,11 @@ button[class*="btn"][type="button"]{
         @media screen and (min-width:1160px){
             margin: 0 0 80px;
             font-size:40px;
+        }
+    }
+    &.narrow{
+        h2{
+            margin-bottom:32px;
         }
     }
 }
