@@ -1017,6 +1017,7 @@ button[class*="btn"][type="button"]{
             margin-bottom:40px;
         }
         > *{
+            margin-bottom:32px;
             @media screen and (min-width:1160px) {
                 flex: 0 1 calc(50% - 16px);
                 border-radius:20px;
@@ -3003,6 +3004,75 @@ button[class*="btn"][type="button"]{
                         line-height:1.2;
                     }
                 }
+            }
+        }
+    }
+}
+/* 디지털 혁신 지원 서비스 > 시설 예약 > 목록 */
+.facilityResWrap{
+    .wrap{
+        @media screen and (min-width:1160px) {
+            flex-wrap:wrap;
+            gap:40px 0;
+            margin:0;
+        }
+        *{
+            @media screen and (min-width:1160px) {
+                margin:0;
+                height:auto;
+            }
+        }
+    }
+    a{
+        position:relative;
+        display:block;
+        overflow:hidden;
+        height:440px;
+        border-radius:20px;
+        .imgWrap{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            img{
+                max-width:initial;
+            }
+        }
+        .txtBox{
+            position:absolute;
+            bottom:0;
+            left:0;
+            padding:20px 24px;
+            width:100%;
+            background:rgba(29, 29, 29, 0.6);
+            @media screen and (min-width:1160px) {
+                padding:20px 40px;
+            }
+            *{
+                line-height:1.5;
+                letter-spacing:-0.03em;
+                font-size:20px;
+                color:var(--color-white);
+            }
+            strong{
+                font-weight:var(--bold);
+                @media screen and (min-width:1160px) {
+                    font-size:24px;
+                }
+            }
+            p{
+                margin:8px 0 4px;
+                font-weight:var(--regular);
+            }
+            ul{
+                display:flex;
+                flex-wrap:wrap;
+                align-items:center;
+                justify-content:flex-start;
+                gap:8px;
+            }
+            li{
+                font-size:15px;
+                font-weight:var(--regular);
             }
         }
     }
