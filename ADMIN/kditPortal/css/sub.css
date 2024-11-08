@@ -11,7 +11,7 @@
 .location li + li:before {content: ""; position: absolute; top: 0; left: -14px; width: 6px; height: 100%; background: url("../../img/admin/ico-arrow-nav.svg") no-repeat center/6px auto;}
 
 /* 버튼 */
-.btn {display: inline-block; padding: 0 12px; border-radius: 4px; min-width: 80px; text-align: center; line-height: 34px; font-size: 16px; font-weight: 700}
+.btn {display: inline-block; padding: 0 12px; border-radius: 4px; min-width: 80px; text-align: center; line-height: 34px; font-size: 16px; font-weight: 700; cursor: pointer;}
 .btnS {line-height: 30px; font-size: 14px;}
 
 /* 버튼 색상 */

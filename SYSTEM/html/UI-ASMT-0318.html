@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>과제평가시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+$(function(){
+	fn_gnb(0,0);
+})
+</script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<h1><a href=""><img src="../assets/images/logo.svg" alt="경남 디지털혁신거점 GYUNGNAM DIGITAL INNOVATION HUB"></a></h1>
+			<!-- util -->
+            <div class="util">
+                <a href="" class="tid"><strong>퍼블관리자</strong> 님</a>
+                <a href="" class="mybtn">로그아웃</a>
+            </div>
+            <!--// util -->
+		</div>
+		<!--// inner -->
+	</div>
+	<!--// header -->
+
+	<!-- gnb -->
+	<div id="gnb">
+		<!-- inner -->
+		<div class="inner">
+			<ul class="depth01">
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0101.svg" alt="">
+						<span>과제평가 관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0102.svg" alt="">
+						<span>사용자 관리</span>
+					</a>
+				</li>
+                <li>
+					<a href="">
+                        <img src="../assets/images/ico-0103.svg" alt="">
+						<span>평가위원관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0104.svg" alt="">
+						<span>공지사항 관리</span>
+					</a>
+                    <ul class="depth02">
+                        <li>
+                            <a href="">DEPTH0301</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0302</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0303</a>
+                        </li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<!--// inner -->
+		<button type="button" class="btnMenu">메뉴 닫기</button>
+	</div>
+	<!--// gnb -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+            <!-- titArea -->
+            <div class="titArea">
+                <div class="tit">
+                    <h2>평가위원관리</h2>
+                    <div class="titInfo">관리 작업을 수행 할 수 있습니다.</div>
+                </div>
+                <ol class="location">
+                    <li>홈</li>
+                    <li>평가위원관리</li>
+                    <li>평가위원관리</li>
+                </ol>
+            </div>
+            <!--// titArea -->
+            <!-- tabWrap -->
+            <div class="tabWrap tabFunc">
+                <ul>
+                    <li class="curr"><a href="">기본정보</a></li>
+                    <li><a href="">평가이력</a></li>
+                </ul>
+                <!-- tabBox -->
+                <div class="tabBox">
+                    <!-- 기본정보 -->
+                    <div>
+                        <!-- contWrap -->
+                        <div class="contWrap">
+                            <!-- cont -->
+                            <div class="cont">
+                                <!-- rowTable -->
+                                <div class="rowTable">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:150px">
+                                            <col style="width:auto">
+                                            <col style="width:150px">
+                                            <col style="width:auto">
+                                            <col style="width:150px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">성명</th>
+                                                <td>
+                                                    <input type="text" title="성명">
+                                                </td>
+                                                <th scope="row">생년월일</th>
+                                                <td>
+                                                    <input type="text" title="생년월일">
+                                                </td>
+                                                <th scope="row">전문분야</th>
+                                                <td>
+                                                    <input type="text" title="전문분야">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" rowspan="2">자택</th>
+                                                <th scope="row">주소</th>
+                                                <td colspan="4">
+                                                    <input type="text" title="주소" class="wfull">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">전화번호</th>
+                                                <td colspan="2">
+                                                    <div class="flex">
+                                                        <input type="text" title="전화번호 앞번호" class="w100">
+                                                        <span>-</span>
+                                                        <input type="text" title="전화번호 중간번호" class="w100">
+                                                        <span>-</span>
+                                                        <input type="text" title="전화번호 뒷번호" class="w100">
+                                                    </div>
+                                                </td>
+                                                <th scope="row">휴대폰</th>
+                                                <td>
+                                                    <div class="flex">
+                                                        <input type="text" title="전화번호 앞번호" class="w100">
+                                                        <span>-</span>
+                                                        <input type="text" title="전화번호 중간번호" class="w100">
+                                                        <span>-</span>
+                                                        <input type="text" title="전화번호 뒷번호" class="w100">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" rowspan="4">직장</th>
+                                                <th scope="row">직장명</th>
+                                                <td colspan="2">
+                                                    <input type="text" title="직장명">
+                                                </td>
+                                                <th scope="row">직위(직급)</th>
+                                                <td>
+                                                    <input type="text" title="직위(직급)">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">주소</th>
+                                                <td colspan="4">
+                                                    <input type="text" title="주소" class="wfull">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">전화번호</th>
+                                                <td colspan="2">
+                                                    <div class="flex">
+                                                        <input type="text" title="전화번호 앞번호" class="w100">
+                                                        <span>-</span>
+                                                        <input type="text" title="전화번호 중간번호" class="w100">
+                                                        <span>-</span>
+                                                        <input type="text" title="전화번호 뒷번호" class="w100">
+                                                    </div>
+                                                </td>
+                                                <th scope="row">휴대폰</th>
+                                                <td>
+                                                    <div class="flex">
+                                                        <input type="text" title="전화번호 앞번호" class="w100">
+                                                        <span>-</span>
+                                                        <input type="text" title="전화번호 중간번호" class="w100">
+                                                        <span>-</span>
+                                                        <input type="text" title="전화번호 뒷번호" class="w100">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">e-mail</th>
+                                                <td colspan="4">
+                                                    <div class="flex">
+                                                        <input type="text" title="이메일 아이디">
+                                                        <span>@</span>
+                                                        <input type="text" title="이메일 도메인">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">학력사항</th>
+                                                <td colspan="5">
+                                                    <!-- colTable -->
+                                                    <div class="colTable">
+                                                        <table>
+                                                            <colgroup>
+                                                                <col span="4" style="width:auto">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">취득년월</th>
+                                                                    <th scope="col">학교</th>
+                                                                    <th scope="col">학위</th>
+                                                                    <th scope="col">전공</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <p class="date mAuto"><input type="text" title="날짜" placeholder="YY-MM-DD"></p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="학교" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="학위" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="전공" class="wfull">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <p class="date mAuto"><input type="text" title="날짜" placeholder="YY-MM-DD"></p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="학교" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="학위" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="전공" class="wfull">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <p class="date mAuto"><input type="text" title="날짜" placeholder="YY-MM-DD"></p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="학교" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="학위" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="전공" class="wfull">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!--// colTable -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">경력사항</th>
+                                                <td colspan="5">
+                                                    <!-- colTable -->
+                                                    <div class="colTable">
+                                                        <table>
+                                                            <colgroup>
+                                                                <col span="4" style="width:auto">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">근무기간</th>
+                                                                    <th scope="col">근무처</th>
+                                                                    <th scope="col">직위</th>
+                                                                    <th scope="col">주요업무</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <!-- dateWrap -->
+                                                                        <div class="dateWrap jcCenter">
+                                                                            <p class="date"><input type="text" title="시작 날짜" placeholder="YY-MM-DD"></p>
+                                                                            <em>~</em>
+                                                                            <p class="date"><input type="text" title="종료 날짜" placeholder="YY-MM-DD"></p>
+                                                                        </div>
+                                                                        <!--// dateWrap -->
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="근무처" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="직위" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="주요업무" class="wfull">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <!-- dateWrap -->
+                                                                        <div class="dateWrap jcCenter">
+                                                                            <p class="date"><input type="text" title="시작 날짜" placeholder="YY-MM-DD"></p>
+                                                                            <em>~</em>
+                                                                            <p class="date"><input type="text" title="종료 날짜" placeholder="YY-MM-DD"></p>
+                                                                        </div>
+                                                                        <!--// dateWrap -->
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="근무처" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="직위" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="주요업무" class="wfull">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <!-- dateWrap -->
+                                                                        <div class="dateWrap jcCenter">
+                                                                            <p class="date"><input type="text" title="시작 날짜" placeholder="YY-MM-DD"></p>
+                                                                            <em>~</em>
+                                                                            <p class="date"><input type="text" title="종료 날짜" placeholder="YY-MM-DD"></p>
+                                                                        </div>
+                                                                        <!--// dateWrap -->
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="근무처" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="직위" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="주요업무" class="wfull">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!--// colTable -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">전체 경력</th>
+                                                <td colspan="5">
+                                                    <div class="flex">
+                                                        <input type="text" title="전체 경력(년)">
+                                                        <span>년</span>
+                                                        <input type="text" title="전체 경력(개월)">
+                                                        <span>개월</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">자격증<br />보유현황</th>
+                                                <td colspan="5">
+                                                    <!-- colTable -->
+                                                    <div class="colTable">
+                                                        <table>
+                                                            <colgroup>
+                                                                <col span="4" style="width:auto">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">취득년월</th>
+                                                                    <th scope="col">자격증명</th>
+                                                                    <th scope="col">인가&middot;관리기관</th>
+                                                                    <th scope="col">비고</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <p class="date mAuto"><input type="text" title="날짜" placeholder="YY-MM-DD"></p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="자격증명" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="인가&middot;관리기관" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="비고" class="wfull">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <p class="date mAuto"><input type="text" title="날짜" placeholder="YY-MM-DD"></p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="자격증명" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="인가&middot;관리기관" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="비고" class="wfull">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <p class="date mAuto"><input type="text" title="날짜" placeholder="YY-MM-DD"></p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="자격증명" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="인가&middot;관리기관" class="wfull">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" title="비고" class="wfull">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!--// colTable -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">저서 및 논문</th>
+                                                <td colspan="5">
+                                                    <input type="text" title="저서 및 논문" class="wfull">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">기타사항</th>
+                                                <td colspan="5">
+                                                    <input type="text" title="기타사항" class="wfull">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">메모</th>
+                                                <td colspan="5">
+                                                    <input type="text" title="메모" class="wfull">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--// rowTable -->
+                                <!-- btnBottom -->
+                                <div class="btnBottom">
+                                    <div class="lt">
+                                        <button type="button" class="btn btnlNavy">목록</button>
+                                    </div>
+                                    <div class="rt">
+                                        <button type="button" class="btn btnNavy">수정</button>
+                                    </div>
+                                </div>
+                                <!--// btnBottom -->
+                            </div>
+                            <!--// cont -->
+                        </div>
+                        <!--// contWrap -->
+                    </div>
+                    <!--// 기본정보 -->
+                    <!-- 평가이력 -->
+                    <div>
+                        그리드 사용 예정 <br />
+                        UI-ASMT-0300.html
+                    </div>
+                    <!--// 평가이력 -->
+                </div>
+                <!--// tabBox -->
+            </div>
+            <!--// tabWrap -->
+		</div>
+		<!--// contents -->
+	</div>
+	<!--// container -->
+</div>
+<!--// wrap -->
+</body>
+</html>

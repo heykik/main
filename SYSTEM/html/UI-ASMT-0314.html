@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>과제평가시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+$(function(){
+	fn_gnb(0,0);
+})
+</script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<h1><a href=""><img src="../assets/images/logo.svg" alt="경남 디지털혁신거점 GYUNGNAM DIGITAL INNOVATION HUB"></a></h1>
+			<!-- util -->
+            <div class="util">
+                <a href="" class="tid"><strong>퍼블관리자</strong> 님</a>
+                <a href="" class="mybtn">로그아웃</a>
+            </div>
+            <!--// util -->
+		</div>
+		<!--// inner -->
+	</div>
+	<!--// header -->
+
+	<!-- gnb -->
+	<div id="gnb">
+		<!-- inner -->
+		<div class="inner">
+			<ul class="depth01">
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0101.svg" alt="">
+						<span>과제평가 관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0102.svg" alt="">
+						<span>사용자 관리</span>
+					</a>
+				</li>
+                <li>
+					<a href="">
+                        <img src="../assets/images/ico-0103.svg" alt="">
+						<span>평가위원관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0104.svg" alt="">
+						<span>공지사항 관리</span>
+					</a>
+                    <ul class="depth02">
+                        <li>
+                            <a href="">DEPTH0301</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0302</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0303</a>
+                        </li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<!--// inner -->
+		<button type="button" class="btnMenu">메뉴 닫기</button>
+	</div>
+	<!--// gnb -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+            <!-- titArea -->
+            <div class="titArea">
+                <div class="tit">
+                    <h2>사용자관리</h2>
+                    <div class="titInfo">관리 작업을 수행 할 수 있습니다.</div>
+                </div>
+                <ol class="location">
+                    <li>홈</li>
+                    <li>사용자관리</li>
+                    <li>사용자관리</li>
+                </ol>
+            </div>
+            <!--// titArea -->
+			<!-- contWrap -->
+			<div class="contWrap">
+				<!-- cont -->
+				<div class="cont">
+                    <!-- rowTable -->
+                    <div class="rowTable">
+                        <table>
+                            <colgroup>
+                                <col style="width:200px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">아이디</th>
+                                    <td>
+                                        <input type="text" title="아이디">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">비밀번호</th>
+                                    <td>
+                                        <input type="password" title="비밀번호">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">비밀번호 확인</th>
+                                    <td>
+                                        <input type="password" title="비밀번호 확인">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이름</th>
+                                    <td>
+                                        <input type="text" title="이름">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">부서</th>
+                                    <td>
+                                        <input type="text" title="부서">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="req">필수입력</span>부서 연락처</th>
+                                    <td>
+                                        <div class="flex">
+                                            <input type="text" title="전화번호 앞번호" class="w100">
+                                            <span>-</span>
+                                            <input type="text" title="전화번호 중간번호" class="w100">
+                                            <span>-</span>
+                                            <input type="text" title="전화번호 뒷번호" class="w100">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">개인 연락처</th>
+                                    <td>
+                                        <div class="flex">
+                                            <input type="text" title="전화번호 앞번호" class="w100">
+                                            <span>-</span>
+                                            <input type="text" title="전화번호 중간번호" class="w100">
+                                            <span>-</span>
+                                            <input type="text" title="전화번호 뒷번호" class="w100">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이메일</th>
+                                    <td>
+                                        <div class="flex">
+                                            <input type="text" title="이메일 아이디">
+                                            <span>@</span>
+                                            <input type="text" title="이메일 도메인">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--// rowTable -->
+                    <!-- rowTable -->
+                    <div class="rowTable">
+                        <table>
+                            <colgroup>
+                                <col style="width:200px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">구분</th>
+                                    <td>
+                                        <select name="" id="" title="구분">
+                                            <option value="">선택</option>
+                                            <option value="">시스템관리자</option>
+                                            <option value="">과제담당자</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--// rowTable -->
+                    <!-- btnBottom -->
+                    <div class="btnBottom">
+                        <div class="lt">
+                            <button type="button" class="btn btnlNavy">목록</button>
+                        </div>
+                        <div class="rt">
+                            <button type="button" class="btn btnNavy">등록</button>
+                        </div>
+                    </div>
+                    <!--// btnBottom -->
+				</div>
+				<!--// cont -->
+			</div>
+			<!--// contWrap -->
+		</div>
+		<!--// contents -->
+	</div>
+	<!--// container -->
+</div>
+<!--// wrap -->
+</body>
+</html>
