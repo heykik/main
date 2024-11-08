@@ -1284,7 +1284,6 @@ button[class*="btn"][type="button"]{
     }
     table{
         border-top:1px solid var(--table-top);
-        border-bottom:1px solid var(--border-bottom);
         width:100%;
         .bgTableThick{
             background:var(--table-bg-thick);
@@ -2938,8 +2937,74 @@ button[class*="btn"][type="button"]{
 
 /* 디지털 혁신 지원 서비스 > 공동장비활용 검색 예약 상세 */
 .prdtWrap{
+    @media screen and (min-width:1160px) {
+        display:flex;
+        align-items:flex-start;
+        justify-content:space-between;
+        gap:100px;
+    }
     .imgWrap{
+        overflow:hidden;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin-bottom:40px;
         background:var(--gray5);
+        border-radius:20px;
+        @media screen and (min-width:1160px) {
+            flex:0 0 550px;
+            height:508px;
+        }
+    }
+    .tableTit{
+        h5{
+            margin-bottom:0;
+        }
+        p{
+           margin-bottom:24px; 
+           @media screen and (min-width:1160px) {
+                font-size:20px;
+           }
+        }
+    }
+    .prdtInfoWrap{
+        @media screen and (min-width:1160px) {
+            flex-grow:1;
+        }
+    }
+    table{
+        border-top-color:var(--gray80);
+        tr{
+            th{
+                padding:10px 0 4px;
+                line-height:1.5;
+                font-weight:var(--regular);
+                color:var(--gray70);
+                background:var(--color-white);
+                @media screen and (min-width:1160px) {
+                    padding:16px 0; 
+                    text-align:left;
+                    width:146px;
+                    border-right:none;
+                    line-height:1.2;
+                }
+            }
+            td{
+                padding:0 0 10px;
+                @media screen and (min-width:1160px) {
+                    padding:16px 0;
+                }
+                p{
+                    padding:0;
+                    line-height:1.5;
+                    font-weight:var(--medium);
+                    color: var(--color-dark);
+                    @media screen and (min-width:1160px) {
+                        line-height:1.2;
+                    }
+                }
+            }
+        }
     }
 }
 

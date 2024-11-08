@@ -1253,7 +1253,6 @@ button[class*=btn][type=button] {
 }
 .tableDefault table {
   border-top: 1px solid var(--table-top);
-  border-bottom: 1px solid var(--border-bottom);
   width: 100%;
 }
 .tableDefault table .bgTableThick {
@@ -3028,8 +3027,82 @@ button[class*=btn][type=button] {
 }
 
 /* 디지털 혁신 지원 서비스 > 공동장비활용 검색 예약 상세 */
+@media screen and (min-width: 1160px) {
+  .prdtWrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 100px;
+  }
+}
 .prdtWrap .imgWrap {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
   background: var(--gray5);
+  border-radius: 20px;
+}
+@media screen and (min-width: 1160px) {
+  .prdtWrap .imgWrap {
+    flex: 0 0 550px;
+    height: 508px;
+  }
+}
+.prdtWrap .tableTit h5 {
+  margin-bottom: 0;
+}
+.prdtWrap .tableTit p {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1160px) {
+  .prdtWrap .tableTit p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .prdtWrap .prdtInfoWrap {
+    flex-grow: 1;
+  }
+}
+.prdtWrap table {
+  border-top-color: var(--gray80);
+}
+.prdtWrap table tr th {
+  padding: 10px 0 4px;
+  line-height: 1.5;
+  font-weight: var(--regular);
+  color: var(--gray70);
+  background: var(--color-white);
+}
+@media screen and (min-width: 1160px) {
+  .prdtWrap table tr th {
+    padding: 16px 0;
+    text-align: left;
+    width: 146px;
+    border-right: none;
+    line-height: 1.2;
+  }
+}
+.prdtWrap table tr td {
+  padding: 0 0 10px;
+}
+@media screen and (min-width: 1160px) {
+  .prdtWrap table tr td {
+    padding: 16px 0;
+  }
+}
+.prdtWrap table tr td p {
+  padding: 0;
+  line-height: 1.5;
+  font-weight: var(--medium);
+  color: var(--color-dark);
+}
+@media screen and (min-width: 1160px) {
+  .prdtWrap table tr td p {
+    line-height: 1.2;
+  }
 }
 
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내
