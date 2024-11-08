@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>과제평가시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<button class="btn btnNavy" onclick="fn_layer('layer01', this, 800)">기본 팝업</button>
+<button class="btn btnNavy" onclick="fn_layer('layer02', this, 400)">알림 팝업</button>
+<!-- 기본 팝업 -->
+<div class="layerPop" id="layer01">
+    <div class="inner">
+        <strong class="tit">타이틀</strong>
+        <!-- layerCont -->
+        <div class="layerCont">
+            내용 영역입니다.
+            <!-- btnBottom -->
+            <div class="btnBottom">
+                <div class="ct">
+                    <button type="button" class="btn btnGray" onclick="fn_layer_close(this)">취소</button>
+                    <button type="button" class="btn btnNavy">선택</button>
+                </div>
+            </div>
+            <!--// btnBottom -->
+        </div>
+        <!--// layerCont -->
+        <a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+    </div>
+</div>
+<!--// 기본 팝업-->
+
+<!-- 알림 팝업 -->
+<div class="layerPop alert" id="layer02">
+    <div class="inner">
+        <!-- layerCont -->
+        <div class="layerCont">
+            <p>알림 내용 영역입니다.</p>
+            <!-- btnBottom -->
+            <div class="btnBottom center">
+                <div class="ct">
+                    <button type="button" class="btn btnGray" onclick="fn_layer_close(this)">취소</button>
+                    <button type="button" class="btn btnNavy">확인</button>
+                </div>
+            </div>
+            <!--// btnBottom -->
+        </div>
+        <!--// layerCont -->
+        <a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+    </div>
+</div>
+<!--// 알림 팝업-->
+</body>
+</html>

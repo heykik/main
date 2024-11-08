@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>과제평가시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<button class="btn btnNavy" onclick="fn_layer('layer01', this, 1200)">평가위원1 정성평가표</button>
+<!-- 팝업 -->
+<div class="layerPop" id="layer01">
+    <div class="inner">
+        <strong class="tit">평가위원1 정성평가표</strong>
+        <!-- layerCont -->
+        <div class="layerCont">
+            <!-- tableTop -->
+            <div class="tableTop">
+                <div class="rt">
+                    <button type="button" class="btn btnNavy">엑셀 다운로드</button>
+                </div>
+            </div>
+            <!--// tableTop -->
+            <div style="height: 200px; background: #f1f1f1">그리드 영역입니다. 개발 시 스타일 삭제해 주세요.</div>
+            <!-- tableTop -->
+            <div class="tableTop">
+                <div class="lt">
+                    <h3>의견</h3>
+                </div>
+            </div>
+            <!--// tableTop -->
+            <!-- 필요하신 거 사용하세요 -->
+            <textarea title="의견" value="본 평가는..."></textarea>
+            <div class="comment">
+                본 평가는...
+            </div>
+            <!--// 필요하신 거 사용하세요 -->
+            <!-- btnBottom -->
+            <div class="btnBottom">
+                <div class="ct">
+                    <button type="button" class="btn btnGray" onclick="fn_layer_close(this)">닫기</button>
+                </div>
+            </div>
+            <!--// btnBottom -->
+        </div>
+        <!--// layerCont -->
+        <a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+    </div>
+</div>
+<!--// 팝업-->
+</body>
+</html>

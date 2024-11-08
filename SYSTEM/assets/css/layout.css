@@ -95,8 +95,8 @@
 #container .contents .location li {float:left; line-height:25px; font-size:13px; color:#666}
 #container .contents .location li + li:before {display:inline-block; content:">"; width:45px; text-align:center; vertical-align:top; font-family:Dotum, Arial, sans-serif; color:#aaa}
 #container .contents .location li:last-child {color:#133692; font-weight:500} */
-#container .contents .contWrap {display:flex; flex-direction:row; flex-wrap:wrap; margin:-15px}
-#container .contents .contWrap .cont {display:flex; flex-direction:column; flex:1; flex-shrink:1; min-width:0; margin:15px; padding:35px 30px; border-radius:10px; box-shadow:0 0 16px rgba(206, 206, 206, 0.08); background:#fff}
+#container .contents .contWrap {display:flex; flex-direction:row; flex-wrap:wrap;}
+#container .contents .contWrap .cont {display:flex; flex-direction:column; flex:1; flex-shrink:1; min-width:0; padding:20px; border-radius:16px; box-shadow:0 0 16px rgba(206, 206, 206, 0.08); background:#fff}
 #container .contents .contWrap .cont.col1 {min-width:calc(37% - 30px); max-width:calc(37% - 30px)}
 #container .contents .contWrap .cont.col2 {min-width:calc(63% - 30px); max-width:calc(63% - 30px)}
 #container .contents .contWrap .cont.col3 {min-width:calc(100% - 30px); max-width:calc(100% - 30px)}

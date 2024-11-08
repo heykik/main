@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>과제평가시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<button class="btn btnNavy" onclick="fn_layer('layer01', this, 1200)">이력보기</button>
+<!-- 팝업 -->
+<div class="layerPop" id="layer01">
+    <div class="inner">
+        <strong class="tit">평가항목 및 배점 조회</strong>
+        <!-- layerCont -->
+        <div class="layerCont">
+            <!-- searchArea -->
+            <div class="searchArea">
+                <div class="rt">
+                    <span>공고종류</span>
+                    <select name="" id="" title="공고종류" class="w100">
+                        <option value="">선택</option>
+                        <option value="">전체</option>
+                        <option value="">사업평가</option>
+                        <option value="">용역평가</option>
+                    </select>
+                    <span>공고게시일 조회기간</span>
+                    <!-- dateWrap -->
+                    <div class="dateWrap">
+                        <p class="date"><input type="text" title="시작 날짜" placeholder="YY-MM-DD"></p>
+                        <em>~</em>
+                        <p class="date"><input type="text" title="종료 날짜" placeholder="YY-MM-DD"></p>
+                    </div>
+                    <!--// dateWrap -->
+                    <input type="text" title="공고명" placeholder="공고명(공고명을 알고 있을경우)">
+                    <button type="button" class="btn btnNavy">검색</button>
+                </div>
+            </div>
+            <!--// searchArea -->
+            <div style="height: 200px; background: #f1f1f1">그리드 영역입니다. 개발 시 스타일 삭제해 주세요.</div>
+            <!-- btnBottom -->
+            <div class="btnBottom">
+                <div class="ct">
+                    <button type="button" class="btn btnGray" onclick="fn_layer_close(this)">취소</button>
+                    <button type="button" class="btn btnNavy">선택</button>
+                </div>
+            </div>
+            <!--// btnBottom -->
+        </div>
+        <!--// layerCont -->
+        <a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+    </div>
+</div>
+<!--// 팝업-->
+</body>
+</html>

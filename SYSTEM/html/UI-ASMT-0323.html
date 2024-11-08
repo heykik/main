@@ -16,7 +16,7 @@
 <![endif]-->
 <script>
 $(function(){
-	fn_gnb(0,1,1,1);
+	fn_gnb(0,0);
 })
 </script>
 </head>
@@ -91,88 +91,57 @@ $(function(){
 	<div id="container">
 		<!-- contents -->
 		<div class="contents">
-			<h2>페이지명</h2>
-			<ol class="location">
-				<li><i>home</i></li>
-				<li>DEPTH01</li>
-				<li>DEPTH02</li>
-			</ol>
+            <!-- titArea -->
+            <div class="titArea">
+                <div class="tit">
+                    <h2>공지사항관리</h2>
+                    <div class="titInfo">관리 작업을 수행 할 수 있습니다.</div>
+                </div>
+                <ol class="location">
+                    <li>홈</li>
+                    <li>공지사항관리</li>
+                    <li>공지사항관리</li>
+                </ol>
+            </div>
+            <!--// titArea -->
 			<!-- contWrap -->
 			<div class="contWrap">
 				<!-- cont -->
 				<div class="cont">
-					<!-- titArea -->
-					<div class="titArea">
-						<h3>타이틀</h3>
-					</div>
-					<!--// titArea -->
-					
-					<!-- searchWrap -->
-					<div class="searchWrap">
-						<!-- inBox -->
-						<div class="inBox">
-							<table>
-								<caption>항목, 항목항, 항목항목 항목으로 구성된 "제목" 검색 표</caption>
-								<colgroup>
-									<col style="width:60px"><!-- 두글자 -->
-									<col style="width:auto">
-									<col style="width:80px"><!-- 세글자 -->
-									<col style="width:auto">
-									<col style="width:90px"><!-- 네글자 -->
-									<col style="width:auto">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th scope="row">항목</th>
-										<td>
-											<!-- selectBtn -->
-											<div class="selectBtn">
-												<span>
-													<input type="radio" name="select01" id="select0101" checked>
-													<label for="select0101">선택1</label>
-												</span>
-												<span>
-													<input type="radio" name="select01" id="select0102">
-													<label for="select0102">선택2</label>
-												</span>
-												<span>
-													<input type="radio" name="select01" id="select0103">
-													<label for="select0103">선택3</label>
-												</span>
-												<span>
-													<input type="radio" name="select01" id="select0104">
-													<label for="select0104">선택4</label>
-												</span>
-											</div>
-											<!--// selectBtn -->
-										</td>
-										<th scope="row">항목항</th>
-										<td>
-											<select title="항목항">
-												<option value="">선택</option>
-											</select>
-										</td>
-										<th scope="row">항목항목</th>
-										<td>
-											<div class="flex">
-												<select title="항목항목" class="w100">
-													<option value="">선택</option>
-												</select>
-												<p class="f1"><input type="text" title="항목항목"></p>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<!--// inBox -->
-						<!-- btnArea -->
-						<div class="btnArea">
-							<button type="button" class="btn btnPB02"><i>search</i>검색</button>
-						</div>
-						<!--// btnArea -->
-					</div>
-					<!--// searchWrap -->
+                    <!-- rowTable -->
+                    <div class="rowTable">
+                        <table>
+                            <colgroup>
+                                <col style="width:200px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">제목</th>
+                                    <td>
+                                        <input type="text" title="제목" class="wfull">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">내용</th>
+                                    <td>
+                                        <textarea name="" id="" title="내용"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--// rowTable -->
+                    <!-- btnBottom -->
+                    <div class="btnBottom">
+                        <div class="lt">
+                            <button type="button" class="btn btnlNavy">목록</button>
+                        </div>
+                        <div class="rt">
+                            <button type="button" class="btn btnNavy">등록</button>
+                        </div>
+                    </div>
+                    <!--// btnBottom -->
 				</div>
 				<!--// cont -->
 			</div>

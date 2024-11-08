@@ -2,9 +2,9 @@
     /* input, select, textarea */
     --font-input: 16px;
     --color-input: #101010;
-    --color-placeholder: #707070;
+    --color-placeholder: #454545;
     --border-input: #DBDBDB;
-    --border-radius: 4px;
+    --border-radius: 4px; 
     --bg-input: #fff;
 
     /* border */
