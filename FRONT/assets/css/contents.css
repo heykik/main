@@ -821,7 +821,11 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1160px) {
   .titM * {
     margin: 0 0 80px;
+    font-size: 36px;
   }
+}
+.titM.narrow * {
+  margin-bottom: 24px;
 }
 
 .titS * {
@@ -1105,13 +1109,15 @@ button[class*=btn][type=button] {
 .descDeft.tag [class*=ico].icoLoca strong::before {
   background: url(../images/icon/ico-location-red-20.svg) no-repeat center center/contain;
 }
+.descDeft.tag [class*=ico].icoLoca[class*="24"] strong::before {
+  background: url(../images/icon/ico-location-red-24.svg) no-repeat center center/contain;
+}
 .descDeft.tag [class*=ico].icoCall strong::before {
   background: url(../images/icon/ico-call-red-20.svg) no-repeat center center/contain;
 }
 .descDeft.tag [class*=ico].icoBag strong::before {
   background: url(../images/icon/ico-bag-red-20.svg) no-repeat center center/contain;
 }
-
 /* dot list */
 .txtDotList {
   padding: 10px 0;
@@ -2220,11 +2226,14 @@ button[class*=btn][type=button] {
 }
 .serviceMap .targetWrap {
   position: relative;
-  padding: 40px 0;
+  margin: 0 -16px;
+  padding: 40px 16px;
   background: var(--gray5);
 }
 @media screen and (min-width: 1160px) {
   .serviceMap .targetWrap {
+    margin: 0;
+    padding: 40px 0;
     background: initial;
   }
   .serviceMap .targetWrap::before {
@@ -2259,6 +2268,7 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .serviceMap .targetWrap .wrap div {
+    margin: 0;
     padding: 40px 32px 20px;
   }
 }
