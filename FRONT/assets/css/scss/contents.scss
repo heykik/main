@@ -836,7 +836,7 @@ button[class*="btn"][type="button"]{
         margin-bottom:64px;
         line-height:1.5;
         letter-spacing:-0.03em;
-        font-size:32px;
+        font-size:25px;
         font-weight:var(--bold);
         color:var(--color-dark);
         @media screen and (min-width:1160px){
@@ -960,6 +960,9 @@ button[class*="btn"][type="button"]{
         &[class*="PersonCheck"]::before{
            background:url(../images/icon/ico-person-check-50.svg) no-repeat center center / contain;
         }
+        &[class*="Navigation"]::before{
+           background:url(../images/icon/ico-navigation-50.svg) no-repeat center center / contain;
+        }
     }
 }
 
@@ -1076,9 +1079,12 @@ button[class*="btn"][type="button"]{
     * {
         line-height:1.5;
         letter-spacing:-0.03em;
-        font-size:20px;
+        font-size:17px;
         font-weight:var(--regular);
         color:var(--color-text);
+        @media screen and (min-width:1160px) {
+            font-size:20px;
+        }
         &:not(:last-child){
             margin-bottom:16px;
         }
@@ -1096,8 +1102,11 @@ button[class*="btn"][type="button"]{
             flex-wrap:wrap;
             align-items:center;
             justify-content:flex-start;
-            gap:16px 8px;
+            gap:10px 8px;            
             width:100%;
+            @media screen and (min-width:1160px) {
+                gap:16px 8px;
+            }
             strong{
                 flex-shrink:0;
                 font-weight:var(--bold);
@@ -1124,13 +1133,21 @@ button[class*="btn"][type="button"]{
                     height:20px;
                 }
             }
+            &.lg{
+                strong{
+                    &::before{
+                        width:24px;
+                        height:24px;
+                    }
+                }
+            }
             &.icoLoca{
                 strong{
                     &::before{
                         background:url(../images/icon/ico-location-red-20.svg) no-repeat center center / contain;
                     }
                 }
-                &[class*="24"]{
+                &.lg{
                     strong{
                         &::before{
                             background:url(../images/icon/ico-location-red-24.svg) no-repeat center center / contain;
@@ -1158,10 +1175,24 @@ button[class*="btn"][type="button"]{
 
                     }
                 }
-                &[class*="24"]{
+                &.lg{
                     strong{
                         &::before{
-                        background:url(../images/icon/ico-bag-red-20.svg) no-repeat center center / contain;
+                        background:url(../images/icon/ico-time-red-20.svg) no-repeat center center / contain;
+                        }
+                    }
+                }
+            }
+            &.icoCal{
+                strong{
+                    &::before{
+
+                    }
+                }
+                &.lg{
+                    strong{
+                        &::before{
+                        background:url(../images/icon/ico-calendar-red-20.svg) no-repeat center center / contain;
                         }
                     }
                 }
@@ -1233,6 +1264,17 @@ button[class*="btn"][type="button"]{
             color:var(--color-text);
             &:not(:last-child){
                 margin-bottom:4px;
+            }
+        }
+    }
+    &.sm{
+        li{
+            p{
+                font-size:17px;
+                color:var(--gray70);
+                &::before{
+                    margin:10px 4px;
+                }
             }
         }
     }
@@ -2327,135 +2369,135 @@ button[class*="btn"][type="button"]{
                 }
             }
         }
+    }    
+}
+.serviceWrap{
+    padding:64px 0 0;
+    @media screen and (min-width:720px) {
+        display:flex;
+        flex-wrap:wrap;
+        align-items:flex-start;
+        justify-content:space-between;
     }
-    .serviceWrap{
-        padding:64px 0 0;
+    @media screen and (min-width:1160px) {
+        display:block;
+        padding:80px 0 40px;
+    }
+    .titM{
+        width:100%;
+    }
+    .wrap{
+        display:flex;
+        flex-direction:column;
+        gap:32px;
+        margin:32px 0 0;
+        padding:20px 0 0;
         @media screen and (min-width:720px) {
-            display:flex;
-            flex-wrap:wrap;
-            align-items:flex-start;
-            justify-content:space-between;
+            flex-basis:calc(50% - 32px);
         }
         @media screen and (min-width:1160px) {
-            display:block;
-            padding:80px 0 40px;
+            flex-direction:row;
+            gap:0 80px;
+            margin:16px 0 0;
+            padding:20px 0;
         }
-        .titM{
-            width:100%;
-        }
-        .wrap{
-            display:flex;
-            flex-direction:column;
-            gap:32px;
-            margin:32px 0 0;
-            padding:20px 0 0;
-            @media screen and (min-width:720px) {
-                flex-basis:calc(50% - 32px);
+        div{
+            margin-bottom:0;
+            @media screen and (min-width:1160px) {
+                height:320px;
             }
+        }
+        .imgWrap{
+            flex:0 0 auto;
+            position:relative;
+            width:100%;
+            max-width:520px;
+            height:200px;
+            border-radius:20px;
+            @media screen and (min-width:1160px) {
+                flex:0 0 520px;
+                height:320px;
+            }
+            &::before{
+                display:block;
+                content:"";
+                position:absolute;
+                bottom:-16px;
+                z-index:-1;
+                border-radius:20px;
+                width:280px;
+                height:160px;
+                background:#F3F8FE;
+                @media screen and (min-width:1160px) {
+                    bottom:-40px;
+                }
+            }
+        }
+        .descDeft{
+            padding-bottom:40px;
+            strong{
+                @media screen and (min-width:1160px) {
+                    font-size:24px;
+                }
+            }
+            p{
+                gap:20px;
+            }
+        }
+        &:nth-child(2){
+            .imgWrap{
+                background:url(../images/visual-service-wrap-01.png) no-repeat center left / 100%;
+            }
+        }
+        &:nth-child(3){
+            .imgWrap{
+                background:url(../images/visual-service-wrap-02.png) no-repeat center left / 100%;
+            }
+        }
+        &:nth-child(4){
+            .imgWrap{
+                background:url(../images/visual-service-wrap-03.png) no-repeat center left / 100%;
+            }
+        }
+        &:nth-child(5){
+            .imgWrap{
+                background:url(../images/visual-service-wrap-04.png) no-repeat center left / 100%;
+            }
+        }
+        &:nth-child(6){
+            .imgWrap{
+                background:url(../images/visual-service-wrap-05.png) no-repeat center left / 100%;
+            }
+        }
+        &:nth-child(odd){
+            flex-direction:column-reverse;
+            justify-content:flex-end;
             @media screen and (min-width:1160px) {
                 flex-direction:row;
-                gap:0 80px;
-                margin:16px 0 0;
-                padding:20px 0;
-            }
-            div{
-                margin-bottom:0;
-                @media screen and (min-width:1160px) {
-                    height:320px;
-                }
             }
             .imgWrap{
-                flex:0 0 auto;
-                position:relative;
-                width:100%;
-                max-width:520px;
-                height:200px;
-                border-radius:20px;
                 @media screen and (min-width:1160px) {
-                    flex:0 0 520px;
-                    height:320px;
+                    margin-bottom:0;
+                    margin-right:60px;
                 }
                 &::before{
-                    display:block;
-                    content:"";
-                    position:absolute;
-                    bottom:-16px;
-                    z-index:-1;
-                    border-radius:20px;
-                    width:280px;
-                    height:160px;
-                    background:#F3F8FE;
+                    right:-16px;
                     @media screen and (min-width:1160px) {
-                        bottom:-40px;
+                        right:-60px;
                     }
                 }
             }
-            .descDeft{
-                padding-bottom:40px;
-                strong{
-                    @media screen and (min-width:1160px) {
-                        font-size:24px;
-                    }
-                }
-                p{
-                    gap:20px;
-                }
-            }
-            &:nth-child(2){
-                .imgWrap{
-                    background:url(../images/visual-service-wrap-01.png) no-repeat center left / 100%;
-                }
-            }
-            &:nth-child(3){
-                .imgWrap{
-                    background:url(../images/visual-service-wrap-02.png) no-repeat center left / 100%;
-                }
-            }
-            &:nth-child(4){
-                .imgWrap{
-                    background:url(../images/visual-service-wrap-03.png) no-repeat center left / 100%;
-                }
-            }
-            &:nth-child(5){
-                .imgWrap{
-                    background:url(../images/visual-service-wrap-04.png) no-repeat center left / 100%;
-                }
-            }
-            &:nth-child(6){
-                .imgWrap{
-                    background:url(../images/visual-service-wrap-05.png) no-repeat center left / 100%;
-                }
-            }
-            &:nth-child(odd){
-                flex-direction:column-reverse;
-                justify-content:flex-end;
+        }
+        &:nth-child(even){
+            justify-content:flex-start;
+            .imgWrap{
                 @media screen and (min-width:1160px) {
-                    flex-direction:row;
+                    margin-left:60px;
                 }
-                .imgWrap{
+                &::before{
+                    left:-16px;
                     @media screen and (min-width:1160px) {
-                        margin-bottom:0;
-                        margin-right:60px;
-                    }
-                    &::before{
-                        right:-16px;
-                        @media screen and (min-width:1160px) {
-                            right:-60px;
-                        }
-                    }
-                }
-            }
-            &:nth-child(even){
-                justify-content:flex-start;
-                .imgWrap{
-                    @media screen and (min-width:1160px) {
-                        margin-left:60px;
-                    }
-                    &::before{
-                        left:-16px;
-                        @media screen and (min-width:1160px) {
-                            left:-60px;
-                        }
+                        left:-60px;
                     }
                 }
             }
@@ -3145,6 +3187,21 @@ button[class*="btn"][type="button"]{
             }
         }
     }
+}
+/* 디지털 혁신 지원 서비스 > 시설예약 > 상세 */
+.titInfoList{
+    margin:64px 0 0;
+}
+.infoListBox{
+    padding:32px 24px;
+    border-radius:8px;
+    border:1px solid var(--gray30);
+    @media screen and (min-width:1160px) {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+
 }
 
 

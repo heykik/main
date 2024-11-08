@@ -814,7 +814,7 @@ button[class*=btn][type=button] {
   margin-bottom: 64px;
   line-height: 1.5;
   letter-spacing: -0.03em;
-  font-size: 32px;
+  font-size: 25px;
   font-weight: var(--bold);
   color: var(--color-dark);
 }
@@ -937,6 +937,9 @@ button[class*=btn][type=button] {
 }
 [class*=tit][class*=Ico][class*=PersonCheck]::before {
   background: url(../images/icon/ico-person-check-50.svg) no-repeat center center/contain;
+}
+[class*=tit][class*=Ico][class*=Navigation]::before {
+  background: url(../images/icon/ico-navigation-50.svg) no-repeat center center/contain;
 }
 
 /* description color */
@@ -1062,9 +1065,14 @@ button[class*=btn][type=button] {
 .descDeft * {
   line-height: 1.5;
   letter-spacing: -0.03em;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: var(--regular);
   color: var(--color-text);
+}
+@media screen and (min-width: 1160px) {
+  .descDeft * {
+    font-size: 20px;
+  }
 }
 .descDeft *:not(:last-child) {
   margin-bottom: 16px;
@@ -1081,8 +1089,13 @@ button[class*=btn][type=button] {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 16px 8px;
+  gap: 10px 8px;
   width: 100%;
+}
+@media screen and (min-width: 1160px) {
+  .descDeft.tag p {
+    gap: 16px 8px;
+  }
 }
 .descDeft.tag p strong {
   flex-shrink: 0;
@@ -1106,10 +1119,14 @@ button[class*=btn][type=button] {
   width: 20px;
   height: 20px;
 }
+.descDeft.tag [class*=ico].lg strong::before {
+  width: 24px;
+  height: 24px;
+}
 .descDeft.tag [class*=ico].icoLoca strong::before {
   background: url(../images/icon/ico-location-red-20.svg) no-repeat center center/contain;
 }
-.descDeft.tag [class*=ico].icoLoca[class*="24"] strong::before {
+.descDeft.tag [class*=ico].icoLoca.lg strong::before {
   background: url(../images/icon/ico-location-red-24.svg) no-repeat center center/contain;
 }
 .descDeft.tag [class*=ico].icoCall strong::before {
@@ -1118,8 +1135,11 @@ button[class*=btn][type=button] {
 .descDeft.tag [class*=ico].icoBag strong::before {
   background: url(../images/icon/ico-bag-red-20.svg) no-repeat center center/contain;
 }
-.descDeft.tag [class*=ico].icoTime[class*="24"] strong::before {
-  background: url(../images/icon/ico-bag-red-20.svg) no-repeat center center/contain;
+.descDeft.tag [class*=ico].icoTime.lg strong::before {
+  background: url(../images/icon/ico-time-red-20.svg) no-repeat center center/contain;
+}
+.descDeft.tag [class*=ico].icoCal.lg strong::before {
+  background: url(../images/icon/ico-calendar-red-20.svg) no-repeat center center/contain;
 }
 
 /* dot list */
@@ -1185,6 +1205,13 @@ button[class*=btn][type=button] {
 }
 .txtDotList li span:not(:last-child) {
   margin-bottom: 4px;
+}
+.txtDotList.sm li p {
+  font-size: 17px;
+  color: var(--gray70);
+}
+.txtDotList.sm li p::before {
+  margin: 10px 4px;
 }
 
 /* paging */
@@ -2357,11 +2384,12 @@ button[class*=btn][type=button] {
   font-weight: var(--regular);
   color: var(--color-text);
 }
-.serviceMap .serviceWrap {
+
+.serviceWrap {
   padding: 64px 0 0;
 }
 @media screen and (min-width: 720px) {
-  .serviceMap .serviceWrap {
+  .serviceWrap {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -2369,15 +2397,15 @@ button[class*=btn][type=button] {
   }
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap {
+  .serviceWrap {
     display: block;
     padding: 80px 0 40px;
   }
 }
-.serviceMap .serviceWrap .titM {
+.serviceWrap .titM {
   width: 100%;
 }
-.serviceMap .serviceWrap .wrap {
+.serviceWrap .wrap {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -2385,27 +2413,27 @@ button[class*=btn][type=button] {
   padding: 20px 0 0;
 }
 @media screen and (min-width: 720px) {
-  .serviceMap .serviceWrap .wrap {
+  .serviceWrap .wrap {
     flex-basis: calc(50% - 32px);
   }
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap {
+  .serviceWrap .wrap {
     flex-direction: row;
     gap: 0 80px;
     margin: 16px 0 0;
     padding: 20px 0;
   }
 }
-.serviceMap .serviceWrap .wrap div {
+.serviceWrap .wrap div {
   margin-bottom: 0;
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap div {
+  .serviceWrap .wrap div {
     height: 320px;
   }
 }
-.serviceMap .serviceWrap .wrap .imgWrap {
+.serviceWrap .wrap .imgWrap {
   flex: 0 0 auto;
   position: relative;
   width: 100%;
@@ -2414,12 +2442,12 @@ button[class*=btn][type=button] {
   border-radius: 20px;
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap .imgWrap {
+  .serviceWrap .wrap .imgWrap {
     flex: 0 0 520px;
     height: 320px;
   }
 }
-.serviceMap .serviceWrap .wrap .imgWrap::before {
+.serviceWrap .wrap .imgWrap::before {
   display: block;
   content: "";
   position: absolute;
@@ -2431,72 +2459,72 @@ button[class*=btn][type=button] {
   background: #F3F8FE;
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap .imgWrap::before {
+  .serviceWrap .wrap .imgWrap::before {
     bottom: -40px;
   }
 }
-.serviceMap .serviceWrap .wrap .descDeft {
+.serviceWrap .wrap .descDeft {
   padding-bottom: 40px;
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap .descDeft strong {
+  .serviceWrap .wrap .descDeft strong {
     font-size: 24px;
   }
 }
-.serviceMap .serviceWrap .wrap .descDeft p {
+.serviceWrap .wrap .descDeft p {
   gap: 20px;
 }
-.serviceMap .serviceWrap .wrap:nth-child(2) .imgWrap {
+.serviceWrap .wrap:nth-child(2) .imgWrap {
   background: url(../images/visual-service-wrap-01.png) no-repeat center left/100%;
 }
-.serviceMap .serviceWrap .wrap:nth-child(3) .imgWrap {
+.serviceWrap .wrap:nth-child(3) .imgWrap {
   background: url(../images/visual-service-wrap-02.png) no-repeat center left/100%;
 }
-.serviceMap .serviceWrap .wrap:nth-child(4) .imgWrap {
+.serviceWrap .wrap:nth-child(4) .imgWrap {
   background: url(../images/visual-service-wrap-03.png) no-repeat center left/100%;
 }
-.serviceMap .serviceWrap .wrap:nth-child(5) .imgWrap {
+.serviceWrap .wrap:nth-child(5) .imgWrap {
   background: url(../images/visual-service-wrap-04.png) no-repeat center left/100%;
 }
-.serviceMap .serviceWrap .wrap:nth-child(6) .imgWrap {
+.serviceWrap .wrap:nth-child(6) .imgWrap {
   background: url(../images/visual-service-wrap-05.png) no-repeat center left/100%;
 }
-.serviceMap .serviceWrap .wrap:nth-child(odd) {
+.serviceWrap .wrap:nth-child(odd) {
   flex-direction: column-reverse;
   justify-content: flex-end;
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap:nth-child(odd) {
+  .serviceWrap .wrap:nth-child(odd) {
     flex-direction: row;
   }
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap:nth-child(odd) .imgWrap {
+  .serviceWrap .wrap:nth-child(odd) .imgWrap {
     margin-bottom: 0;
     margin-right: 60px;
   }
 }
-.serviceMap .serviceWrap .wrap:nth-child(odd) .imgWrap::before {
+.serviceWrap .wrap:nth-child(odd) .imgWrap::before {
   right: -16px;
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap:nth-child(odd) .imgWrap::before {
+  .serviceWrap .wrap:nth-child(odd) .imgWrap::before {
     right: -60px;
   }
 }
-.serviceMap .serviceWrap .wrap:nth-child(even) {
+.serviceWrap .wrap:nth-child(even) {
   justify-content: flex-start;
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap:nth-child(even) .imgWrap {
+  .serviceWrap .wrap:nth-child(even) .imgWrap {
     margin-left: 60px;
   }
 }
-.serviceMap .serviceWrap .wrap:nth-child(even) .imgWrap::before {
+.serviceWrap .wrap:nth-child(even) .imgWrap::before {
   left: -16px;
 }
 @media screen and (min-width: 1160px) {
-  .serviceMap .serviceWrap .wrap:nth-child(even) .imgWrap::before {
+  .serviceWrap .wrap:nth-child(even) .imgWrap::before {
     left: -60px;
   }
 }
@@ -3238,6 +3266,24 @@ button[class*=btn][type=button] {
 .facilityResWrap a .txtBox li {
   font-size: 15px;
   font-weight: var(--regular);
+}
+
+/* 디지털 혁신 지원 서비스 > 시설예약 > 상세 */
+.titInfoList {
+  margin: 64px 0 0;
+}
+
+.infoListBox {
+  padding: 32px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--gray30);
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내
