@@ -1153,7 +1153,18 @@ button[class*="btn"][type="button"]{
                 }
             }
             &.icoTime{
+                strong{
+                    &::before{
 
+                    }
+                }
+                &[class*="24"]{
+                    strong{
+                        &::before{
+                        background:url(../images/icon/ico-bag-red-20.svg) no-repeat center center / contain;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1894,7 +1905,7 @@ button[class*="btn"][type="button"]{
             margin:0 0 0 -16px;
             width:100vw;
             height:78px;
-            background:url(../images/visual-arrow-large.svg) no-repeat center center / contain;
+            background:url(../images/visual-arrow-large.svg) no-repeat center top / auto;
             @media screen and (min-width:1160px) {
                 margin:0 auto;
                 width:726px;
@@ -1959,12 +1970,14 @@ button[class*="btn"][type="button"]{
             .moV{
                 display:block;
                 margin:0 auto;
+                width:100%;
                 max-width:326px;
                 @media screen and (min-width:1160px) {
                     display:none;
                 }
             }
             .pcV{
+                width:100%;
                 max-width:1520px;
             }
         }        
@@ -2014,7 +2027,10 @@ button[class*="btn"][type="button"]{
         }
     }
     .cardList{
+        display:flex;
         flex-wrap:wrap;
+        align-items:flex-start;
+        justify-content:space-between;
         gap:16px;
         margin:0 0 64px;
         padding:0 0 40px;
@@ -2167,6 +2183,9 @@ button[class*="btn"][type="button"]{
                         }
                     }
                 }
+                &:last-child{
+                    margin-bottom:0;
+                }
                 strong{
                     line-height:1.5;
                     letter-spacing:0.03;
@@ -2198,16 +2217,23 @@ button[class*="btn"][type="button"]{
         @media screen and (min-width:1160px) {
             margin:0;
             padding:40px 0;
-            background:initial;
-            &::before{
+            background:initial;            
+        }
+        &::before{
+            position:absolute;
+            top:0;
+            z-index:-1;
+            width:100vw;
+            height:100%;
+            background:var(--gray5);
+            @media screen and (min-width:1160px) {
                 content:"";
-                position:absolute;
-                top:0;
+                left:50%;
+                transform:translateX(-50%);
+            }
+            @media screen and (min-width:1520px) {
                 left:calc((-100vw + 1520px ) / 2);
-                z-index:-1;
-                width:100vw;
-                height:100%;
-                background:var(--gray5);
+                transform:initial;
             }
         }
         .wrap{
@@ -2304,14 +2330,28 @@ button[class*="btn"][type="button"]{
     }
     .serviceWrap{
         padding:64px 0 0;
+        @media screen and (min-width:720px) {
+            display:flex;
+            flex-wrap:wrap;
+            align-items:flex-start;
+            justify-content:space-between;
+        }
         @media screen and (min-width:1160px) {
+            display:block;
             padding:80px 0 40px;
         }
+        .titM{
+            width:100%;
+        }
         .wrap{
+            display:flex;
             flex-direction:column;
             gap:32px;
             margin:32px 0 0;
             padding:20px 0 0;
+            @media screen and (min-width:720px) {
+                flex-basis:calc(50% - 32px);
+            }
             @media screen and (min-width:1160px) {
                 flex-direction:row;
                 gap:0 80px;
@@ -2320,7 +2360,9 @@ button[class*="btn"][type="button"]{
             }
             div{
                 margin-bottom:0;
-                height:320px;
+                @media screen and (min-width:1160px) {
+                    height:320px;
+                }
             }
             .imgWrap{
                 flex:0 0 auto;
@@ -2328,6 +2370,7 @@ button[class*="btn"][type="button"]{
                 width:100%;
                 max-width:520px;
                 height:200px;
+                border-radius:20px;
                 @media screen and (min-width:1160px) {
                     flex:0 0 520px;
                     height:320px;
@@ -2336,14 +2379,13 @@ button[class*="btn"][type="button"]{
                     display:block;
                     content:"";
                     position:absolute;
-                    top:-50px;
+                    bottom:-16px;
                     z-index:-1;
                     border-radius:20px;
                     width:280px;
                     height:160px;
                     background:#F3F8FE;
                     @media screen and (min-width:1160px) {
-                        top:auto;
                         bottom:-40px;
                     }
                 }
@@ -2392,6 +2434,7 @@ button[class*="btn"][type="button"]{
                 }
                 .imgWrap{
                     @media screen and (min-width:1160px) {
+                        margin-bottom:0;
                         margin-right:60px;
                     }
                     &::before{

@@ -1118,6 +1118,10 @@ button[class*=btn][type=button] {
 .descDeft.tag [class*=ico].icoBag strong::before {
   background: url(../images/icon/ico-bag-red-20.svg) no-repeat center center/contain;
 }
+.descDeft.tag [class*=ico].icoTime[class*="24"] strong::before {
+  background: url(../images/icon/ico-bag-red-20.svg) no-repeat center center/contain;
+}
+
 /* dot list */
 .txtDotList {
   padding: 10px 0;
@@ -1895,7 +1899,7 @@ button[class*=btn][type=button] {
   margin: 0 0 0 -16px;
   width: 100vw;
   height: 78px;
-  background: url(../images/visual-arrow-large.svg) no-repeat center center/contain;
+  background: url(../images/visual-arrow-large.svg) no-repeat center top/auto;
 }
 @media screen and (min-width: 1160px) {
   .serviceMap .structureWrap::after {
@@ -1969,6 +1973,7 @@ button[class*=btn][type=button] {
 .serviceMap .structureWrap .circleWrap .moV {
   display: block;
   margin: 0 auto;
+  width: 100%;
   max-width: 326px;
 }
 @media screen and (min-width: 1160px) {
@@ -1977,6 +1982,7 @@ button[class*=btn][type=button] {
   }
 }
 .serviceMap .structureWrap .circleWrap .pcV {
+  width: 100%;
   max-width: 1520px;
 }
 .serviceMap .dbWrap {
@@ -2030,7 +2036,10 @@ button[class*=btn][type=button] {
   background: url(../images/icon/ico-coin-24.svg) no-repeat center center/contain;
 }
 .serviceMap .cardList {
+  display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 16px;
   margin: 0 0 64px;
   padding: 0 0 40px;
@@ -2200,6 +2209,9 @@ button[class*=btn][type=button] {
     content: none;
   }
 }
+.serviceMap .needWrap .wrap .shCard:last-child {
+  margin-bottom: 0;
+}
 .serviceMap .needWrap .wrap .shCard strong {
   line-height: 1.5;
   letter-spacing: 0.03;
@@ -2236,15 +2248,26 @@ button[class*=btn][type=button] {
     padding: 40px 0;
     background: initial;
   }
+}
+.serviceMap .targetWrap::before {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  background: var(--gray5);
+}
+@media screen and (min-width: 1160px) {
   .serviceMap .targetWrap::before {
     content: "";
-    position: absolute;
-    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1520px) {
+  .serviceMap .targetWrap::before {
     left: calc((-100vw + 1520px) / 2);
-    z-index: -1;
-    width: 100vw;
-    height: 100%;
-    background: var(--gray5);
+    transform: initial;
   }
 }
 .serviceMap .targetWrap .wrap {
@@ -2337,16 +2360,34 @@ button[class*=btn][type=button] {
 .serviceMap .serviceWrap {
   padding: 64px 0 0;
 }
+@media screen and (min-width: 720px) {
+  .serviceMap .serviceWrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
 @media screen and (min-width: 1160px) {
   .serviceMap .serviceWrap {
+    display: block;
     padding: 80px 0 40px;
   }
 }
+.serviceMap .serviceWrap .titM {
+  width: 100%;
+}
 .serviceMap .serviceWrap .wrap {
+  display: flex;
   flex-direction: column;
   gap: 32px;
   margin: 32px 0 0;
   padding: 20px 0 0;
+}
+@media screen and (min-width: 720px) {
+  .serviceMap .serviceWrap .wrap {
+    flex-basis: calc(50% - 32px);
+  }
 }
 @media screen and (min-width: 1160px) {
   .serviceMap .serviceWrap .wrap {
@@ -2358,7 +2399,11 @@ button[class*=btn][type=button] {
 }
 .serviceMap .serviceWrap .wrap div {
   margin-bottom: 0;
-  height: 320px;
+}
+@media screen and (min-width: 1160px) {
+  .serviceMap .serviceWrap .wrap div {
+    height: 320px;
+  }
 }
 .serviceMap .serviceWrap .wrap .imgWrap {
   flex: 0 0 auto;
@@ -2366,6 +2411,7 @@ button[class*=btn][type=button] {
   width: 100%;
   max-width: 520px;
   height: 200px;
+  border-radius: 20px;
 }
 @media screen and (min-width: 1160px) {
   .serviceMap .serviceWrap .wrap .imgWrap {
@@ -2377,7 +2423,7 @@ button[class*=btn][type=button] {
   display: block;
   content: "";
   position: absolute;
-  top: -50px;
+  bottom: -16px;
   z-index: -1;
   border-radius: 20px;
   width: 280px;
@@ -2386,7 +2432,6 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .serviceMap .serviceWrap .wrap .imgWrap::before {
-    top: auto;
     bottom: -40px;
   }
 }
@@ -2427,6 +2472,7 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .serviceMap .serviceWrap .wrap:nth-child(odd) .imgWrap {
+    margin-bottom: 0;
     margin-right: 60px;
   }
 }
