@@ -1178,7 +1178,7 @@ button[class*="btn"][type="button"]{
                 &.lg{
                     strong{
                         &::before{
-                        background:url(../images/icon/ico-time-red-20.svg) no-repeat center center / contain;
+                        background:url(../images/icon/ico-time-red-24.svg) no-repeat center center / contain;
                         }
                     }
                 }
@@ -1192,7 +1192,7 @@ button[class*="btn"][type="button"]{
                 &.lg{
                     strong{
                         &::before{
-                        background:url(../images/icon/ico-calendar-red-20.svg) no-repeat center center / contain;
+                        background:url(../images/icon/ico-calendar-red-24.svg) no-repeat center center / contain;
                         }
                     }
                 }
@@ -2504,6 +2504,7 @@ button[class*="btn"][type="button"]{
         }
     }
 }
+
 /* 디지털 혁신 지원 서비스 > 기술지원서비스 */
 .serviceList{
     flex-direction:column-reverse;
@@ -3193,6 +3194,7 @@ button[class*="btn"][type="button"]{
     margin:64px 0 0;
 }
 .infoListBox{
+    margin:0 auto 20px;
     padding:32px 24px;
     border-radius:8px;
     border:1px solid var(--gray30);
@@ -3201,9 +3203,136 @@ button[class*="btn"][type="button"]{
         align-items:center;
         justify-content:space-between;
     }
-
+    .descDeft{
+        @media screen and (min-width:1160px) {
+            display:flex;
+            align-items:center;
+            justify-content:flex-start;
+            gap:40px;
+            margin:0;
+        }
+        li{
+            &:not(:last-child){
+                margin:0 0 16px;
+                @media screen and (min-width:1160px) {
+                    margin:0;
+                }
+            }
+        }
+        p{
+            flex-wrap:nowrap;
+            align-items:flex-start;
+            @media screen and (min-width:1160px) {
+                flex:1;
+                width:auto;
+            }
+            strong{
+                flex-basis:121px;
+                @media screen and (min-width:1160px) {
+                    flex-basis:auto;
+                }
+            }
+        }
+    }
+    .btnBox{
+        margin:20px 0 0;
+        @media screen and (min-width:1160px) {
+            flex:0 1 auto;
+            width:auto;
+            margin:0;
+        }
+    }
 }
-
+.infoDetailImgWrap{
+    margin:0 0 64px;
+    .swiper-slide{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+        border-radius:20px;
+        height:240px;
+        @media screen and (min-width:1160px) {
+            height:440px;
+        }
+        img{
+            display:block;
+            max-width:initial;        
+            height:100%;
+        }
+    }
+    .swiper-button-prev{
+        width:40px;
+        height:40px;
+        background:url(../images/icon/ico-swiper-arrow-left-40.svg) no-repeat center center / contain;
+        &::after{
+            opacity:0;
+        }
+    }
+    .swiper-button-next{
+        width:40px;
+        height:40px;
+        background:url(../images/icon/ico-swiper-arrow-right-40.svg) no-repeat center center / contain;
+        &::after{
+            opacity:0;
+        }
+    }
+}
+.infoDetailWrap{
+    .titS{
+        h5{
+            margin-bottom:10px;
+        }
+    }
+    ul{
+        margin:0;
+    }
+    .descDeft{
+        padding:10px 0;
+        @media screen and (min-width:1160px) {
+            padding:24px 0;
+        }
+        li{
+            &:first-child{
+                p{
+                    margin:0 0 20px;
+                }
+            }
+        }
+    }
+    li{
+        > div{
+            padding:24px 0;
+            border-bottom:1px solid var(--gray30);
+            @media screen and (min-width:1160px) {
+                display:flex;
+                align-items:flex-start;
+                justify-content:flex-start;
+                gap:40px;
+            }
+            .titS{
+                @media screen and (min-width:1160px) {
+                    flex:0 0 212px;
+                }
+            }
+        }
+        &:first-child{
+            > div{
+                padding:0 0 24px;
+            }
+        }
+        &:last-child{
+            > div{
+                border-bottom:none;
+            }
+        }
+    }
+    .txtDotList{
+        li{
+            margin:0 0 4px;
+        }
+    }
+}
 
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내
                                  > 교육수료증 발급

@@ -1136,10 +1136,10 @@ button[class*=btn][type=button] {
   background: url(../images/icon/ico-bag-red-20.svg) no-repeat center center/contain;
 }
 .descDeft.tag [class*=ico].icoTime.lg strong::before {
-  background: url(../images/icon/ico-time-red-20.svg) no-repeat center center/contain;
+  background: url(../images/icon/ico-time-red-24.svg) no-repeat center center/contain;
 }
 .descDeft.tag [class*=ico].icoCal.lg strong::before {
-  background: url(../images/icon/ico-calendar-red-20.svg) no-repeat center center/contain;
+  background: url(../images/icon/ico-calendar-red-24.svg) no-repeat center center/contain;
 }
 
 /* dot list */
@@ -3274,6 +3274,7 @@ button[class*=btn][type=button] {
 }
 
 .infoListBox {
+  margin: 0 auto 20px;
   padding: 32px 24px;
   border-radius: 8px;
   border: 1px solid var(--gray30);
@@ -3284,6 +3285,133 @@ button[class*=btn][type=button] {
     align-items: center;
     justify-content: space-between;
   }
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox .descDeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    margin: 0;
+  }
+}
+.infoListBox .descDeft li:not(:last-child) {
+  margin: 0 0 16px;
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox .descDeft li:not(:last-child) {
+    margin: 0;
+  }
+}
+.infoListBox .descDeft p {
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox .descDeft p {
+    flex: 1;
+    width: auto;
+  }
+}
+.infoListBox .descDeft p strong {
+  flex-basis: 121px;
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox .descDeft p strong {
+    flex-basis: auto;
+  }
+}
+.infoListBox .btnBox {
+  margin: 20px 0 0;
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox .btnBox {
+    flex: 0 1 auto;
+    width: auto;
+    margin: 0;
+  }
+}
+
+.infoDetailImgWrap {
+  margin: 0 0 64px;
+}
+.infoDetailImgWrap .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 240px;
+}
+@media screen and (min-width: 1160px) {
+  .infoDetailImgWrap .swiper-slide {
+    height: 440px;
+  }
+}
+.infoDetailImgWrap .swiper-slide img {
+  display: block;
+  max-width: initial;
+  height: 100%;
+}
+.infoDetailImgWrap .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background: url(../images/icon/ico-swiper-arrow-left-40.svg) no-repeat center center/contain;
+}
+.infoDetailImgWrap .swiper-button-prev::after {
+  opacity: 0;
+}
+.infoDetailImgWrap .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background: url(../images/icon/ico-swiper-arrow-right-40.svg) no-repeat center center/contain;
+}
+.infoDetailImgWrap .swiper-button-next::after {
+  opacity: 0;
+}
+
+.infoDetailWrap .titS h5 {
+  margin-bottom: 10px;
+}
+.infoDetailWrap ul {
+  margin: 0;
+}
+.infoDetailWrap .descDeft {
+  padding: 10px 0;
+}
+@media screen and (min-width: 1160px) {
+  .infoDetailWrap .descDeft {
+    padding: 24px 0;
+  }
+}
+.infoDetailWrap .descDeft li:first-child p {
+  margin: 0 0 20px;
+}
+.infoDetailWrap li > div {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--gray30);
+}
+@media screen and (min-width: 1160px) {
+  .infoDetailWrap li > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .infoDetailWrap li > div .titS {
+    flex: 0 0 212px;
+  }
+}
+.infoDetailWrap li:first-child > div {
+  padding: 0 0 24px;
+}
+.infoDetailWrap li:last-child > div {
+  border-bottom: none;
+}
+.infoDetailWrap .txtDotList li {
+  margin: 0 0 4px;
 }
 
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내
