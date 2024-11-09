@@ -51,8 +51,12 @@ h3 {
 .txtr{text-align:right}
 
 /* margin */
+.m0{margin:0!important}
 .mt10{margin-top:10px!important;}
 .mb20{margin-bottom:20px}
+
+/* padding */
+.p0{padding:0!important;}
 
 /* 버튼 */
 .btnBox{
@@ -836,7 +840,7 @@ button[class*="btn"][type="button"]{
         margin-bottom:64px;
         line-height:1.5;
         letter-spacing:-0.03em;
-        font-size:25px;
+        font-size:24px;
         font-weight:var(--bold);
         color:var(--color-dark);
         @media screen and (min-width:1160px){
@@ -976,6 +980,10 @@ button[class*="btn"][type="button"]{
 
 /* Layout Default */
 .layout{
+    margin:0 auto 64px;
+    @media screen and (min-width:1160px){
+        margin:0 auto 80px;
+    }
     .titL{
         h2{
             margin-bottom:32px;
@@ -985,36 +993,50 @@ button[class*="btn"][type="button"]{
     .titS{
         h3,
         h5{
-            margin-bottom:20px;
+            margin-bottom:24px;
         }
     }
     .imgTit{
         display:flex;
         align-items:center;
         justify-content:center;
-        overflow:hidden;
-        margin-bottom:120px;
-        border-radius:40px;
-        width:100%;
-        height:540px;
-        background:url(../images/sample-bg.png) no-repeat #000 center center / 100% auto;
+        margin:0 -16px 40px;
+        padding:0 16px 0;
+        width:calc(100% + 16px + 16px);
+        height:480px;
+            @media screen and (min-width:1160px){
+            overflow:hidden;
+            margin:0 0 120px;
+            padding:0;
+            width:100%;
+            height:540px;
+            background:url(../images/sample-bg.png) no-repeat #000 center center / 100% auto;
+            border-radius:40px;
+        }
         .titBox{
+            *{
+                text-shadow:0px 0px 20px rgba(45, 45, 45, 0.86);
+            }
             h3{
                 margin-bottom:10px;
                 text-align:center;
                 line-height:1.5;
                 letter-spacing:-0.03em;
-                font-size:52px;
                 font-weight:var(--bold);
                 color:var(--color-white);
+                @media screen and (min-width:1160px){
+                    font-size:52px;
+                }
             }
             .sub{
                 text-align:center;
                 line-height:1.5;
                 letter-spacing:-0.03em;
-                font-size:20px;
                 font-weight:var(--regular);
                 color:var(--color-white);
+                @media screen and (min-width:1160px){
+                    font-size:20px;
+                }
             }
         }
     }
@@ -1087,7 +1109,19 @@ button[class*="btn"][type="button"]{
         }
         &:not(:last-child){
             margin-bottom:16px;
+            @media screen and (min-width:1160px){
+                margin-bottom:20px;
+            }
         }
+    }
+    &[class*="fix"]{        
+        *{
+            font-size:20px;
+        }
+        &[class*="sm"] *{
+            font-size:17px;
+        }
+
     }
     &[class*="sm"] *{
         font-size:15px;
@@ -1111,6 +1145,12 @@ button[class*="btn"][type="button"]{
                 flex-shrink:0;
                 font-weight:var(--bold);
                 color:var(--color-red);
+            }
+        }
+        &.straight{
+            p{
+                flex-wrap:nowrap;
+                align-items:flex-start;
             }
         }
         &.colLine{
@@ -1230,9 +1270,9 @@ button[class*="btn"][type="button"]{
                 background:var(--color-red);
             }
         }
-        &.subMore{
+        &.subMore{ 
             span{
-                display:block;
+                display:flex;
                 padding:0 0 0 20px;
                 &:first-of-type{
                     margin-top:8px;
@@ -1889,6 +1929,45 @@ button[class*="btn"][type="button"]{
 }
 
 /* custom */
+
+/* 디지털 혁신 인프라 > 혁신거점 허브 */
+.hubCont{
+    .imgTit{
+        background:url(../images/bg-bridge-img-title-mo.png) no-repeat #000 center center / cover;
+        @media screen and (min-width:1160px){
+            background:url(../images/bg-bridge-img-title.png) no-repeat #000 center center / cover;
+        }
+    }
+}
+.txtCont{
+    .layout{
+        padding:0 0 40px;
+    }
+    .mapCont{
+        padding:10px 0;
+        @media screen and (min-width:1160px){
+            padding:0;
+        }
+        .mapBox{
+            overflow:hidden;
+            margin:0 auto 20px;
+            width:100%;
+            height:200px;
+            border-radius:20px;
+            background:var(--gray30);
+            @media screen and (min-width:1160px){
+                margin:0 auto 0;
+                height:360px;
+            }
+        }
+        div:nth-child(2){
+            margin:0 auto 0;
+        }
+        .descDeft{
+            margin:0;
+        }
+    }
+}
 
 /* 디지털 혁신 지원 서비스 > 서비스 지원제도 */
 .serviceMap{
@@ -3203,6 +3282,15 @@ button[class*="btn"][type="button"]{
         align-items:center;
         justify-content:space-between;
     }
+    &.dk{
+        padding:32px;
+        background:var(--gray5);
+        border-color:var(--table-border);
+        border-radius:12px;
+        dl{
+            gap:0;
+        }
+    }
     .descDeft{
         @media screen and (min-width:1160px) {
             display:flex;
@@ -3233,6 +3321,39 @@ button[class*="btn"][type="button"]{
                 }
             }
         }
+        dt{
+            margin:0 0 24px;
+            font-size:17px;
+            font-weight:var(--bold);
+            color:var(--color-dark);
+            @media screen and (min-width:1160px){
+                margin:0 32px 0 0;
+            }
+        }
+        dd{
+            margin:0 auto 24px;
+            font-size:17px;
+            color:var(--color-dark);
+            @media screen and (min-width:1160px){
+                display:inline-flex;
+                align-items:center;
+                justify-content:flex-start;
+                margin:0;
+            }
+            &:not(:last-child){
+                &::after{
+                    @media screen and (min-width:1160px){
+                        display:block;
+                        content:"";
+                        width:1px;
+                        height:25px;
+                        margin:0 24px;
+                        background:#C8C8C8;
+                    }
+                }
+            }
+        }
+        
     }
     .btnBox{
         margin:20px 0 0;

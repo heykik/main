@@ -63,12 +63,21 @@ h3 {
 }
 
 /* margin */
+.m0 {
+  margin: 0 !important;
+}
+
 .mt10 {
   margin-top: 10px !important;
 }
 
 .mb20 {
   margin-bottom: 20px;
+}
+
+/* padding */
+.p0 {
+  padding: 0 !important;
 }
 
 /* 버튼 */
@@ -114,6 +123,7 @@ button[class*=btn][type=button] {
   justify-content: center;
   padding: 16px 12px;
   border-radius: 8px;
+  width: -moz-max-content;
   width: max-content;
   height: 48px;
   line-height: 1.5;
@@ -361,7 +371,9 @@ button[class*=btn][type=button] {
 }
 .inputBox select {
   background: url(../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .inputBox input {
   display: flex;
@@ -428,7 +440,9 @@ button[class*=btn][type=button] {
   width: 1px;
   height: 1px;
   opacity: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .radioBox [type=radio]:focus + label {
   outline: 2px solid #000;
@@ -493,7 +507,9 @@ button[class*=btn][type=button] {
   width: 1px;
   height: 1px;
   opacity: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .checkBox input[type=checkbox]:focus + label {
   outline: 2px solid #000;
@@ -814,7 +830,7 @@ button[class*=btn][type=button] {
   margin-bottom: 64px;
   line-height: 1.5;
   letter-spacing: -0.03em;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: var(--bold);
   color: var(--color-dark);
 }
@@ -968,6 +984,14 @@ button[class*=btn][type=button] {
 }
 
 /* Layout Default */
+.layout {
+  margin: 0 auto 64px;
+}
+@media screen and (min-width: 1160px) {
+  .layout {
+    margin: 0 auto 80px;
+  }
+}
 .layout .titL h2 {
   margin-bottom: 32px;
 }
@@ -975,35 +999,55 @@ button[class*=btn][type=button] {
 .layout .titM h5,
 .layout .titS h3,
 .layout .titS h5 {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .layout .imgTit {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  margin-bottom: 120px;
-  border-radius: 40px;
-  width: 100%;
-  height: 540px;
-  background: url(../images/sample-bg.png) no-repeat #000 center center/100% auto;
+  margin: 0 -16px 40px;
+  padding: 0 16px 0;
+  width: calc(100% + 16px + 16px);
+  height: 480px;
+}
+@media screen and (min-width: 1160px) {
+  .layout .imgTit {
+    overflow: hidden;
+    margin: 0 0 120px;
+    padding: 0;
+    width: 100%;
+    height: 540px;
+    background: url(../images/sample-bg.png) no-repeat #000 center center/100% auto;
+    border-radius: 40px;
+  }
+}
+.layout .imgTit .titBox * {
+  text-shadow: 0px 0px 20px rgba(45, 45, 45, 0.86);
 }
 .layout .imgTit .titBox h3 {
   margin-bottom: 10px;
   text-align: center;
   line-height: 1.5;
   letter-spacing: -0.03em;
-  font-size: 52px;
   font-weight: var(--bold);
   color: var(--color-white);
+}
+@media screen and (min-width: 1160px) {
+  .layout .imgTit .titBox h3 {
+    font-size: 52px;
+  }
 }
 .layout .imgTit .titBox .sub {
   text-align: center;
   line-height: 1.5;
   letter-spacing: -0.03em;
-  font-size: 20px;
   font-weight: var(--regular);
   color: var(--color-white);
+}
+@media screen and (min-width: 1160px) {
+  .layout .imgTit .titBox .sub {
+    font-size: 20px;
+  }
 }
 .layout.outTxt [class*=tit] + div {
   margin-bottom: 32px;
@@ -1077,6 +1121,17 @@ button[class*=btn][type=button] {
 .descDeft *:not(:last-child) {
   margin-bottom: 16px;
 }
+@media screen and (min-width: 1160px) {
+  .descDeft *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.descDeft[class*=fix] * {
+  font-size: 20px;
+}
+.descDeft[class*=fix][class*=sm] * {
+  font-size: 17px;
+}
 .descDeft[class*=sm] * {
   font-size: 15px;
   color: var(--gray60);
@@ -1101,6 +1156,10 @@ button[class*=btn][type=button] {
   flex-shrink: 0;
   font-weight: var(--bold);
   color: var(--color-red);
+}
+.descDeft.tag.straight p {
+  flex-wrap: nowrap;
+  align-items: flex-start;
 }
 .descDeft.tag.colLine p {
   flex-direction: column;
@@ -1174,7 +1233,7 @@ button[class*=btn][type=button] {
   background: var(--color-red);
 }
 .txtDotList li.subMore span {
-  display: block;
+  display: flex;
   padding: 0 0 0 20px;
 }
 .txtDotList li.subMore span:first-of-type {
@@ -1371,6 +1430,9 @@ button[class*=btn][type=button] {
   font-weight: var(--regular);
   color: var(--color-dark);
   box-sizing: border-box;
+}
+.tableDefault tbody tr td input::-moz-placeholder, .tableDefault tbody tr td select::-moz-placeholder, .tableDefault tbody tr td textarea::-moz-placeholder {
+  color: var(--color-text);
 }
 .tableDefault tbody tr td input::placeholder,
 .tableDefault tbody tr td select::placeholder,
@@ -1863,6 +1925,48 @@ button[class*=btn][type=button] {
 }
 
 /* custom */
+/* 디지털 혁신 인프라 > 혁신거점 허브 */
+.hubCont .imgTit {
+  background: url(../images/bg-bridge-img-title-mo.png) no-repeat #000 center center/cover;
+}
+@media screen and (min-width: 1160px) {
+  .hubCont .imgTit {
+    background: url(../images/bg-bridge-img-title.png) no-repeat #000 center center/cover;
+  }
+}
+
+.txtCont .layout {
+  padding: 0 0 40px;
+}
+.txtCont .mapCont {
+  padding: 10px 0;
+}
+@media screen and (min-width: 1160px) {
+  .txtCont .mapCont {
+    padding: 0;
+  }
+}
+.txtCont .mapCont .mapBox {
+  overflow: hidden;
+  margin: 0 auto 20px;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  background: var(--gray30);
+}
+@media screen and (min-width: 1160px) {
+  .txtCont .mapCont .mapBox {
+    margin: 0 auto 0;
+    height: 360px;
+  }
+}
+.txtCont .mapCont div:nth-child(2) {
+  margin: 0 auto 0;
+}
+.txtCont .mapCont .descDeft {
+  margin: 0;
+}
+
 /* 디지털 혁신 지원 서비스 > 서비스 지원제도 */
 .serviceMap .titHeader {
   padding: 20px 0 60px;
@@ -3286,6 +3390,15 @@ button[class*=btn][type=button] {
     justify-content: space-between;
   }
 }
+.infoListBox.dk {
+  padding: 32px;
+  background: var(--gray5);
+  border-color: var(--table-border);
+  border-radius: 12px;
+}
+.infoListBox.dk dl {
+  gap: 0;
+}
 @media screen and (min-width: 1160px) {
   .infoListBox .descDeft {
     display: flex;
@@ -3319,6 +3432,40 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1160px) {
   .infoListBox .descDeft p strong {
     flex-basis: auto;
+  }
+}
+.infoListBox .descDeft dt {
+  margin: 0 0 24px;
+  font-size: 17px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox .descDeft dt {
+    margin: 0 32px 0 0;
+  }
+}
+.infoListBox .descDeft dd {
+  margin: 0 auto 24px;
+  font-size: 17px;
+  color: var(--color-dark);
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox .descDeft dd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox .descDeft dd:not(:last-child)::after {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 25px;
+    margin: 0 24px;
+    background: #C8C8C8;
   }
 }
 .infoListBox .btnBox {
