@@ -57,6 +57,7 @@ h3 {
 
 /* padding */
 .p0{padding:0!important;}
+.pt0{padding-top:0!important;}
 
 /* 버튼 */
 .btnBox{
@@ -996,11 +997,17 @@ button[class*="btn"][type="button"]{
             margin-bottom:24px;
         }
     }
+    &:has(.imgTit){
+        padding:0 0 40px;
+        @media screen and (min-width:1160px){
+            padding:0;
+        }
+    }
     .imgTit{
         display:flex;
         align-items:center;
         justify-content:center;
-        margin:0 -16px 40px;
+        margin:0 -16px 0;
         padding:0 16px 0;
         width:calc(100% + 16px + 16px);
         height:480px;
@@ -1046,25 +1053,26 @@ button[class*="btn"][type="button"]{
         }
     }
     .wrap{
+        padding:0 0 40px;
         @media screen and (min-width:1160px) {
             display:flex;
             align-items:flex-start;
             justify-content:space-between;
+            padding:0 0 40px;
             gap:0 32px;
-            margin-bottom:40px;
         }
         > *{
             margin-bottom:32px;
+            height:240px;
             @media screen and (min-width:1160px) {
                 flex: 0 1 calc(50% - 16px);
                 border-radius:20px;
                 height:360px;
             }
             &.auto{
-                @media screen and (min-width:1160px) {
-                    flex-basis:auto;
-                    height:auto;
-                }
+                flex-basis:auto;
+                height:auto;
+                min-height:auto;
             }
             &.autoW{
                 @media screen and (min-width:1160px) {
@@ -1108,7 +1116,7 @@ button[class*="btn"][type="button"]{
             font-size:20px;
         }
         &:not(:last-child){
-            margin-bottom:16px;
+            margin-bottom:20px;
             @media screen and (min-width:1160px){
                 margin-bottom:20px;
             }
@@ -1246,6 +1254,9 @@ button[class*="btn"][type="button"]{
     padding:10px 0;
     li{
         margin-bottom:12px;
+        &:last-child{
+            margin-bottom:0;
+        }
         p{
             display:flex;
             align-items:flex-start;
@@ -1933,38 +1944,158 @@ button[class*="btn"][type="button"]{
 /* 디지털 혁신 인프라 > 혁신거점 허브 */
 .hubCont{
     .imgTit{
-        background:url(../images/bg-bridge-img-title-mo.png) no-repeat #000 center center / cover;
+        background:url(../images/bg-hub-img-title-mo.png) no-repeat #000 center center / cover;
         @media screen and (min-width:1160px){
-            background:url(../images/bg-bridge-img-title.png) no-repeat #000 center center / cover;
+            background:url(../images/bg-hub-img-title.png) no-repeat #000 center center / cover;
         }
     }
 }
 .txtCont{
     .layout{
         padding:0 0 40px;
+    }    
+}
+.mapCont{
+    padding:10px 0;
+    @media screen and (min-width:1160px){
+        padding:0;
+        margin-top:10px;
     }
-    .mapCont{
-        padding:10px 0;
+    .mapBox{
+        overflow:hidden;
+        margin:0 auto 20px;
+        width:100%;
+        height:200px;
+        min-height:initial;
+        border-radius:20px;
+        background:var(--gray30);
         @media screen and (min-width:1160px){
-            padding:0;
+            flex:0 0 760px;
+            margin:0 auto 0;
+            height:360px;
         }
-        .mapBox{
-            overflow:hidden;
-            margin:0 auto 20px;
-            width:100%;
-            height:200px;
-            border-radius:20px;
-            background:var(--gray30);
+    }
+    div:nth-child(2){
+        height:initial;
+        margin:0 auto 0;
+        @media screen and (min-width:1160px){
+            min-height:360px;
+        }
+    }
+    .descDeft{
+        margin:0;
+    }
+}
+
+/* 디지털 혁신 인프라 > 혁신거점 브릿지 */
+.bridgeCont{
+    .wrap{
+        padding:10px 0 40px;
+    }
+    .imgTit{
+        background:url(../images/bg-bridge-img-title-mo.png) no-repeat #000 center center / cover;
+        @media screen and (min-width:1160px){
+            background:url(../images/bg-bridge-img-title.png) no-repeat #000 center center / cover;
+        }
+    }
+    .imgBox{
+        overflow:hidden;
+        margin:0 0 20px;
+        border-radius:24px;
+        @media screen and (min-width:1160px){
+            flex:0 0 560px;
+            margin:56px 0 0;
+        }
+        &.mainBox{
+            background:url(../images/visual-main-bridge-img-mo.png) no-repeat center center / contain;
             @media screen and (min-width:1160px){
-                margin:0 auto 0;
-                height:360px;
+                background:url(../images/visual-main-bridge-img.png) no-repeat center center / contain;
             }
         }
-        div:nth-child(2){
-            margin:0 auto 0;
+        &.subBox{
+            background:url(../images/visual-sub-bridge-img-mo.png) no-repeat center center / contain;
+            @media screen and (min-width:1160px){
+                background:url(../images/visual-sub-bridge-img.png) no-repeat center center / contain;
+            }
         }
-        .descDeft{
+    }
+    .txtBold{
+        display:block;
+        margin-bottom:20px;
+        line-height:1.5;
+        letter-spacing:-0.03em;
+        font-size:20px;
+        font-weight:var(--bold);
+        color:var(--color-dark);
+        @media screen and (min-width:1160px){
+            font-size:24px;
+        }
+    }
+    .txtBox{
+        margin:0;
+        div:last-child{
             margin:0;
+        }
+        @media screen and (min-width:1160px){
+            flex-grow:1;
+        }
+    }
+}
+.infoCont{
+    .wrap{
+        @media screen and (min-width:1160px){
+            flex-direction:row-reverse;
+        }
+    }
+}
+
+/* 디지털 혁신 인프라 > SW 미래채움 */
+.swCont{
+    .imgTit{
+        background:url(../images/bg-sw-img-title-mo.png) no-repeat center center / contain;
+        @media screen and (min-width:1160px){
+            background:url(../images/bg-sw-img-title.png) no-repeat center center / contain;
+        }
+    }
+    .targetWrap{
+        background:initial;
+        @media screen and (min-width:1160px){
+            margin:0 auto 80px;
+            padding:0;
+            &::before{
+                content:none;
+            }
+        }
+    }
+}
+/* 디지털 혁신 인프라 > AX 랩 */
+.axCont{
+    .imgTit{
+        background:url(../images/bg-ax-img-title-mo.png) no-repeat center center / contain;
+        @media screen and (min-width:1160px){
+            background:url(../images/bg-ax-img-title.png) no-repeat center center / contain;
+        }
+    }
+    .targetWrap{
+        background:initial;
+        @media screen and (min-width:1160px){
+            margin:0 auto 80px;
+            padding:0;
+            &::before{
+                content:none;
+            }
+        }
+    }
+    .txtBold{
+        display:block;
+        margin-bottom:20px;
+        line-height:1.5;
+        letter-spacing:-0.03em;
+        font-size:20px;
+        font-weight:var(--bold);
+        color:var(--color-dark);
+        @media screen and (min-width:1160px){
+            font-size:24px;
         }
     }
 }
@@ -2329,126 +2460,187 @@ button[class*="btn"][type="button"]{
                 }
             }
         }
+    }    
+}
+.targetWrap{
+    position:relative;
+    margin:0 -16px;
+    padding:40px 16px;
+    background:var(--gray5);
+    @media screen and (min-width:1160px) {
+        margin:0;
+        padding:40px 0;
+        background:initial;            
     }
-    .targetWrap{
-        position:relative;
-        margin:0 -16px;
-        padding:40px 16px;
+    &::before{
+        position:absolute;
+        top:0;
+        z-index:-1;
+        width:100vw;
+        height:100%;
         background:var(--gray5);
         @media screen and (min-width:1160px) {
-            margin:0;
-            padding:40px 0;
-            background:initial;            
+            content:"";
+            left:50%;
+            transform:translateX(-50%);
         }
-        &::before{
-            position:absolute;
-            top:0;
-            z-index:-1;
-            width:100vw;
-            height:100%;
-            background:var(--gray5);
-            @media screen and (min-width:1160px) {
-                content:"";
-                left:50%;
-                transform:translateX(-50%);
-            }
-            @media screen and (min-width:1520px) {
-                left:calc((-100vw + 1520px ) / 2);
-                transform:initial;
-            }
+        @media screen and (min-width:1520px) {
+            left:calc((-100vw + 1520px ) / 2);
+            transform:initial;
         }
-        .wrap{
-            flex-direction:column;
-            gap:24px;
+    }
+    .wrap{
+        flex-direction:column;
+        gap:24px;
+        @media screen and (min-width:1160px) {
+            flex-direction:row;
+        }
+        div{
+            position:relative;
+            overflow:hidden;
+            padding:40px 32px 20px;
+            border-radius:20px;
+            width:100%;
+            height:auto;
+            background:var(--color-white);
+            box-shadow:2px 2px 16px rgba(0, 0, 0, 0.1);
             @media screen and (min-width:1160px) {
-                flex-direction:row;
+                margin:0;
             }
-            div{
-                position:relative;
-                overflow:hidden;
-                padding:20px 32px;
-                border-radius:20px;
-                width:100%;
-                height:260px;
-                background:var(--color-white);
-                box-shadow:2px 2px 16px rgba(0, 0, 0, 0.1);
-                @media screen and (min-width:1160px) {
-                    margin:0;
-                    padding:40px 32px 20px;
+            &:last-child{
+                margin:0;
+            }
+            &.oneLine{
+                padding:40px 32px 30px;
+                @media screen and (min-width:1160px){
+                    padding:40px 32px;
                 }
-                &::before{
-                    display:block;
-                    position:absolute;
-                    top:-86px;
-                    left:-48px;
-                    z-index:0;
-                    line-height:1.5;
-                    letter-spacing:-0.03em;
-                    font-size:180px;
-                    font-weight:var(--bold);
-                    color:var(--color-dark);
-                    opacity:0.03;
+                p{
+                    min-height:initial;
+                }
+                .txt{
+                    margin:6px auto 36px;
+                    @media screen and (min-width:1160px){
+                        margin:4px auto 46px;
+                    }
                 }
                 &::after{
-                    display:block;
-                    content:"";
-                    margin:0 0 0 auto;
+                    position:absolute;
+                    bottom:20px;
+                    right:32px;
+                }
+            }
+            &::before{
+                display:block;
+                position:absolute;
+                top:-86px;
+                left:-48px;
+                z-index:0;
+                line-height:1.5;
+                letter-spacing:-0.03em;
+                font-size:180px;
+                font-weight:var(--bold);
+                color:var(--color-dark);
+                opacity:0.03;
+            }
+            &::after{
+                display:block;
+                content:"";
+                margin:0 0 0 auto;
+                width:60px;
+                height:60px;
+                @media screen and (min-width:1160px){
                     width:80px;
                     height:80px;
                 }
-                &:nth-child(1){
-                    &::before{
-                        content:"01";
-                    }
-                    &::after{
-                        background:url(../images/icon/ico-file-check-80.svg) no-repeat center center / contain;
-                    }
+            }
+            &:nth-child(1){
+                &::before{
+                    content:"01";
                 }
-                &:nth-child(2){
-                    &::before{
-                        content:"02";
-                    }
-                    &::after{
-                        background:url(../images/icon/ico-moniter-setting-80.svg) no-repeat center center / contain;
-                    }
+            }
+            &:nth-child(2){
+                &::before{
+                    content:"02";
                 }
-                &:nth-child(3){
-                    &::before{
-                        content:"03";
-                    }
-                    &::after{
-                        background:url(../images/icon/ico-cloud-server-80.svg) no-repeat center center / contain;
-                    }
+            }
+            &:nth-child(3){
+                &::before{
+                    content:"03";
                 }
-                &:nth-child(4){
-                    &::before{
-                        content:"04";
-                    }
+            }
+            &:nth-child(4){
+                &::before{
+                    content:"04";
+                }
+            }
+            &:nth-child(5){
+                &::before{
+                    content:"05";
+                }
+            }
+            &[class*="bgIco"]{
+                &[class*="Fix"]{
                     &::after{
                         background:url(../images/icon/ico-fix-tool-80.svg) no-repeat center center / contain;
                     }
                 }
-                .num{
-                    position:relative;
-                    line-height:1.5;
-                    letter-spacing:-0.03em;
-                    font-size:24px;
-                    font-weight:var(--bold);
-                    color:var(--color-red);
+                &[class*="CloudeServer"]{
+                    &::after{
+                        background:url(../images/icon/ico-cloud-server-80.svg) no-repeat center center / contain;
+                    }
                 }
-                .txt{
-                    position:relative;
-                    margin:8px auto 16px;
-                    min-height:60px;
-                    line-height:1.5;
-                    letter-spacing:-0.03em;
-                    font-size:20px;
-                    font-weight:var(--regular);
-                    color:var(--color-text);
+                &[class*="MoniterSetting"]{
+                    &::after{
+                    background:url(../images/icon/ico-moniter-setting-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="FileCheck"]{
+                    &::after{
+                        background:url(../images/icon/ico-file-check-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="NotebookTool"]{
+                    &::after{
+                        background:url(../images/icon/ico-notebook-tool-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="UserBubble"]{
+                    &::after{
+                        background:url(../images/icon/ico-user-bubble-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="Apple"]{
+                    &::after{
+                        background:url(../images/icon/ico-apple-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="AxHand"]{
+                    &::after{
+                        background:url(../images/icon/ico-ax-hand-80.svg) no-repeat center center / contain;
+                    }
                 }
             }
+            .num{
+                position:relative;
+                line-height:1.5;
+                letter-spacing:-0.03em;
+                font-size:24px;
+                font-weight:var(--bold);
+                color:var(--color-red);
+            }
+            .txt{
+                position:relative;
+                margin:8px auto 16px;
+                min-height:60px;
+                line-height:1.5;
+                letter-spacing:-0.03em;
+                font-size:20px;
+                font-weight:var(--regular);
+                color:var(--color-text);
+            }
         }
-    }    
+    }
 }
 .serviceWrap{
     padding:64px 0 0;
@@ -3201,16 +3393,24 @@ button[class*="btn"][type="button"]{
 }
 /* 디지털 혁신 지원 서비스 > 시설 예약 > 목록 */
 .facilityResWrap{
+    margin:0;
     .wrap{
+        padding:0;
         @media screen and (min-width:1160px) {
             flex-wrap:wrap;
             gap:40px 0;
             margin:0;
+            padding:0 0 40px;
         }
         *{
             @media screen and (min-width:1160px) {
                 margin:0;
                 height:auto;
+            }
+        }
+        > li{
+            &:last-child{
+                margin:0;
             }
         }
     }
@@ -3287,8 +3487,12 @@ button[class*="btn"][type="button"]{
         background:var(--gray5);
         border-color:var(--table-border);
         border-radius:12px;
+        @media screen and (min-width:1160px){
+            margin:120px auto 0;
+        }
         dl{
             gap:0;
+            margin:0;
         }
     }
     .descDeft{
@@ -3351,6 +3555,9 @@ button[class*="btn"][type="button"]{
                         background:#C8C8C8;
                     }
                 }
+            }
+            &:last-child{
+                margin:0;
             }
         }
         
