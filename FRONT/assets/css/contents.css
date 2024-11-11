@@ -84,6 +84,10 @@ h3 {
   padding-top: 0 !important;
 }
 
+.pt10 {
+  padding-top: 10px !important;
+}
+
 /* 버튼 */
 .btnBox {
   display: flex;
@@ -152,8 +156,12 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .btn[class*=pcReFill] {
-    padding: 10px 8px;
     width: auto;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .btn[class*=pcReFill][class*=sm] {
+    padding: 10px 8px;
   }
 }
 
@@ -1034,15 +1042,20 @@ button[class*=btn][type=button] {
   width: calc(100% + 16px + 16px);
   height: 480px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 767px) {
   .layout .imgTit {
     overflow: hidden;
-    margin: 0 0 120px;
+    margin: 0 auto;
     padding: 0;
     width: 100%;
-    height: 540px;
     background: url(../images/sample-bg.png) no-repeat #000 center center/100% auto;
     border-radius: 40px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .layout .imgTit {
+    margin: 0 0 120px;
+    height: 540px;
   }
 }
 .layout .imgTit .titBox * {
@@ -1053,6 +1066,7 @@ button[class*=btn][type=button] {
   text-align: center;
   line-height: 1.5;
   letter-spacing: -0.03em;
+  font-size: 40px;
   font-weight: var(--bold);
   color: var(--color-white);
 }
@@ -1753,6 +1767,9 @@ button[class*=btn][type=button] {
 }
 
 /* tableBackground 2n custom */
+[class*=table][class*=BgCustom2n] table thead tr {
+  background: var(--table-bg);
+}
 [class*=table][class*=BgCustom2n] table tr {
   background: var(--table-bg);
 }
@@ -1938,6 +1955,18 @@ button[class*=btn][type=button] {
 }
 
 @media screen and (min-width: 1160px) {
+  .pcW420 {
+    width: 420px;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .pcW480 {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 1160px) {
   .pcW556 {
     width: 556px;
   }
@@ -1954,7 +1983,7 @@ button[class*=btn][type=button] {
 .hubCont .imgTit {
   background: url(../images/bg-hub-img-title-mo.png) no-repeat #000 center center/cover;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 767px) {
   .hubCont .imgTit {
     background: url(../images/bg-hub-img-title.png) no-repeat #000 center center/cover;
   }
@@ -2009,7 +2038,7 @@ button[class*=btn][type=button] {
 .bridgeCont .imgTit {
   background: url(../images/bg-bridge-img-title-mo.png) no-repeat #000 center center/cover;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 767px) {
   .bridgeCont .imgTit {
     background: url(../images/bg-bridge-img-title.png) no-repeat #000 center center/cover;
   }
@@ -2075,45 +2104,21 @@ button[class*=btn][type=button] {
 
 /* 디지털 혁신 인프라 > SW 미래채움 */
 .swCont .imgTit {
-  background: url(../images/bg-sw-img-title-mo.png) no-repeat center center/contain;
+  background: url(../images/bg-sw-img-title-mo.png) no-repeat center center/cover;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 767px) {
   .swCont .imgTit {
-    background: url(../images/bg-sw-img-title.png) no-repeat center center/contain;
-  }
-}
-.swCont .targetWrap {
-  background: initial;
-}
-@media screen and (min-width: 1160px) {
-  .swCont .targetWrap {
-    margin: 0 auto 80px;
-    padding: 0;
-  }
-  .swCont .targetWrap::before {
-    content: none;
+    background: url(../images/bg-sw-img-title.png) no-repeat center center/cover;
   }
 }
 
 /* 디지털 혁신 인프라 > AX 랩 */
 .axCont .imgTit {
-  background: url(../images/bg-ax-img-title-mo.png) no-repeat center center/contain;
+  background: url(../images/bg-ax-img-title-mo.png) no-repeat center center/cover;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 767px) {
   .axCont .imgTit {
-    background: url(../images/bg-ax-img-title.png) no-repeat center center/contain;
-  }
-}
-.axCont .targetWrap {
-  background: initial;
-}
-@media screen and (min-width: 1160px) {
-  .axCont .targetWrap {
-    margin: 0 auto 80px;
-    padding: 0;
-  }
-  .axCont .targetWrap::before {
-    content: none;
+    background: url(../images/bg-ax-img-title.png) no-repeat center center/cover;
   }
 }
 .axCont .txtBold {
@@ -2133,54 +2138,128 @@ button[class*=btn][type=button] {
 
 /* 디지털 혁신 인프라 > 경남메타버스지원센터 운영 사업 */
 .vrCont .imgTit {
-  background: url(../images/bg-vr-img-title-mo.png) no-repeat center center/contain;
+  background: url(../images/bg-vr-img-title-mo.png) no-repeat center center/cover;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 767px) {
   .vrCont .imgTit {
-    background: url(../images/bg-vr-img-title.png) no-repeat center center/contain;
+    background: url(../images/bg-vr-img-title.png) no-repeat center center/cover;
   }
 }
-.vrCont .videoCont .wrap {
+
+.withLinkBox .wrap {
+  display: block;
+}
+.withLinkBox .btnBox {
+  margin: 16px auto 0;
+}
+.videoCont .wrap {
   gap: 32px;
 }
-.vrCont .videoBox {
+.videoCont .wrap .videoBox {
+  overflow: hidden;
   margin-bottom: 0;
   height: 210px;
   background: var(--gray30);
+  border-radius: 20px;
 }
 @media screen and (min-width: 1160px) {
-  .vrCont .videoBox {
+  .videoCont .wrap .videoBox {
     flex-basis: 680px;
     height: 360px;
   }
 }
-.vrCont .targetWrap {
-  background: none;
-}
-.vrCont .targetWrap::before {
-  background: none;
-}
-.vrCont .withLinkBox .wrap {
-  display: block;
-}
-.vrCont .withLinkBox .btnBox {
-  margin: 16px auto 0;
-}
+
 /* 디지털 혁신 인프라 > 동남권 품질역량강화센터 */
 .qualityCont .imgTit {
-  background: url(../images/bg-quality-img-title-mo.png) no-repeat center center/contain;
+  background: url(../images/bg-quality-img-title-mo.png) no-repeat center center/cover;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 767px) {
   .qualityCont .imgTit {
-    background: url(../images/bg-quality-img-title.png) no-repeat center center/contain;
+    background: url(../images/bg-quality-img-title.png) no-repeat center center/cover;
   }
 }
-.qualityCont .targetWrap {
-  background: initial;
+.qualityCont .ruleCont .wrap div {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+@media screen and (min-width: 767px) {
+  .qualityCont .ruleCont .wrap div {
+    flex-grow: 1;
+  }
+}
+.qualityCont .ruleCont .wrap .imgWrap {
+  padding: 10px 0 0;
+}
+@media screen and (min-width: 767px) {
+  .qualityCont .ruleCont .wrap .imgWrap {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 32px;
+    padding: 0;
+  }
+}
+.qualityCont .ruleCont .wrap .imgWrap div:first-child {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 767px) {
+  .qualityCont .ruleCont .wrap .imgWrap div:first-child {
+    margin: 0;
+  }
+}
+.qualityCont .ruleCont .wrap .imgWrap img {
+  display: block;
+}
+@media screen and (min-width: 767px) {
+  .qualityCont .ruleCont .wrap .imgWrap img {
+    width: 255px;
+  }
+}
+
+.testCont .tableDefault {
+  padding-bottom: 40px;
 }
 @media screen and (min-width: 1160px) {
-  .qualityCont .targetWrap::before {
-    content: none;
+  .testCont .tableDefault {
+    padding-bottom: 160px;
+  }
+}
+.testCont .tableDefault tbody tr td {
+  vertical-align: middle;
+}
+@media screen and (min-width: 1160px) {
+  .testCont .tableDefault tbody tr td {
+    padding: 16px 18px;
+  }
+}
+.testCont .tableDefault tbody tr td:has(.txtDotList) {
+  text-align: left;
+}
+.testCont .tableDefault tbody tr td .txt {
+  margin-bottom: 12px;
+}
+.testCont .tableDefault .txtDotList {
+  padding: 0;
+}
+.testCont .tableDefault .txtDotList li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.testCont .tableDefault .txtDotList li p {
+  line-height: 1.2;
+}
+.testCont .tableDefault .txtDotList li p::before {
+  margin: 8px 4px;
+}
+
+/* 디지털 혁신 인프라 > 정보보안 테스트베드 */
+.testCont .imgTit {
+  background: url(../images/bg-test-img-title-mo.png) no-repeat center center/cover;
+}
+@media screen and (min-width: 767px) {
+  .testCont .imgTit {
+    background: url(../images/bg-test-img-title.png) no-repeat center center/cover;
   }
 }
 
@@ -2619,9 +2698,23 @@ button[class*=btn][type=button] {
     transform: initial;
   }
 }
+.targetWrap.bgWhite {
+  margin-bottom: 64px;
+  padding-top: 0;
+  background: initial;
+}
+@media screen and (min-width: 1160px) {
+  .targetWrap.bgWhite {
+    margin-bottom: 80px;
+  }
+  .targetWrap.bgWhite::before {
+    content: none;
+  }
+}
 .targetWrap .wrap {
   flex-direction: column;
   gap: 24px;
+  padding: 0;
 }
 @media screen and (min-width: 1160px) {
   .targetWrap .wrap {
@@ -3701,6 +3794,57 @@ button[class*=btn][type=button] {
   gap: 0;
   margin: 0;
 }
+.infoListBox.dk dt {
+  margin: 0 0 18px;
+  font-size: 20px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox.dk dt {
+    margin: 0 32px 0 0;
+  }
+}
+.infoListBox.dk dd {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto 14px;
+  font-size: 17px;
+  color: var(--color-dark);
+}
+.infoListBox.dk dd span {
+  flex: 0 0 auto;
+  margin-right: 8px;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox.dk dd span {
+    display: none;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox.dk dd {
+    align-items: center;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .infoListBox.dk dd:not(:last-child)::after {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 25px;
+    margin: 0 24px;
+    background: #C8C8C8;
+  }
+}
+.infoListBox.dk dd:last-child {
+  margin: 0;
+}
 @media screen and (min-width: 1160px) {
   .infoListBox .descDeft {
     display: flex;
@@ -3735,43 +3879,6 @@ button[class*=btn][type=button] {
   .infoListBox .descDeft p strong {
     flex-basis: auto;
   }
-}
-.infoListBox .descDeft dt {
-  margin: 0 0 24px;
-  font-size: 20px;
-  font-weight: var(--bold);
-  color: var(--color-dark);
-}
-@media screen and (min-width: 1160px) {
-  .infoListBox .descDeft dt {
-    margin: 0 32px 0 0;
-  }
-}
-.infoListBox .descDeft dd {
-  margin: 0 auto 24px;
-  font-size: 17px;
-  color: var(--color-dark);
-}
-@media screen and (min-width: 1160px) {
-  .infoListBox .descDeft dd {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
-  }
-}
-@media screen and (min-width: 1160px) {
-  .infoListBox .descDeft dd:not(:last-child)::after {
-    display: block;
-    content: "";
-    width: 1px;
-    height: 25px;
-    margin: 0 24px;
-    background: #C8C8C8;
-  }
-}
-.infoListBox .descDeft dd:last-child {
-  margin: 0;
 }
 .infoListBox .btnBox {
   margin: 20px 0 0;

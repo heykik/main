@@ -58,6 +58,7 @@ h3 {
 /* padding */
 .p0{padding:0!important;}
 .pt0{padding-top:0!important;}
+.pt10{padding-top:10px!important;}
 
 /* 버튼 */
 .btnBox{
@@ -122,8 +123,12 @@ button[class*="btn"][type="button"]{
     }
     &[class*="pcReFill"]{
         @media screen and (min-width:1160px) {
-            padding:10px 8px;
             width:auto;
+        }
+        &[class*="sm"]{
+            @media screen and (min-width:1160px) {
+                padding:10px 8px;
+            }
         }
     }
 }
@@ -1011,14 +1016,17 @@ button[class*="btn"][type="button"]{
         padding:0 16px 0;
         width:calc(100% + 16px + 16px);
         height:480px;
-            @media screen and (min-width:1160px){
+        @media screen and (min-width:767px){
             overflow:hidden;
-            margin:0 0 120px;
+            margin:0 auto;
             padding:0;
             width:100%;
-            height:540px;
             background:url(../images/sample-bg.png) no-repeat #000 center center / 100% auto;
             border-radius:40px;
+        }
+        @media screen and (min-width:1160px) {
+            margin:0 0 120px;
+            height:540px;
         }
         .titBox{
             *{
@@ -1029,6 +1037,7 @@ button[class*="btn"][type="button"]{
                 text-align:center;
                 line-height:1.5;
                 letter-spacing:-0.03em;
+                font-size:40px;
                 font-weight:var(--bold);
                 color:var(--color-white);
                 @media screen and (min-width:1160px){
@@ -1756,6 +1765,11 @@ button[class*="btn"][type="button"]{
 /* tableBackground 2n custom */
 [class*="table"][class*="BgCustom2n"]{
     table{
+        thead{
+            tr{
+                background:var(--table-bg);
+            }
+        }
         tr{
             background:var(--table-bg);
             @media screen and (min-width:1160px) {
@@ -1928,6 +1942,16 @@ button[class*="btn"][type="button"]{
         width:375px;
     }
 }
+.pcW420{
+    @media screen and (min-width:1160px) {
+        width:420px;
+    }
+}
+.pcW480{
+    @media screen and (min-width:1160px) {
+        width:480px;
+    }
+}
 .pcW556{
     @media screen and (min-width:1160px) {
         width:556px;
@@ -1945,7 +1969,7 @@ button[class*="btn"][type="button"]{
 .hubCont{
     .imgTit{
         background:url(../images/bg-hub-img-title-mo.png) no-repeat #000 center center / cover;
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:767px){
             background:url(../images/bg-hub-img-title.png) no-repeat #000 center center / cover;
         }
     }
@@ -1994,7 +2018,7 @@ button[class*="btn"][type="button"]{
     }
     .imgTit{
         background:url(../images/bg-bridge-img-title-mo.png) no-repeat #000 center center / cover;
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:767px){
             background:url(../images/bg-bridge-img-title.png) no-repeat #000 center center / cover;
         }
     }
@@ -2052,38 +2076,18 @@ button[class*="btn"][type="button"]{
 /* 디지털 혁신 인프라 > SW 미래채움 */
 .swCont{
     .imgTit{
-        background:url(../images/bg-sw-img-title-mo.png) no-repeat center center / contain;
-        @media screen and (min-width:1160px){
-            background:url(../images/bg-sw-img-title.png) no-repeat center center / contain;
-        }
-    }
-    .targetWrap{
-        background:initial;
-        @media screen and (min-width:1160px){
-            margin:0 auto 80px;
-            padding:0;
-            &::before{
-                content:none;
-            }
+        background:url(../images/bg-sw-img-title-mo.png) no-repeat center center / cover;
+        @media screen and (min-width:767px){
+            background:url(../images/bg-sw-img-title.png) no-repeat center center / cover;
         }
     }
 }
 /* 디지털 혁신 인프라 > AX 랩 */
 .axCont{
     .imgTit{
-        background:url(../images/bg-ax-img-title-mo.png) no-repeat center center / contain;
-        @media screen and (min-width:1160px){
-            background:url(../images/bg-ax-img-title.png) no-repeat center center / contain;
-        }
-    }
-    .targetWrap{
-        background:initial;
-        @media screen and (min-width:1160px){
-            margin:0 auto 80px;
-            padding:0;
-            &::before{
-                content:none;
-            }
+        background:url(../images/bg-ax-img-title-mo.png) no-repeat center center / cover;
+        @media screen and (min-width:767px){
+            background:url(../images/bg-ax-img-title.png) no-repeat center center / cover;
         }
     }
     .txtBold{
@@ -2102,38 +2106,34 @@ button[class*="btn"][type="button"]{
 /* 디지털 혁신 인프라 > 경남메타버스지원센터 운영 사업 */
 .vrCont{
     .imgTit{
-        background:url(../images/bg-vr-img-title-mo.png) no-repeat center center / contain;
-        @media screen and (min-width:1160px){
-            background:url(../images/bg-vr-img-title.png) no-repeat center center / contain;
+        background:url(../images/bg-vr-img-title-mo.png) no-repeat center center / cover;
+        @media screen and (min-width:767px){
+            background:url(../images/bg-vr-img-title.png) no-repeat center center / cover;
         }
     }
-    .videoCont{
-        .wrap{
-            gap:32px;
-        }
+}
+.withLinkBox{
+    .wrap{
+        display:block;
     }
-    .videoBox{
-        margin-bottom:0;
-        height:210px;
-        background:var(--gray30);
+    .btnBox{
+        margin:16px auto 0;
         @media screen and (min-width:1160px) {
-            flex-basis:680px;
-            height:360px;
         }
     }
-    .targetWrap{
-        background:none;
-        &::before{
-            background:none;
-        }
-    }
-    .withLinkBox{
-        .wrap{
-            display:block;
-        }
-        .btnBox{
-            margin:16px auto 0;
+}
+.videoCont{
+    .wrap{
+        gap:32px;
+        .videoBox{
+            overflow:hidden;
+            margin-bottom:0;
+            height:210px;
+            background:var(--gray30);
+            border-radius:20px;
             @media screen and (min-width:1160px) {
+                flex-basis:680px;
+                height:360px;
             }
         }
     }
@@ -2141,21 +2141,94 @@ button[class*="btn"][type="button"]{
 /* 디지털 혁신 인프라 > 동남권 품질역량강화센터 */
 .qualityCont{
     .imgTit{
-        background:url(../images/bg-quality-img-title-mo.png) no-repeat center center / contain;
-        @media screen and (min-width:1160px){
-            background:url(../images/bg-quality-img-title.png) no-repeat center center / contain;
+        background:url(../images/bg-quality-img-title-mo.png) no-repeat center center / cover;
+        @media screen and (min-width:767px){
+            background:url(../images/bg-quality-img-title.png) no-repeat center center / cover;
         }
     }
-    .targetWrap{
-        background:initial;
-        @media screen and (min-width:1160px) {
-            &::before{
-                content:none;
+    .ruleCont{
+        .wrap{
+            div{
+                margin:0;
+                padding:0;
+                height:auto;
+                @media screen and (min-width:767px) {
+                    flex-grow:1;
+                }
+            }
+            .imgWrap{
+                padding:10px 0 0;
+                @media screen and (min-width:767px) {
+                    flex:0 0 auto;
+                    display:flex;
+                    align-items:flex-start;
+                    justify-content:flex-end;
+                    gap:32px;
+                    padding:0;
+                }
+                div:first-child{
+                    margin-bottom:24px;
+                    @media screen and (min-width:767px) {
+                        margin:0;
+                    }
+                }
+                img{
+                    display:block;
+                    @media screen and (min-width:767px) {
+                        width:255px;
+                    }
+                }
             }
         }
     }
 }
-
+.testCont{
+    .tableDefault{
+        padding-bottom:40px;
+        @media screen and (min-width:1160px) {
+            padding-bottom:160px;
+        }
+        tbody{
+            tr{
+                td{
+                    vertical-align:middle;
+                    @media screen and (min-width:1160px) {
+                        padding:16px 18px;
+                    }
+                    &:has(.txtDotList){
+                        text-align:left;
+                    }
+                    .txt{
+                        margin-bottom:12px;
+                    }
+                }
+            }
+        }
+        .txtDotList{
+            padding:0;
+            li{
+                &:not(:last-child){
+                    margin-bottom:8px;
+                }
+                p{
+                    line-height:1.2;
+                    &::before{
+                        margin:8px 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 디지털 혁신 인프라 > 정보보안 테스트베드 */
+.testCont{
+    .imgTit{
+        background:url(../images/bg-test-img-title-mo.png) no-repeat center center / cover;
+        @media screen and (min-width:767px){
+            background:url(../images/bg-test-img-title.png) no-repeat center center / cover;
+        }
+    }
+}
 
 /* 디지털 혁신 지원 서비스 > 서비스 지원제도 */
 .serviceMap{
@@ -2546,9 +2619,21 @@ button[class*="btn"][type="button"]{
             transform:initial;
         }
     }
+    &.bgWhite{
+        margin-bottom:64px;
+        padding-top:0;
+        background:initial;
+        @media screen and (min-width:1160px) {
+            margin-bottom:80px;
+            &::before{
+                content:none;
+            }
+        }
+    }
     .wrap{
         flex-direction:column;
         gap:24px;
+        padding:0;
         @media screen and (min-width:1160px) {
             flex-direction:row;
         }
@@ -3584,6 +3669,53 @@ button[class*="btn"][type="button"]{
             gap:0;
             margin:0;
         }
+        dt{
+            margin:0 0 18px;
+            font-size:20px;
+            font-weight:var(--bold);
+            color:var(--color-dark);
+            @media screen and (min-width:1160px){
+                margin:0 32px 0 0;
+            }
+        }
+        dd{
+            display:flex;
+            align-items:flex-start;
+            justify-content:flex-start;
+            margin:0 auto 14px;
+            font-size:17px;
+            color:var(--color-dark);
+            span{
+                flex:0 0 auto;
+                margin-right:8px;
+                line-height:inherit;
+                font-size:inherit;
+                font-weight:inherit;
+                color:inherit;
+                @media screen and (min-width:1160px) {
+                    display:none;
+                }
+            }
+            @media screen and (min-width:1160px){
+                align-items:center;
+                margin:0;
+            }
+            &:not(:last-child){
+                &::after{
+                    @media screen and (min-width:1160px){
+                        display:block;
+                        content:"";
+                        width:1px;
+                        height:25px;
+                        margin:0 24px;
+                        background:#C8C8C8;
+                    }
+                }
+            }
+            &:last-child{
+                margin:0;
+            }
+        }
     }
     .descDeft{
         @media screen and (min-width:1160px) {
@@ -3614,42 +3746,7 @@ button[class*="btn"][type="button"]{
                     flex-basis:auto;
                 }
             }
-        }
-        dt{
-            margin:0 0 24px;
-            font-size:20px;
-            font-weight:var(--bold);
-            color:var(--color-dark);
-            @media screen and (min-width:1160px){
-                margin:0 32px 0 0;
-            }
-        }
-        dd{
-            margin:0 auto 24px;
-            font-size:17px;
-            color:var(--color-dark);
-            @media screen and (min-width:1160px){
-                display:inline-flex;
-                align-items:center;
-                justify-content:flex-start;
-                margin:0;
-            }
-            &:not(:last-child){
-                &::after{
-                    @media screen and (min-width:1160px){
-                        display:block;
-                        content:"";
-                        width:1px;
-                        height:25px;
-                        margin:0 24px;
-                        background:#C8C8C8;
-                    }
-                }
-            }
-            &:last-child{
-                margin:0;
-            }
-        }
+        }       
         
     }
     .btnBox{
