@@ -264,6 +264,7 @@ button[class*="btn"][type="button"]{
     }
 }
 [class*="withIco"]{
+    padding:16px 14px;
     &::before{
         display:block;
         content:"";
@@ -818,15 +819,17 @@ button[class*="btn"][type="button"]{
 
 /* titles */
 .titL{
+    margin-bottom:64px;
+    @media screen and (min-width:1160px) {
+        margin: 0 0 80px;
+    }
     h2{
-        margin-bottom:64px;
         line-height:1.5;
         letter-spacing:-0.03em;
         font-size:32px;
         font-weight:var(--bold);
         color:var(--color-dark);
         @media screen and (min-width:1160px){
-            margin: 0 0 80px;
             font-size:40px;
         }
     }
@@ -837,34 +840,36 @@ button[class*="btn"][type="button"]{
     }
 }
 .titM{ //모바일 미정
+    margin-bottom:64px;
+    @media screen and (min-width:1160px) {
+        margin: 0 0 80px;
+    }
     *{
-        margin-bottom:64px;
         line-height:1.5;
         letter-spacing:-0.03em;
         font-size:24px;
         font-weight:var(--bold);
         color:var(--color-dark);
         @media screen and (min-width:1160px){
-            margin: 0 0 80px;
             font-size:36px;
         }
     }
     &.narrow{
-        *{
-            margin-bottom:24px;
-        }
+        margin-bottom:24px;
     }
 }
 .titS{
+    margin-bottom:16px;
+    @media screen and (min-width:1160px) {
+        margin-bottom:20px;
+    }
     *{
-        margin-bottom:16px;
         line-height:1.5;
         letter-spacing:-0.03em;
         font-size:20px;   
         font-weight:var(--bold);
         color:var(--color-dark);
         @media screen and (min-width:1160px) {
-            margin-bottom:20px;
             font-size:24px;
         }
     }
@@ -986,16 +991,11 @@ button[class*="btn"][type="button"]{
         margin:0 auto 80px;
     }
     .titL{
-        h2{
-            margin-bottom:32px;
-        }
+        margin-bottom:32px;
     }
     .titM,
     .titS{
-        h3,
-        h5{
-            margin-bottom:24px;
-        }
+        margin-bottom:24px;
     }
     &:has(.imgTit){
         padding:0 0 40px;
@@ -1080,8 +1080,8 @@ button[class*="btn"][type="button"]{
                 }
             }
             &.autoH{
+                height:auto;
                 @media screen and (min-width:1160px) {
-                    height:auto;
                 }
             }
         }
@@ -2099,6 +2099,63 @@ button[class*="btn"][type="button"]{
         }
     }
 }
+/* 디지털 혁신 인프라 > 경남메타버스지원센터 운영 사업 */
+.vrCont{
+    .imgTit{
+        background:url(../images/bg-vr-img-title-mo.png) no-repeat center center / contain;
+        @media screen and (min-width:1160px){
+            background:url(../images/bg-vr-img-title.png) no-repeat center center / contain;
+        }
+    }
+    .videoCont{
+        .wrap{
+            gap:32px;
+        }
+    }
+    .videoBox{
+        margin-bottom:0;
+        height:210px;
+        background:var(--gray30);
+        @media screen and (min-width:1160px) {
+            flex-basis:680px;
+            height:360px;
+        }
+    }
+    .targetWrap{
+        background:none;
+        &::before{
+            background:none;
+        }
+    }
+    .withLinkBox{
+        .wrap{
+            display:block;
+        }
+        .btnBox{
+            margin:16px auto 0;
+            @media screen and (min-width:1160px) {
+            }
+        }
+    }
+}
+/* 디지털 혁신 인프라 > 동남권 품질역량강화센터 */
+.qualityCont{
+    .imgTit{
+        background:url(../images/bg-quality-img-title-mo.png) no-repeat center center / contain;
+        @media screen and (min-width:1160px){
+            background:url(../images/bg-quality-img-title.png) no-repeat center center / contain;
+        }
+    }
+    .targetWrap{
+        background:initial;
+        @media screen and (min-width:1160px) {
+            &::before{
+                content:none;
+            }
+        }
+    }
+}
+
 
 /* 디지털 혁신 지원 서비스 > 서비스 지원제도 */
 .serviceMap{
@@ -2620,6 +2677,36 @@ button[class*="btn"][type="button"]{
                         background:url(../images/icon/ico-ax-hand-80.svg) no-repeat center center / contain;
                     }
                 }
+                &[class*="Bankbook"]{
+                    &::after{
+                        background:url(../images/icon/ico-bankbook-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="IdeaGear"]{
+                    &::after{
+                        background:url(../images/icon/ico-idea-gear-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="PlayDoc"]{
+                    &::after{
+                        background:url(../images/icon/ico-play-doc-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="Puzzle"]{
+                    &::after{
+                        background:url(../images/icon/ico-puzzle-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="DoubleBubble"]{
+                    &::after{
+                        background:url(../images/icon/ico-double-bubble-80.svg) no-repeat center center / contain;
+                    }
+                }
+                &[class*="FileTarget"]{
+                    &::after{
+                        background:url(../images/icon/ico-file-target-80.svg) no-repeat center center / contain;
+                    }
+                }
             }
             .num{
                 position:relative;
@@ -2644,11 +2731,13 @@ button[class*="btn"][type="button"]{
 }
 .serviceWrap{
     padding:64px 0 0;
-    @media screen and (min-width:720px) {
+    margin-bottom:40px;
+    @media screen and (min-width:767px) {
         display:flex;
         flex-wrap:wrap;
         align-items:flex-start;
         justify-content:space-between;
+        margin-bottom:0;
     }
     @media screen and (min-width:1160px) {
         display:block;
@@ -2706,6 +2795,7 @@ button[class*="btn"][type="button"]{
         }
         .descDeft{
             padding-bottom:40px;
+            height:auto;
             strong{
                 @media screen and (min-width:1160px) {
                     font-size:24px;
@@ -3527,7 +3617,7 @@ button[class*="btn"][type="button"]{
         }
         dt{
             margin:0 0 24px;
-            font-size:17px;
+            font-size:20px;
             font-weight:var(--bold);
             color:var(--color-dark);
             @media screen and (min-width:1160px){
@@ -3608,9 +3698,7 @@ button[class*="btn"][type="button"]{
 }
 .infoDetailWrap{
     .titS{
-        h5{
-            margin-bottom:10px;
-        }
+        margin-bottom:10px;
     }
     ul{
         margin:0;

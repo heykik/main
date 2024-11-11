@@ -127,7 +127,6 @@ button[class*=btn][type=button] {
   justify-content: center;
   padding: 16px 12px;
   border-radius: 8px;
-  width: -moz-max-content;
   width: max-content;
   height: 48px;
   line-height: 1.5;
@@ -297,6 +296,9 @@ button[class*=btn][type=button] {
   transform: rotate(180deg);
 }
 
+[class*=withIco] {
+  padding: 16px 14px;
+}
 [class*=withIco]::before {
   display: block;
   content: "";
@@ -375,9 +377,7 @@ button[class*=btn][type=button] {
 }
 .inputBox select {
   background: url(../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .inputBox input {
   display: flex;
@@ -444,9 +444,7 @@ button[class*=btn][type=button] {
   width: 1px;
   height: 1px;
   opacity: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .radioBox [type=radio]:focus + label {
   outline: 2px solid #000;
@@ -511,9 +509,7 @@ button[class*=btn][type=button] {
   width: 1px;
   height: 1px;
   opacity: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .checkBox input[type=checkbox]:focus + label {
   outline: 2px solid #000;
@@ -812,8 +808,15 @@ button[class*=btn][type=button] {
 
 /* content */
 /* titles */
-.titL h2 {
+.titL {
   margin-bottom: 64px;
+}
+@media screen and (min-width: 1160px) {
+  .titL {
+    margin: 0 0 80px;
+  }
+}
+.titL h2 {
   line-height: 1.5;
   letter-spacing: -0.03em;
   font-size: 32px;
@@ -822,7 +825,6 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .titL h2 {
-    margin: 0 0 80px;
     font-size: 40px;
   }
 }
@@ -830,8 +832,15 @@ button[class*=btn][type=button] {
   margin-bottom: 32px;
 }
 
-.titM * {
+.titM {
   margin-bottom: 64px;
+}
+@media screen and (min-width: 1160px) {
+  .titM {
+    margin: 0 0 80px;
+  }
+}
+.titM * {
   line-height: 1.5;
   letter-spacing: -0.03em;
   font-size: 24px;
@@ -840,16 +849,22 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .titM * {
-    margin: 0 0 80px;
     font-size: 36px;
   }
 }
-.titM.narrow * {
+.titM.narrow {
   margin-bottom: 24px;
 }
 
-.titS * {
+.titS {
   margin-bottom: 16px;
+}
+@media screen and (min-width: 1160px) {
+  .titS {
+    margin-bottom: 20px;
+  }
+}
+.titS * {
   line-height: 1.5;
   letter-spacing: -0.03em;
   font-size: 20px;
@@ -858,7 +873,6 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .titS * {
-    margin-bottom: 20px;
     font-size: 24px;
   }
 }
@@ -996,13 +1010,11 @@ button[class*=btn][type=button] {
     margin: 0 auto 80px;
   }
 }
-.layout .titL h2 {
+.layout .titL {
   margin-bottom: 32px;
 }
-.layout .titM h3,
-.layout .titM h5,
-.layout .titS h3,
-.layout .titS h5 {
+.layout .titM,
+.layout .titS {
   margin-bottom: 24px;
 }
 .layout:has(.imgTit) {
@@ -1097,10 +1109,8 @@ button[class*=btn][type=button] {
     flex-basis: auto;
   }
 }
-@media screen and (min-width: 1160px) {
-  .layout .wrap > *.autoH {
-    height: auto;
-  }
+.layout .wrap > *.autoH {
+  height: auto;
 }
 .layout .wrap .imgCont {
   overflow: hidden;
@@ -1448,9 +1458,6 @@ button[class*=btn][type=button] {
   font-weight: var(--regular);
   color: var(--color-dark);
   box-sizing: border-box;
-}
-.tableDefault tbody tr td input::-moz-placeholder, .tableDefault tbody tr td select::-moz-placeholder, .tableDefault tbody tr td textarea::-moz-placeholder {
-  color: var(--color-text);
 }
 .tableDefault tbody tr td input::placeholder,
 .tableDefault tbody tr td select::placeholder,
@@ -2124,6 +2131,59 @@ button[class*=btn][type=button] {
   }
 }
 
+/* 디지털 혁신 인프라 > 경남메타버스지원센터 운영 사업 */
+.vrCont .imgTit {
+  background: url(../images/bg-vr-img-title-mo.png) no-repeat center center/contain;
+}
+@media screen and (min-width: 1160px) {
+  .vrCont .imgTit {
+    background: url(../images/bg-vr-img-title.png) no-repeat center center/contain;
+  }
+}
+.vrCont .videoCont .wrap {
+  gap: 32px;
+}
+.vrCont .videoBox {
+  margin-bottom: 0;
+  height: 210px;
+  background: var(--gray30);
+}
+@media screen and (min-width: 1160px) {
+  .vrCont .videoBox {
+    flex-basis: 680px;
+    height: 360px;
+  }
+}
+.vrCont .targetWrap {
+  background: none;
+}
+.vrCont .targetWrap::before {
+  background: none;
+}
+.vrCont .withLinkBox .wrap {
+  display: block;
+}
+.vrCont .withLinkBox .btnBox {
+  margin: 16px auto 0;
+}
+/* 디지털 혁신 인프라 > 동남권 품질역량강화센터 */
+.qualityCont .imgTit {
+  background: url(../images/bg-quality-img-title-mo.png) no-repeat center center/contain;
+}
+@media screen and (min-width: 1160px) {
+  .qualityCont .imgTit {
+    background: url(../images/bg-quality-img-title.png) no-repeat center center/contain;
+  }
+}
+.qualityCont .targetWrap {
+  background: initial;
+}
+@media screen and (min-width: 1160px) {
+  .qualityCont .targetWrap::before {
+    content: none;
+  }
+}
+
 /* 디지털 혁신 지원 서비스 > 서비스 지원제도 */
 .serviceMap .titHeader {
   padding: 20px 0 60px;
@@ -2675,6 +2735,24 @@ button[class*=btn][type=button] {
 .targetWrap .wrap div[class*=bgIco][class*=AxHand]::after {
   background: url(../images/icon/ico-ax-hand-80.svg) no-repeat center center/contain;
 }
+.targetWrap .wrap div[class*=bgIco][class*=Bankbook]::after {
+  background: url(../images/icon/ico-bankbook-80.svg) no-repeat center center/contain;
+}
+.targetWrap .wrap div[class*=bgIco][class*=IdeaGear]::after {
+  background: url(../images/icon/ico-idea-gear-80.svg) no-repeat center center/contain;
+}
+.targetWrap .wrap div[class*=bgIco][class*=PlayDoc]::after {
+  background: url(../images/icon/ico-play-doc-80.svg) no-repeat center center/contain;
+}
+.targetWrap .wrap div[class*=bgIco][class*=Puzzle]::after {
+  background: url(../images/icon/ico-puzzle-80.svg) no-repeat center center/contain;
+}
+.targetWrap .wrap div[class*=bgIco][class*=DoubleBubble]::after {
+  background: url(../images/icon/ico-double-bubble-80.svg) no-repeat center center/contain;
+}
+.targetWrap .wrap div[class*=bgIco][class*=FileTarget]::after {
+  background: url(../images/icon/ico-file-target-80.svg) no-repeat center center/contain;
+}
 .targetWrap .wrap div .num {
   position: relative;
   line-height: 1.5;
@@ -2696,13 +2774,15 @@ button[class*=btn][type=button] {
 
 .serviceWrap {
   padding: 64px 0 0;
+  margin-bottom: 40px;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 767px) {
   .serviceWrap {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1160px) {
@@ -2774,6 +2854,7 @@ button[class*=btn][type=button] {
 }
 .serviceWrap .wrap .descDeft {
   padding-bottom: 40px;
+  height: auto;
 }
 @media screen and (min-width: 1160px) {
   .serviceWrap .wrap .descDeft strong {
@@ -3657,7 +3738,7 @@ button[class*=btn][type=button] {
 }
 .infoListBox .descDeft dt {
   margin: 0 0 24px;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: var(--bold);
   color: var(--color-dark);
 }
@@ -3741,7 +3822,7 @@ button[class*=btn][type=button] {
   opacity: 0;
 }
 
-.infoDetailWrap .titS h5 {
+.infoDetailWrap .titS {
   margin-bottom: 10px;
 }
 .infoDetailWrap ul {
