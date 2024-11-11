@@ -4084,13 +4084,15 @@ button[class*=btn][type=button] {
   background: url(../images/visual-file-with-medal.svg) no-repeat #fff center center/auto;
 }
 
+.inputWrap.boardTop {
+  margin-bottom: 40px;
+}
 @media screen and (min-width: 1160px) {
   .inputWrap.boardTop {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: relative;
-    margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 1160px) {

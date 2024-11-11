@@ -3956,12 +3956,12 @@ button[class*="btn"][type="button"]{
     }
 }
 .inputWrap.boardTop{
+    margin-bottom:40px;
     @media screen and (min-width:1160px) {
         display:flex;
         align-items:center;
         justify-content:flex-end;
         position:relative;
-        margin-bottom:40px;
     }
     select{
         @media screen and (min-width:1160px) {
