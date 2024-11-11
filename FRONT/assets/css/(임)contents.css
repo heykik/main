@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* 경남테크노파크정보산업진흥본부 소개 */
+.titInfo {
+  margin-top: -48px;
+  line-height: 1.5;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.imgCenter {
+  margin: 52px 0 90px;
+}
+.imgCenter img {
+  display: block;
+  margin: 0 auto;
+}
+
+.opeGoalWrap {
+  position: relative;
+  padding: 50px 0 80px;
+}
+.opeGoalWrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc((-100vw + 1520px) / 2);
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  background: var(--gray5);
+}
+.opeGoalWrap .titM * {
+  margin: 0 0 54px;
+}
+
+.opeGoalBox {
+  position: relative;
+  width: 100%;
+  height: 420px;
+}
+.opeGoalBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/visual-goal-pc.svg") no-repeat center/666px auto;
+}
+.opeGoalBox .opeGoal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-top: 88px;
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-dark);
+  transform: translate(-50%, -50%);
+}
+.opeGoalBox .opeGoal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  background: url("../images/icon/ico-goal.svg") no-repeat center/100% auto;
+}
+.opeGoalBox .top,
+.opeGoalBox .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.opeGoalBox .top div[class^=goal]:nth-child(odd),
+.opeGoalBox .bottom div[class^=goal]:nth-child(odd) {
+  text-align: right;
+}
+.opeGoalBox .top div[class^=goal]:nth-child(even),
+.opeGoalBox .bottom div[class^=goal]:nth-child(even) {
+  text-align: left;
+}
+.opeGoalBox div[class^=goal] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  line-height: 1.3;
+  font-size: 20px;
+  color: var(--color-dark);
+}
+.opeGoalBox div[class^=goal] strong {
+  font-weight: 700;
+}
+.opeGoalBox div[class^=goal0] {
+  justify-content: flex-start;
+  background: var(--gray5);
+}
+
+@media (max-width: 1160px) {
+  .titInfo {
+    margin-top: -40px;
+    font-size: 20px;
+  }
+  .imgCenter {
+    margin: 44px 0 104px;
+  }
+}

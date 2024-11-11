@@ -1,0 +1,221 @@
+/* 경남테크노파크정보산업진흥본부 소개 */
+.titInfo {
+    margin-top: -48px;
+    line-height: 1.5;
+    font-size: 20px;
+    color: var(--text-color);
+}
+.imgCenter {
+    margin: 52px 0 90px;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+.opeGoalWrap {
+    position: relative;
+    padding: 50px 0 80px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc((-100vw + 1520px) / 2);
+        z-index: -1;
+        width: 100vw;
+        height: 100%;
+        background: var(--gray5);
+    }
+    .titM * {
+        margin: 0 0 54px;
+    }
+}
+.opeGoalBox {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../images/visual-goal-pc.svg") no-repeat center/666px auto;
+    }
+    .opeGoal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding-top: 88px; // 64px
+            line-height: 1.5;
+            font-size: 20px; // 17px
+            font-weight: 700;
+            color: var(--color-dark);
+            transform: translate(-50%, -50%);
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 80px; // 56px
+                height: 80px;
+                background: url("../images/icon/ico-goal.svg") no-repeat center/100% auto;
+            }    
+    }
+    .top,
+    .bottom  {
+        display: flex;
+        justify-content: space-between;
+        div[class^=goal]:nth-child(odd) {
+            text-align: right;
+        }
+        div[class^=goal]:nth-child(even) {
+            text-align: left;
+        }
+    }
+    div[class^="goal"] {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        height: 100%;
+        line-height: 1.3;
+        font-size: 20px;
+        color: var(--color-dark);
+        strong {
+            font-weight: 700;
+        }
+    }
+    div[class^="goal0"] {
+        justify-content: flex-start;
+        background: var(--gray5);
+    }
+}
+@media (max-width: 1160px) {
+    .titInfo {
+        margin-top: -40px;
+        font-size: 20px;
+    }
+    .imgCenter {
+        margin: 44px 0 104px;
+    }
+}
+@media (max-width: 767px) {
+    
+    
+}
+// .goalWrap {
+//     position: relative;
+//     margin: 0 -16px;
+//     padding: 40px 16px 62px;
+//     background: var(--gray5);
+// }
+// .goalWrap {
+//     .titM {
+//         h5 {
+//             font-size: 24px;
+//         }
+//     }
+//     .opeGoalBox {
+//         position: relative;
+//         margin-bottom: 40px;
+//         height: 256px;
+//         &::before {
+//             content: "";
+//             position: absolute;
+//             top: 0;
+//             left: 50%;
+//             width: 256px;
+//             height: 100%;
+//             background: url("../images/visual-goal.svg") no-repeat center/100% auto;
+//             transform: translateX(-50%);
+//         }
+//         .opeGoal {
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             padding-top: 64px;
+//             line-height: 1.5;
+//             font-size: 17px;
+//             font-weight: 700;
+//             color: var(--color-dark);
+//             transform: translate(-50%, -50%);
+//             &::before {
+//                 content: "";
+//                 position: absolute;
+//                 top: 0;
+//                 width: 56px;
+//                 height: 56px;
+//                 background: url("../images/icon/ico-goal.svg") no-repeat center/100% auto;
+//             }    
+//         }
+//     }
+//     .goalList {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 24px;
+//         .top,
+//         .bottom {
+//             display: flex;
+//             flex-direction: column;
+//             gap: 24px;
+//         }
+//         div[class^="goal"] {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             position: relative;
+//             padding: 8px 0 8px 88px;
+//             height: 88px;
+//             line-height: 1.5;
+//             font-size: 17px;
+//             color: var(--color-dark);
+//             strong {
+//                 font-weight: 700;
+//             }
+//             &::before {
+//                 content: "";
+//                 position: absolute;
+//                 left: 0;
+//                 border-radius: 50%;
+//                 width: 72px;
+//                 height: 72px;
+//                 filter: drop-shadow(2px 4px 10px rgba(2, 22, 88, 0.20));
+//             }
+            
+//         }
+//         .goal01::before {
+//             background: var(--color-white) url("../images/icon/ico-goal01.svg") no-repeat center;
+//         }
+//         .goal02::before {
+//             background: var(--color-white) url("../images/icon/ico-goal02.svg") no-repeat center;
+//         }
+//         .goal03::before {
+//             background: var(--color-white) url("../images/icon/ico-goal03.svg") no-repeat center;
+//         }
+//         .goal04::before {
+//             background: var(--color-white) url("../images/icon/ico-goal04.svg") no-repeat center;
+//         }
+//     }
+    
+// }
+// .serviceWrap.fieldWrap .wrap:nth-child(2) .imgWrap {
+//     background: url("../images/visual-field-wrap-01.png") no-repeat center left/100%;
+// }
+// .serviceWrap.fieldWrap .wrap:nth-child(3) .imgWrap {
+//     background: url("../images/visual-field-wrap-02.png") no-repeat center left/100%;
+// }
+// .serviceWrap.fieldWrap .wrap:nth-child(4) .imgWrap {
+//     background: url("../images/visual-field-wrap-03.png") no-repeat center left/100%;
+// }
+// .serviceWrap.fieldWrap .wrap:nth-child(5) .imgWrap {
+//     background: url("../images/visual-field-wrap-04.png") no-repeat center left/100%;
+// }
+
+// @media screen and (min-width: 1160px) {
+
+// }
