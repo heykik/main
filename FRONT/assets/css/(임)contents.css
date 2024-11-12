@@ -1,5 +1,87 @@
 @charset "UTF-8";
-/* 경남테크노파크정보산업진흥본부 소개 */
+/* 공통 */
+.w320 {
+  width: 100% !important;
+  max-width: 320px !important;
+}
+
+.txtR {
+  text-align: right !important;
+}
+
+/* 데이터피커 */
+.date {
+  position: relative;
+}
+.date img {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+
+input[disabled] {
+  background: var(--gray5);
+}
+
+/* 탭 */
+.tabTit.v2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tabTit.v2 ul {
+  height: 54px;
+}
+.tabTit.v2 li {
+  border-color: var(--color-white);
+  border-bottom: 1px solid var(--border-color);
+  min-width: 160px;
+  line-height: 52px;
+  font-size: 17px;
+  font-weight: 400;
+}
+.tabTit.v2 li a {
+  padding: 0 20px;
+  color: var(--gray70);
+}
+.tabTit.v2 li.curr {
+  border-bottom: 3px solid var(--color-red);
+  background: var(--color-white);
+}
+.tabTit.v2 li.curr a {
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+.tabCont.v2 {
+  padding: 60px 0 0;
+}
+
+@media (max-width: 767px) {
+  .tabTit.v2 ul {
+    width: 100%;
+  }
+  .tabTit.v2 li {
+    flex: 1;
+    min-width: inherit;
+  }
+}
+/* 폼 */
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.flex.col {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.zipCode input {
+  max-width: 320px !important;
+}
+
+/* 본부 소개 */
 .titInfo {
   margin-top: -48px;
   letter-spacing: -0.6px;
@@ -479,5 +561,353 @@
   }
   .defWrap .lt strong {
     font-size: 24px;
+  }
+}
+/* 오시는 길 */
+.mapInfoWrap .map {
+  border-radius: 16px 16px 0 0;
+  height: 540px;
+}
+.mapInfoWrap .mapInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 60px;
+  border: 1px solid var(--gray30);
+  border-top: 0;
+  border-radius: 0 0 16px 16px;
+}
+.mapInfoWrap .mapInfo p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.72px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+.mapInfoWrap .mapInfo ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+}
+.mapInfoWrap .mapInfo ul li {
+  display: flex;
+  gap: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  font-size: 17px;
+  color: var(--color-text);
+}
+.mapInfoWrap .mapInfo ul li span {
+  position: relative;
+  padding-left: 28px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-red);
+}
+.mapInfoWrap .mapInfo ul li span::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+}
+.mapInfoWrap .mapInfo ul li .loc::before {
+  background: url("../images/icon/ico-loc-red.svg") no-repeat center/100% auto;
+}
+.mapInfoWrap .mapInfo ul li .cal::before {
+  background: url("../images/icon/ico-cal.svg") no-repeat center/100% auto;
+}
+.mapInfoWrap .mapInfo ul li .fax::before {
+  background: url("../images/icon/ico-fax.svg") no-repeat center/100% auto;
+}
+.mapInfoWrap .mapInfo .btn span {
+  position: relative;
+  padding-left: 28px;
+  background: url("../images/icon/ico-loc-white.svg") no-repeat center left/24px auto;
+}
+
+.wayInfoWrap {
+  margin-top: 80px;
+}
+.wayInfoWrap .titM {
+  margin: 0 0 40px;
+}
+.wayInfoWrap dl {
+  display: flex;
+  gap: 40px;
+}
+.wayInfoWrap dl + dl {
+  margin-top: 24px;
+}
+.wayInfoWrap dl dt {
+  flex-shrink: 0;
+  width: 222px;
+  position: relative;
+  padding-left: 60px;
+  line-height: 50px;
+  letter-spacing: -0.72px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+.wayInfoWrap dl dt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.wayInfoWrap dl .airplane::before {
+  background: url("../images/icon/ico-airplane-50.svg") no-repeat center left/100% auto;
+}
+.wayInfoWrap dl .rail::before {
+  background: url("../images/icon/ico-train-50.svg") no-repeat center left/100% auto;
+}
+.wayInfoWrap dl .bus::before {
+  background: url("../images/icon/ico-bus-50.svg") no-repeat center left/100% auto;
+}
+.wayInfoWrap dl dd {
+  padding: 10px 0 34px;
+  border-bottom: 1px solid var(--gray30);
+}
+.wayInfoWrap dl .way {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+}
+.wayInfoWrap dl .way strong {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-red);
+}
+.wayInfoWrap dl .way p {
+  font-size: 20px;
+  color: var(--text-color);
+}
+.wayInfoWrap dl .way ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wayInfoWrap dl .way ul li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 17px;
+  color: var(--text-color);
+}
+.wayInfoWrap dl .way ul li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--color-red);
+}
+.wayInfoWrap dl .way + .way {
+  margin-top: 20px;
+}
+.wayInfoWrap dl:last-child dd {
+  border-bottom: 0;
+}
+
+@media (max-width: 1160px) {
+  .mapInfoWrap .map {
+    height: 390px;
+  }
+  .mapInfoWrap .mapInfo {
+    padding: 40px;
+  }
+  .mapInfoWrap .mapInfo .lt,
+  .mapInfoWrap .mapInfo .rt,
+  .mapInfoWrap .mapInfo .btn {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .mapInfoWrap .map {
+    height: 240px;
+  }
+  .mapInfoWrap .mapInfo {
+    padding: 32px 24px;
+  }
+  .mapInfoWrap .mapInfo p {
+    font-size: 20px;
+  }
+  .mapInfoWrap .mapInfo ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mapInfoWrap .mapInfo ul li {
+    gap: 10px;
+  }
+  .mapInfoWrap .mapInfo ul li span {
+    flex-shrink: 0;
+    padding-left: 24px;
+    font-size: 17px;
+  }
+  .mapInfoWrap .mapInfo ul li span::before {
+    top: 3px;
+    width: 20px;
+    height: 20px;
+  }
+  .wayInfoWrap {
+    margin-top: 64px;
+  }
+  .wayInfoWrap .titM {
+    margin: 0 0 16px;
+  }
+  .wayInfoWrap dl {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .wayInfoWrap dl dt {
+    width: 100%;
+    font-size: 20px;
+  }
+  .wayInfoWrap dl dd {
+    padding: 0 0 34px;
+    border-bottom: 1px solid var(--gray30);
+  }
+  .wayInfoWrap dl .way strong {
+    font-size: 17px;
+  }
+  .wayInfoWrap dl .way p {
+    font-size: 17px;
+  }
+  .wayInfoWrap dl .way + .way {
+    margin-top: 20px;
+  }
+  .wayInfoWrap dl:last-child dd {
+    border-bottom: 0;
+  }
+}
+/* 아 하기 싫어 */
+.member {
+  position: relative;
+  padding: 80px 0 !important;
+}
+.member::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  background: var(--gray5);
+  transform: translateX(-50%);
+}
+
+.memberCont {
+  padding: 0 16px;
+}
+.memberCont .titL {
+  margin: 0 0 60px;
+  text-align: center;
+}
+.memberCont .whiteBox {
+  margin: 0 auto;
+  padding: 64px 186px;
+  border-radius: 20px;
+  width: 828px;
+  max-width: 100%;
+  background: var(--color-white);
+}
+.memberCont .memberInputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.memberCont .memberInputBox ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.memberCont .memberInputBox ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.memberCont .memberInputBox ul li p {
+  line-height: 1.5;
+  letter-spacing: -0.51px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+.memberCont .memberInputBox ul li .passwordBox {
+  position: relative;
+}
+.memberCont .memberInputBox ul li .passwordBox input {
+  padding-right: 50px;
+}
+.memberCont .memberInputBox ul li .passwordBox .btnShow {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  background: url("../images/icon/ico-visible.svg") no-repeat center/100% auto;
+}
+.memberCont .memberInputBox input {
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 100%;
+  line-height: 30px;
+  font-size: 17px;
+  box-sizing: border-box;
+}
+.memberCont .result {
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: -0.51px;
+  font-size: 17px;
+  color: var(--color-dark);
+}
+.memberCont .result strong {
+  font-weight: 700;
+  color: var(--color-red);
+}
+.memberCont .result span {
+  display: block;
+  margin-top: 16px;
+  font-weight: 700;
+}
+.memberCont .utilBox {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+.memberCont .utilBox a {
+  padding: 8px 4px;
+  text-decoration: underline;
+  line-height: 1.5;
+  letter-spacing: -0.45px;
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+@media (max-width: 767px) {
+  .member {
+    padding: 80px 0 120px !important;
+  }
+  .memberCont .titL {
+    margin: 0 0 40px;
+  }
+  .memberCont .whiteBox {
+    padding: 40px 20px;
+    width: 100%;
   }
 }
