@@ -1756,7 +1756,7 @@ button[class*=btn][type=button] {
   font-weight: var(--regular);
   color: var(--color-text);
   -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
-  line-clamp: 2; /* 표시할 줄 수 (여기서는 2줄) */
+  -webkit-line-clamp: 2; /* 표시할 줄 수 (여기서는 2줄) */
   text-decoration-color: var(--color-text);
 }
 @media screen and (min-width: 1160px) {
@@ -2322,18 +2322,19 @@ button[class*=btn][type=button] {
 }
 
 /* 알림마당 > 디지털 우수기업 및 기술 소개 > 공동장비활용 검색 예약*/
-.cardListCont .cntBox {
+.cntBox {
   margin-bottom: 8px;
 }
-.cardListCont .cntBox p {
+.cntBox p {
   line-height: 1.5;
   font-size: 17px;
   font-weight: var(--regular);
   color: var(--color-dark);
 }
-.cardListCont .cntBox span {
+.cntBox span {
   font-weight: var(--bold);
 }
+
 @media screen and (min-width: 767px) {
   .cardListCont .cardListWrap {
     display: flex;
@@ -2388,11 +2389,11 @@ button[class*=btn][type=button] {
 .cardListCont .card .imgWrap .linkWrap .home {
   background: url(../images/icon/ico-home-empty-26.svg) no-repeat #fff center center/auto;
 }
-.cardListCont .card .imgWrap .linkWrap .favorites {
+.cardListCont .card .imgWrap .linkWrap .star {
   padding: 0;
   background: url(../images/icon/ico-star-empty-16.svg) no-repeat #fff center center/auto;
 }
-.cardListCont .card .imgWrap .linkWrap .favorites.on {
+.cardListCont .card .imgWrap .linkWrap .star.on {
   background: url(../images/icon/ico-star-yellow-16.svg) no-repeat #fff center center/auto;
 }
 .cardListCont .card .titWrap {
