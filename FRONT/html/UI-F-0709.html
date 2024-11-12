@@ -120,10 +120,10 @@
                         <caption>NO, 교육과정명, 교육기간, 교육생명, 수료증 발급신청[개인 이메일 작성, 발급신청]으로 이루어진 표</caption>
                         <colgroup>
                             <col class="pcW64">
-                            <col class="pxW556">
+                            <col class="pcW480">
                             <col class="pcW285">
                             <col class="pcW120">
-                            <col class="pcW375">
+                            <col style="width:460px;">
                             <col class="pcW120">
                         </colgroup>
                         <thead>
@@ -148,7 +148,7 @@
                                 </td>
                                 <td>
                                     <span class="cellTit">교육과정명</span>
-                                    <p class="txtl">응용 소프트웨어 교육</p>
+                                    <p class="txtl txtElip pcW456">응용 소프트웨어 교육</p>
                                 </td>
                                 <td>
                                     <span class="cellTit">교육기간</span>
@@ -161,8 +161,11 @@
                                 <td>
                                     <span class="cellTit">개인 이메일 작성</span>
                                     <div class="inputWrap">
-                                        <div class="inputBox email">
+                                        <div class="inputBox email idInput">
                                             <input type="text" title="이메일 주소 입력">
+                                        </div>
+                                        <div class="inputBox email">
+                                            <input type="text" placeholder="직접입력" title="직접입력">
                                         </div>
                                         <div class="inputBox email">
                                             <select title="도메인">
@@ -187,7 +190,7 @@
                                 </td>
                                 <td>
                                     <span class="cellTit">교육과정명</span>
-                                    <p class="txtl">지역산업 맞춤형 AI 프로젝트 교육_대형언어모델</p>
+                                    <p class="txtl txtElip pcW456">지역산업 맞춤형 AI 프로젝트 교육_대형언어모델 지역산업 맞춤형 AI 프로젝트 교육_대형언어모델</p>
                                 </td>
                                 <td>
                                     <span class="cellTit">교육기간</span>
@@ -200,8 +203,11 @@
                                 <td>
                                     <span class="cellTit">개인 이메일 작성</span>
                                     <div class="inputWrap">
-                                        <div class="inputBox email">
+                                        <div class="inputBox email idInput">
                                             <input type="text" title="이메일 주소 입력">
+                                        </div>
+                                        <div class="inputBox email">
+                                            <input type="text" placeholder="직접입력" title="직접입력">
                                         </div>
                                         <div class="inputBox email">
                                             <select title="도메인">
@@ -226,7 +232,7 @@
                                 </td>
                                 <td>
                                     <span class="cellTit">교육과정명</span>
-                                    <p class="txtl">노바투스 교육</p>
+                                    <p class="txtl txtElip pcW456">노바투스 교육</p>
                                 </td>
                                 <td>
                                     <span class="cellTit">교육기간</span>
@@ -239,8 +245,11 @@
                                 <td>
                                     <span class="cellTit">개인 이메일 작성</span>
                                     <div class="inputWrap">
-                                        <div class="inputBox email">
+                                        <div class="inputBox email idInput">
                                             <input type="text" title="이메일 주소 입력">
+                                        </div>
+                                        <div class="inputBox email">
+                                            <input type="text" placeholder="직접입력" title="직접입력">
                                         </div>
                                         <div class="inputBox email">
                                             <select title="도메인">
@@ -266,6 +275,172 @@
                     <p>※ 개별 교육수료증 발급신청 1일 1회로 제한됩니다.</p>
                     <p>※ 발급 진행중인 교육수료증은 발급신청이 제한 됩니다.</p>
                  </div>
+                <!-- descDeft -->
+
+                <!-- paging -->
+                <div class="paging"> 
+                    <div class="pageBox">
+                        <a href="" class="btnFirst">처음 페이지</a>
+                        <a href="" class="btnPrev">이전 페이지</a>
+                        <div class="page">
+                            <strong>1</strong>
+                            <a href="">2</a>
+                            <!-- 모바일에서 안 보이게 처리해 주세요 -->
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">5</a>
+                            <a href="">6</a>
+                            <a href="">7</a>
+                            <a href="">8</a>
+                            <a href="">9</a>
+                            <!-- 모바일에서 안 보이게 처리해 주세요 -->
+                            <span class="omission">생략</span>
+                            <a href="">120</a>
+                        </div>
+                        <a href="" class="btnNext">다음 페이지</a>
+                        <a href="" class="btnLast">마지막 페이지</a>
+                    </div>
+                </div>
+                <!--// paging -->
+
+                <!-- tableTit -->
+                <div class="tableTit mt120">
+                    <h5>교육수료증 신청목록</h5>
+                </div>
+                <!-- // tableTit -->
+
+                <!-- tableDefault -->
+                <div class="tableDefault boardList BgCustom2n">
+                    <table>
+                        <caption>글넘버, 교육과정명, 교육기간, 교육생명, 상태, 발급일로 이루어진 표</caption>
+                        <colgroup>
+                            <col class="pcW64">
+                            <col class="pxW556">
+                            <col class="pcW375">
+                            <col class="pcW120">
+                            <col class="pcW285">
+                            <col class="pcW120">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">NO</th>
+                                <th scope="col">교육과정명</th>
+                                <th scope="col">교육기간</th>
+                                <th scope="col">교육생명</th>
+                                <th class="col">상태</th>
+                                <th class="col">발급일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="cellTit">NO</span>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">교육과정명</span>
+                                    <p>지역산업 맞춤형 AI 프로젝트 교육_대형언어모델 </p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">교육기간</span>
+                                    <p>2024.00.00~2024.00.00(40H)</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">교육생명</span>
+                                    <p>홍길동</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">상태</span>
+                                    <p>신청</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">발급일</span>
+                                    <p></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="cellTit">NO</span>
+                                    <p>2</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">교육과정명</span>
+                                    <p>노바투스 교육</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">교육기간</span>
+                                    <p>2024.00.00~2024.00.00(40H)</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">교육생명</span>
+                                    <p>홍길동</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">상태</span>
+                                    <p>신청</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">발급일</span>
+                                    <p></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="cellTit">NO</span>
+                                    <p>3</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">교육과정명</span>
+                                    <p>응용 소프트웨어 교육</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">교육기간</span>
+                                    <p>2024.00.00~2024.00.00(40H)</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">교육생명</span>
+                                    <p>홍길동</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">상태</span>
+                                    <p>발급완료</p>
+                                </td>
+                                <td>
+                                    <span class="cellTit">발급일</span>
+                                    <p>2024-00-00</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // tableDefault -->
+
+                <!-- paging -->
+                <div class="paging"> 
+                    <div class="pageBox">
+                        <a href="" class="btnFirst">처음 페이지</a>
+                        <a href="" class="btnPrev">이전 페이지</a>
+                        <div class="page">
+                            <strong>1</strong>
+                            <a href="">2</a>
+                            <!-- 모바일에서 안 보이게 처리해 주세요 -->
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">5</a>
+                            <a href="">6</a>
+                            <a href="">7</a>
+                            <a href="">8</a>
+                            <a href="">9</a>
+                            <!-- 모바일에서 안 보이게 처리해 주세요 -->
+                            <span class="omission">생략</span>
+                            <a href="">120</a>
+                        </div>
+                        <a href="" class="btnNext">다음 페이지</a>
+                        <a href="" class="btnLast">마지막 페이지</a>
+                    </div>
+                </div>
+                <!--// paging -->
+
             </div>
             <!-- // content -->
         </div>
