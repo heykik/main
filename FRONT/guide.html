@@ -134,9 +134,9 @@ $(function(){
 		<div class="side mCustomScrollbar">
 			<ul> <!-- 주석 -->
 				<li><a href="#">Button</a></li>
-				<li><a href="#">input Type</a></li>
+				<li class="on"><a href="#">input Type</a></li>
 				<li><a href="#">Title</a></li>
-				<li class="on"><a href="#">Layout</a></li>
+				<li><a href="#">Layout</a></li>
 				<li><a href="#">Text Description</a></li>
 				<li><a href="#">가이드6</a></li>
 			</ul>
@@ -285,20 +285,32 @@ $(function(){
 								<div class="tableDefault">
 									<table>
 										<tbody>
-											<th>sample</th>
-											<td>
-												<div class="flexBoxAcJs withFileBtn">
-													<button type="button" class="btn btnRed sm">파일추가</button>
-													<input type="file" tabindex="-1">	
-													<input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>
-												</div>
-												<div class="prevFileInput">
-													<div class="pRel">
-														<input type="text" title="첨부파일명" readonly>
-														<button class="btnRemove">삭제하기</button>
+											<tr>
+												<th>sample</th>
+												<td>
+													<div class="checkBox">
+														<input type="checkbox" name="checkDefault" id="check04">
+														<label for="check04">checkBox</label>
+														<input type="text" title="input">
 													</div>
-												</div>
-											</td>
+												</td>
+											</tr>
+											<tr>
+												<th>sample</th>
+												<td>
+													<div class="flexBoxAcJs withFileBtn">
+														<button type="button" class="btn btnRed sm">파일추가</button>
+														<input type="file" tabindex="-1">	
+														<input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>
+													</div>
+													<div class="prevFileInput">
+														<div class="pRel">
+															<input type="text" title="첨부파일명" readonly>
+															<button class="btnRemove">삭제하기</button>
+														</div>
+													</div>
+												</td>
+											</tr>
 										</tbody>
 									</table>
 								</div>	
@@ -621,6 +633,15 @@ $(function(){
 
 							<div class="descDeft tag colLine">
 								<p><strong>Description</strong>Has Tag And Long Text Has Tag And Long Text Has Tag And Long Text Has Tag</p>
+							</div>
+							
+							<div class="descDeft tag">
+								<p class="icoLoca"><strong>icoLoca</strong>Has Tag And Icon</p>
+								<p class="icoLoca lg"><strong>icoLoca lg</strong>Has Tag And Icon</p>
+								<p class="icoCall"><strong>icoCall</strong>Has Tag And Icon</p>
+								<p class="icoBag"><strong>icoBag</strong>Has Tag And Icon</p>
+								<p class="icoTime lg"><strong>icoTime lg</strong>Has Tag And Icon</p>
+								<p class="icoCal lg"><strong>icoCal lg</strong>Has Tag And Icon</p>
 							</div>
 
 							<div class="txtDotList">

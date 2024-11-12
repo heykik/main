@@ -56,9 +56,12 @@ const fn_gnb = () => {
             if(!$('#container'.length > 0)){
                 $('#header').removeClass('scroll');
             }
-            gnb.removeClass('open');
-            // gnb.find('.gnbOpen').slideUp(200);
-            $('.gnbOpen').slideUp(200);
+            setTimeout(() => {
+                if (!gnb.find(':focus').length) {
+                    gnb.removeClass('open');
+                    $('.gnbOpen').slideUp(200);
+                }
+            }, 10); // 지연 시간 추가
         }))
     }
 }

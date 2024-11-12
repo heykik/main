@@ -334,6 +334,11 @@ button[class*="btn"][type="button"]{
     &:last-child{
         margin-bottom:0;
     }
+    &.bgInput{
+        input{
+            background:url(../images/icon/ico-search-24.svg) no-repeat calc(100% - 10px) center / auto;
+        }
+    }   
     input,
     select,
     textarea{
@@ -360,7 +365,7 @@ button[class*="btn"][type="button"]{
         display:flex;
         align-items:center;
         justify-content:flex-start;
-        text-align:left;        
+        text-align:left;     
     }    
     p{
         margin-top:4px;
@@ -415,7 +420,6 @@ button[class*="btn"][type="button"]{
     align-items:center;
     justify-content:center;
     position:relative;
-    padding:20px 0;
     &:not(:last-child){
         margin-right:16px;
     }
@@ -493,9 +497,12 @@ button[class*="btn"][type="button"]{
         top:0;
         left:0;
         overflow:hidden;
+        margin:0;
+        padding:0;
         width:1px;
         height:1px;
         opacity:0;
+        border-style:none;
         appearance:none;
         &:focus{
             + label{
@@ -1020,9 +1027,9 @@ button[class*="btn"][type="button"]{
             overflow:hidden;
             margin:0 auto;
             padding:0;
+            border-radius:40px;
             width:100%;
             background:url(../images/sample-bg.png) no-repeat #000 center center / 100% auto;
-            border-radius:40px;
         }
         @media screen and (min-width:1160px) {
             margin:0 0 120px;
@@ -1067,8 +1074,8 @@ button[class*="btn"][type="button"]{
             display:flex;
             align-items:flex-start;
             justify-content:space-between;
-            padding:0 0 40px;
             gap:0 32px;
+            padding:0 0 40px;
         }
         > *{
             margin-bottom:32px;
@@ -1141,6 +1148,13 @@ button[class*="btn"][type="button"]{
 
     }
     &[class*="sm"] *{
+        font-size:15px;
+        color:var(--gray60);
+        &:not(:last-child){
+            margin-bottom:4px;
+        }
+    } // sm이 pc일 때 사이즈 커질 수 있는 상황 고려하여 분리
+    &[class*="xsm"] *{
         font-size:15px;
         color:var(--gray60);
         &:not(:last-child){
@@ -1251,6 +1265,13 @@ button[class*="btn"][type="button"]{
                         &::before{
                         background:url(../images/icon/ico-calendar-red-24.svg) no-repeat center center / contain;
                         }
+                    }
+                }
+            }
+            &.icoPerson{
+                strong{
+                    &::before{
+                        background:url(../images/icon/ico-person-red-20.svg) no-repeat center center / contain;
                     }
                 }
             }
@@ -1421,6 +1442,9 @@ button[class*="btn"][type="button"]{
     table{
         border-top:1px solid var(--table-top);
         width:100%;
+        @media screen and (max-width:1159px) {
+            display:block;                
+        }
         .bgTableThick{
             background:var(--table-bg-thick);
         }
@@ -1436,6 +1460,9 @@ button[class*="btn"][type="button"]{
     tbody{
         border-bottom:1px solid var(--table-border);
         width:100%;
+        @media screen and (max-width:1159px) {
+            display:block;                
+        }
         @media screen and (min-width:1160px) {
             // display:inline-table;
         }
@@ -1473,7 +1500,11 @@ button[class*="btn"][type="button"]{
                 }
             }
             td{
-                padding:12px;
+                padding:18px 22px;
+                &:has(input[type="text"]),
+                &:has(textarea){
+                    padding:12px;
+                }
                 input,
                 select,
                 textarea{
@@ -1541,7 +1572,7 @@ button[class*="btn"][type="button"]{
                     }
                 }
                 p{
-                    padding:6px 10px;
+                    // padding:6px 10px;
                     line-height:1.2;
                     letter-spacing:-0.03em;
                     font-size:17px;
@@ -1594,6 +1625,18 @@ button[class*="btn"][type="button"]{
                         padding:0;
                         @media screen and (min-width:1160px) {
                             flex:0 0 164px;
+                        }
+                        &:has(input[type="text"]){
+                            flex:1 0 100%;
+                            @media screen and (min-width:1160px) {
+                                flex:0 0 auto;
+                            }
+                            input[type="text"]{
+                                margin-left:8px;
+                                @media screen and (min-width:1160px) {
+                                    width:320px;
+                                }
+                            }
                         }
                     }
                 }
@@ -1719,7 +1762,7 @@ button[class*="btn"][type="button"]{
                     @media screen and (min-width:1160px) {
                         display:flex;
                         align-items:center;
-                        justify-content:center;
+                        justify-content:space-between;
                         max-width:320px;
                     }
                 }
@@ -1982,16 +2025,16 @@ button[class*="btn"][type="button"]{
 .mapCont{
     padding:10px 0;
     @media screen and (min-width:1160px){
-        padding:0;
         margin-top:10px;
+        padding:0;
     }
     .mapBox{
         overflow:hidden;
         margin:0 auto 20px;
+        border-radius:20px;
         width:100%;
         height:200px;
         min-height:initial;
-        border-radius:20px;
         background:var(--gray30);
         @media screen and (min-width:1160px){
             flex:0 0 760px;
@@ -2000,8 +2043,8 @@ button[class*="btn"][type="button"]{
         }
     }
     div:nth-child(2){
-        height:initial;
         margin:0 auto 0;
+        height:initial;
         @media screen and (min-width:1160px){
             min-height:360px;
         }
@@ -2128,9 +2171,9 @@ button[class*="btn"][type="button"]{
         .videoBox{
             overflow:hidden;
             margin-bottom:0;
+            border-radius:20px;
             height:210px;
             background:var(--gray30);
-            border-radius:20px;
             @media screen and (min-width:1160px) {
                 flex-basis:680px;
                 height:360px;
@@ -2159,10 +2202,10 @@ button[class*="btn"][type="button"]{
             .imgWrap{
                 padding:10px 0 0;
                 @media screen and (min-width:767px) {
-                    flex:0 0 auto;
                     display:flex;
                     align-items:flex-start;
                     justify-content:flex-end;
+                    flex:0 0 auto;
                     gap:32px;
                     padding:0;
                 }
@@ -2226,6 +2269,190 @@ button[class*="btn"][type="button"]{
         background:url(../images/bg-test-img-title-mo.png) no-repeat center center / cover;
         @media screen and (min-width:767px){
             background:url(../images/bg-test-img-title.png) no-repeat center center / cover;
+        }
+    }
+}
+/* 알림마당 > 디지털 우수기업 및 기술 소개 > 공동장비활용 검색 예약*/
+.cardListCont{
+    .cntBox{
+        margin-bottom:8px;
+        p{
+            line-height:1.5;
+            font-size:17px;
+            font-weight:var(--regular);
+            color:var(--color-dark);
+        }
+        span{
+            font-weight:var(--bold);
+        }
+    }
+    .cardListWrap{
+        @media screen and (min-width:767px) {
+            display:flex;
+            flex-wrap:wrap;
+            align-items:flex-start;
+            justify-content:space-between;
+            gap:32px;
+        }
+    }
+    .card{
+        overflow:hidden;
+        border:1px solid var(--gray30);
+        border-radius:20px;
+        @media screen and (min-width:767px) {
+            flex:0 0 calc((100% - 32px) / 2);
+        }
+        @media screen and (min-width:1160px) {
+            flex:0 0 calc((100% - 32px - 32px) / 3);
+        }
+        .imgWrap{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            position:relative;
+            height:240px;
+            img{
+                max-width:initial;
+            }
+            .linkWrap{
+                display:flex;
+                align-items:center;
+                justify-content:flex-end;
+                gap:10px;
+                position:absolute;
+                top:20px;
+                right:24px;
+                *{
+                    display:block;
+                    overflow:hidden;
+                    border-radius:100%;
+                    width:32px;
+                    height:32px;
+                    text-indent:-9999px;
+                }
+                .home{
+                    background:url(../images/icon/ico-home-empty-26.svg) no-repeat #fff center center / auto;
+                }
+                .favorites{
+                    padding:0;
+                    background:url(../images/icon/ico-star-empty-16.svg) no-repeat #fff center center / auto;
+                    &.on{
+                        background:url(../images/icon/ico-star-yellow-16.svg) no-repeat #fff center center / auto;
+                    }
+                }
+            }            
+        }
+        .titWrap{
+            margin:0 24px;
+            padding:16px 0 20px;
+            border-bottom:1px solid var(--gray30);
+            @media screen and (min-width:1160px) {
+                margin:0 40px;
+                padding:24px 0 20px;
+            }
+            *{
+                overflow:hidden;
+                display:-webkit-box;
+                width:100%;
+                -webkit-line-clamp:2;
+                -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
+                text-overflow:ellipsis;
+                line-height:1.5;
+                letter-spacing:-0.03em;
+            }
+            strong{
+                display:block;
+                margin-bottom:8px;
+                font-size:20px;
+                font-weight:var(--bold);
+                color:var(--color-dark);
+                @media screen and (min-width:767px) {
+                    height:64px;
+                }
+            }
+            p{
+                font-size:17px;
+                font-weight:var(--regular);
+                color:var(--text-color);
+                @media screen and (min-width:767px) {
+                    height:52px;
+                }
+            }
+        }
+        .infoWrap{
+            display:flex;
+            align-items:flex-start;
+            justify-content:space-between;
+            gap:16px;
+            margin:0 24px;
+            padding:20px 0 24px;
+            @media screen and (min-width:1160px) {
+                margin:0 40px;
+                padding:24px 0 20px;
+                gap:32px;
+            }
+            .logoWrap{
+                flex:0 0 56px;
+                display:flex;
+                overflow:hidden;
+                height:56px;
+                border-radius:4px;
+            }
+            .infoList{
+                flex:1 0 calc(100% - 56px - 16px);
+                max-width:calc(100% - 56px - 16px);
+                margin:0;
+                @media screen and (min-width:1160px) {
+                    flex:0 0 calc(100% - 56px - 32px);
+                    max-width:calc(100% - 56px - 32px);
+                }
+                ul{
+                    @media screen and (min-width:1160px) {
+                        display:flex;
+                        flex-wrap:wrap;
+                        align-items:flex-start;
+                        justify-content:space-between;
+                        gap:8px;
+                        width:100%;
+                    }
+                }
+                li{
+                    width:100%;
+                    @media screen and (min-width:1160px) {
+                    }
+                    &:not(:last-child){
+                        margin-bottom:8px;
+                        @media screen and (min-width:1160px) {
+                            margin:0;
+                        }
+                    }
+                    &:nth-child(odd){
+                        @media screen and (min-width:1160px) {
+                            flex:0 0 96px;
+                        }
+                    }
+                    &:nth-child(even){
+                        @media screen and (min-width:1160px) {
+                            flex:0 0 calc(100% - 96px - 8px);
+                            max-width:calc(100% - 96px - 8px);
+                        }
+                    }                 
+                }
+                span{
+                    @media screen and (min-width:1160px) {
+                        overflow:hidden;
+                        white-space:nowrap;
+                        text-overflow:ellipsis;
+                        width:100%;
+                    }
+                }
+            }
+        }
+        &:not(:last-child){
+            margin-bottom:24px;
+            @media screen and (min-width:767px) {
+                margin-bottom:0;
+            }
         }
     }
 }
@@ -2668,8 +2895,8 @@ button[class*="btn"][type="button"]{
                 }
                 &::after{
                     position:absolute;
-                    bottom:20px;
                     right:32px;
+                    bottom:20px;
                 }
             }
             &::before{
@@ -2815,8 +3042,8 @@ button[class*="btn"][type="button"]{
     }
 }
 .serviceWrap{
-    padding:64px 0 0;
     margin-bottom:40px;
+    padding:64px 0 0;
     @media screen and (min-width:767px) {
         display:flex;
         flex-wrap:wrap;
@@ -2855,10 +3082,10 @@ button[class*="btn"][type="button"]{
         .imgWrap{
             flex:0 0 auto;
             position:relative;
+            border-radius:20px;
             width:100%;
             max-width:520px;
             height:200px;
-            border-radius:20px;
             @media screen and (min-width:1160px) {
                 flex:0 0 520px;
                 height:320px;
@@ -2923,8 +3150,8 @@ button[class*="btn"][type="button"]{
             }
             .imgWrap{
                 @media screen and (min-width:1160px) {
-                    margin-bottom:0;
                     margin-right:60px;
+                    margin-bottom:0;
                 }
                 &::before{
                     right:-16px;
@@ -3343,8 +3570,8 @@ button[class*="btn"][type="button"]{
             padding:18px 0;
             @media screen and (min-width:1160px) {
                 flex:0 1 58px;
-                padding:0;
                 white-space:nowrap;
+                padding:0;
             }
             span{
                 line-height:1.2;
@@ -3363,8 +3590,8 @@ button[class*="btn"][type="button"]{
             padding:0 0 20px;
             @media screen and (min-width:1160px) {
                 flex-grow:1;
-                padding:0;
                 white-space:nowrap;
+                padding:0;
             }
             .checkBox{
                 @media screen and (min-width:1160px) {
@@ -3403,8 +3630,8 @@ button[class*="btn"][type="button"]{
         border:1px solid var(--gray30);
         border-radius:20px;
         @media screen and (min-width:1160px) {
-            margin:0;
             flex:0 0 calc((100% - 64px) / 3);
+            margin:0;
         }
         .imgBox{
             display:flex;
@@ -3478,11 +3705,11 @@ button[class*="btn"][type="button"]{
                         flex-wrap:nowrap;
                     }
                     span{
-                        max-width:100%;
                         flex-wrap:nowrap;
                         overflow:hidden;
-                        white-space:nowrap;
                         text-overflow:ellipsis;
+                        white-space:nowrap;
+                        max-width:100%;
                     }
                 }
                 .btnBox{
@@ -3503,13 +3730,13 @@ button[class*="btn"][type="button"]{
         gap:100px;
     }
     .imgWrap{
-        overflow:hidden;
         display:flex;
         align-items:center;
         justify-content:center;
+        overflow:hidden;
         margin-bottom:40px;
-        background:var(--gray5);
         border-radius:20px;
+        background:var(--gray5);
         @media screen and (min-width:1160px) {
             flex:0 0 550px;
             height:508px;
@@ -3541,10 +3768,10 @@ button[class*="btn"][type="button"]{
                 color:var(--gray70);
                 background:var(--color-white);
                 @media screen and (min-width:1160px) {
-                    padding:16px 0; 
-                    text-align:left;
-                    width:146px;
+                    padding:16px 0;
                     border-right:none;
+                    width:146px; 
+                    text-align:left;
                     line-height:1.2;
                 }
             }
@@ -3590,11 +3817,11 @@ button[class*="btn"][type="button"]{
         }
     }
     a{
-        position:relative;
         display:block;
+        position:relative;
         overflow:hidden;
-        height:440px;
         border-radius:20px;
+        height:440px;
         .imgWrap{
             display:flex;
             align-items:center;
@@ -3650,8 +3877,8 @@ button[class*="btn"][type="button"]{
 .infoListBox{
     margin:0 auto 20px;
     padding:32px 24px;
-    border-radius:8px;
     border:1px solid var(--gray30);
+    border-radius:8px;
     @media screen and (min-width:1160px) {
         display:flex;
         align-items:center;
@@ -3659,9 +3886,9 @@ button[class*="btn"][type="button"]{
     }
     &.dk{
         padding:32px;
-        background:var(--gray5);
         border-color:var(--table-border);
         border-radius:12px;
+        background:var(--gray5);
         @media screen and (min-width:1160px){
             margin:120px auto 0;
         }
@@ -3705,9 +3932,9 @@ button[class*="btn"][type="button"]{
                     @media screen and (min-width:1160px){
                         display:block;
                         content:"";
+                        margin:0 24px;
                         width:1px;
                         height:25px;
-                        margin:0 24px;
                         background:#C8C8C8;
                     }
                 }
@@ -3753,8 +3980,8 @@ button[class*="btn"][type="button"]{
         margin:20px 0 0;
         @media screen and (min-width:1160px) {
             flex:0 1 auto;
-            width:auto;
             margin:0;
+            width:auto;
         }
     }
 }

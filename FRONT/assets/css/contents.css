@@ -361,6 +361,9 @@ button[class*=btn][type=button] {
 .inputBox:last-child {
   margin-bottom: 0;
 }
+.inputBox.bgInput input {
+  background: url(../images/icon/ico-search-24.svg) no-repeat calc(100% - 10px) center/auto;
+}
 .inputBox input,
 .inputBox select,
 .inputBox textarea {
@@ -439,7 +442,6 @@ button[class*=btn][type=button] {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 20px 0;
 }
 .radioBox:not(:last-child) {
   margin-right: 16px;
@@ -514,9 +516,12 @@ button[class*=btn][type=button] {
   top: 0;
   left: 0;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
   width: 1px;
   height: 1px;
   opacity: 0;
+  border-style: none;
   appearance: none;
 }
 .checkBox input[type=checkbox]:focus + label {
@@ -1047,9 +1052,9 @@ button[class*=btn][type=button] {
     overflow: hidden;
     margin: 0 auto;
     padding: 0;
+    border-radius: 40px;
     width: 100%;
     background: url(../images/sample-bg.png) no-repeat #000 center center/100% auto;
-    border-radius: 40px;
   }
 }
 @media screen and (min-width: 1160px) {
@@ -1098,8 +1103,8 @@ button[class*=btn][type=button] {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 0 40px;
     gap: 0 32px;
+    padding: 0 0 40px;
   }
 }
 .layout .wrap > * {
@@ -1178,6 +1183,13 @@ button[class*=btn][type=button] {
 .descDeft[class*=sm] *:not(:last-child) {
   margin-bottom: 4px;
 }
+.descDeft[class*=xsm] * {
+  font-size: 15px;
+  color: var(--gray60);
+}
+.descDeft[class*=xsm] *:not(:last-child) {
+  margin-bottom: 4px;
+}
 .descDeft.tag p {
   display: flex;
   flex-wrap: wrap;
@@ -1238,6 +1250,9 @@ button[class*=btn][type=button] {
 }
 .descDeft.tag [class*=ico].icoCal.lg strong::before {
   background: url(../images/icon/ico-calendar-red-24.svg) no-repeat center center/contain;
+}
+.descDeft.tag [class*=ico].icoPerson strong::before {
+  background: url(../images/icon/ico-person-red-20.svg) no-repeat center center/contain;
 }
 
 /* dot list */
@@ -1400,6 +1415,11 @@ button[class*=btn][type=button] {
   border-top: 1px solid var(--table-top);
   width: 100%;
 }
+@media screen and (max-width: 1159px) {
+  .tableDefault table {
+    display: block;
+  }
+}
 .tableDefault table .bgTableThick {
   background: var(--table-bg-thick);
 }
@@ -1414,6 +1434,11 @@ button[class*=btn][type=button] {
 .tableDefault tbody {
   border-bottom: 1px solid var(--table-border);
   width: 100%;
+}
+@media screen and (max-width: 1159px) {
+  .tableDefault tbody {
+    display: block;
+  }
 }
 @media screen and (max-width: 1159px) {
   .tableDefault tbody tr {
@@ -1458,6 +1483,9 @@ button[class*=btn][type=button] {
   }
 }
 .tableDefault tbody tr td {
+  padding: 18px 22px;
+}
+.tableDefault tbody tr td:has(input[type=text]), .tableDefault tbody tr td:has(textarea) {
   padding: 12px;
 }
 .tableDefault tbody tr td input,
@@ -1526,7 +1554,6 @@ button[class*=btn][type=button] {
   }
 }
 .tableDefault tbody tr td p {
-  padding: 6px 10px;
   line-height: 1.2;
   letter-spacing: -0.03em;
   font-size: 17px;
@@ -1586,6 +1613,22 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1160px) {
   .tableDefault tbody tr td .tableCheck .checkBox {
     flex: 0 0 164px;
+  }
+}
+.tableDefault tbody tr td .tableCheck .checkBox:has(input[type=text]) {
+  flex: 1 0 100%;
+}
+@media screen and (min-width: 1160px) {
+  .tableDefault tbody tr td .tableCheck .checkBox:has(input[type=text]) {
+    flex: 0 0 auto;
+  }
+}
+.tableDefault tbody tr td .tableCheck .checkBox:has(input[type=text]) input[type=text] {
+  margin-left: 8px;
+}
+@media screen and (min-width: 1160px) {
+  .tableDefault tbody tr td .tableCheck .checkBox:has(input[type=text]) input[type=text] {
+    width: 320px;
   }
 }
 .tableDefault tbody tr .hMin240 {
@@ -1720,7 +1763,7 @@ button[class*=btn][type=button] {
   [class*=table][class*=boardList] tbody tr td .inputWrap {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 320px;
   }
 }
@@ -1998,17 +2041,17 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .mapCont {
-    padding: 0;
     margin-top: 10px;
+    padding: 0;
   }
 }
 .mapCont .mapBox {
   overflow: hidden;
   margin: 0 auto 20px;
+  border-radius: 20px;
   width: 100%;
   height: 200px;
   min-height: initial;
-  border-radius: 20px;
   background: var(--gray30);
 }
 @media screen and (min-width: 1160px) {
@@ -2019,8 +2062,8 @@ button[class*=btn][type=button] {
   }
 }
 .mapCont div:nth-child(2) {
-  height: initial;
   margin: 0 auto 0;
+  height: initial;
 }
 @media screen and (min-width: 1160px) {
   .mapCont div:nth-child(2) {
@@ -2158,9 +2201,9 @@ button[class*=btn][type=button] {
 .videoCont .wrap .videoBox {
   overflow: hidden;
   margin-bottom: 0;
+  border-radius: 20px;
   height: 210px;
   background: var(--gray30);
-  border-radius: 20px;
 }
 @media screen and (min-width: 1160px) {
   .videoCont .wrap .videoBox {
@@ -2193,10 +2236,10 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 767px) {
   .qualityCont .ruleCont .wrap .imgWrap {
-    flex: 0 0 auto;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+    flex: 0 0 auto;
     gap: 32px;
     padding: 0;
   }
@@ -2260,6 +2303,205 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 767px) {
   .testCont .imgTit {
     background: url(../images/bg-test-img-title.png) no-repeat center center/cover;
+  }
+}
+
+/* 알림마당 > 디지털 우수기업 및 기술 소개 > 공동장비활용 검색 예약*/
+.cardListCont .cntBox {
+  margin-bottom: 8px;
+}
+.cardListCont .cntBox p {
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--color-dark);
+}
+.cardListCont .cntBox span {
+  font-weight: var(--bold);
+}
+@media screen and (min-width: 767px) {
+  .cardListCont .cardListWrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+  }
+}
+.cardListCont .card {
+  overflow: hidden;
+  border: 1px solid var(--gray30);
+  border-radius: 20px;
+}
+@media screen and (min-width: 767px) {
+  .cardListCont .card {
+    flex: 0 0 calc((100% - 32px) / 2);
+  }
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card {
+    flex: 0 0 calc((100% - 32px - 32px) / 3);
+  }
+}
+.cardListCont .card .imgWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 240px;
+}
+.cardListCont .card .imgWrap img {
+  max-width: initial;
+}
+.cardListCont .card .imgWrap .linkWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+  right: 24px;
+}
+.cardListCont .card .imgWrap .linkWrap * {
+  display: block;
+  overflow: hidden;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+}
+.cardListCont .card .imgWrap .linkWrap .home {
+  background: url(../images/icon/ico-home-empty-26.svg) no-repeat #fff center center/auto;
+}
+.cardListCont .card .imgWrap .linkWrap .favorites {
+  padding: 0;
+  background: url(../images/icon/ico-star-empty-16.svg) no-repeat #fff center center/auto;
+}
+.cardListCont .card .imgWrap .linkWrap .favorites.on {
+  background: url(../images/icon/ico-star-yellow-16.svg) no-repeat #fff center center/auto;
+}
+.cardListCont .card .titWrap {
+  margin: 0 24px;
+  padding: 16px 0 20px;
+  border-bottom: 1px solid var(--gray30);
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card .titWrap {
+    margin: 0 40px;
+    padding: 24px 0 20px;
+  }
+}
+.cardListCont .card .titWrap * {
+  overflow: hidden;
+  display: -webkit-box;
+  width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+}
+.cardListCont .card .titWrap strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
+@media screen and (min-width: 767px) {
+  .cardListCont .card .titWrap strong {
+    height: 64px;
+  }
+}
+.cardListCont .card .titWrap p {
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--text-color);
+}
+@media screen and (min-width: 767px) {
+  .cardListCont .card .titWrap p {
+    height: 52px;
+  }
+}
+.cardListCont .card .infoWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 24px;
+  padding: 20px 0 24px;
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card .infoWrap {
+    margin: 0 40px;
+    padding: 24px 0 20px;
+    gap: 32px;
+  }
+}
+.cardListCont .card .infoWrap .logoWrap {
+  flex: 0 0 56px;
+  display: flex;
+  overflow: hidden;
+  height: 56px;
+  border-radius: 4px;
+}
+.cardListCont .card .infoWrap .infoList {
+  flex: 1 0 calc(100% - 56px - 16px);
+  max-width: calc(100% - 56px - 16px);
+  margin: 0;
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card .infoWrap .infoList {
+    flex: 0 0 calc(100% - 56px - 32px);
+    max-width: calc(100% - 56px - 32px);
+  }
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card .infoWrap .infoList ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+  }
+}
+.cardListCont .card .infoWrap .infoList li {
+  width: 100%;
+}
+.cardListCont .card .infoWrap .infoList li:not(:last-child) {
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card .infoWrap .infoList li:not(:last-child) {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card .infoWrap .infoList li:nth-child(odd) {
+    flex: 0 0 96px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card .infoWrap .infoList li:nth-child(even) {
+    flex: 0 0 calc(100% - 96px - 8px);
+    max-width: calc(100% - 96px - 8px);
+  }
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card .infoWrap .infoList span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+}
+.cardListCont .card:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 767px) {
+  .cardListCont .card:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 
@@ -2760,8 +3002,8 @@ button[class*=btn][type=button] {
 }
 .targetWrap .wrap div.oneLine::after {
   position: absolute;
-  bottom: 20px;
   right: 32px;
+  bottom: 20px;
 }
 .targetWrap .wrap div::before {
   display: block;
@@ -2866,8 +3108,8 @@ button[class*=btn][type=button] {
 }
 
 .serviceWrap {
-  padding: 64px 0 0;
   margin-bottom: 40px;
+  padding: 64px 0 0;
 }
 @media screen and (min-width: 767px) {
   .serviceWrap {
@@ -2918,10 +3160,10 @@ button[class*=btn][type=button] {
 .serviceWrap .wrap .imgWrap {
   flex: 0 0 auto;
   position: relative;
+  border-radius: 20px;
   width: 100%;
   max-width: 520px;
   height: 200px;
-  border-radius: 20px;
 }
 @media screen and (min-width: 1160px) {
   .serviceWrap .wrap .imgWrap {
@@ -2983,8 +3225,8 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .serviceWrap .wrap:nth-child(odd) .imgWrap {
-    margin-bottom: 0;
     margin-right: 60px;
+    margin-bottom: 0;
   }
 }
 .serviceWrap .wrap:nth-child(odd) .imgWrap::before {
@@ -3444,8 +3686,8 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1160px) {
   .categoryCont .cateWrap .tit {
     flex: 0 1 58px;
-    padding: 0;
     white-space: nowrap;
+    padding: 0;
   }
 }
 .categoryCont .cateWrap .tit span {
@@ -3466,8 +3708,8 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1160px) {
   .categoryCont .cateWrap .inputBox {
     flex-grow: 1;
-    padding: 0;
     white-space: nowrap;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1160px) {
@@ -3506,8 +3748,8 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .resultCont .prdtBox {
-    margin: 0;
     flex: 0 0 calc((100% - 64px) / 3);
+    margin: 0;
   }
 }
 .resultCont .prdtBox .imgBox {
@@ -3589,11 +3831,11 @@ button[class*=btn][type=button] {
   flex-wrap: nowrap;
 }
 .resultCont .prdtBox .txtBox .connectBox .location span {
-  max-width: 100%;
   flex-wrap: nowrap;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 .resultCont .prdtBox .txtBox .connectBox .btnBox {
   flex: 0;
@@ -3610,13 +3852,13 @@ button[class*=btn][type=button] {
   }
 }
 .prdtWrap .imgWrap {
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   margin-bottom: 40px;
-  background: var(--gray5);
   border-radius: 20px;
+  background: var(--gray5);
 }
 @media screen and (min-width: 1160px) {
   .prdtWrap .imgWrap {
@@ -3653,9 +3895,9 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1160px) {
   .prdtWrap table tr th {
     padding: 16px 0;
-    text-align: left;
-    width: 146px;
     border-right: none;
+    width: 146px;
+    text-align: left;
     line-height: 1.2;
   }
 }
@@ -3704,11 +3946,11 @@ button[class*=btn][type=button] {
   margin: 0;
 }
 .facilityResWrap a {
-  position: relative;
   display: block;
+  position: relative;
   overflow: hidden;
-  height: 440px;
   border-radius: 20px;
+  height: 440px;
 }
 .facilityResWrap a .imgWrap {
   display: flex;
@@ -3769,8 +4011,8 @@ button[class*=btn][type=button] {
 .infoListBox {
   margin: 0 auto 20px;
   padding: 32px 24px;
-  border-radius: 8px;
   border: 1px solid var(--gray30);
+  border-radius: 8px;
 }
 @media screen and (min-width: 1160px) {
   .infoListBox {
@@ -3781,9 +4023,9 @@ button[class*=btn][type=button] {
 }
 .infoListBox.dk {
   padding: 32px;
-  background: var(--gray5);
   border-color: var(--table-border);
   border-radius: 12px;
+  background: var(--gray5);
 }
 @media screen and (min-width: 1160px) {
   .infoListBox.dk {
@@ -3836,9 +4078,9 @@ button[class*=btn][type=button] {
   .infoListBox.dk dd:not(:last-child)::after {
     display: block;
     content: "";
+    margin: 0 24px;
     width: 1px;
     height: 25px;
-    margin: 0 24px;
     background: #C8C8C8;
   }
 }
@@ -3886,8 +4128,8 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1160px) {
   .infoListBox .btnBox {
     flex: 0 1 auto;
-    width: auto;
     margin: 0;
+    width: auto;
   }
 }
 
