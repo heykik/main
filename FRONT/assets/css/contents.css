@@ -1417,6 +1417,7 @@ button[class*=btn][type=button] {
   .paging .pageBox .page * {
     width: 40px;
     height: 40px;
+    line-height: 40px;
   }
 }
 .paging .pageBox .page .omission {
@@ -2118,6 +2119,9 @@ input[disabled] {
 .flex.col {
   flex-direction: column;
   align-items: flex-start;
+}
+.flex span {
+  flex-shrink: 0;
 }
 
 .zipCode input {

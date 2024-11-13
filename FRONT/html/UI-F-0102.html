@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>경남디지털혁신튜브</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/swiper.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/main.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+-->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<button class="btn" onclick="fn_layer('layer01', this, 400)">팝업</button>
+<!-- 팝업 -->
+<div class="layerPop" id="layer01">
+    <div class="inner">
+        <strong class="tit">알림</strong>
+        <!-- layerCont -->
+        <div class="layerCont txtc">
+            가입된 담당자정보가 모두 삭제됩니다.<br />
+            작성하신 게시물은 삭제되지 않습니다.<br />
+            <strong class="cRed">회원탈퇴를 진행하시겠습니까?</strong>
+            <!-- btnBox -->
+            <div class="btnBox center">
+                <button type="button" class="btn btnGray">취소</button>
+                <button type="button" class="btn btnRed" onclick="fn_layer_close(this)">닫기 </button>
+            </div>
+            <!--// btnBox -->
+        </div>
+        <!--// layerCont -->
+        <a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+    </div>
+</div>
+<!--// 팝업-->  
+</body>
+</html>

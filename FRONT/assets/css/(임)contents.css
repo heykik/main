@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/* 텍스트 */
+.cRed {
+  color: var(--color-red);
+}
+
+/* 팝업 */
+.layerPop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.layerPop .inner {
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 72px 0 0;
+  border-radius: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  background: #fff;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+.layerPop .inner .tit {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--border-color);
+  line-height: 72px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(---color-dark);
+}
+.layerPop .inner .tit::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 74px;
+  height: 3px;
+  background: var(--color-red);
+}
+.layerPop .inner .layerCont {
+  overflow-y: auto;
+  padding: 32px;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  font-size: 20px;
+  color: var(--color-text);
+}
+.layerPop .inner > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  background: url("../images/icon/ico-close.svg") no-repeat center;
+}
+.layerPop .btnBox {
+  margin-top: 32px;
+}
+.layerPop.on .inner {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 767px) {
+  .layerPop .inner .tit {
+    padding: 0 16px;
+    font-size: 20px;
+  }
+  .layerPop .inner .layerCont {
+    padding: 32px 16px;
+  }
+  .layerPop .inner > a {
+    right: 16px;
+  }
+}
+/* 이용약관 */
+.whiteBox.v2 {
+  padding: 50px 40px;
+}
+
+.joinProcess {
+  margin-bottom: 40px;
+}
+.joinProcess ol {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.joinProcess ol li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 96px;
+  width: 80px;
+  line-height: 1.5;
+}
+.joinProcess ol li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+}
+.joinProcess ol li + li::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -80px;
+  width: 80px;
+  height: 1px;
+  background: var(--border-color);
+}
+.joinProcess ol li strong {
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: -0.45px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.joinProcess ol li p {
+  white-space: nowrap;
+  font-size: 17px;
+  color: var(--color-text);
+}
+.joinProcess ol li.curr strong {
+  color: var(--color-red);
+}
+.joinProcess ol li.curr p {
+  color: var(--color-dark);
+}
+.joinProcess ol .step1::before {
+  background: var(--color-white) url("../images/icon/ico-list-50.svg") no-repeat center/50px auto;
+}
+.joinProcess ol .step2::before {
+  background: var(--color-white) url("../images/icon/ico-edit-file-50-gray.svg") no-repeat center/50px auto;
+}
+.joinProcess ol .step2.curr::before {
+  background-image: url("../images/icon/ico-edit-file-50.svg");
+}
+.joinProcess ol .step3::before {
+  background: var(--color-white) url("../images/icon/ico-person-check-50-gray.svg") no-repeat center/50px auto;
+}
+.joinProcess ol .step3.curr::before {
+  background-image: url("../images/icon/ico-person-check-50.svg");
+}
