@@ -1,3 +1,93 @@
+@charset "UTF-8";
+/* 개인정보처리방침 */
+.grayBgBox {
+  padding: 24px;
+  background-color: #F8F8F8;
+  border-radius: 16px;
+  text-align: center;
+}
+.grayBgBox p {
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  font-size: 20px;
+  color: var(--color-dark);
+}
 
+.psPolicyArea {
+  word-break: keep-all;
+}
+.psPolicyArea dl {
+  margin-top: 80px;
+}
+.psPolicyArea dl dt {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.8;
+  letter-spacing: -0.03em;
+  color: var(--color-red);
+}
+.psPolicyArea dl dd .titXS strong {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-dark);
+}
+.psPolicyArea dl dd .txtDotList {
+  margin-left: 20px;
+}
+.psPolicyArea dl dd .txtDotList + .descDeft {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault {
+  margin-top: 40px;
+  margin-bottom: 130px;
+}
+.psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault tbody tr td {
+  vertical-align: top;
+  text-align: left;
+}
+.psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault tbody tr td p {
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 20px;
+  font-weight: var(--regular);
+  color: var(--color-text);
+}
+
+@media (max-width: 767px) {
+  .psPolicyArea dl {
+    margin-top: 60px;
+  }
+  .psPolicyArea dl dt {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .psPolicyArea dl dd .titXS strong {
+    margin-top: 30px;
+    margin-bottom: 24px;
+  }
+  .psPolicyArea dl dd .txtDotList {
+    padding: 0;
+  }
+  .psPolicyArea dl dd .txtDotList + .descDeft {
+    margin-top: 20px;
+  }
+  .psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault tbody tr td + td {
+    background-color: #fff;
+    border-top: 1px solid var(--color-dark);
+  }
+  .psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault tbody tr td .cellTit {
+    align-items: center;
+  }
+  .psPolicyArea dl dd .descDeft * {
+    font-size: 20px;
+  }
+}
 
 /*# sourceMappingURL=jn_contents.css.map */
