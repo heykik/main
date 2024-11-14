@@ -551,6 +551,7 @@ button[class*=btn][type=button] {
   outline: 2px solid #000;
 }
 .checkBox input[type=checkbox] + label {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1546,17 +1547,36 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr td input.dateInput {
   background: url(../images/icon/ico-calendar-20.svg) no-repeat calc(100% - 10px) center/auto;
 }
-.tableDefault tbody tr td input.timeInput {
+.tableDefault tbody tr td .timeInput {
+  padding: 6px 10px;
+  appearance: none;
   background: url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center/auto;
 }
-.tableDefault tbody tr td:has(.email) {
-  display: block;
+@media screen and (max-width: 1159px) {
+  .tableDefault tbody tr td:has(.email) {
+    display: block;
+  }
 }
 .tableDefault tbody tr td:has(.email) .inputWrap {
   display: block;
 }
+@media screen and (min-width: 1160px) {
+  .tableDefault tbody tr td:has(.email) .inputWrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    max-width: initial;
+  }
+}
 .tableDefault tbody tr td .email {
   width: 100%;
+}
+@media screen and (min-width: 1160px) {
+  .tableDefault tbody tr td .email {
+    margin: 0;
+    flex: 0 0 146px;
+  }
 }
 .tableDefault tbody tr td .email:first-child {
   display: flex;
@@ -1570,14 +1590,21 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   .tableDefault tbody tr td .email:first-child::after {
-    margin: 0 8px;
+    margin: 0 0 0 8px;
   }
 }
 .tableDefault tbody tr td .email:first-child input {
   flex-basis: calc(100% - 22px);
 }
-.tableDefault tbody tr td .email * {
-  width: 100%;
+@media screen and (min-width: 1160px) {
+  .tableDefault tbody tr td .email:first-child input {
+    max-width: 146px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .tableDefault tbody tr td .email * {
+    max-width: 146px;
+  }
 }
 .tableDefault tbody tr td .prevFileInput {
   display: flex;
@@ -1918,6 +1945,11 @@ button[class*=btn][type=button] {
 [class*=table][class*=inputMax] .inputWrap input {
   flex: 1 0 auto;
   width: auto;
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=inputMax] .tableCheck {
+    padding: 0;
+  }
 }
 
 /* answer Content */
@@ -5168,10 +5200,11 @@ input[disabled] {
 }
 .infoTxtSub .noteSymbol {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: baseline;
+  justify-content: flex-start;
 }
 .infoTxtSub .noteSymbol::before {
+  flex: 0 0 auto;
   display: block;
   content: "※";
   margin-right: 4px;
@@ -5886,7 +5919,7 @@ input[disabled] {
     border-bottom: 0;
   }
 }
-/* 아 하기 싫어 */
+/* 회원서비스 */
 .member {
   position: relative;
   padding: 80px 0 !important;

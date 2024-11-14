@@ -55,12 +55,12 @@
                 <!-- table input -->
                 <div class="tableDefault inputMax">
                     <table>
-                        <caption>기업명, 담당자명(성명), 연락처, 이메일, 작성일, 시간으로 이루어진 표</caption>
+                        <caption>기업명, 예약자, 연락처, 이메일, 이용목적, 참여인원, 날짜선택, 시간으로 이루어진 표</caption>
                         <colgroup>
                             <col>
+                            <col style="width:560px;">
                             <col>
-                            <col>
-                            <col>
+                            <col style="width:560px;">
                         </colgroup>
                         <tbody>
                             <tr>
@@ -70,9 +70,11 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><span class="req">필수입력</span>담당자명(성명)</th>
+                                <th scope="row"><span class="req">필수입력</span>예약자</th>
                                 <td colspan="3">
-                                    <input type="text" title="담당자명(성명)">
+                                    <div class="inputWrap">
+                                        <input type="text" title="담당자명(성명)">
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -97,6 +99,9 @@
                                             <input type="text" title="이메일 주소 입력">
                                         </div>
                                         <div class="inputBox email">
+                                            <input type="text" placeholder="직접 입력" title="이메일 주소 입력">
+                                        </div>
+                                        <div class="inputBox email">
                                             <select title="도메인">
                                                 <option value="">gmail.com</option>
                                                 <option value="">naver.com</option>
@@ -106,13 +111,39 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">작성일</th>
-                                <td>
-                                    <input type="text" class="dateInput" title="작성일">
+                                <th scope="row"><span class="req">필수입력</span>이용목적
+                                </th>
+                                <td colspan="3">
+                                    <input type="text" title="작성일">
                                 </td>
-                                <th scope="row">시간</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <span class="req">필수입력</span>참여인원</th>
                                 <td>
-                                    <input type="text" class="timeInput" title="시간">
+                                    <div class="flex">
+                                        <input type="text" title="종사자수" class="w320 txtr">
+                                        <span>명</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="req">필수입력</span>날짜선택</th>
+                                <td>
+                                    <div class="inputWrap date">
+                                        <input type="text" title="작성일">
+                                    </div>
+                                </td>
+                                <th scope="row"><span class="req">필수입력</span>시간</th>
+                                <td>
+                                    <div class="inputWrap">
+                                        <select class="timeInput">
+                                            <option value="">12:00 ~ 13:00</option>
+                                            <option value="">13:00 ~ 14:00</option>
+                                            <option value="">14:00 ~ 15:00</option>
+                                            <option value="">15:00 ~ 16:00</option>
+                                        </select>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -122,8 +153,8 @@
                      </div>
                 </div>
                 <!-- // table input -->
-                <div class="btnBox half resize">
-                    <a href="javascript:void(0)" class="btn btnDefault">목록</a>
+                <div class="btnBox half resize sideRight">
+                    <a href="javascript:void(0)" class="btn btnDefault">취소</a>
                     <a href="javascript:void(0)" class="btn btnRed">예약신청</a>
                 </div>
 
@@ -139,6 +170,7 @@
     <script src="../assets/js/jquery-3.7.1.js"></script>
     <script src="../assets/js/swiper.js"></script>
     <script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+    <script src="../assets/js/jquery-ui.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
