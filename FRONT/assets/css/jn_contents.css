@@ -89,3 +89,30 @@
     font-size: 20px;
   }
 }
+/* 유관배너 목록 */
+.ciList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.ciList > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 200px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+}
+
+@media (max-width: 1160px) {
+  .ciList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .ciList {
+    grid-template-columns: 1fr;
+  }
+}
+
