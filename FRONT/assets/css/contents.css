@@ -1519,7 +1519,7 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr td {
   padding: 18px 22px;
 }
-.tableDefault tbody tr td:has(input[type=text]), .tableDefault tbody tr td:has(textarea) {
+.tableDefault tbody tr td:has(input[type=text]), .tableDefault tbody tr td:has(select), .tableDefault tbody tr td:has(textarea) {
   padding: 12px;
 }
 .tableDefault tbody tr td input,
@@ -1548,6 +1548,36 @@ button[class*=btn][type=button] {
 }
 .tableDefault tbody tr td input.timeInput {
   background: url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center/auto;
+}
+.tableDefault tbody tr td:has(.email) {
+  display: block;
+}
+.tableDefault tbody tr td:has(.email) .inputWrap {
+  display: block;
+}
+.tableDefault tbody tr td .email {
+  width: 100%;
+}
+.tableDefault tbody tr td .email:first-child {
+  display: flex;
+}
+.tableDefault tbody tr td .email:first-child::after {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  content: "@";
+  margin: 0 8px;
+}
+@media screen and (min-width: 1160px) {
+  .tableDefault tbody tr td .email:first-child::after {
+    margin: 0 8px;
+  }
+}
+.tableDefault tbody tr td .email:first-child input {
+  flex-basis: calc(100% - 22px);
+}
+.tableDefault tbody tr td .email * {
+  width: 100%;
 }
 .tableDefault tbody tr td .prevFileInput {
   display: flex;
@@ -1720,6 +1750,9 @@ button[class*=btn][type=button] {
 [class*=table][class*=boardList] tbody tr td {
   padding: 10px 8px;
 }
+[class*=table][class*=boardList] tbody tr td:has(.cellTit) {
+  padding: 10px 8px;
+}
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] tbody tr td {
     display: table-cell;
@@ -1881,28 +1914,6 @@ button[class*=btn][type=button] {
 }
 [class*=table][class*=inputMax] .inputWrap .phone input {
   width: calc((100% - 96px) / 3);
-}
-[class*=table][class*=inputMax] .inputWrap .email {
-  margin: 0;
-  width: calc((100% - 28px) / 2);
-}
-[class*=table][class*=inputMax] .inputWrap .email:first-child {
-  display: flex;
-}
-[class*=table][class*=inputMax] .inputWrap .email:first-child::after {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  content: "@";
-  margin: 0 8px;
-}
-@media screen and (min-width: 1160px) {
-  [class*=table][class*=inputMax] .inputWrap .email:first-child::after {
-    margin: 0 8px;
-  }
-}
-[class*=table][class*=inputMax] .inputWrap .email * {
-  width: 100%;
 }
 [class*=table][class*=inputMax] .inputWrap input {
   flex: 1 0 auto;

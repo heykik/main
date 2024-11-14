@@ -1530,6 +1530,7 @@ button[class*="btn"][type="button"]{
             td{
                 padding:18px 22px;
                 &:has(input[type="text"]),
+                &:has(select),
                 &:has(textarea){
                     padding:12px;
                 }
@@ -1556,6 +1557,34 @@ button[class*="btn"][type="button"]{
                     }
                     &.timeInput{
                         background:url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center  / auto;
+                    }
+                }
+                &:has(.email){
+                    display:block;
+                    .inputWrap{
+                        display:block;
+                    }
+                }
+                .email{
+                    width:100%;
+                    &:first-child{
+                        display:flex;
+                        &::after{
+                            display:inline-flex;
+                            align-items:center;
+                            justify-content:center;
+                            content:"@";
+                            margin:0 8px;
+                            @media screen and (min-width:1160px) {
+                                margin:0 8px;
+                            }
+                        }
+                        input{
+                            flex-basis:calc(100% - 22px);
+                        }
+                    }
+                    *{
+                        width:100%;
                     }
                 }
                 .prevFileInput{
@@ -1721,6 +1750,9 @@ button[class*="btn"][type="button"]{
             }
             td{
                 padding:10px 8px;
+                &:has(.cellTit){
+                    padding:10px 8px;
+                }
                 @media screen and (min-width:1160px) {
                     display:table-cell;
                     padding:15px 12px;
@@ -1874,26 +1906,6 @@ button[class*="btn"][type="button"]{
             }
             input{
                 width:calc((100% - ((48px + 48px))) / 3 );
-            }
-        }
-        .email{
-            margin:0;
-            width:calc((100% - 28px) / 2);
-            &:first-child{
-                display:flex;
-                &::after{
-                    display:inline-flex;
-                    align-items:center;
-                    justify-content:center;
-                    content:"@";
-                    margin:0 8px;
-                    @media screen and (min-width:1160px) {
-                        margin:0 8px;
-                    }
-                }
-            }
-            *{
-                width:100%;
             }
         }
         input{
@@ -5745,7 +5757,7 @@ input {
     }
 }
 
-/* 아 하기 싫어 */
+/* 회원서비스 */
 .member {
     position: relative;
     padding: 80px 0 !important;
