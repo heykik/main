@@ -5212,7 +5212,8 @@ input[disabled] {
 
 /* 본부 소개 */
 .titInfo {
-  margin-top: -48px;
+  margin-top: 32px;
+  letter-spacing: -0.6px;
   line-height: 1.5;
   letter-spacing: -0.6px;
   font-size: 20px;
@@ -5442,7 +5443,6 @@ input[disabled] {
 }
 @media (max-width: 1160px) {
   .titInfo {
-    margin-top: -40px;
     font-size: 20px;
   }
   .imgCenter {
@@ -5540,6 +5540,21 @@ input[disabled] {
     top: 20px;
   }
 }
+@media (max-width: 390px) {
+  .opeGoalBox div[class^=goal] {
+    font-size: 15px;
+  }
+  .opeGoalBox div[class^=goal0] {
+    padding: 8px 0 8px 80px;
+  }
+  .opeGoalBox div[class^=goal0]::before {
+    width: 60px;
+    height: 60px;
+  }
+  .borderBoxes .borderBox p {
+    font-size: 17px;
+  }
+}
 /* 포털 소개 */
 .centerTit {
   text-align: center;
@@ -5550,7 +5565,7 @@ input[disabled] {
   font-size: 52px;
 }
 .centerTit .titInfo {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .introduceWrap {
