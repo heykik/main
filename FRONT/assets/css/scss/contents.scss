@@ -527,6 +527,7 @@ button[class*="btn"][type="button"]{
             }
         }
         & + label{
+            flex-shrink:0;
             display:flex;
             align-items:center;
             justify-content:flex-start;
@@ -1555,18 +1556,33 @@ button[class*="btn"][type="button"]{
                     &.dateInput{
                         background:url(../images/icon/ico-calendar-20.svg) no-repeat calc(100% - 10px) center  / auto;
                     }
-                    &.timeInput{
-                        background:url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center  / auto;
-                    }
+                }
+                .timeInput{
+                    padding:6px 10px;
+                    appearance:none;
+                    background:url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center  / auto;
                 }
                 &:has(.email){
-                    display:block;
+                    @media screen and (max-width:1159px) {
+                        display:block;
+                    }
                     .inputWrap{
                         display:block;
+                        @media screen and (min-width:1160px) {
+                            display:flex;
+                            align-items:center;
+                            justify-content:flex-start;
+                            gap:8px;
+                            max-width:initial;
+                        }
                     }
                 }
                 .email{
                     width:100%;
+                    @media screen and (min-width:1160px) {
+                        margin:0;
+                        flex:0 0 146px;
+                    }
                     &:first-child{
                         display:flex;
                         &::after{
@@ -1576,15 +1592,20 @@ button[class*="btn"][type="button"]{
                             content:"@";
                             margin:0 8px;
                             @media screen and (min-width:1160px) {
-                                margin:0 8px;
+                                margin:0 0 0 8px;
                             }
                         }
                         input{
                             flex-basis:calc(100% - 22px);
+                            @media screen and (min-width:1160px) {
+                                max-width:146px;
+                            }
                         }
                     }
                     *{
-                        width:100%;
+                        @media screen and (min-width:1160px) {
+                            max-width:146px;
+                        }
                     }
                 }
                 .prevFileInput{
@@ -1685,6 +1706,7 @@ button[class*="btn"][type="button"]{
                         }
                         &:has(input[type="text"]){
                             flex:1 0 100%;
+                            // background:red;
                             @media screen and (min-width:1160px) {
                                 flex:0 0 auto;
                             }
@@ -1911,6 +1933,11 @@ button[class*="btn"][type="button"]{
         input{
             flex:1 0 auto;
             width:auto;
+        }
+    }
+    .tableCheck{
+        @media screen and (min-width:1160px) {
+            padding:0;
         }
     }
 }
@@ -4983,9 +5010,10 @@ input {
     margin: 28px 0 0;
     .noteSymbol{
         display:flex;
-        align-items:flex-start;
-        justify-content:space-between;
+        align-items:baseline;
+        justify-content:flex-start;
         &::before{
+            flex:0 0 auto;
             display:block;
             content:"※";
             margin-right:4px;
