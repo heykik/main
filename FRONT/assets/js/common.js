@@ -175,14 +175,14 @@ const fn_contents = () => {
 			// dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일']
 		});
 	}
-    $('#myDatePicker .time').timepicker({
-        });
-        4
-        $('#myDatePicker .date').datepicker({
-        });
+    // $('#myDatePicker .time').timepicker({
+    //     });
+    //     4
+    //     $('#myDatePicker .date').datepicker({
+    //     });
         
-    $('#myDatePicker').datepair({
-        })
+    // $('#myDatePicker').datepair({
+    //     })
         
 
     // 아코디언
@@ -198,6 +198,26 @@ const fn_contents = () => {
             $button.toggleClass("on");
         });
     }
+
+    // 정보 및 검색영역 펼치기 / 닫기
+    if ($(window).width() < 1161) {
+        $('.btnDropdown').on('click', ((e) => {
+            if($(e.currentTarget).hasClass('info')){
+                $(e.currentTarget).toggleClass('on');
+                $('.compLoca').slideToggle(200);
+                $(e.currentTarget).text($(e.currentTarget).text() == '정보 숨기기' ? '정보 보기' : '정보 숨기기');
+            }else{
+                $(e.currentTarget).toggleClass('on');
+                $(e.currentTarget).parent().siblings().slideToggle(200);
+                $(e.currentTarget).text($(e.currentTarget).text() == '닫기' ? '펼치기' : '닫기');
+            }
+        }))
+    }
+
+    $('.btnHidden').on('click', ((e) => {
+        $(e.currentTarget).toggleClass('on');
+        $(e.currentTarget).text($(e.currentTarget).text() == '비밀번호 보기' ? '비밀번호 숨기기' : '비밀번호 보기');
+    }))
 }
 
 // 레이어 팝업

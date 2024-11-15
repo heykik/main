@@ -52,7 +52,7 @@ h3 {
 
 /* text ellipsis */
 .txtElip{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         overflow:hidden;
         text-overflow:ellipsis;
         white-space:nowrap;
@@ -86,7 +86,7 @@ h3 {
     gap:0 10px;
     margin-top:32px;
     width:100%;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         justify-content:space-between;
         margin-top:40px;
     }
@@ -94,7 +94,7 @@ h3 {
         flex:0 1 calc(50% - 5px);
     }
     &[class*="resize"] > *{
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             flex:0 0 auto;
         }
     }
@@ -140,11 +140,11 @@ button[class*="btn"][type="button"]{
         width:100%;
     }
     &[class*="pcReFill"]{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             width:auto;
         }
         &[class*="sm"]{
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 padding:10px 8px;
             }
         }
@@ -370,7 +370,7 @@ button[class*="btn"][type="button"]{
         font-weight:var(--regular);
         color:var(--color-dark);
         box-sizing:border-box;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             font-size:20px;
         }
     }
@@ -399,7 +399,7 @@ button[class*="btn"][type="button"]{
             font-size:15px;
             margin-top:4px;
             color:var(--success);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin:8px 0 -2px;
             }
         }
@@ -412,7 +412,7 @@ button[class*="btn"][type="button"]{
             font-size:15px;
             margin-top:4px;
             color:#D50136; //color-danger
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin:8px 0 -2px;
             }
         }
@@ -514,7 +514,7 @@ button[class*="btn"][type="button"]{
     justify-content:flex-start;
     flex:1 1 calc(50% - 16px);
     position:relative;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         flex:1 1 calc((100% / 6) - 16px);
     }
     input[type="checkbox"]{
@@ -789,7 +789,7 @@ button[class*="btn"][type="button"]{
     width:100%;
     max-width:calc(1520px + 24px + 24px);
     min-height:50vh;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         overflow:inherit;
         margin:100px auto 0;
         padding:0 24px 120px;
@@ -805,7 +805,7 @@ button[class*="btn"][type="button"]{
         justify-content:flex-start;
         gap:0 4px;
         padding:0 0 40px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             padding:0;
         }
     }
@@ -845,7 +845,7 @@ button[class*="btn"][type="button"]{
             background:url(../images/common/ico-sitemap-home.svg) no-repeat center center / contain;
         }
     }
-    @media screen and (min-width:1160px){
+    @media screen and (min-width:1161px){
         padding: 40px 0;
     }
 }
@@ -858,7 +858,7 @@ button[class*="btn"][type="button"]{
 /* titles */
 .titL{
     margin-bottom:64px;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         margin: 0 0 80px;
     }
     h2{
@@ -867,7 +867,7 @@ button[class*="btn"][type="button"]{
         font-size:32px;
         font-weight:var(--bold);
         color:var(--color-dark);
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             font-size:40px;
         }
     }
@@ -879,7 +879,7 @@ button[class*="btn"][type="button"]{
 }
 .titM{ //모바일 미정
     margin-bottom:64px;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         margin: 0 0 80px;
     }
     *{
@@ -888,7 +888,7 @@ button[class*="btn"][type="button"]{
         font-size:24px;
         font-weight:var(--bold);
         color:var(--color-dark);
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             font-size:36px;
         }
     }
@@ -898,7 +898,7 @@ button[class*="btn"][type="button"]{
 }
 .titS{
     margin-bottom:16px;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         margin-bottom:20px;
     }
     *{
@@ -907,7 +907,7 @@ button[class*="btn"][type="button"]{
         font-size:20px;   
         font-weight:var(--bold);
         color:var(--color-dark);
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             font-size:24px;
         }
     }
@@ -1026,7 +1026,7 @@ button[class*="btn"][type="button"]{
 /* Layout Default */
 .layout{
     margin:0 auto 64px;
-    @media screen and (min-width:1160px){
+    @media screen and (min-width:1161px){
         margin:0 auto 80px;
     }
     .titL{
@@ -1038,7 +1038,7 @@ button[class*="btn"][type="button"]{
     }
     &:has(.imgTit){
         padding:0 0 40px;
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             padding:0;
         }
     }
@@ -1058,7 +1058,7 @@ button[class*="btn"][type="button"]{
             width:100%;
             background:url(../images/sample-bg.png) no-repeat #000 center center / 100% auto;
         }
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             margin:0 0 120px;
             height:540px;
         }
@@ -1073,7 +1073,7 @@ button[class*="btn"][type="button"]{
                 font-size:40px;
                 font-weight:var(--bold);
                 color:var(--color-white);
-                @media screen and (min-width:1160px){
+                @media screen and (min-width:1161px){
                     font-size:52px;
                 }
             }
@@ -1084,7 +1084,7 @@ button[class*="btn"][type="button"]{
                 letter-spacing:-0.03em;
                 font-weight:var(--regular);
                 color:var(--color-white);
-                @media screen and (min-width:1160px){
+                @media screen and (min-width:1161px){
                     font-size:20px;
                 }
             }
@@ -1097,7 +1097,7 @@ button[class*="btn"][type="button"]{
     }
     .wrap{
         padding:0 0 40px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             display:flex;
             align-items:flex-start;
             justify-content:space-between;
@@ -1107,7 +1107,7 @@ button[class*="btn"][type="button"]{
         > *{
             margin-bottom:32px;
             height:240px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex: 0 1 calc(50% - 16px);
                 border-radius:20px;
                 height:360px;
@@ -1118,13 +1118,13 @@ button[class*="btn"][type="button"]{
                 min-height:auto;
             }
             &.autoW{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     flex-basis:auto;
                 }
             }
             &.autoH{
                 height:auto;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                 }
             }
         }
@@ -1139,11 +1139,11 @@ button[class*="btn"][type="button"]{
             justify-content:space-between;
         }
         &.split2{
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex-wrap:wrap;
             }
             > *{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     flex:1 1 calc((100% - 32px) / 2);
                 }
             }
@@ -1165,12 +1165,12 @@ button[class*="btn"][type="button"]{
         font-size:17px;
         font-weight:var(--regular);
         color:var(--color-text);
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             font-size:20px;
         }
         &:not(:last-child){
             margin-bottom:20px;
-            @media screen and (min-width:1160px){
+            @media screen and (min-width:1161px){
                 margin-bottom:20px;
             }
         }
@@ -1196,7 +1196,7 @@ button[class*="btn"][type="button"]{
         color:var(--gray60);
         &:not(:last-child){
             margin-bottom:4px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
             }
         }
     }
@@ -1208,7 +1208,7 @@ button[class*="btn"][type="button"]{
             justify-content:flex-start;
             gap:10px 8px;            
             width:100%;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 gap:16px 8px;
             }
             strong{
@@ -1403,7 +1403,7 @@ button[class*="btn"][type="button"]{
 /* paging */
 .paging{
     margin-top:34px;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         margin-top:30px;
     }
     .pageBox{
@@ -1428,7 +1428,7 @@ button[class*="btn"][type="button"]{
             &[class*="Last"]{
                 background:url(../images/icon/ico-dubbleArrow-gray-right.svg) no-repeat center / auto;
             }
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 width:40px;
                 height:40px;
             }
@@ -1449,7 +1449,7 @@ button[class*="btn"][type="button"]{
                 line-height: 30px;
                 font-size: 17px;
                 color: var(--text-color);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     width:40px;
                     height:40px;
                     line-height: 40px;
@@ -1461,7 +1461,7 @@ button[class*="btn"][type="button"]{
             }
         }
     }
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
 
     }
 }
@@ -1491,7 +1491,7 @@ button[class*="btn"][type="button"]{
         .bgTable{
             background:var(--table-bg);
             &[class*="pcRest"]{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     background-color:initial;
                 }
             }
@@ -1503,7 +1503,7 @@ button[class*="btn"][type="button"]{
         @media screen and (max-width:1159px) {
             display:block;                
         }
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             // display:inline-table;
         }
         tr{
@@ -1520,7 +1520,7 @@ button[class*="btn"][type="button"]{
                 line-height:1.2;
                 font-size:17px;
                 color:var(--color-dark);
-                @media screen and (min-width:1160px){
+                @media screen and (min-width:1161px){
                     display:table-cell;
                     min-height:56px;
                 }
@@ -1532,7 +1532,7 @@ button[class*="btn"][type="button"]{
                 padding:12px 8px;
                 font-weight:var(--bold);
                 background:var(--table-bg);
-                @media screen and (min-width:1160px){
+                @media screen and (min-width:1161px){
                     border-right:1px solid var(--border-color);
                     width:200px;
                     text-align:center;
@@ -1586,7 +1586,7 @@ button[class*="btn"][type="button"]{
                     .inputWrap{
                         // display:block;
                         flex-wrap:wrap;
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                             display:flex;
                             align-items:center;
                             justify-content:flex-start;
@@ -1597,7 +1597,7 @@ button[class*="btn"][type="button"]{
                 }
                 .email{
                     width:100%;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         margin:0;
                         flex:0 0 146px;
                     }
@@ -1612,13 +1612,13 @@ button[class*="btn"][type="button"]{
                         }
                         input{
                             flex-basis:calc(100% - 22px);
-                            @media screen and (min-width:1160px) {
+                            @media screen and (min-width:1161px) {
                                 max-width:146px;
                             }
                         }
                     }
                     *{
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                             max-width:146px;
                         }
                     }
@@ -1631,12 +1631,12 @@ button[class*="btn"][type="button"]{
                     gap:0 8px;
                     position:relative;
                     margin:8px 0 0;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                     }
                     div{
                         flex-grow:1;
                         max-width:320px;
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                         }
                     }
                     input{
@@ -1659,7 +1659,7 @@ button[class*="btn"][type="button"]{
                     min-height:168px;
                     font-family:inherit;
                     resize:none;
-                    @media screen and (min-width:1160px){
+                    @media screen and (min-width:1161px){
                         min-height:240px;
                         resize:inherit;
                     }
@@ -1696,7 +1696,7 @@ button[class*="btn"][type="button"]{
                     line-height:1.2;
                     letter-spacing:-0.03em;
                 }
-                @media screen and (min-width:1160px){
+                @media screen and (min-width:1161px){
                     width:auto;
                     &:not(:last-child){
                         border-right:1px solid vaR(--table-border);
@@ -1709,21 +1709,21 @@ button[class*="btn"][type="button"]{
                     justify-content:space-between;
                     gap: 16px;
                     padding: 6px 10px;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         justify-content:flex-start;
                     }
                     .checkBox{
                         flex: 1 0 calc(50% - 16px);
                         margin:0;
                         padding:0;
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                             flex:0 0 164px;
                         }
                         &:has(input[type="text"]){
                             flex:1 0 100%;
                             gap:8px;
                             min-width:0;
-                            @media screen and (min-width:1160px) {
+                            @media screen and (min-width:1161px) {
                                 flex:0 0 auto;
                             }
                             .inputWrap{
@@ -1733,7 +1733,7 @@ button[class*="btn"][type="button"]{
                             input[type="text"]{
                                 flex:0 1 auto;
                                 min-width:0;
-                                @media screen and (min-width:1160px) {
+                                @media screen and (min-width:1161px) {
                                     width:320px;
                                 }
                             }
@@ -1743,11 +1743,11 @@ button[class*="btn"][type="button"]{
             }
             .hMin240{
                 min-height:168px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     min-height:216px;
                 }
             }
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 display:table-row;
             }
         }
@@ -1757,7 +1757,7 @@ button[class*="btn"][type="button"]{
 /* tableBaord */
 [class*="table"][class*="boardList"]{
     thead{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             border-bottom:1px solid var(--talbe-border);
             width:100%;
             background:var(--table-bg);
@@ -1779,24 +1779,24 @@ button[class*="btn"][type="button"]{
     }
     tbody{
         border-bottom:1px solid var(--color-dark);
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             border-bottom:1px solid var(--table-border);
         }
         tr{
             &:not(:last-child){
                 border-bottom:1px solid var(--color-dark);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     border-bottom:1px solid var(--table-border);
                 }
             }
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
             }
             td{
                 padding:10px 8px;
                 &:has(.cellTit){
                     padding:10px 8px;
                 }
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     display:table-cell;
                     padding:15px 12px;
                     vertical-align:middle;
@@ -1822,14 +1822,14 @@ button[class*="btn"][type="button"]{
                     font-weight:var(--bold);
                     color:var(--color-dark);
                     box-sizing:content-box;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         display:none;
                     }
                 }
                 p{
                     padding:0;
                     line-height:1.5;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         padding:0;
                     }
                 }
@@ -1847,7 +1847,7 @@ button[class*="btn"][type="button"]{
                     -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
                     -webkit-line-clamp: 2;        /* 표시할 줄 수 (여기서는 2줄) */
                     text-decoration-color:var(--color-text);
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         margin:0;
                     }
                     &:hover,
@@ -1858,12 +1858,12 @@ button[class*="btn"][type="button"]{
                     }
                 }
                 &:not(:has(.titHover)){
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         text-align:center;
                     }
                 }
                 .inputWrap{
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         display:flex;
                         align-items:center;
                         justify-content:flex-start;
@@ -1872,7 +1872,7 @@ button[class*="btn"][type="button"]{
                 }
                 .email{
                     margin:0 0 8px;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         flex:1 1 132px;
                         margin:0;
                     }
@@ -1884,7 +1884,7 @@ button[class*="btn"][type="button"]{
                         height:32px;
                         font-size:inherit;
                         background:#fff;
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                             width:132px;
                         }
                     }
@@ -1917,7 +1917,7 @@ button[class*="btn"][type="button"]{
         }
         tr{
             background:var(--table-bg);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 background:var(--color-white);
             }
             &:nth-child(2n){
@@ -1933,7 +1933,7 @@ button[class*="btn"][type="button"]{
         display:flex;
         align-items:center;
         justify-content:space-between;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             max-width:320px;
         }
         .phone{
@@ -1959,7 +1959,7 @@ button[class*="btn"][type="button"]{
         .email{
             &:not(:last-child){
                 max-width:calc((100% - 34px) / 2);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     max-width:initial;
                 }
                 input{
@@ -1974,7 +1974,7 @@ button[class*="btn"][type="button"]{
         }
     }
     .tableCheck{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             padding:0;
         }
     }
@@ -1983,7 +1983,7 @@ button[class*="btn"][type="button"]{
 /* answer Content */
 .ansCont{
     margin:64px 0 0;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         margin:80px 0 0;
     }
     .ansBox{
@@ -2037,14 +2037,14 @@ button[class*="btn"][type="button"]{
         &.edit{
             textarea{
                 min-height:120px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     font-size:17px;
                 }
             }
         }
         &.new{
             border-style:none;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 padding:40px 0;
             }
             .btnBox{
@@ -2059,57 +2059,57 @@ button[class*="btn"][type="button"]{
 
 /* table cell size */
 .pcW64{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:64px;
     }
 }
 .pcW120{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:120px;
     }
 }
 .pcW240{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:240px;
     }
 }
 .pcW285{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:285px;
     }
 }
 .pcW360{
-    @media screen and (min-width:1160px){
+    @media screen and (min-width:1161px){
         width:360px !important;
     }
 }
 .pcW375{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:375px;
     }
 }
 .pcW420{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:420px;
     }
 }
 .pcW456{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:456px;
     }
 }
 .pcW480{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:480px;
     }
 }
 .pcW556{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:556px;
     }
 }
 .pcW976{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         width:976px;
     }
 }
@@ -2210,7 +2210,7 @@ input {
 }
 .mapCont{
     padding:10px 0;
-    @media screen and (min-width:1160px){
+    @media screen and (min-width:1161px){
         margin-top:10px;
         padding:0;
     }
@@ -2222,7 +2222,7 @@ input {
         height:200px;
         min-height:initial;
         background:var(--gray30);
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             flex:0 0 760px;
             margin:0 auto 0;
             height:360px;
@@ -2231,7 +2231,7 @@ input {
     div:nth-child(2){
         margin:0 auto 0;
         height:initial;
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             min-height:360px;
         }
     }
@@ -2255,19 +2255,19 @@ input {
         overflow:hidden;
         margin:0 0 20px;
         border-radius:24px;
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             flex:0 0 560px;
             margin:56px 0 0;
         }
         &.mainBox{
             background:url(../images/visual-main-bridge-img-mo.png) no-repeat center center / contain;
-            @media screen and (min-width:1160px){
+            @media screen and (min-width:1161px){
                 background:url(../images/visual-main-bridge-img.png) no-repeat center center / contain;
             }
         }
         &.subBox{
             background:url(../images/visual-sub-bridge-img-mo.png) no-repeat center center / contain;
-            @media screen and (min-width:1160px){
+            @media screen and (min-width:1161px){
                 background:url(../images/visual-sub-bridge-img.png) no-repeat center center / contain;
             }
         }
@@ -2280,7 +2280,7 @@ input {
         font-size:20px;
         font-weight:var(--bold);
         color:var(--color-dark);
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             font-size:24px;
         }
     }
@@ -2289,14 +2289,14 @@ input {
         div:last-child{
             margin:0;
         }
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             flex-grow:1;
         }
     }
 }
 .infoCont{
     .wrap{
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             flex-direction:row-reverse;
         }
     }
@@ -2327,7 +2327,7 @@ input {
         font-size:20px;
         font-weight:var(--bold);
         color:var(--color-dark);
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             font-size:24px;
         }
     }
@@ -2347,7 +2347,7 @@ input {
     }
     .btnBox{
         margin:16px auto 0;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
         }
     }
 }
@@ -2360,7 +2360,7 @@ input {
             border-radius:20px;
             height:210px;
             background:var(--gray30);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex-basis:680px;
                 height:360px;
             }
@@ -2414,14 +2414,14 @@ input {
 .testCont{
     .tableDefault{
         padding-bottom:40px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             padding-bottom:160px;
         }
         tbody{
             tr{
                 td{
                     vertical-align:middle;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         padding:16px 18px;
                     }
                     &:has(.txtDotList){
@@ -2488,7 +2488,7 @@ input {
         @media screen and (min-width:767px) {
             flex:0 0 calc((100% - 32px) / 2);
         }
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex:0 0 calc((100% - 32px - 32px) / 3);
         }
         .imgWrap{
@@ -2532,7 +2532,7 @@ input {
             margin:0 24px;
             padding:16px 0 20px;
             border-bottom:1px solid var(--gray30);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin:0 40px;
                 padding:24px 0 20px;
             }
@@ -2572,7 +2572,7 @@ input {
             gap:16px;
             margin:0 24px;
             padding:20px 0 24px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 gap:32px;
                 margin:0 40px;
                 padding:24px 0 20px;
@@ -2588,12 +2588,12 @@ input {
                 flex:1 0 calc(100% - 56px - 16px);
                 margin:0;
                 max-width:calc(100% - 56px - 16px);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     flex:0 0 calc(100% - 56px - 32px);
                     max-width:calc(100% - 56px - 32px);
                 }
                 ul{
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         display:flex;
                         flex-wrap:wrap;
                         align-items:flex-start;
@@ -2604,28 +2604,28 @@ input {
                 }
                 li{
                     width:100%;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                     }
                     &:not(:last-child){
                         margin-bottom:8px;
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                             margin:0;
                         }
                     }
                     &:nth-child(odd){
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                             flex:0 0 96px;
                         }
                     }
                     &:nth-child(even){
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                             flex:0 0 calc(100% - 96px - 8px);
                             max-width:calc(100% - 96px - 8px);
                         }
                     }                 
                 }
                 span{
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         overflow:hidden;
                         text-overflow:ellipsis;
                         white-space:nowrap;
@@ -2653,7 +2653,7 @@ input {
     ul{
         .overListBox{
             margin-bottom:24px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin-bottom:0;
             }
             &:last-child{
@@ -2681,7 +2681,7 @@ input {
                     width:8px;
                     height:57px;
                     background:url(../images/visual-arrow-angle-red.svg) no-repeat center bottom / 100% auto;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         margin:-6px auto 4px;
                         height:68px;
                     }
@@ -2717,7 +2717,7 @@ input {
 .consultingCont{
     .topCont{
         margin:0 auto 24px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             display:flex;
             align-items:center;
             justify-content:space-between;
@@ -2734,7 +2734,7 @@ input {
             padding:24px;
             border-radius:20px;
             background: var(--gray5); 
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex: 0 0 calc((100% - 112px) / 2 );
                 padding:40px 60px;
             }
@@ -2751,7 +2751,7 @@ input {
             }
             &:last-child{
                 margin-top:72px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin:0;
                 }
                 &::before{
@@ -2764,7 +2764,7 @@ input {
                     height:28px;
                     background:url(../images/visual-arrow-dot-red.svg) no-repeat center center / contain;
                     transform:translate(-50%, -100%);
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         top:50%;
                         left:-56px;
                         transform:rotate(-90deg) translate(50%, -50%);
@@ -2786,7 +2786,7 @@ input {
         padding:16px;
         border:1px solid var(--gray30);
         border-radius:16px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             display:flex;
             align-items:center;
             justify-content:space-between;
@@ -2794,7 +2794,7 @@ input {
             padding:30px 66px;
         }
         .centerBox{
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex:1 0 744px;
                 display:flex;
                 align-items: center;
@@ -2809,7 +2809,7 @@ input {
             margin:0 auto;
             width:150px;
             height:68px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 width:220px;
                 height:92px;
                 margin:0;
@@ -2825,7 +2825,7 @@ input {
                 height:289px;
                 background:url(../images/visual-line-long-red-mo.svg)no-repeat center center / contain;
                 transform:translate(50%, 0);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     width:86px;
                     height:328px;
                     background:url(../images/visual-arrow-gray-dash-middle-pc.svg)no-repeat center center / contain;
@@ -2843,7 +2843,7 @@ input {
             width:150px;
             height:68px;
             background:var(--color-red);            
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin:0 auto 0;
                 width:220px;
                 height:92px;
@@ -2856,7 +2856,7 @@ input {
                 font-size:17px;
                 font-weight:var(--bold);
                 color:var(--color-white);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     font-size:20px;
                 }
             }
@@ -2868,7 +2868,7 @@ input {
                 width:14px;
                 height:50px;
                 background:url(../images/visual-arrow-line-angle-red.svg) no-repeat top center / auto;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     height:74px;
                 }
             }
@@ -2881,7 +2881,7 @@ input {
                 right:calc(50% + 12px);
                 bottom:4px;
                 transform:rotate(180deg) translate(-50%, -100%);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                 
                 }
             }
@@ -2897,7 +2897,7 @@ input {
             font-weight:var(--regular);
             color:var(--text-color);
             white-space:nowrap;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 font-size:19px;
             }
         }
@@ -2912,7 +2912,7 @@ input {
             height:68px;
             transform:translate(-50%, -100%);
             background:var(--gray5);            
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 top:-75px;
                 width:220px;
                 height:92px;
@@ -2922,7 +2922,7 @@ input {
                 font-size:17px;
                 font-weight:var(--bold);
                 color:var(--color-dark);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     font-size:20px;
                 }
             }
@@ -2951,7 +2951,7 @@ input {
             bottom:-132px;
             left:50%;
             transform:translate(-50%, 100%);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 bottom:-178px;
             }
         }
@@ -2966,7 +2966,7 @@ input {
             height:68px;
             transform:translate(-50%, 100%);
             background:var(--gray5);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 bottom:-75px;
                 width:220px;
                 height:92px;
@@ -2982,7 +2982,7 @@ input {
                 width:14px;
                 height:50px;
                 background:url(../images/visual-arrow-line-angle-darkRed.svg) no-repeat center top / auto;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     height:74px;
                 }
             }
@@ -2990,7 +2990,7 @@ input {
                 font-size:17px;
                 font-weight:var(--bold);
                 color:var(--color-dark);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     font-size:20px;
                 }
             }  
@@ -3004,7 +3004,7 @@ input {
                 height:118px;
                 background:url(../images/visual-arrow-gray-dash-short-mo.svg)no-repeat center center / contain;
                 transform:translate(-100%, -100%);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     width:106px;
                     height:178px;
                     background:url(../images/visual-arrow-gray-dash-middle.svg)no-repeat center center / contain;
@@ -3015,7 +3015,7 @@ input {
             position:relative;
             max-width:fit-content;
             margin:0 auto;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 display:flex;
                 align-items:flex-start;
                 justify-content:center;
@@ -3031,7 +3031,7 @@ input {
                 height:357px;
                 transform:translateX(-100%);
                 background:url(../images/visual-arrow-gray-dash-mo.svg)no-repeat center center / contain;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     bottom:58%;
                     left:-12px;
                     width:112px;
@@ -3041,7 +3041,7 @@ input {
                 }
             }
             &::after{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     position:absolute;
                     bottom:0;
                     right:71px;
@@ -3057,7 +3057,7 @@ input {
         .unistTxt{
             margin:254px auto 0;
             text-align:center;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 position:relative;
                 margin:0 66px 0 0;
             }
@@ -3084,7 +3084,7 @@ input {
                 width:14px;
                 height:36px;
                 background:url(../images/visual-arrow-line-angle-red.svg) no-repeat center top / auto;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     position:absolute;
                     top:40px;
                     right:-8px;
@@ -3117,7 +3117,7 @@ input {
         .unistArrTxt{
             bottom:100px;
             left:-44px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 bottom:-38px;
                 left:auto;
                 right:48px;
@@ -3127,7 +3127,7 @@ input {
     }
     .listBox{
         position:relative;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex:0 0 566px;
         }
         &::before{
@@ -3140,7 +3140,7 @@ input {
             width:1px;
             height:calc(100% - 50px);
             background:var(--color-red);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 top:24px;
             }
         }
@@ -3155,7 +3155,7 @@ input {
             font-size:15px;
             font-weight:var(--regular);
             color:var(--text-color);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 font-size:17px;
             }
             &::before{
@@ -3208,11 +3208,11 @@ input {
 }
 .cohortCont{
     margin:24px auto 0;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         margin:30px auto 0;
     }
     ul{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             display:flex;
             flex-wrap:wrap;
             align-items:flex-start;
@@ -3221,7 +3221,7 @@ input {
     }
     li{
         margin-bottom:24px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex:0 0 calc((100% - 32px) / 2);
         }
     }
@@ -3230,7 +3230,7 @@ input {
         height:200px;   
         background: var(--gray30);
         border-radius:20px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             height:360px;
         }
     }
@@ -3247,7 +3247,7 @@ input {
             font-size:36px;
             font-weight:var(--bold);
             color:var(--color-dark);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 padding:40px 0 60px;
                 font-size:52px;
             }
@@ -3256,7 +3256,7 @@ input {
     .titM{
         h5{
             font-size:24px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 font-size:36px;
             }
         }
@@ -3266,7 +3266,7 @@ input {
         margin:0 -16px 0;
         padding:64px 16px 0;
         background:url(../images/bg-structure.png) no-repeat top center / 100%;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             margin:0 auto 68px;
             padding:80px 0 0;
             background:initial;
@@ -3294,7 +3294,7 @@ input {
             width:100vw;
             height:78px;
             background:url(../images/visual-arrow-large.svg) no-repeat center top / auto;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin:0 auto;
                 width:726px;
                 height:152px;            
@@ -3305,7 +3305,7 @@ input {
             padding:40px 0;
             border-radius:40px;
             background:#fff;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin:0;
                 padding:70px 0;
             }
@@ -3322,7 +3322,7 @@ input {
             width:220px;
             height:100px;
             background:var(--gray5);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin: 0 auto 32px;
                 width:240px;
                 height:110px;
@@ -3338,7 +3338,7 @@ input {
                 font-size:17px;                
                 font-weight:var(--medium);
                 color:var(--color-dark);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     font-size:19px;
                 }
                 &::before{
@@ -3359,7 +3359,7 @@ input {
                 margin:0 auto;
                 width:100%;
                 max-width:326px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                 }
             }
             .pcV{
@@ -3374,7 +3374,7 @@ input {
         align-items:center;
         justify-content:center;
         gap:10px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex-direction:row;
             margin-top:-12px;
         }
@@ -3387,7 +3387,7 @@ input {
             width:220px;
             height:60px;            
             background:var(--table-bg);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 height:70px;
             }
             p{
@@ -3399,7 +3399,7 @@ input {
                 font-size:15px;
                 font-weight:var(--medium);
                 color:var(--color-dark);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     font-size:19px;
                 }
                 &::before{
@@ -3420,7 +3420,7 @@ input {
         gap:16px;
         margin:0 0 64px;
         padding:0 0 40px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             gap:0 24px;
         }
         li{
@@ -3436,7 +3436,7 @@ input {
             color:var(--color-dark);
             background:var(--gray5);
             box-sizing:border-box;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex:1 0 calc((100% - (32px * 5)) / 6);
                 height:240px;
                 font-size:24px;
@@ -3452,7 +3452,7 @@ input {
                 border-radius:100%;
                 width:80px;
                 height:80px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin:0 auto 16px;
                     width:100px;
                     height:100px;
@@ -3482,7 +3482,7 @@ input {
     }
     .needWrap{
         margin-bottom:104px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             margin-bottom:120px;
         }
         .highWrap{
@@ -3497,7 +3497,7 @@ input {
                 height:40px;
                 background:url(../images/visual-shCard-dash.svg) no-repeat center bottom / auto;
                 transform:translate(-50%, 100%);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     position:static;
                     margin:24px auto 18px;
                     width:1036px;
@@ -3519,7 +3519,7 @@ input {
                 height:64px;
                 background:var(--table-bg);
                 box-sizing:border-box;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin:0 auto;
                     height:74px;
                     font-size:24px;
@@ -3536,7 +3536,7 @@ input {
         .wrap{
             flex-direction:column;
             gap:24px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex-direction:row;
             }            
             .shCard{
@@ -3551,7 +3551,7 @@ input {
                 width:100%;
                 height:140px;
                 box-shadow:2px 2px 16px rgba(0, 0, 0, 0.1);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     padding:32px 60px;
                     width:initial;
                     height:200px;
@@ -3567,7 +3567,7 @@ input {
                         height:25px;
                         background:url(../images/visual-shCard-dash.svg) no-repeat center bottom / auto;
                         transform:translate(-50%, 100%);
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                             content:none;
                         }
                     }
@@ -3581,7 +3581,7 @@ input {
                     font-size:20px;
                     font-weight:var(--bold);
                     color:var(--color-red);
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         font-size:24px;
                     }
                 }
@@ -3591,7 +3591,7 @@ input {
                     font-size:17px;
                     font-weight:var(--regular);
                     color:var(--color-text);
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         font-size:20px;
                     }
                 }
@@ -3604,7 +3604,7 @@ input {
     margin:0 -16px;
     padding:40px 16px;
     background:var(--gray5);
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         margin:0;
         padding:40px 0;
         background:initial;            
@@ -3616,7 +3616,7 @@ input {
         width:100vw;
         height:100%;
         background:var(--gray5);
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             content:"";
             left:50%;
             transform:translateX(-50%);
@@ -3630,7 +3630,7 @@ input {
         margin-bottom:64px;
         padding-top:0;
         background:initial;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             margin-bottom:80px;
             &::before{
                 content:none;
@@ -3641,7 +3641,7 @@ input {
         flex-direction:column;
         gap:24px;
         padding:0;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex-direction:row;
         }
         [class*="bgIco"]{
@@ -3653,7 +3653,7 @@ input {
             height:auto;
             background:var(--color-white);
             box-shadow:2px 2px 16px rgba(0, 0, 0, 0.1);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin:0;
             }
             &:last-child{
@@ -3661,7 +3661,7 @@ input {
             }
             &.oneLine{
                 padding:40px 32px 30px;
-                @media screen and (min-width:1160px){
+                @media screen and (min-width:1161px){
                     padding:40px 32px;
                 }
                 p{
@@ -3669,7 +3669,7 @@ input {
                 }
                 .txt{
                     margin:6px auto 36px;
-                    @media screen and (min-width:1160px){
+                    @media screen and (min-width:1161px){
                         margin:4px auto 46px;
                     }
                 }
@@ -3698,7 +3698,7 @@ input {
                 margin:0 0 0 auto;
                 width:60px;
                 height:60px;
-                @media screen and (min-width:1160px){
+                @media screen and (min-width:1161px){
                     width:80px;
                     height:80px;
                 }
@@ -3831,7 +3831,7 @@ input {
         justify-content:space-between;
         margin-bottom:0;
     }
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         display:block;
         padding:80px 0 40px;
     }
@@ -3847,7 +3847,7 @@ input {
         @media screen and (min-width:720px) {
             flex-basis:calc(50% - 32px);
         }
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex-direction:row;
             gap:0 80px;
             margin:16px 0 0;
@@ -3855,7 +3855,7 @@ input {
         }
         div{
             margin-bottom:0;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 height:320px;
             }
         }
@@ -3866,7 +3866,7 @@ input {
             width:100%;
             max-width:520px;
             height:200px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex:0 0 520px;
                 height:320px;
             }
@@ -3880,7 +3880,7 @@ input {
                 width:280px;
                 height:160px;
                 background:#F3F8FE;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     bottom:-40px;
                 }
             }
@@ -3889,7 +3889,7 @@ input {
             padding-bottom:40px;
             height:auto;
             strong{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     font-size:24px;
                 }
             }
@@ -3925,17 +3925,17 @@ input {
         &:nth-child(odd){
             flex-direction:column-reverse;
             justify-content:flex-end;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex-direction:row;
             }
             .imgWrap{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin-right:60px;
                     margin-bottom:0;
                 }
                 &::before{
                     right:-16px;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         right:-60px;
                     }
                 }
@@ -3944,12 +3944,12 @@ input {
         &:nth-child(even){
             justify-content:flex-start;
             .imgWrap{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin-left:60px;
                 }
                 &::before{
                     left:-16px;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         left:-60px;
                     }
                 }
@@ -3961,13 +3961,13 @@ input {
 /* 디지털 혁신 지원 서비스 > 기술지원서비스 */
 .serviceList{
     flex-direction:column-reverse;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         flex-direction:row;
     }
     [class*="flexBox"]{
         flex-wrap:wrap;
         width:100%;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex-wrap:nowrap;
             width:auto;
         }
@@ -3978,20 +3978,20 @@ input {
             font-size:17px;
             font-weight:var(--regular);
             color:var(--text-color);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 width:auto;
             }
         }
         .btnBox{
             margin:0 0 32px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin:0;
                 width:auto;
             }
             .btn{
                 white-space:nowrap;
                 padding:16px 0;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     padding:16px 12px;
                 }
             }
@@ -4003,7 +4003,7 @@ input {
 .matchServ{
     .listCont{
         margin-bottom:40px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             width:600px;
         }
     }
@@ -4012,20 +4012,20 @@ input {
         li{
             p{
                 font-size:17px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     font-size:20px;
                 }
             }
         }
     }
     .detailWrap{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             width: 820px;    
         }
         > div{
             &:first-child{
                 margin:0 0 24px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin: 0 0 32px;
                 }
             }
@@ -4047,14 +4047,14 @@ input {
     border:1px solid var(--gray30);
     background:var(--gray5);
     border-top-color:var(--gray80);
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         display:flex;
         align-items:stretch;
         justify-content:space-between;
     }
     .companyWrap{
         padding:24px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex:0 0 400px;
             border-right:1px solid var(--gray30);
             background:var(--color-white);
@@ -4071,12 +4071,12 @@ input {
                 justify-content:flex-start;
                 flex:1 0 auto;
                 gap:10px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     flex-direction:column;
                 }
                 img{
                     width:40px;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         width:auto;
                     }
                 }
@@ -4088,7 +4088,7 @@ input {
                 }
                 .compInfo{
                     display:none;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         display:block;
                         text-align:center;
                         line-height:1.5;
@@ -4100,7 +4100,7 @@ input {
                 }
             }
             button{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     display:none;
                 }
             }
@@ -4109,7 +4109,7 @@ input {
             padding:16px;
             border-radius:10px;
             background:var(--color-white);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 padding:16px 24px;
                 background:var(--table-bg);
             }
@@ -4120,7 +4120,7 @@ input {
                     font-size:15px;
                     &:not(:last-child){
                         margin:0 0 10px;
-                        @media screen and (min-width:1160px) {
+                        @media screen and (min-width:1161px) {
                             margin:0 0 16px;
                         }
                     }
@@ -4133,7 +4133,7 @@ input {
     }
     .chatWrap{
         padding-top:0;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex:1 0 auto;
         }
         .chatTit{
@@ -4142,7 +4142,7 @@ input {
             border-bottom:1px solid var(--gray30);            
             background:vaR(--color-white);
             box-sizing:border-box;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 padding:24px 32px;
             }
             p{
@@ -4163,7 +4163,7 @@ input {
         overflow-y:auto;
         padding:24px;
         height:523px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             padding:24px 32px;
             height:459px;
         }
@@ -4195,12 +4195,12 @@ input {
                 align-items:center;
                 gap:8px;
                 margin:0 0 8px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     align-items:flex-start;
                 }
                 img{
                     width:40px;
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         width:60px;
                     }
                 }
@@ -4219,7 +4219,7 @@ input {
                 &:not(:last-child){
                     margin-bottom:12px;
                 }
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     &:nth-child(2){
                         margin-top:-28px;
                     }
@@ -4249,7 +4249,7 @@ input {
         .chatMe{
             .detail{
                 justify-content:flex-end;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin-right:70px;   
                 }
                 p{
@@ -4268,7 +4268,7 @@ input {
         .chatComp{
             .detail{
                 justify-content:flex-start;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin-left:70px;
                 }
                 p{
@@ -4315,7 +4315,7 @@ input {
     border-radius:16px;
     background:var(--gray5);
     .cateWrap{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             display:flex;
             align-items:flex-start;
             justify-content:flex-start;
@@ -4326,19 +4326,19 @@ input {
             border-bottom:1px solid var(--gray30);
         }
         &:first-child{
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 padding:0 0 24px;
             }
             .tit{
                 padding:0 0 18px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     padding:0;
                 }
             }
         }
         &:has(input[type="text"]){
             .tit{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     padding:14px 0 0;
                 }
             }
@@ -4348,7 +4348,7 @@ input {
             align-items:center;
             justify-content:space-between;
             padding:18px 0;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex:0 1 58px;
                 white-space:nowrap;
                 padding:0;
@@ -4360,7 +4360,7 @@ input {
                 font-weight:var(--bold);
                 color:var(--color-dark);
             }
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 .btnDropdown{
                     display:none;
                 }
@@ -4368,13 +4368,14 @@ input {
         }
         .inputBox{
             padding:0 0 20px;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
+                display: flex !important;
                 flex-grow:1;
                 white-space:nowrap;
                 padding:0;
             }
             .checkBox{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     flex-grow:0;
                 }
             }
@@ -4396,7 +4397,7 @@ input {
         }
     }
     .resultWrap{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             display:flex;
             flex-wrap:wrap;
             align-items:flex-start;
@@ -4409,7 +4410,7 @@ input {
         margin-top:24px;
         border:1px solid var(--gray30);
         border-radius:20px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex:0 0 calc((100% - 64px) / 3);
             margin:0;
         }
@@ -4443,7 +4444,7 @@ input {
         .txtBox{
             padding:24px;
             box-sizing:border-box;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 padding:24px 40px;
             }
             .prdtNm{
@@ -4457,7 +4458,7 @@ input {
                     font-size:20px;
                     font-weight:var(--bold);
                     color:var(--color-dark);
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         font-size:20px;
                     }
                 }
@@ -4468,7 +4469,7 @@ input {
                     font-size:15px;
                     font-weight:var(--regular);
                     color:var(--gray70);
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         font-size:17px;
                     }
                 }
@@ -4503,7 +4504,7 @@ input {
 
 /* 디지털 혁신 지원 서비스 > 공동장비활용 검색 예약 상세 */
 .prdtWrap{
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         display:flex;
         align-items:flex-start;
         justify-content:space-between;
@@ -4517,7 +4518,7 @@ input {
         margin-bottom:40px;
         border-radius:20px;
         background:var(--gray5);
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex:0 0 550px;
             height:508px;
         }
@@ -4528,13 +4529,13 @@ input {
         }
         p{
            margin-bottom:24px; 
-           @media screen and (min-width:1160px) {
+           @media screen and (min-width:1161px) {
                 font-size:20px;
            }
         }
     }
     .prdtInfoWrap{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex-grow:1;
         }
     }
@@ -4547,7 +4548,7 @@ input {
                 font-weight:var(--regular);
                 color:var(--gray70);
                 background:var(--color-white);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     padding:16px 0;
                     border-right:none;
                     width:146px; 
@@ -4557,7 +4558,7 @@ input {
             }
             td{
                 padding:0 0 10px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     padding:16px 0;
                 }
                 p{
@@ -4565,7 +4566,7 @@ input {
                     line-height:1.5;
                     font-weight:var(--medium);
                     color: var(--color-dark);
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         line-height:1.2;
                     }
                 }
@@ -4578,14 +4579,14 @@ input {
     margin:0;
     .wrap{
         padding:0;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex-wrap:wrap;
             gap:40px 0;
             margin:0;
             padding:0 0 40px;
         }
         *{
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 margin:0;
                 height:auto;
             }
@@ -4617,7 +4618,7 @@ input {
             padding:20px 24px;
             width:100%;
             background:rgba(29, 29, 29, 0.6);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 padding:20px 40px;
             }
             *{
@@ -4628,7 +4629,7 @@ input {
             }
             strong{
                 font-weight:var(--bold);
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     font-size:24px;
                 }
             }
@@ -4659,7 +4660,7 @@ input {
     padding:32px 24px;
     border:1px solid var(--gray30);
     border-radius:8px;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         display:flex;
         align-items:center;
         justify-content:space-between;
@@ -4669,7 +4670,7 @@ input {
         border-color:var(--table-border);
         border-radius:12px;
         background:var(--gray5);
-        @media screen and (min-width:1160px){
+        @media screen and (min-width:1161px){
             margin:120px auto 0;
         }
         dl{
@@ -4681,7 +4682,7 @@ input {
             font-size:20px;
             font-weight:var(--bold);
             color:var(--color-dark);
-            @media screen and (min-width:1160px){
+            @media screen and (min-width:1161px){
                 margin:0 32px 0 0;
             }
         }
@@ -4699,17 +4700,17 @@ input {
                 font-size:inherit;
                 font-weight:inherit;
                 color:inherit;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     display:none;
                 }
             }
-            @media screen and (min-width:1160px){
+            @media screen and (min-width:1161px){
                 align-items:center;
                 margin:0;
             }
             &:not(:last-child){
                 &::after{
-                    @media screen and (min-width:1160px){
+                    @media screen and (min-width:1161px){
                         display:block;
                         content:"";
                         margin:0 24px;
@@ -4725,7 +4726,7 @@ input {
         }
     }
     .descDeft{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             display:flex;
             align-items:center;
             justify-content:flex-start;
@@ -4735,7 +4736,7 @@ input {
         li{
             &:not(:last-child){
                 margin:0 0 16px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin:0;
                 }
             }
@@ -4743,13 +4744,13 @@ input {
         p{
             flex-wrap:nowrap;
             align-items:flex-start;
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 flex:1;
                 width:auto;
             }
             strong{
                 flex-basis:121px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     flex-basis:auto;
                 }
             }
@@ -4758,7 +4759,7 @@ input {
     }
     .btnBox{
         margin:20px 0 0;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             flex:0 1 auto;
             margin:0;
             width:auto;
@@ -4774,7 +4775,7 @@ input {
         overflow:hidden;
         border-radius:20px;
         height:240px;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             height:440px;
         }
         img{
@@ -4809,7 +4810,7 @@ input {
     }
     .descDeft{
         padding:10px 0;
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             padding:24px 0;
         }
         li{
@@ -4824,14 +4825,14 @@ input {
         > div{
             padding:24px 0;
             border-bottom:1px solid var(--gray30);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 display:flex;
                 align-items:flex-start;
                 justify-content:flex-start;
                 gap:40px;
             }
             .titS{
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     flex:0 0 212px;
                 }
             }
@@ -4860,7 +4861,7 @@ input {
     padding:24px;
     border-radius:16px;
     background:var(--gray5);
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         display:flex;
         align-items:flex-start;
         justify-content:space-between;
@@ -4888,7 +4889,7 @@ input {
             width:100%;
             height:1px;
             background:var(--table-border);
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 position:absolute;
                 top:0;
                 right:-24px;
@@ -4899,14 +4900,14 @@ input {
         }
     }
     .txtDotList{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             padding:10px 16px;
         }        
     }    
     .circList{
         padding:10px 0;
         ul{
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 display:flex;
                 align-items:center;
                 justify-content:center;
@@ -4914,14 +4915,14 @@ input {
             }
         }
         li{
-            @media screen and (min-width:1160px) {
+            @media screen and (min-width:1161px) {
                 display:flex;
                 align-items:flex-start;
                 justify-content:center;
             }
             &:not(:last-child){
                 margin:0 auto 24px;
-                @media screen and (min-width:1160px) {
+                @media screen and (min-width:1161px) {
                     margin: 0;
                 }
                 &::after{
@@ -4932,7 +4933,7 @@ input {
                     height:32px;
                     background:url(../images/visual-arrow-dot.svg) no-repeat center center / auto;
                     transform:rotate(90deg);
-                    @media screen and (min-width:1160px) {
+                    @media screen and (min-width:1161px) {
                         margin:36px 0 0 32px;
                         transform:inherit;
                     }
@@ -4962,25 +4963,25 @@ input {
 }
 .inputWrap.boardTop{
     margin-bottom:40px;
-    @media screen and (min-width:1160px) {
+    @media screen and (min-width:1161px) {
         display:flex;
         align-items:center;
         justify-content:flex-end;
         position:relative;
     }
     .inputBox{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             margin-bottom:0;
         }
     }
     select{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             margin-right:10px;
             width:120px;            
         }
     }
     input{
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             width:360px;
         }
     }
@@ -4993,7 +4994,7 @@ input {
             height:20px;
             background:url(../images/icon/ico-search-white-20.svg) no-repeat center center / contain;
         }
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             &::before{
                 content:none;
             }
@@ -5033,7 +5034,7 @@ input {
         font-size:24px;
         font-weight:var(--bold);
         color:var(--color-dark);
-        @media screen and (min-width:1160px) {
+        @media screen and (min-width:1161px) {
             font-size:36px;
 
         }
@@ -5904,14 +5905,17 @@ input {
                     input {
                         padding-right: 50px;
                     }
-                    .btnShow {
+                    .btnHidden {
                         position: absolute;
                         top: 12px;
                         right: 16px;
                         width: 24px;
                         height: 24px;
                         text-indent: -9999px;
-                        background: url("../images/icon/ico-visible.svg") no-repeat center/100% auto;
+                        background: url("../images/icon/ico-hidden.svg") no-repeat center/100% auto;
+                        &.on {
+                            background-image: url("../images/icon/ico-visible.svg");
+                        }
                     }
                 }
             }
@@ -6489,20 +6493,20 @@ input {
             color: var( --text-color);
             &:before {
                 position:absolute;
-                content:"";
+                content:"펼치기";
                 top:3px;
                 right:0;
                 width:20px;
                 height:20px;
+                text-indent:-9999px;
                 background:url('../images/icon/ico-acco-arrow-20.svg') no-repeat center / 100% auto;
+                
+            }
+            &.on:before {
+                content:"닫기";
                 transform:rotate(180deg);
                 -webkit-transform:rotate(180deg);
                 -moz-transform:rotate(180deg);
-            }
-            &.on:before {
-                transform:rotate(0);
-                -webkit-transform:rotate(0);
-                -moz-transform:rotate(0);
             }
         }
     }

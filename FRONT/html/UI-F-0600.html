@@ -90,7 +90,7 @@
                                 <img src="../assets/images/sample-img-cardList01.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button>
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -148,7 +148,7 @@
                                 <img src="../assets/images/sample-img-cardList02.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button>
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -206,7 +206,7 @@
                                 <img src="../assets/images/sample-img-cardList03.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button>
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -264,7 +264,7 @@
                                 <img src="../assets/images/sample-img-cardList01.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button>
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -322,7 +322,7 @@
                                 <img src="../assets/images/sample-img-cardList02.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button>
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -380,7 +380,7 @@
                                 <img src="../assets/images/sample-img-cardList03.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button>
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -477,7 +477,11 @@
         $(document).ready(()=>{
             $('.star').on('click', ((e)=>{
                 $(e.currentTarget).toggleClass('on');
-                console.log(e.currentTarget);
+                if($(e.currentTarget).hasClass('on')){
+                    $(e.currentTarget).text('즐겨찾기 해제');
+                }else{
+                    $(e.currentTarget).text('즐겨찾기 등록');
+                }
             }))
         })
     </script>

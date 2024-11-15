@@ -63,7 +63,7 @@ h3 {
 }
 
 /* text ellipsis */
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .txtElip {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -124,7 +124,7 @@ h3 {
   margin-top: 32px;
   width: 100%;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .btnBox {
     justify-content: space-between;
     margin-top: 40px;
@@ -133,7 +133,7 @@ h3 {
 .btnBox[class*=half] > * {
   flex: 0 1 calc(50% - 5px);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .btnBox[class*=resize] > * {
     flex: 0 0 auto;
   }
@@ -158,6 +158,7 @@ button[class*=btn][type=button] {
   justify-content: center;
   padding: 16px 12px;
   border-radius: 8px;
+  width: -moz-max-content;
   width: max-content;
   height: 48px;
   line-height: 1.5;
@@ -181,12 +182,12 @@ button[class*=btn][type=button] {
 .btn[class*=full] {
   width: 100%;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .btn[class*=pcReFill] {
     width: auto;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .btn[class*=pcReFill][class*=sm] {
     padding: 10px 8px;
   }
@@ -405,7 +406,7 @@ button[class*=btn][type=button] {
   color: var(--color-dark);
   box-sizing: border-box;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .inputBox input,
   .inputBox select,
   .inputBox textarea {
@@ -414,7 +415,9 @@ button[class*=btn][type=button] {
 }
 .inputBox select {
   background: url(../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .inputBox input {
   display: flex;
@@ -437,7 +440,7 @@ button[class*=btn][type=button] {
   margin-top: 4px;
   color: var(--success);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .inputBox.success p {
     margin: 8px 0 -2px;
   }
@@ -450,7 +453,7 @@ button[class*=btn][type=button] {
   margin-top: 4px;
   color: #D50136;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .inputBox.error p {
     margin: 8px 0 -2px;
   }
@@ -492,7 +495,9 @@ button[class*=btn][type=button] {
   width: 1px;
   height: 1px;
   opacity: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .radioBox [type=radio]:focus + label {
   outline: 2px solid #000;
@@ -544,7 +549,7 @@ button[class*=btn][type=button] {
   flex: 1 1 calc(50% - 16px);
   position: relative;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .checkBox {
     flex: 1 1 calc(16.6666666667% - 16px);
   }
@@ -560,7 +565,9 @@ button[class*=btn][type=button] {
   height: 1px;
   opacity: 0;
   border-style: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .checkBox input[type=checkbox]:focus + label {
   outline: 2px solid #000;
@@ -796,7 +803,7 @@ button[class*=btn][type=button] {
   max-width: 1568px;
   min-height: 50vh;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   #container {
     overflow: inherit;
     margin: 100px auto 0;
@@ -813,7 +820,7 @@ button[class*=btn][type=button] {
   gap: 0 4px;
   padding: 0 0 40px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .sitemap ul {
     padding: 0;
   }
@@ -852,7 +859,7 @@ button[class*=btn][type=button] {
   text-indent: -9999px;
   background: url(../images/common/ico-sitemap-home.svg) no-repeat center center/contain;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .sitemap {
     padding: 40px 0;
   }
@@ -863,7 +870,7 @@ button[class*=btn][type=button] {
 .titL {
   margin-bottom: 64px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .titL {
     margin: 0 0 80px;
   }
@@ -875,7 +882,7 @@ button[class*=btn][type=button] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .titL h2 {
     font-size: 40px;
   }
@@ -887,7 +894,7 @@ button[class*=btn][type=button] {
 .titM {
   margin-bottom: 64px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .titM {
     margin: 0 0 80px;
   }
@@ -899,7 +906,7 @@ button[class*=btn][type=button] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .titM * {
     font-size: 36px;
   }
@@ -911,7 +918,7 @@ button[class*=btn][type=button] {
 .titS {
   margin-bottom: 16px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .titS {
     margin-bottom: 20px;
   }
@@ -923,7 +930,7 @@ button[class*=btn][type=button] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .titS * {
     font-size: 24px;
   }
@@ -1061,7 +1068,7 @@ button[class*=btn][type=button] {
 .layout {
   margin: 0 auto 64px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout {
     margin: 0 auto 80px;
   }
@@ -1076,7 +1083,7 @@ button[class*=btn][type=button] {
 .layout:has(.imgTit) {
   padding: 0 0 40px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout:has(.imgTit) {
     padding: 0;
   }
@@ -1100,7 +1107,7 @@ button[class*=btn][type=button] {
     background: url(../images/sample-bg.png) no-repeat #000 center center/100% auto;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout .imgTit {
     margin: 0 0 120px;
     height: 540px;
@@ -1117,7 +1124,7 @@ button[class*=btn][type=button] {
   font-weight: var(--bold);
   color: var(--color-white);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout .imgTit .titBox h3 {
     font-size: 52px;
   }
@@ -1130,7 +1137,7 @@ button[class*=btn][type=button] {
   font-weight: var(--regular);
   color: var(--color-white);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout .imgTit .titBox .sub {
     font-size: 20px;
   }
@@ -1141,7 +1148,7 @@ button[class*=btn][type=button] {
 .layout .wrap {
   padding: 0 0 40px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout .wrap {
     display: flex;
     align-items: flex-start;
@@ -1154,7 +1161,7 @@ button[class*=btn][type=button] {
   margin-bottom: 32px;
   height: 240px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout .wrap > * {
     flex: 0 1 calc(50% - 16px);
     border-radius: 20px;
@@ -1166,7 +1173,7 @@ button[class*=btn][type=button] {
   height: auto;
   min-height: auto;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout .wrap > *.autoW {
     flex-basis: auto;
   }
@@ -1184,12 +1191,12 @@ button[class*=btn][type=button] {
   align-items: flex-end;
   justify-content: space-between;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout .wrap.split2 {
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .layout .wrap.split2 > * {
     flex: 1 1 calc((100% - 32px) / 2);
   }
@@ -1210,7 +1217,7 @@ button[class*=btn][type=button] {
   font-weight: var(--regular);
   color: var(--color-text);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .descDeft * {
     font-size: 20px;
   }
@@ -1218,7 +1225,7 @@ button[class*=btn][type=button] {
 .descDeft *:not(:last-child) {
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .descDeft *:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -1251,7 +1258,7 @@ button[class*=btn][type=button] {
   gap: 10px 8px;
   width: 100%;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .descDeft.tag p {
     gap: 16px 8px;
   }
@@ -1387,7 +1394,7 @@ button[class*=btn][type=button] {
 .paging {
   margin-top: 34px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .paging {
     margin-top: 30px;
   }
@@ -1416,7 +1423,7 @@ button[class*=btn][type=button] {
 .paging .pageBox [class*=btn][class*=Last] {
   background: url(../images/icon/ico-dubbleArrow-gray-right.svg) no-repeat center/auto;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .paging .pageBox [class*=btn] {
     width: 40px;
     height: 40px;
@@ -1440,7 +1447,7 @@ button[class*=btn][type=button] {
   font-size: 17px;
   color: var(--text-color);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .paging .pageBox .page * {
     width: 40px;
     height: 40px;
@@ -1480,7 +1487,7 @@ button[class*=btn][type=button] {
 .tableDefault table .bgTable {
   background: var(--table-bg);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault table .bgTable[class*=pcRest] {
     background-color: initial;
   }
@@ -1510,7 +1517,7 @@ button[class*=btn][type=button] {
   font-size: 17px;
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr th,
   .tableDefault tbody tr td {
     display: table-cell;
@@ -1528,7 +1535,7 @@ button[class*=btn][type=button] {
   font-weight: var(--bold);
   background: var(--table-bg);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr th {
     border-right: 1px solid var(--border-color);
     width: 200px;
@@ -1555,6 +1562,9 @@ button[class*=btn][type=button] {
   color: var(--color-dark);
   box-sizing: border-box;
 }
+.tableDefault tbody tr td input::-moz-placeholder, .tableDefault tbody tr td select::-moz-placeholder, .tableDefault tbody tr td textarea::-moz-placeholder {
+  color: var(--color-text);
+}
 .tableDefault tbody tr td input::placeholder,
 .tableDefault tbody tr td select::placeholder,
 .tableDefault tbody tr td textarea::placeholder {
@@ -1568,7 +1578,9 @@ button[class*=btn][type=button] {
 }
 .tableDefault tbody tr td .timeInput {
   padding: 6px 10px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center/auto;
 }
 @media screen and (max-width: 1159px) {
@@ -1579,7 +1591,7 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr td:has(.email) .inputWrap {
   flex-wrap: wrap;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td:has(.email) .inputWrap {
     display: flex;
     align-items: center;
@@ -1591,7 +1603,7 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr td .email {
   width: 100%;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .email {
     margin: 0;
     flex: 0 0 146px;
@@ -1610,12 +1622,12 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr td .email:first-child input {
   flex-basis: calc(100% - 22px);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .email:first-child input {
     max-width: 146px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .email * {
     max-width: 146px;
   }
@@ -1652,7 +1664,7 @@ button[class*=btn][type=button] {
   font-family: inherit;
   resize: none;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td textarea {
     min-height: 240px;
     resize: inherit;
@@ -1689,7 +1701,7 @@ button[class*=btn][type=button] {
   line-height: 1.2;
   letter-spacing: -0.03em;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td {
     width: auto;
   }
@@ -1705,7 +1717,7 @@ button[class*=btn][type=button] {
   gap: 16px;
   padding: 6px 10px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .tableCheck {
     justify-content: flex-start;
   }
@@ -1715,7 +1727,7 @@ button[class*=btn][type=button] {
   margin: 0;
   padding: 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .tableCheck .checkBox {
     flex: 0 0 164px;
   }
@@ -1725,7 +1737,7 @@ button[class*=btn][type=button] {
   gap: 8px;
   min-width: 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .tableCheck .checkBox:has(input[type=text]) {
     flex: 0 0 auto;
   }
@@ -1738,7 +1750,7 @@ button[class*=btn][type=button] {
   flex: 0 1 auto;
   min-width: 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .tableCheck .checkBox:has(input[type=text]) input[type=text] {
     width: 320px;
   }
@@ -1746,19 +1758,19 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr .hMin240 {
   min-height: 168px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr .hMin240 {
     min-height: 216px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableDefault tbody tr {
     display: table-row;
   }
 }
 
 /* tableBaord */
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] thead {
     border-bottom: 1px solid var(--talbe-border);
     width: 100%;
@@ -1782,7 +1794,7 @@ button[class*=btn][type=button] {
 [class*=table][class*=boardList] tbody {
   border-bottom: 1px solid var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody {
     border-bottom: 1px solid var(--table-border);
   }
@@ -1790,7 +1802,7 @@ button[class*=btn][type=button] {
 [class*=table][class*=boardList] tbody tr:not(:last-child) {
   border-bottom: 1px solid var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr:not(:last-child) {
     border-bottom: 1px solid var(--table-border);
   }
@@ -1801,7 +1813,7 @@ button[class*=btn][type=button] {
 [class*=table][class*=boardList] tbody tr td:has(.cellTit) {
   padding: 10px 8px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td {
     display: table-cell;
     padding: 15px 12px;
@@ -1832,7 +1844,7 @@ button[class*=btn][type=button] {
   color: var(--color-dark);
   box-sizing: content-box;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td .cellTit {
     display: none;
   }
@@ -1841,7 +1853,7 @@ button[class*=btn][type=button] {
   padding: 0;
   line-height: 1.5;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td p {
     padding: 0;
   }
@@ -1861,7 +1873,7 @@ button[class*=btn][type=button] {
   -webkit-line-clamp: 2; /* 표시할 줄 수 (여기서는 2줄) */
   text-decoration-color: var(--color-text);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td .titHover {
     margin: 0;
   }
@@ -1870,12 +1882,12 @@ button[class*=btn][type=button] {
   color: var(--color-red);
   text-decoration-color: var(--color-red);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td:not(:has(.titHover)) {
     text-align: center;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td .inputWrap {
     display: flex;
     align-items: center;
@@ -1886,7 +1898,7 @@ button[class*=btn][type=button] {
 [class*=table][class*=boardList] tbody tr td .email {
   margin: 0 0 8px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td .email {
     flex: 1 1 132px;
     margin: 0;
@@ -1901,7 +1913,7 @@ button[class*=btn][type=button] {
   font-size: inherit;
   background: #fff;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td .email input,
   [class*=table][class*=boardList] tbody tr td .email select {
     width: 132px;
@@ -1928,7 +1940,7 @@ button[class*=btn][type=button] {
 [class*=table][class*=BgCustom2n] table tr {
   background: var(--table-bg);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=BgCustom2n] table tr {
     background: var(--color-white);
   }
@@ -1943,7 +1955,7 @@ button[class*=btn][type=button] {
   align-items: center;
   justify-content: space-between;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=inputMax] .inputWrap {
     max-width: 320px;
   }
@@ -1971,7 +1983,7 @@ button[class*=btn][type=button] {
 [class*=table][class*=inputMax] .inputWrap .email:not(:last-child) {
   max-width: calc((100% - 34px) / 2);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=inputMax] .inputWrap .email:not(:last-child) {
     max-width: initial;
   }
@@ -1984,7 +1996,7 @@ button[class*=btn][type=button] {
 [class*=table][class*=inputMax] .inputWrap .email:last-child {
   width: 100%;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=inputMax] .tableCheck {
     padding: 0;
   }
@@ -1994,7 +2006,7 @@ button[class*=btn][type=button] {
 .ansCont {
   margin: 64px 0 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .ansCont {
     margin: 80px 0 0;
   }
@@ -2051,7 +2063,7 @@ button[class*=btn][type=button] {
 .ansCont .ansBox.edit textarea {
   min-height: 120px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .ansCont .ansBox.edit textarea {
     font-size: 17px;
   }
@@ -2059,7 +2071,7 @@ button[class*=btn][type=button] {
 .ansCont .ansBox.new {
   border-style: none;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .ansCont .ansBox.new {
     padding: 40px 0;
   }
@@ -2072,67 +2084,67 @@ button[class*=btn][type=button] {
 }
 
 /* table cell size */
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW64 {
     width: 64px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW120 {
     width: 120px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW240 {
     width: 240px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW285 {
     width: 285px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW360 {
     width: 360px !important;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW375 {
     width: 375px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW420 {
     width: 420px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW456 {
     width: 456px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW480 {
     width: 480px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW556 {
     width: 556px;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .pcW976 {
     width: 976px;
   }
@@ -2231,7 +2243,7 @@ input[disabled] {
 .mapCont {
   padding: 10px 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .mapCont {
     margin-top: 10px;
     padding: 0;
@@ -2246,7 +2258,7 @@ input[disabled] {
   min-height: initial;
   background: var(--gray30);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .mapCont .mapBox {
     flex: 0 0 760px;
     margin: 0 auto 0;
@@ -2257,7 +2269,7 @@ input[disabled] {
   margin: 0 auto 0;
   height: initial;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .mapCont div:nth-child(2) {
     min-height: 360px;
   }
@@ -2283,7 +2295,7 @@ input[disabled] {
   margin: 0 0 20px;
   border-radius: 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .bridgeCont .imgBox {
     flex: 0 0 560px;
     margin: 56px 0 0;
@@ -2292,7 +2304,7 @@ input[disabled] {
 .bridgeCont .imgBox.mainBox {
   background: url(../images/visual-main-bridge-img-mo.png) no-repeat center center/contain;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .bridgeCont .imgBox.mainBox {
     background: url(../images/visual-main-bridge-img.png) no-repeat center center/contain;
   }
@@ -2300,7 +2312,7 @@ input[disabled] {
 .bridgeCont .imgBox.subBox {
   background: url(../images/visual-sub-bridge-img-mo.png) no-repeat center center/contain;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .bridgeCont .imgBox.subBox {
     background: url(../images/visual-sub-bridge-img.png) no-repeat center center/contain;
   }
@@ -2314,7 +2326,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .bridgeCont .txtBold {
     font-size: 24px;
   }
@@ -2325,13 +2337,13 @@ input[disabled] {
 .bridgeCont .txtBox div:last-child {
   margin: 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .bridgeCont .txtBox {
     flex-grow: 1;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoCont .wrap {
     flex-direction: row-reverse;
   }
@@ -2365,7 +2377,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .axCont .txtBold {
     font-size: 24px;
   }
@@ -2397,7 +2409,7 @@ input[disabled] {
   height: 210px;
   background: var(--gray30);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .videoCont .wrap .videoBox {
     flex-basis: 680px;
     height: 360px;
@@ -2456,7 +2468,7 @@ input[disabled] {
 .testCont .tableDefault {
   padding-bottom: 40px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .testCont .tableDefault {
     padding-bottom: 160px;
   }
@@ -2464,7 +2476,7 @@ input[disabled] {
 .testCont .tableDefault tbody tr td {
   vertical-align: middle;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .testCont .tableDefault tbody tr td {
     padding: 16px 18px;
   }
@@ -2531,7 +2543,7 @@ input[disabled] {
     flex: 0 0 calc((100% - 32px) / 2);
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cardListCont .card {
     flex: 0 0 calc((100% - 32px - 32px) / 3);
   }
@@ -2578,7 +2590,7 @@ input[disabled] {
   padding: 16px 0 20px;
   border-bottom: 1px solid var(--gray30);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cardListCont .card .titWrap {
     margin: 0 40px;
     padding: 24px 0 20px;
@@ -2624,7 +2636,7 @@ input[disabled] {
   margin: 0 24px;
   padding: 20px 0 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cardListCont .card .infoWrap {
     gap: 32px;
     margin: 0 40px;
@@ -2643,13 +2655,13 @@ input[disabled] {
   margin: 0;
   max-width: calc(100% - 56px - 16px);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cardListCont .card .infoWrap .infoList {
     flex: 0 0 calc(100% - 56px - 32px);
     max-width: calc(100% - 56px - 32px);
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cardListCont .card .infoWrap .infoList ul {
     display: flex;
     flex-wrap: wrap;
@@ -2665,23 +2677,23 @@ input[disabled] {
 .cardListCont .card .infoWrap .infoList li:not(:last-child) {
   margin-bottom: 8px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cardListCont .card .infoWrap .infoList li:not(:last-child) {
     margin: 0;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cardListCont .card .infoWrap .infoList li:nth-child(odd) {
     flex: 0 0 96px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cardListCont .card .infoWrap .infoList li:nth-child(even) {
     flex: 0 0 calc(100% - 96px - 8px);
     max-width: calc(100% - 96px - 8px);
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cardListCont .card .infoWrap .infoList span {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2710,7 +2722,7 @@ input[disabled] {
 .aiAcademyCont ul .overListBox {
   margin-bottom: 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .aiAcademyCont ul .overListBox {
     margin-bottom: 0;
   }
@@ -2732,7 +2744,7 @@ input[disabled] {
   height: 57px;
   background: url(../images/visual-arrow-angle-red.svg) no-repeat center bottom/100% auto;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .aiAcademyCont ul .overListBox .botListBox::before {
     margin: -6px auto 4px;
     height: 68px;
@@ -2766,7 +2778,7 @@ input[disabled] {
 .consultingCont .topCont {
   margin: 0 auto 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .topCont {
     display: flex;
     align-items: center;
@@ -2786,7 +2798,7 @@ input[disabled] {
   border-radius: 20px;
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .topCont .innerBox {
     flex: 0 0 calc((100% - 112px) / 2);
     padding: 40px 60px;
@@ -2804,7 +2816,7 @@ input[disabled] {
 .consultingCont .topCont .innerBox:last-child {
   margin-top: 72px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .topCont .innerBox:last-child {
     margin: 0;
   }
@@ -2820,7 +2832,7 @@ input[disabled] {
   background: url(../images/visual-arrow-dot-red.svg) no-repeat center center/contain;
   transform: translate(-50%, -100%);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .topCont .innerBox:last-child::before {
     top: 50%;
     left: -56px;
@@ -2841,7 +2853,7 @@ input[disabled] {
   border: 1px solid var(--gray30);
   border-radius: 16px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont {
     display: flex;
     align-items: center;
@@ -2850,7 +2862,7 @@ input[disabled] {
     padding: 30px 66px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .centerBox {
     flex: 1 0 744px;
     display: flex;
@@ -2867,7 +2879,7 @@ input[disabled] {
   width: 150px;
   height: 68px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .redBox {
     width: 220px;
     height: 92px;
@@ -2886,7 +2898,7 @@ input[disabled] {
   background: url(../images/visual-line-long-red-mo.svg) no-repeat center center/contain;
   transform: translate(50%, 0);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .redBox::after {
     width: 86px;
     height: 328px;
@@ -2905,7 +2917,7 @@ input[disabled] {
   height: 68px;
   background: var(--color-red);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .centerTxt {
     margin: 0 auto 0;
     width: 220px;
@@ -2921,7 +2933,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-white);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .centerTxt p {
     font-size: 20px;
   }
@@ -2934,7 +2946,7 @@ input[disabled] {
   height: 50px;
   background: url(../images/visual-arrow-line-angle-red.svg) no-repeat top center/auto;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .centerTxt::before, .consultingCont .arrowCont .centerTxt::after {
     height: 74px;
   }
@@ -2961,7 +2973,7 @@ input[disabled] {
   color: var(--text-color);
   white-space: nowrap;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont [class*=top][class*=Txt],
   .consultingCont .arrowCont [class*=Arr][class*=Txt],
   .consultingCont .arrowCont [class*=bot][class*=Txt] {
@@ -2980,7 +2992,7 @@ input[disabled] {
   transform: translate(-50%, -100%);
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .topTxt {
     top: -75px;
     width: 220px;
@@ -2993,7 +3005,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .topTxt p {
     font-size: 20px;
   }
@@ -3023,7 +3035,7 @@ input[disabled] {
   left: 50%;
   transform: translate(-50%, 100%);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .botUndTxt {
     bottom: -178px;
   }
@@ -3040,7 +3052,7 @@ input[disabled] {
   transform: translate(-50%, 100%);
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .botTxt {
     bottom: -75px;
     width: 220px;
@@ -3059,7 +3071,7 @@ input[disabled] {
   height: 50px;
   background: url(../images/visual-arrow-line-angle-darkRed.svg) no-repeat center top/auto;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .botTxt::before {
     height: 74px;
   }
@@ -3069,7 +3081,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .botTxt p {
     font-size: 20px;
   }
@@ -3085,7 +3097,7 @@ input[disabled] {
   background: url(../images/visual-arrow-gray-dash-short-mo.svg) no-repeat center center/contain;
   transform: translate(-100%, -100%);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .botTxt::after {
     width: 106px;
     height: 178px;
@@ -3094,10 +3106,11 @@ input[disabled] {
 }
 .consultingCont .arrowCont .grayBox {
   position: relative;
+  max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .grayBox {
     display: flex;
     align-items: flex-start;
@@ -3116,7 +3129,7 @@ input[disabled] {
   transform: translateX(-100%);
   background: url(../images/visual-arrow-gray-dash-mo.svg) no-repeat center center/contain;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .grayBox::before {
     bottom: 58%;
     left: -12px;
@@ -3126,7 +3139,7 @@ input[disabled] {
     transform: translate(-100%, -100%);
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .grayBox::after {
     position: absolute;
     bottom: 0;
@@ -3143,7 +3156,7 @@ input[disabled] {
   margin: 254px auto 0;
   text-align: center;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .unistTxt {
     position: relative;
     margin: 0 66px 0 0;
@@ -3173,7 +3186,7 @@ input[disabled] {
   height: 36px;
   background: url(../images/visual-arrow-line-angle-red.svg) no-repeat center top/auto;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .unistTxt::after {
     position: absolute;
     top: 40px;
@@ -3207,7 +3220,7 @@ input[disabled] {
   bottom: 100px;
   left: -44px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .unistArrTxt {
     bottom: -38px;
     left: auto;
@@ -3218,7 +3231,7 @@ input[disabled] {
 .consultingCont .listBox {
   position: relative;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .listBox {
     flex: 0 0 566px;
   }
@@ -3234,7 +3247,7 @@ input[disabled] {
   height: calc(100% - 50px);
   background: var(--color-red);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .listBox::before {
     top: 24px;
   }
@@ -3251,7 +3264,7 @@ input[disabled] {
   font-weight: var(--regular);
   color: var(--text-color);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .consultingCont .listBox li {
     font-size: 17px;
   }
@@ -3293,12 +3306,12 @@ input[disabled] {
 .cohortCont {
   margin: 24px auto 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cohortCont {
     margin: 30px auto 0;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cohortCont ul {
     display: flex;
     flex-wrap: wrap;
@@ -3309,7 +3322,7 @@ input[disabled] {
 .cohortCont li {
   margin-bottom: 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cohortCont li {
     flex: 0 0 calc((100% - 32px) / 2);
   }
@@ -3320,7 +3333,7 @@ input[disabled] {
   background: var(--gray30);
   border-radius: 20px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .cohortCont .imgBox {
     height: 360px;
   }
@@ -3338,7 +3351,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .titHeader h3 {
     padding: 40px 0 60px;
     font-size: 52px;
@@ -3347,7 +3360,7 @@ input[disabled] {
 .serviceMap .titM h5 {
   font-size: 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .titM h5 {
     font-size: 36px;
   }
@@ -3358,7 +3371,7 @@ input[disabled] {
   padding: 64px 16px 0;
   background: url(../images/bg-structure.png) no-repeat top center/100%;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .structureWrap {
     margin: 0 auto 68px;
     padding: 80px 0 0;
@@ -3377,7 +3390,7 @@ input[disabled] {
     transform: translateX(-50%);
   }
 }
-@media screen and (min-width: 1160px) and (min-width: 1520px) {
+@media screen and (min-width: 1161px) and (min-width: 1520px) {
   .serviceMap .structureWrap::before {
     left: calc((-100vw + 1520px) / 2);
     transform: initial;
@@ -3391,7 +3404,7 @@ input[disabled] {
   height: 78px;
   background: url(../images/visual-arrow-large.svg) no-repeat center top/auto;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .structureWrap::after {
     margin: 0 auto;
     width: 726px;
@@ -3404,7 +3417,7 @@ input[disabled] {
   border-radius: 40px;
   background: #fff;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .structureWrap .wrap {
     margin: 0;
     padding: 70px 0;
@@ -3423,7 +3436,7 @@ input[disabled] {
   height: 100px;
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .structureWrap .dotListWrap {
     margin: 0 auto 32px;
     width: 240px;
@@ -3442,7 +3455,7 @@ input[disabled] {
   font-weight: var(--medium);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .structureWrap .dotListWrap p {
     font-size: 19px;
   }
@@ -3476,7 +3489,7 @@ input[disabled] {
   justify-content: center;
   gap: 10px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .dbWrap {
     flex-direction: row;
     margin-top: -12px;
@@ -3492,7 +3505,7 @@ input[disabled] {
   height: 60px;
   background: var(--table-bg);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .dbWrap div {
     height: 70px;
   }
@@ -3507,7 +3520,7 @@ input[disabled] {
   font-weight: var(--medium);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .dbWrap div p {
     font-size: 19px;
   }
@@ -3528,7 +3541,7 @@ input[disabled] {
   margin: 0 0 64px;
   padding: 0 0 40px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .cardList {
     gap: 0 24px;
   }
@@ -3547,7 +3560,7 @@ input[disabled] {
   background: var(--gray5);
   box-sizing: border-box;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .cardList li {
     flex: 1 0 calc((100% - 160px) / 6);
     height: 240px;
@@ -3568,7 +3581,7 @@ input[disabled] {
   width: 80px;
   height: 80px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .cardList li::before {
     margin: 0 auto 16px;
     width: 100px;
@@ -3596,7 +3609,7 @@ input[disabled] {
 .serviceMap .needWrap {
   margin-bottom: 104px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .needWrap {
     margin-bottom: 120px;
   }
@@ -3615,7 +3628,7 @@ input[disabled] {
   background: url(../images/visual-shCard-dash.svg) no-repeat center bottom/auto;
   transform: translate(-50%, 100%);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .needWrap .highWrap::after {
     position: static;
     margin: 24px auto 18px;
@@ -3639,7 +3652,7 @@ input[disabled] {
   background: var(--table-bg);
   box-sizing: border-box;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .needWrap .highWrap div {
     margin: 0 auto;
     height: 74px;
@@ -3657,7 +3670,7 @@ input[disabled] {
   flex-direction: column;
   gap: 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .needWrap .wrap {
     flex-direction: row;
   }
@@ -3675,7 +3688,7 @@ input[disabled] {
   height: 140px;
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .needWrap .wrap .shCard {
     padding: 32px 60px;
     width: initial;
@@ -3693,7 +3706,7 @@ input[disabled] {
   background: url(../images/visual-shCard-dash.svg) no-repeat center bottom/auto;
   transform: translate(-50%, 100%);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .needWrap .wrap .shCard:not(:last-child)::before {
     content: none;
   }
@@ -3708,7 +3721,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-red);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .needWrap .wrap .shCard strong {
     font-size: 24px;
   }
@@ -3720,7 +3733,7 @@ input[disabled] {
   font-weight: var(--regular);
   color: var(--color-text);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceMap .needWrap .wrap .shCard p {
     font-size: 20px;
   }
@@ -3732,7 +3745,7 @@ input[disabled] {
   padding: 40px 16px;
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .targetWrap {
     margin: 0;
     padding: 40px 0;
@@ -3747,7 +3760,7 @@ input[disabled] {
   height: 100%;
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .targetWrap::before {
     content: "";
     left: 50%;
@@ -3765,7 +3778,7 @@ input[disabled] {
   padding-top: 0;
   background: initial;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .targetWrap.bgWhite {
     margin-bottom: 80px;
   }
@@ -3778,7 +3791,7 @@ input[disabled] {
   gap: 24px;
   padding: 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .targetWrap .wrap {
     flex-direction: row;
   }
@@ -3793,7 +3806,7 @@ input[disabled] {
   background: var(--color-white);
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .targetWrap .wrap [class*=bgIco] {
     margin: 0;
   }
@@ -3804,7 +3817,7 @@ input[disabled] {
 .targetWrap .wrap [class*=bgIco].oneLine {
   padding: 40px 32px 30px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .targetWrap .wrap [class*=bgIco].oneLine {
     padding: 40px 32px;
   }
@@ -3815,7 +3828,7 @@ input[disabled] {
 .targetWrap .wrap [class*=bgIco].oneLine .txt {
   margin: 6px auto 36px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .targetWrap .wrap [class*=bgIco].oneLine .txt {
     margin: 4px auto 46px;
   }
@@ -3845,7 +3858,7 @@ input[disabled] {
   width: 60px;
   height: 60px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .targetWrap .wrap [class*=bgIco]::after {
     width: 80px;
     height: 80px;
@@ -3940,7 +3953,7 @@ input[disabled] {
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap {
     display: block;
     padding: 80px 0 40px;
@@ -3961,7 +3974,7 @@ input[disabled] {
     flex-basis: calc(50% - 32px);
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap {
     flex-direction: row;
     gap: 0 80px;
@@ -3972,7 +3985,7 @@ input[disabled] {
 .serviceWrap .wrap div {
   margin-bottom: 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap div {
     height: 320px;
   }
@@ -3985,7 +3998,7 @@ input[disabled] {
   max-width: 520px;
   height: 200px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap .imgWrap {
     flex: 0 0 520px;
     height: 320px;
@@ -4002,7 +4015,7 @@ input[disabled] {
   height: 160px;
   background: #F3F8FE;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap .imgWrap::before {
     bottom: -40px;
   }
@@ -4011,7 +4024,7 @@ input[disabled] {
   padding-bottom: 40px;
   height: auto;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap .descDeft strong {
     font-size: 24px;
   }
@@ -4038,12 +4051,12 @@ input[disabled] {
   flex-direction: column-reverse;
   justify-content: flex-end;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap:nth-child(odd) {
     flex-direction: row;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap:nth-child(odd) .imgWrap {
     margin-right: 60px;
     margin-bottom: 0;
@@ -4052,7 +4065,7 @@ input[disabled] {
 .serviceWrap .wrap:nth-child(odd) .imgWrap::before {
   right: -16px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap:nth-child(odd) .imgWrap::before {
     right: -60px;
   }
@@ -4060,7 +4073,7 @@ input[disabled] {
 .serviceWrap .wrap:nth-child(even) {
   justify-content: flex-start;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap:nth-child(even) .imgWrap {
     margin-left: 60px;
   }
@@ -4068,7 +4081,7 @@ input[disabled] {
 .serviceWrap .wrap:nth-child(even) .imgWrap::before {
   left: -16px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceWrap .wrap:nth-child(even) .imgWrap::before {
     left: -60px;
   }
@@ -4078,7 +4091,7 @@ input[disabled] {
 .serviceList {
   flex-direction: column-reverse;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceList {
     flex-direction: row;
   }
@@ -4087,7 +4100,7 @@ input[disabled] {
   flex-wrap: wrap;
   width: 100%;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceList [class*=flexBox] {
     flex-wrap: nowrap;
     width: auto;
@@ -4101,7 +4114,7 @@ input[disabled] {
   font-weight: var(--regular);
   color: var(--text-color);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceList [class*=flexBox] p {
     width: auto;
   }
@@ -4109,7 +4122,7 @@ input[disabled] {
 .serviceList [class*=flexBox] .btnBox {
   margin: 0 0 32px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceList [class*=flexBox] .btnBox {
     margin: 0;
     width: auto;
@@ -4119,7 +4132,7 @@ input[disabled] {
   white-space: nowrap;
   padding: 16px 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .serviceList [class*=flexBox] .btnBox .btn {
     padding: 16px 12px;
   }
@@ -4129,7 +4142,7 @@ input[disabled] {
 .matchServ .listCont {
   margin-bottom: 40px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchServ .listCont {
     width: 600px;
   }
@@ -4140,12 +4153,12 @@ input[disabled] {
 .matchServ .txtDotList li p {
   font-size: 17px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchServ .txtDotList li p {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchServ .detailWrap {
     width: 820px;
   }
@@ -4153,7 +4166,7 @@ input[disabled] {
 .matchServ .detailWrap > div:first-child {
   margin: 0 0 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchServ .detailWrap > div:first-child {
     margin: 0 0 32px;
   }
@@ -4175,7 +4188,7 @@ input[disabled] {
   background: var(--gray5);
   border-top-color: var(--gray80);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat {
     display: flex;
     align-items: stretch;
@@ -4185,7 +4198,7 @@ input[disabled] {
 .matchChat .companyWrap {
   padding: 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .companyWrap {
     flex: 0 0 400px;
     border-right: 1px solid var(--gray30);
@@ -4206,7 +4219,7 @@ input[disabled] {
   flex: 1 0 auto;
   gap: 10px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .companyWrap .compInfo div {
     flex-direction: column;
   }
@@ -4214,7 +4227,7 @@ input[disabled] {
 .matchChat .companyWrap .compInfo div img {
   width: 40px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .companyWrap .compInfo div img {
     width: auto;
   }
@@ -4228,7 +4241,7 @@ input[disabled] {
 .matchChat .companyWrap .compInfo div .compInfo {
   display: none;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .companyWrap .compInfo div .compInfo {
     display: block;
     text-align: center;
@@ -4239,7 +4252,7 @@ input[disabled] {
     color: var(--gray70);
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .companyWrap .compInfo button {
     display: none;
   }
@@ -4249,7 +4262,7 @@ input[disabled] {
   border-radius: 10px;
   background: var(--color-white);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .companyWrap .compLoca {
     padding: 16px 24px;
     background: var(--table-bg);
@@ -4265,7 +4278,7 @@ input[disabled] {
 .matchChat .companyWrap .compLoca .descDeft p:not(:last-child) {
   margin: 0 0 10px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .companyWrap .compLoca .descDeft p:not(:last-child) {
     margin: 0 0 16px;
   }
@@ -4276,7 +4289,7 @@ input[disabled] {
 .matchChat .chatWrap {
   padding-top: 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .chatWrap {
     flex: 1 0 auto;
   }
@@ -4288,7 +4301,7 @@ input[disabled] {
   background: vaR(--color-white);
   box-sizing: border-box;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .chatWrap .chatTit {
     padding: 24px 32px;
   }
@@ -4310,7 +4323,7 @@ input[disabled] {
   padding: 24px;
   height: 523px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .chatLogWrap {
     padding: 24px 32px;
     height: 459px;
@@ -4346,7 +4359,7 @@ input[disabled] {
   gap: 8px;
   margin: 0 0 8px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .chatLogWrap [class*=chat] .info {
     align-items: flex-start;
   }
@@ -4354,7 +4367,7 @@ input[disabled] {
 .matchChat .chatLogWrap [class*=chat] .info img {
   width: 40px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .chatLogWrap [class*=chat] .info img {
     width: 60px;
   }
@@ -4374,7 +4387,7 @@ input[disabled] {
 .matchChat .chatLogWrap [class*=chat] .detail:not(:last-child) {
   margin-bottom: 12px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .chatLogWrap [class*=chat] .detail:nth-child(2) {
     margin-top: -28px;
   }
@@ -4402,7 +4415,7 @@ input[disabled] {
 .matchChat .chatLogWrap .chatMe .detail {
   justify-content: flex-end;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .chatLogWrap .chatMe .detail {
     margin-right: 70px;
   }
@@ -4421,7 +4434,7 @@ input[disabled] {
 .matchChat .chatLogWrap .chatComp .detail {
   justify-content: flex-start;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .matchChat .chatLogWrap .chatComp .detail {
     margin-left: 70px;
   }
@@ -4467,7 +4480,7 @@ input[disabled] {
   border-radius: 16px;
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .categoryCont .cateWrap {
     display: flex;
     align-items: flex-start;
@@ -4479,7 +4492,7 @@ input[disabled] {
 .categoryCont .cateWrap:not(:last-child) {
   border-bottom: 1px solid var(--gray30);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .categoryCont .cateWrap:first-child {
     padding: 0 0 24px;
   }
@@ -4487,12 +4500,12 @@ input[disabled] {
 .categoryCont .cateWrap:first-child .tit {
   padding: 0 0 18px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .categoryCont .cateWrap:first-child .tit {
     padding: 0;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .categoryCont .cateWrap:has(input[type=text]) .tit {
     padding: 14px 0 0;
   }
@@ -4503,7 +4516,7 @@ input[disabled] {
   justify-content: space-between;
   padding: 18px 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .categoryCont .cateWrap .tit {
     flex: 0 1 58px;
     white-space: nowrap;
@@ -4517,7 +4530,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .categoryCont .cateWrap .tit .btnDropdown {
     display: none;
   }
@@ -4525,14 +4538,15 @@ input[disabled] {
 .categoryCont .cateWrap .inputBox {
   padding: 0 0 20px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .categoryCont .cateWrap .inputBox {
+    display: flex !important;
     flex-grow: 1;
     white-space: nowrap;
     padding: 0;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .categoryCont .cateWrap .inputBox .checkBox {
     flex-grow: 0;
   }
@@ -4551,7 +4565,7 @@ input[disabled] {
   font-weight: var(--regular);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .resultCont .resultWrap {
     display: flex;
     flex-wrap: wrap;
@@ -4566,7 +4580,7 @@ input[disabled] {
   border: 1px solid var(--gray30);
   border-radius: 20px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .resultCont .prdtBox {
     flex: 0 0 calc((100% - 64px) / 3);
     margin: 0;
@@ -4601,7 +4615,7 @@ input[disabled] {
   padding: 24px;
   box-sizing: border-box;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .resultCont .prdtBox .txtBox {
     padding: 24px 40px;
   }
@@ -4619,7 +4633,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .resultCont .prdtBox .txtBox .prdtNm strong {
     font-size: 20px;
   }
@@ -4632,7 +4646,7 @@ input[disabled] {
   font-weight: var(--regular);
   color: var(--gray70);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .resultCont .prdtBox .txtBox .prdtNm span {
     font-size: 17px;
   }
@@ -4663,7 +4677,7 @@ input[disabled] {
 }
 
 /* 디지털 혁신 지원 서비스 > 공동장비활용 검색 예약 상세 */
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .prdtWrap {
     display: flex;
     align-items: flex-start;
@@ -4680,7 +4694,7 @@ input[disabled] {
   border-radius: 20px;
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .prdtWrap .imgWrap {
     flex: 0 0 550px;
     height: 508px;
@@ -4692,12 +4706,12 @@ input[disabled] {
 .prdtWrap .tableTit p {
   margin-bottom: 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .prdtWrap .tableTit p {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .prdtWrap .prdtInfoWrap {
     flex-grow: 1;
   }
@@ -4712,7 +4726,7 @@ input[disabled] {
   color: var(--gray70);
   background: var(--color-white);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .prdtWrap table tr th {
     padding: 16px 0;
     border-right: none;
@@ -4724,7 +4738,7 @@ input[disabled] {
 .prdtWrap table tr td {
   padding: 0 0 10px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .prdtWrap table tr td {
     padding: 16px 0;
   }
@@ -4735,7 +4749,7 @@ input[disabled] {
   font-weight: var(--medium);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .prdtWrap table tr td p {
     line-height: 1.2;
   }
@@ -4748,7 +4762,7 @@ input[disabled] {
 .facilityResWrap .wrap {
   padding: 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .facilityResWrap .wrap {
     flex-wrap: wrap;
     gap: 40px 0;
@@ -4756,7 +4770,7 @@ input[disabled] {
     padding: 0 0 40px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .facilityResWrap .wrap * {
     margin: 0;
     height: auto;
@@ -4788,7 +4802,7 @@ input[disabled] {
   width: 100%;
   background: rgba(29, 29, 29, 0.6);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .facilityResWrap a .txtBox {
     padding: 20px 40px;
   }
@@ -4802,7 +4816,7 @@ input[disabled] {
 .facilityResWrap a .txtBox strong {
   font-weight: var(--bold);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .facilityResWrap a .txtBox strong {
     font-size: 24px;
   }
@@ -4834,7 +4848,7 @@ input[disabled] {
   border: 1px solid var(--gray30);
   border-radius: 8px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox {
     display: flex;
     align-items: center;
@@ -4847,7 +4861,7 @@ input[disabled] {
   border-radius: 12px;
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox.dk {
     margin: 120px auto 0;
   }
@@ -4862,7 +4876,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox.dk dt {
     margin: 0 32px 0 0;
   }
@@ -4883,18 +4897,18 @@ input[disabled] {
   font-weight: inherit;
   color: inherit;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox.dk dd span {
     display: none;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox.dk dd {
     align-items: center;
     margin: 0;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox.dk dd:not(:last-child)::after {
     display: block;
     content: "";
@@ -4907,7 +4921,7 @@ input[disabled] {
 .infoListBox.dk dd:last-child {
   margin: 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox .descDeft {
     display: flex;
     align-items: center;
@@ -4919,7 +4933,7 @@ input[disabled] {
 .infoListBox .descDeft li:not(:last-child) {
   margin: 0 0 16px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox .descDeft li:not(:last-child) {
     margin: 0;
   }
@@ -4928,7 +4942,7 @@ input[disabled] {
   flex-wrap: nowrap;
   align-items: flex-start;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox .descDeft p {
     flex: 1;
     width: auto;
@@ -4937,7 +4951,7 @@ input[disabled] {
 .infoListBox .descDeft p strong {
   flex-basis: 121px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox .descDeft p strong {
     flex-basis: auto;
   }
@@ -4945,7 +4959,7 @@ input[disabled] {
 .infoListBox .btnBox {
   margin: 20px 0 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoListBox .btnBox {
     flex: 0 1 auto;
     margin: 0;
@@ -4964,7 +4978,7 @@ input[disabled] {
   border-radius: 20px;
   height: 240px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoDetailImgWrap .swiper-slide {
     height: 440px;
   }
@@ -5000,7 +5014,7 @@ input[disabled] {
 .infoDetailWrap .descDeft {
   padding: 10px 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoDetailWrap .descDeft {
     padding: 24px 0;
   }
@@ -5012,7 +5026,7 @@ input[disabled] {
   padding: 24px 0;
   border-bottom: 1px solid var(--gray30);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoDetailWrap li > div {
     display: flex;
     align-items: flex-start;
@@ -5020,7 +5034,7 @@ input[disabled] {
     gap: 40px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .infoDetailWrap li > div .titS {
     flex: 0 0 212px;
   }
@@ -5042,7 +5056,7 @@ input[disabled] {
   border-radius: 16px;
   background: var(--gray5);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .listCont {
     display: flex;
     align-items: flex-start;
@@ -5070,7 +5084,7 @@ input[disabled] {
   height: 1px;
   background: var(--table-border);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .listCont > div:first-child::after {
     position: absolute;
     top: 0;
@@ -5080,7 +5094,7 @@ input[disabled] {
     height: 100%;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .listCont .txtDotList {
     padding: 10px 16px;
   }
@@ -5088,7 +5102,7 @@ input[disabled] {
 .listCont .circList {
   padding: 10px 0;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .listCont .circList ul {
     display: flex;
     align-items: center;
@@ -5096,7 +5110,7 @@ input[disabled] {
     gap: 0 32px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .listCont .circList li {
     display: flex;
     align-items: flex-start;
@@ -5106,7 +5120,7 @@ input[disabled] {
 .listCont .circList li:not(:last-child) {
   margin: 0 auto 24px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .listCont .circList li:not(:last-child) {
     margin: 0;
   }
@@ -5120,7 +5134,7 @@ input[disabled] {
   background: url(../images/visual-arrow-dot.svg) no-repeat center center/auto;
   transform: rotate(90deg);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .listCont .circList li:not(:last-child)::after {
     margin: 36px 0 0 32px;
     transform: inherit;
@@ -5147,7 +5161,7 @@ input[disabled] {
 .inputWrap.boardTop {
   margin-bottom: 40px;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .inputWrap.boardTop {
     display: flex;
     align-items: center;
@@ -5155,18 +5169,18 @@ input[disabled] {
     position: relative;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .inputWrap.boardTop .inputBox {
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .inputWrap.boardTop select {
     margin-right: 10px;
     width: 120px;
   }
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .inputWrap.boardTop input {
     width: 360px;
   }
@@ -5179,7 +5193,7 @@ input[disabled] {
   height: 20px;
   background: url(../images/icon/ico-search-white-20.svg) no-repeat center center/contain;
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .inputWrap.boardTop .btn {
     position: absolute;
     top: 13px;
@@ -5220,7 +5234,7 @@ input[disabled] {
   font-weight: var(--bold);
   color: var(--color-dark);
 }
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .tableTit h5 {
     font-size: 36px;
   }
@@ -6036,14 +6050,17 @@ input[disabled] {
 .memberCont .memberInputBox ul li .passwordBox input {
   padding-right: 50px;
 }
-.memberCont .memberInputBox ul li .passwordBox .btnShow {
+.memberCont .memberInputBox ul li .passwordBox .btnHidden {
   position: absolute;
   top: 12px;
   right: 16px;
   width: 24px;
   height: 24px;
   text-indent: -9999px;
-  background: url("../images/icon/ico-visible.svg") no-repeat center/100% auto;
+  background: url("../images/icon/ico-hidden.svg") no-repeat center/100% auto;
+}
+.memberCont .memberInputBox ul li .passwordBox .btnHidden.on {
+  background-image: url("../images/icon/ico-visible.svg");
 }
 .memberCont .memberInputBox input {
   padding: 8px 16px;
@@ -6559,7 +6576,7 @@ input[disabled] {
   position: relative;
   padding: 0 36px 0 35px;
   width: 100%;
-  background: url("../images/icon/ico-acco-q.png") no-repeat left 2px/16px auto;
+  background: url("../images/common/ico-acco-q.png") no-repeat left 2px/16px auto;
   line-height: 1.5;
   font-weight: var(--regular);
   font-size: 17px;
@@ -6570,20 +6587,19 @@ input[disabled] {
 }
 .accoItem h4 button:before {
   position: absolute;
-  content: "";
+  content: "펼치기";
   top: 3px;
   right: 0;
   width: 20px;
   height: 20px;
+  text-indent: -9999px;
   background: url("../images/icon/ico-acco-arrow-20.svg") no-repeat center/100% auto;
+}
+.accoItem h4 button.on:before {
+  content: "닫기";
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
-}
-.accoItem h4 button.on:before {
-  transform: rotate(0);
-  -webkit-transform: rotate(0);
-  -moz-transform: rotate(0);
 }
 .accoItem .accoCon {
   display: none;
@@ -6598,7 +6614,7 @@ input[disabled] {
 }
 .accoItem .accoCon > div {
   padding-left: 36px;
-  background: url("../images/icon/ico-acco-a.png") no-repeat top left/17px auto;
+  background: url("../images/common/ico-acco-a.png") no-repeat top left/17px auto;
 }
 
 @media (max-width: 768px) {
@@ -6611,5 +6627,3 @@ input[disabled] {
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=contents.css.map */
