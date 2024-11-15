@@ -203,7 +203,6 @@ button[class*="btn"][type="button"]{
 }
 .btnUnder{
     position:relative;
-    padding:8px 4px;
     height:auto;
     line-height:normal;
     font-size:17px;
@@ -4968,6 +4967,11 @@ input {
         align-items:center;
         justify-content:flex-end;
         position:relative;
+    }
+    .inputBox{
+        @media screen and (min-width:1160px) {
+            margin-bottom:0;
+        }
     }
     select{
         @media screen and (min-width:1160px) {
