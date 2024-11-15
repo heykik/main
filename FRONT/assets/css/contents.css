@@ -5157,6 +5157,11 @@ input[disabled] {
   }
 }
 @media screen and (min-width: 1160px) {
+  .inputWrap.boardTop .inputBox {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1160px) {
   .inputWrap.boardTop select {
     margin-right: 10px;
     width: 120px;

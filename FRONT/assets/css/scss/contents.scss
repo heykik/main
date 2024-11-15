@@ -4969,6 +4969,11 @@ input {
         justify-content:flex-end;
         position:relative;
     }
+    .inputBox{
+        @media screen and (min-width:1160px) {
+            margin-bottom:0;
+        }
+    }
     select{
         @media screen and (min-width:1160px) {
             margin-right:10px;
