@@ -59,6 +59,11 @@
   font-weight: var(--regular);
   color: var(--color-text);
 }
+@media screen and (max-width: 767px) {
+  .psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault tbody tr td p {
+    word-break: break-word;
+  }
+}
 
 @media (max-width: 767px) {
   .psPolicyArea dl {
@@ -74,6 +79,7 @@
   }
   .psPolicyArea dl dd .txtDotList {
     padding: 0;
+    margin-left: 0;
   }
   .psPolicyArea dl dd .txtDotList + .descDeft {
     margin-top: 20px;
@@ -196,4 +202,3 @@
   }
 }
 
-/*# sourceMappingURL=jn_contents.css.map */

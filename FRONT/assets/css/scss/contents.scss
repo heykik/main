@@ -61,6 +61,7 @@ h3 {
 
 /* margin */
 .m0{margin:0!important}
+.mb8{margin-bottom:8!important}
 .mt10{margin-top:10px!important;}
 .mb20{margin-bottom:20px}
 .mb24{margin-bottom:24px}
@@ -394,10 +395,14 @@ button[class*="btn"][type="button"]{
             margin-top:8px;
         }
     }
-    &.succcess{
+    &.success{
         p{
-            margin-top:8px;
+            font-size:15px;
+            margin-top:4px;
             color:var(--success);
+            @media screen and (min-width:1160px) {
+                margin:8px 0 -2px;
+            }
         }
     }
     &.error{
@@ -405,8 +410,12 @@ button[class*="btn"][type="button"]{
             border:1px solid #D50136;
         }
         p{
-            margin-top:8px;
+            font-size:15px;
+            margin-top:4px;
             color:#D50136; //color-danger
+            @media screen and (min-width:1160px) {
+                margin:8px 0 -2px;
+            }
         }
     }
     textarea{
@@ -1188,6 +1197,8 @@ button[class*="btn"][type="button"]{
         color:var(--gray60);
         &:not(:last-child){
             margin-bottom:4px;
+            @media screen and (min-width:1160px) {
+            }
         }
     }
     &.tag{
@@ -1531,11 +1542,17 @@ button[class*="btn"][type="button"]{
             }
             td{
                 padding:18px 22px;
-                &:has(input[type="text"]),
+                &:has(input),
                 &:has(select),
                 &:has(textarea){
                     padding:12px;
                 }
+                // &:has(input[type="text"]),
+                // &:has(input[type="password"]),
+                // &:has(select),
+                // &:has(textarea){
+                //     padding:12px;
+                // }
                 input,
                 select,
                 textarea{
@@ -1568,7 +1585,8 @@ button[class*="btn"][type="button"]{
                         display:block;
                     }
                     .inputWrap{
-                        display:block;
+                        // display:block;
+                        flex-wrap:wrap;
                         @media screen and (min-width:1160px) {
                             display:flex;
                             align-items:center;
@@ -1586,15 +1604,12 @@ button[class*="btn"][type="button"]{
                     }
                     &:first-child{
                         display:flex;
+                        gap:8px;
                         &::after{
                             display:inline-flex;
                             align-items:center;
                             justify-content:center;
                             content:"@";
-                            margin:0 8px;
-                            @media screen and (min-width:1160px) {
-                                margin:0 0 0 8px;
-                            }
                         }
                         input{
                             flex-basis:calc(100% - 22px);
@@ -1707,12 +1722,18 @@ button[class*="btn"][type="button"]{
                         }
                         &:has(input[type="text"]){
                             flex:1 0 100%;
-                            // background:red;
+                            gap:8px;
+                            min-width:0;
                             @media screen and (min-width:1160px) {
                                 flex:0 0 auto;
                             }
+                            .inputWrap{
+                                flex:0 1 auto;
+                                min-width:0;
+                            }
                             input[type="text"]{
-                                margin-left:8px;
+                                flex:0 1 auto;
+                                min-width:0;
                                 @media screen and (min-width:1160px) {
                                     width:320px;
                                 }
@@ -1853,6 +1874,7 @@ button[class*="btn"][type="button"]{
                 .email{
                     margin:0 0 8px;
                     @media screen and (min-width:1160px) {
+                        flex:1 1 132px;
                         margin:0;
                     }
                     input,
@@ -1934,6 +1956,22 @@ button[class*="btn"][type="button"]{
         input{
             flex:1 0 auto;
             width:auto;
+        }
+        .email{
+            &:not(:last-child){
+                max-width:calc((100% - 34px) / 2);
+                @media screen and (min-width:1160px) {
+                    max-width:initial;
+                }
+                input{
+                    @media screen and (max-width:1159px) {
+                        max-width:100%;
+                    }
+                }
+            }
+            &:last-child{
+                width:100%;
+            }
         }
     }
     .tableCheck{
@@ -3319,17 +3357,15 @@ input {
             margin:0 auto 24px;
             text-align:center;
             .moV{
-                display:block;
                 margin:0 auto;
                 width:100%;
                 max-width:326px;
                 @media screen and (min-width:1160px) {
-                    display:none;
                 }
             }
             .pcV{
                 width:100%;
-                max-width:1520px;
+                max-width:1180px;
             }
         }        
     }
@@ -3402,10 +3438,13 @@ input {
             background:var(--gray5);
             box-sizing:border-box;
             @media screen and (min-width:1160px) {
-                flex:initial;
-                padding:44px 66px;
+                flex:1 0 calc((100% - (32px * 5)) / 6);
                 height:240px;
                 font-size:24px;
+            }
+            @media screen and (min-width:1560px) {
+                flex:initial;
+                padding:44px 66px;
             }
             &::before{
                 display:block;

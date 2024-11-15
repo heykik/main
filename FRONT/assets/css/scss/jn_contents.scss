@@ -54,6 +54,9 @@
                                 font-size: 20px;
                                 font-weight: var(--regular);
                                 color: var(--color-text);
+                                @media screen and (max-width:767px) {
+                                    word-break: break-word;
+                                }
                             }
                         }
                     }
@@ -79,6 +82,7 @@
                 }
                 .txtDotList {
                     padding:0;
+                    margin-left:0;
                     + .descDeft {
                         margin-top: 20px;
                         + .tableDefault {
