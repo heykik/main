@@ -136,7 +136,7 @@
                                 </td>
                                 <th scope="row"><span class="req">필수입력</span>시간</th>
                                 <td>
-                                    <div class="inputWrap">
+                                    <!-- <div class="inputWrap">
                                         <select class="timeInput">
                                             <option value="">12:00 ~ 13:00</option>
                                             <option value="">13:00 ~ 14:00</option>
@@ -144,13 +144,21 @@
                                             <option value="">15:00 ~ 16:00</option>
                                         </select>
                                     </div>
+                                    -->
+                                     <div id="myDatePicker">
+                                          <input type="text" class="date start" />
+                                          <input type="text" class="time start" />
+                                          <input type="text" class="date end" />
+                                          <input type="text" class="time end" />
+                                        </div>
+                                        
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="descDeft sm infoTxtSub mt10">
                         <p class="noteSymbol">기본 정보 ‘시설예약 내역’에서 예약내역 확인 및 취소 할 수 있습니다.</p>
-                     </div>
+                    </div>
                 </div>
                 <!-- // table input -->
                 <div class="btnBox half resize sideRight">
@@ -171,6 +179,13 @@
     <script src="../assets/js/swiper.js"></script>
     <script src="../assets/js/jquery.mCustomScrollbar.js"></script>
     <script src="../assets/js/jquery-ui.js"></script>
+    
+    <!-- 데이터피커 & 타임피커 -->
+    <script src="../assets/js/datepair.min.js"></script>
+    <script src="../assets/js/jquery.datepair.min.js"></script>
+    <script src="../assets/js/jquery.timepicker.js"></script>
+    <script src="../assets/js/bootstrap-datepicker.js"></script>
+    <!--// 데이터피커 & 타임피커 -->
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
