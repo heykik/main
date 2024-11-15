@@ -1682,14 +1682,45 @@ button[class*="btn"][type="button"]{
                         max-width:320px;
                     }
                     [type="file"]{
-                        position:absolute;
-                        top:0;
-                        left:0;
+                        position:relative;
+                        display:flex;
                         margin:0;
                         padding:0;
-                        width:1px;
-                        height:1px;
-                        opacity:0;
+                        width:72px;
+                        height:32px;
+                        border-style:none;
+                        appearance:none;
+                        &::before{
+                            display:inline-flex;
+                            align-items:center;
+                            justify-content:center;
+                            content:"파일 선택";
+                            width:100%;
+                            height:100%;
+                            background:var(--color-red);
+                            font-size:15px;
+                            font-weight:var(--bold);
+                            color:var(--color-white);
+                            border-radius:4px; 
+                            cursor:pointer;
+                        }
+                        &:hover,
+                        &:focus{
+                            &::before{
+                                background:#B9131E;
+                            }
+                        }
+                        &:active{
+                            &::before{
+                                background:#8B0E16;
+                            }
+                        }
+                        &[disabled]{
+                            &::before{
+                                color:var(--gray60);
+                                background:#D8D8D8;
+                            }
+                        }
                     }
                 }
                 a[download]{

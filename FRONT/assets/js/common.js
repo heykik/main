@@ -125,8 +125,11 @@ const fn_common = () => {
     })
 
     // file add
-    $('.withFileBtn .btnRed').on('click', (()=>{
-        $('[type="file"]').click();
+    $('[type="file"]').on('change', ((e)=>{
+        const fakeInput = $(e.currentTarget).next('input[type="text"]');
+        const fileNm = $(e.currentTarget).val().split('\\');
+
+        fakeInput.val(fileNm[fileNm.length - 1]);
     }))
 
 }

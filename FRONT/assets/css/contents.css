@@ -1688,14 +1688,38 @@ button[class*=btn][type=button] {
   max-width: 320px;
 }
 .tableDefault tbody tr td .withFileBtn [type=file] {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  display: flex;
   margin: 0;
   padding: 0;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
+  width: 72px;
+  height: 32px;
+  border-style: none;
+  appearance: none;
+}
+.tableDefault tbody tr td .withFileBtn [type=file]::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  content: "파일 선택";
+  width: 100%;
+  height: 100%;
+  background: var(--color-red);
+  font-size: 15px;
+  font-weight: var(--bold);
+  color: var(--color-white);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tableDefault tbody tr td .withFileBtn [type=file]:hover::before, .tableDefault tbody tr td .withFileBtn [type=file]:focus::before {
+  background: #B9131E;
+}
+.tableDefault tbody tr td .withFileBtn [type=file]:active::before {
+  background: #8B0E16;
+}
+.tableDefault tbody tr td .withFileBtn [type=file][disabled]::before {
+  color: var(--gray60);
+  background: #D8D8D8;
 }
 .tableDefault tbody tr td a[download] {
   line-height: 1.2;
