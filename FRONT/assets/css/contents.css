@@ -1600,18 +1600,13 @@ button[class*=btn][type=button] {
 }
 .tableDefault tbody tr td .email:first-child {
   display: flex;
+  gap: 8px;
 }
 .tableDefault tbody tr td .email:first-child::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   content: "@";
-  margin: 0 8px;
-}
-@media screen and (min-width: 1160px) {
-  .tableDefault tbody tr td .email:first-child::after {
-    margin: 0 0 0 8px;
-  }
 }
 .tableDefault tbody tr td .email:first-child input {
   flex-basis: calc(100% - 22px);
@@ -1894,6 +1889,7 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1160px) {
   [class*=table][class*=boardList] tbody tr td .email {
+    flex: 1 1 132px;
     margin: 0;
   }
 }
