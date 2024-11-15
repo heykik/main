@@ -87,7 +87,7 @@
 #wrap.menuIco #gnb .btnMenu {transform:rotate(180deg); -webkit-transform:rotate(180deg); -moz-transform:rotate(180deg)}
 
 /* CONTAINER */
-#container {padding:50px 30px}
+#container {display:block; padding:50px 30px}
 #container .contents {position:relative}
 /* #container .contents h2 {margin-bottom:16px; line-height:25px; font-size:25px; color:#000; font-weight:700}
 #container .contents .location {position:absolute; top:0; right:0}

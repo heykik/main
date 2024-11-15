@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>과제평가시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+$(function(){
+	fn_gnb(0,0);
+})
+</script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<h1><a href=""><img src="../assets/images/logo.svg" alt="경남 디지털혁신거점 GYUNGNAM DIGITAL INNOVATION HUB"></a></h1>
+			<!-- util -->
+            <div class="util">
+                <a href="" class="tid"><strong>퍼블관리자</strong> 님</a>
+                <a href="" class="mybtn">로그아웃</a>
+            </div>
+            <!--// util -->
+		</div>
+		<!--// inner -->
+	</div>
+	<!--// header -->
+
+	<!-- gnb -->
+	<div id="gnb">
+		<!-- inner -->
+		<div class="inner">
+			<ul class="depth01">
+                <!-- 관리자 메뉴 -->
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0101.svg" alt="">
+						<span>과제평가 관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0102.svg" alt="">
+						<span>사용자 관리</span>
+					</a>
+				</li>
+                <li>
+					<a href="">
+                        <img src="../assets/images/ico-0103.svg" alt="">
+						<span>평가위원관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0104.svg" alt="">
+						<span>공지사항 관리</span>
+					</a>
+                    <ul class="depth02">
+                        <li>
+                            <a href="">DEPTH0301</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0302</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0303</a>
+                        </li>
+                    </ul>
+				</li>
+                <!--// 관리자 메뉴 -->
+                <!-- 사용자 메뉴 -->
+                <li>
+					<a href="">
+                        <img src="../assets/images/ico-0105.svg" alt="">
+						<span>과제평가</span>
+					</a>
+				</li>
+                <li>
+					<a href="">
+                        <img src="../assets/images/ico-0106.svg" alt="">
+						<span>공지사항</span>
+					</a>
+				</li>
+                <!--// 사용자 메뉴 -->
+			</ul>
+		</div>
+		<!--// inner -->
+		<button type="button" class="btnMenu">메뉴 닫기</button>
+	</div>
+	<!--// gnb -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+            <!-- titArea -->
+            <div class="titArea">
+                <div class="tit">
+                    <h2>타이틀</h2>
+                    <div class="titInfo">타이틀 설명</div>
+                </div>
+                <ol class="location">
+                    <li>홈</li>
+                    <li>depth01</li>
+                    <li>depth02</li>
+                    <li>depth03</li>
+                </ol>
+            </div>
+            <!--// titArea -->
+		</div>
+		<!--// contents -->
+        <!-- loading -->
+        <div class="loading">
+            <span>loading</span>
+        </div>
+        <!--// loading -->
+	</div>
+	<!--// container -->
+</div>
+<!--// wrap -->
+</body>
+</html>

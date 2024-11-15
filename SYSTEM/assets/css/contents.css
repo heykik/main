@@ -157,6 +157,10 @@ div[class$="Table"] + div[class$="Table"] {margin-top: 20px;}
 .w100 {width: 100px !important}
 .wfull {width: 100% !important}
 
+/* 로딩 */
+.loading {position:absolute; top:0; right:0; width:calc(100% - 280px); height:100vh; backdrop-filter: blur(2px)}
+.loading span {position:absolute; top:50%; left:50%; width:80px; height:80px; text-indent:-9999px; background:url("../images/ico-loading.gif") no-repeat center/100% auto; transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%); -moz-transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%)}
+
 /*>>>>>>>>>> 페이지 <<<<<<<<<<*/
 /* 로그인 */
 .loginWrap {display: flex; align-items: center; justify-content: center; padding: 0 !important; background: url("../images/bg-login.svg") no-repeat center/cover;}
