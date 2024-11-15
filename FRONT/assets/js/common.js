@@ -125,8 +125,11 @@ const fn_common = () => {
     })
 
     // file add
-    $('.withFileBtn .btnRed').on('click', (()=>{
-        $('[type="file"]').click();
+    $('[type="file"]').on('change', ((e)=>{
+        const fakeInput = $(e.currentTarget).next('input[type="text"]');
+        const fileNm = $(e.currentTarget).val().split('\\');
+
+        fakeInput.val(fileNm[fileNm.length - 1]);
     }))
 
 }
@@ -175,6 +178,7 @@ const fn_contents = () => {
 			dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일']
 		});
 	}
+        
 
     // 아코디언
     if($(".accordion").length){
