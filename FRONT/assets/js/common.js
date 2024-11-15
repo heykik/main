@@ -175,6 +175,20 @@ const fn_contents = () => {
 			dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일']
 		});
 	}
+
+    // 아코디언
+    if($(".accordion").length){
+        $(".accordion button").click(function() {
+            var $button = $(this);
+            var $content = $(this).parent("h4").next(".accoCon"); 
+
+            $(".accoCon").not($content).slideUp();
+            $(".accordion button").not($button).removeClass("on"); 
+
+            $content.stop(true, true).slideToggle();
+            $button.toggleClass("on");
+        });
+    }
 }
 
 // 레이어 팝업

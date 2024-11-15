@@ -115,4 +115,85 @@
     grid-template-columns: 1fr;
   }
 }
+/* 고객센터 */
+.titM.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.titM.flex button {
+  font-size: 17px;
+  color: var(--color-white);
+  letter-spacing: 0;
+}
 
+.tabTit.acco {
+  justify-content: flex-start;
+}
+.tabTit.acco + .tabCont {
+  padding-top: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.accoItem h4 {
+  padding: 20px 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+.accoItem h4 button {
+  position: relative;
+  padding: 0 36px 0 35px;
+  width: 100%;
+  background: url("../images/icon/ico-acco-q.png") no-repeat left 2px/16px auto;
+  line-height: 1.5;
+  font-weight: var(--regular);
+  font-size: 17px;
+  letter-spacing: -0.03rem;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-color);
+}
+.accoItem h4 button:before {
+  position: absolute;
+  content: "";
+  top: 3px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icon/ico-acco-arrow-20.svg") no-repeat center/100% auto;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+.accoItem h4 button.on:before {
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+}
+.accoItem .accoCon {
+  display: none;
+  padding: 24px 12px;
+  background: var(--gray5);
+  border-bottom: 1px solid var(--border-color);
+  line-height: 20px;
+  letter-spacing: -0.03rem;
+  font-weight: var(--regular);
+  font-size: 17px;
+  color: var(--text-color);
+}
+.accoItem .accoCon > div {
+  padding-left: 36px;
+  background: url("../images/icon/ico-acco-a.png") no-repeat top left/17px auto;
+}
+
+@media (max-width: 768px) {
+  .titM.flex {
+    display: block;
+    margin-bottom: 34px;
+  }
+  .titM.flex button {
+    margin-top: 24px;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=jn_contents.css.map */
