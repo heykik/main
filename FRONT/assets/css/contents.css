@@ -245,7 +245,6 @@ button[class*=btn][type=button] {
 
 .btnUnder {
   position: relative;
-  padding: 8px 4px;
   height: auto;
   line-height: normal;
   font-size: 17px;
