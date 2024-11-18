@@ -6570,3 +6570,39 @@ input {
     }
 }
 
+/* datepicker */
+.datepicker{
+    position:absolute;
+    background:var(--color-white);
+    border:1px solid var(--gray30);
+    padding:4px;
+    table{
+        
+        th,
+        td{
+            width:28px;
+            height:28px;
+        }
+    }
+}
+table{
+    tbody{
+        td{
+            .dateSelector{
+                display:flex;
+                gap:8px;        
+                @media screen and (min-width:1161px) {
+                    align-items:center;
+                    justify-content:flex-start;
+                    input{
+                        width:153px;
+                    }
+                }
+                @media screen and (max-width:1160px) {
+                    flex-direction:column;
+                    text-align:center;
+                }
+            }
+        }
+    }
+}

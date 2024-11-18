@@ -58,20 +58,18 @@
                         <caption>기업명, 예약자, 연락처, 이메일, 이용목적, 참여인원, 날짜선택, 시간으로 이루어진 표</caption>
                         <colgroup>
                             <col>
-                            <col style="width:560px;">
                             <col>
-                            <col style="width:560px;">
                         </colgroup>
                         <tbody>
                             <tr>
                                 <th scope="row"><span class="req">필수입력</span>기업명</th>
-                                <td colspan="3">
+                                <td>
                                     AA 주식회사
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row"><span class="req">필수입력</span>예약자</th>
-                                <td colspan="3">
+                                <td>
                                     <div class="inputWrap">
                                         <input type="text" title="담당자명(성명)">
                                     </div>
@@ -79,7 +77,7 @@
                             </tr>
                             <tr>
                                 <th scope="row"><span class="req">필수입력</span>연락처</th>
-                                <td colspan="3">
+                                <td>
                                     <div class="inputWrap">
                                         <div class="phone">
                                             <input type="text" title="연락처 지역 번호">
@@ -93,7 +91,7 @@
                             </tr>
                             <tr>
                                 <th scope="row"><span class="req">필수입력</span>이메일</th>
-                                <td colspan="3">
+                                <td>
                                     <div class="inputWrap">
                                         <div class="inputBox email">
                                             <input type="text" title="이메일 주소 입력">
@@ -103,8 +101,12 @@
                                         </div>
                                         <div class="inputBox email">
                                             <select title="도메인">
-                                                <option value="">gmail.com</option>
-                                                <option value="">naver.com</option>
+                                                <option>naver.com</option>
+                                                <option>hanmail.com</option>
+                                                <option>gmail.com</option>
+                                                <option>nate.com</option>
+                                                <option>daum.net</option>
+                                                <option>직접입력</option>
                                             </select>
                                         </div>
                                     </div>
@@ -113,7 +115,7 @@
                             <tr>
                                 <th scope="row"><span class="req">필수입력</span>이용목적
                                 </th>
-                                <td colspan="3">
+                                <td>
                                     <input type="text" title="작성일">
                                 </td>
                             </tr>
@@ -128,28 +130,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><span class="req">필수입력</span>날짜선택</th>
-                                <td>
-                                    <div class="inputWrap date">
-                                        <input type="text" title="작성일">
-                                    </div>
-                                </td>
                                 <th scope="row"><span class="req">필수입력</span>시간</th>
                                 <td>
-                                    <!-- <div class="inputWrap">
-                                        <select class="timeInput">
-                                            <option value="">12:00 ~ 13:00</option>
-                                            <option value="">13:00 ~ 14:00</option>
-                                            <option value="">14:00 ~ 15:00</option>
-                                            <option value="">15:00 ~ 16:00</option>
-                                        </select>
-                                    </div>
-                                    -->
-                                    <div id="myDatePicker">
-                                        <input type="text" class="date start" />
-                                        <input type="text" class="time start" />
-                                        <input type="text" class="date end" />
-                                        <input type="text" class="time end" />
+                                    <div id="dateSelector" class="dateSelector">
+                                        <input type="text" class="dateInput start" />
+                                        <input type="text" class="timeInput start" />
+                                        <span>~</span>
+                                        <input type="text" class="dateInput end" />
+                                        <input type="text" class="timeInput end" />
                                     </div>
                                 </td>
                             </tr>
@@ -179,13 +167,28 @@
     <script src="../assets/js/jquery.mCustomScrollbar.js"></script>
     <script src="../assets/js/jquery-ui.js"></script>
     <!-- 데이터피커 & 타임피커 -->
-    <!-- <script src="../assets/js/datepair.min.js"></script>
+    <script src="../assets/js/datepair.min.js"></script>
     <script src="../assets/js/jquery.datepair.min.js"></script>
-    <script src="../assets/js/jquery.timepicker.js"></script>
-    <script src="../assets/js/bootstrap-datepicker.js"></script> -->
+    <script type="module" src="../assets/js/jquery.timepicker.min.js"></script>
+    <script src="../assets/js/bootstrap-datepicker.js"></script>
     <!--// 데이터피커 & 타임피커 -->
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+        $(document).ready(()=>{
+            $('#dateSelector .timeInput').timepicker({
+            });
+            $('#dateSelector .dateInput').datepicker({
+                format: "yyyy-mm-dd",
+                todayHighlight:true,
+                orientation:'bottom',
+
+            });
+            $('#dateSelector').datepair({
+                
+            });
+        })
+    </script>
 </body>
 
 </html>
