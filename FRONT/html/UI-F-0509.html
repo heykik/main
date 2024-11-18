@@ -178,11 +178,21 @@
         $(document).ready(()=>{
             $('#dateSelector .timeInput').timepicker({
             });
-            $('#dateSelector .dateInput').datepicker({
+            $('#dateSelector .dateInput.start').datepicker({
                 format: "yyyy-mm-dd",
                 todayHighlight:true,
                 orientation:'bottom',
-
+                autoclose:true,
+            }).on('changeDate', function (e) {
+                // 시작 날짜 선택 시 종료 날짜의 최소 날짜를 설정
+                $('#dateSelector .end').datepicker('setStartDate', e.date);
+            });
+            $('#dateSelector .dateInput.end').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true
+            }).on('changeDate', function (e) {
+                // 종료 날짜 선택 시 시작 날짜의 최대 날짜를 설정할 수 있음 (선택 사항)
+                $('#startDate').datepicker('setEndDate', e.date);
             });
             $('#dateSelector').datepair({
                 
