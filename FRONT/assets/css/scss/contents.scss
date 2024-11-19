@@ -2508,14 +2508,15 @@ input {
             display:flex;
             flex-wrap:wrap;
             align-items:flex-start;
-            justify-content:space-between;
+            justify-content:flex-start;
             gap:32px;
         }
     }
     .card{
-        overflow:hidden;
+        display:block;
         border:1px solid var(--gray30);
         border-radius:20px;
+        overflow:hidden;
         @media screen and (min-width:767px) {
             flex:0 0 calc((100% - 32px) / 2);
         }
@@ -2527,7 +2528,11 @@ input {
             align-items:center;
             justify-content:center;
             position:relative;
+            overflow:hidden;
             height:240px;
+            &.leftSort{
+                justify-content:flex-start;
+            }
             img{
                 max-width:initial;
             }
@@ -2578,7 +2583,6 @@ input {
                 -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
             }
             strong{
-                display:block;
                 margin-bottom:8px;
                 font-size:20px;
                 font-weight:var(--bold);
@@ -2662,6 +2666,22 @@ input {
                         white-space:nowrap;
                         width:100%;
                     }
+                }
+            }
+        }
+        .compInfoWrap{
+            margin:0 24px;   
+            padding:20px 0 24px;
+            @media screen and (min-width:1160px) {
+                margin:0 40px;
+            }
+            li{
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                gap:8px;
+                &:first-child{
+                    margin-bottom:8px;
                 }
             }
         }

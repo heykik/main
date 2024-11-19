@@ -2541,14 +2541,15 @@ input[disabled] {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 32px;
   }
 }
 .cardListCont .card {
-  overflow: hidden;
+  display: block;
   border: 1px solid var(--gray30);
   border-radius: 20px;
+  overflow: hidden;
 }
 @media screen and (min-width: 767px) {
   .cardListCont .card {
@@ -2565,7 +2566,11 @@ input[disabled] {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   height: 240px;
+}
+.cardListCont .card .imgWrap.leftSort {
+  justify-content: flex-start;
 }
 .cardListCont .card .imgWrap img {
   max-width: initial;
@@ -2619,7 +2624,6 @@ input[disabled] {
   -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
 }
 .cardListCont .card .titWrap strong {
-  display: block;
   margin-bottom: 8px;
   font-size: 20px;
   font-weight: var(--bold);
@@ -2712,6 +2716,24 @@ input[disabled] {
     white-space: nowrap;
     width: 100%;
   }
+}
+.cardListCont .card .compInfoWrap {
+  margin: 0 24px;
+  padding: 20px 0 24px;
+}
+@media screen and (min-width: 1160px) {
+  .cardListCont .card .compInfoWrap {
+    margin: 0 40px;
+  }
+}
+.cardListCont .card .compInfoWrap li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.cardListCont .card .compInfoWrap li:first-child {
+  margin-bottom: 8px;
 }
 .cardListCont .card:not(:last-child) {
   margin-bottom: 24px;
