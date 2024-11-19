@@ -1539,7 +1539,7 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr td {
   padding: 18px 22px;
 }
-.tableDefault tbody tr td:has(input), .tableDefault tbody tr td:has(select), .tableDefault tbody tr td:has(textarea) {
+.tableDefault tbody tr td:has(input), .tableDefault tbody tr td:has(select), .tableDefault tbody tr td:has(textarea), .tableDefault tbody tr td:has(.imgThmb) {
   padding: 12px;
 }
 .tableDefault tbody tr td input,
@@ -1766,6 +1766,31 @@ button[class*=btn][type=button] {
   .tableDefault tbody tr td .tableCheck .checkBox:has(input[type=text]) input[type=text] {
     width: 320px;
   }
+}
+.tableDefault tbody tr td .imgThmb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+}
+@media screen and (min-width: 1161px) {
+  .tableDefault tbody tr td .imgThmb {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.tableDefault tbody tr td .imgThmb img {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  max-height: 240px;
+  border-radius: 20px;
+}
+.tableDefault tbody tr td .imgThmb .btnRemove {
+  top: 12px;
+  transform: initial;
 }
 .tableDefault tbody tr .hMin240 {
   min-height: 168px;

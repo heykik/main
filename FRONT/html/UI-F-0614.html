@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>경남디지털혁신튜브</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+-->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- skipNav -->
+<dl id="skipNav">
+    <dt>바로가기 메뉴</dt>
+    <dd><a href="#container">본문 바로가기</a></dd>
+    <dd><a href="#gnb">주메뉴 바로가기</a></dd>
+    <dd><a href="#footer">풋터 바로가기</a></dd>
+</dl>
+<!-- //skipNav -->
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <div id="headerImport">
+    </div>
+    <!--// header -->
+    
+    <!-- 서브페이지 내용 -->
+    <div id="container">
+        <!-- sitemap -->
+        <div class="sitemap">
+            <ul>
+                <li class="home"><a href="javascript:void(0);">홈</a></li>
+                <li><a href="javscript:void(0)">알림마당</a></li>
+                <li><a href="javscript:void(0)">이미지게시판</a></li>
+            </ul>
+        </div>
+        <!-- // sitemap -->
+
+        <!-- content -->
+        <div class="content">
+            <!-- titL -->
+            <div class="titL">
+                <h2 class="">이미지게시판</h2>
+            </div>
+            <!-- // titL -->
+
+            <!-- tableDefault -->
+            <div class="tableDefault">
+                <table>
+                    <caption>제목, 첨부파일, 이미지, 내용으로 이루어진 표</caption>
+                    <colgroup>
+                        <col class="thRow" style="width:234px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">제목</th>
+                            <td>
+                                <input type="text" placeholder="제목" title="제목">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일</th>
+                            <td>
+                                <!-- withFileBtn -->
+                                <div class="flexBoxAcJs withFileBtn">
+                                    <input type="file" title="파일 선택">
+                                    <input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>                                 
+                                </div>
+                                <!-- // withFileBtn -->
+
+                                <!-- prevFileInput -->
+                                <div class="prevFileInput">
+                                    <div class="pRel">
+                                        <input type="text" class="" value="이미지.jpg" title="첨부파일명" readonly>
+                                        <button class="btnRemove">삭제하기</button>
+                                    </div>
+                                </div> 
+                                <!-- // prevFileInput -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이미지</th>
+                            <td>
+                                <div class="imgThmb">
+                                    <!-- 삭제버튼 미필요 시 img태그만 삽입 -->
+                                    <img src="../assets/images/sample-img-gray.png" alt="샘플 이미지">
+
+                                    <!-- 삭제버튼 필요 시 하단 div.pRel로 감싸서 버튼 추가하여 삽입 -->
+                                    <div class="pRel">
+                                        <img src="../assets/images/sample-img-gray.png" alt="샘플 이미지">
+                                        <button type="button" class="btnRemove">삭제하기</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">내용</th>
+                            <td>
+                                <textarea title="내용"></textarea>
+                            </td>
+                        </tr>                        
+                    </tbody>
+                </table>
+                <!-- btnBox -->
+                <div class="btnBox half resize sideRight">
+                    <a href="javscript:void(0)" class="btn btnGray">취소</a>
+                    <a href="javscript:void(0)" class="btn btnRed">수정</a>
+                </div>
+                <!-- // btnBox -->
+            </div>
+            <!-- // tableDefault -->
+        </div>
+        <!-- // content -->
+    </div>
+
+    <!-- footer -->
+    <div id="footerImport">
+    </div>
+    <!--// footer -->
+</div>
+<!--// wrap -->
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/swiper.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/main.js"></script>
+     
+<script>
+    $(document).ready(()=>{
+        $('.withFileBtn .btnRed').on('click', (()=>{
+            $('[type="file"]').click();
+        }))
+    })
+</script> 
+</body>
+</html>
