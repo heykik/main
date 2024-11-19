@@ -6651,22 +6651,34 @@ input[disabled] {
   height: 28px;
 }
 
-table tbody td .dateSelector {
+table tbody tr td .dateSelector {
   display: flex;
   gap: 8px;
 }
 @media screen and (min-width: 1161px) {
-  table tbody td .dateSelector {
+  table tbody tr td .dateSelector {
     align-items: center;
     justify-content: flex-start;
   }
-  table tbody td .dateSelector input {
+  table tbody tr td .dateSelector input {
     width: 153px;
   }
 }
 @media screen and (max-width: 1160px) {
-  table tbody td .dateSelector {
+  table tbody tr td .dateSelector {
     flex-direction: column;
     text-align: center;
   }
+}
+
+.datepicker table tbody tr td.today, .datepicker table tbody tr td.today.disabled, .datepicker table tbody tr td.today:hover, .datepicker table tbody tr td.today:hover:hover {
+  background: var(--table-bg);
+  color: var(--color-red);
+}
+.datepicker table tbody tr td.today.disabled:hover, .datepicker table tbody tr td.today.disabled.day, .datepicker table tbody tr td.today.disabled.day:hover {
+  background: rgba(216, 216, 216, 0.4823529412);
+  color: var(--gray50);
+}
+.datepicker table tbody tr td.active, .datepicker table tbody tr td.active.disabled, .datepicker table tbody tr td.active.disabled:hover, .datepicker table tbody tr td.active:hover:hover, .datepicker table tbody tr td.active.active {
+  background: var(--color-red);
 }

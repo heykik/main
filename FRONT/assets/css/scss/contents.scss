@@ -6587,20 +6587,53 @@ input {
 }
 table{
     tbody{
-        td{
-            .dateSelector{
-                display:flex;
-                gap:8px;        
-                @media screen and (min-width:1161px) {
-                    align-items:center;
-                    justify-content:flex-start;
-                    input{
-                        width:153px;
+        tr{
+            td{
+                .dateSelector{
+                    display:flex;
+                    gap:8px;        
+                    @media screen and (min-width:1161px) {
+                        align-items:center;
+                        justify-content:flex-start;
+                        input{
+                            width:153px;
+                        }
                     }
+                    @media screen and (max-width:1160px) {
+                        flex-direction:column;
+                        text-align:center;
+                    }                    
                 }
-                @media screen and (max-width:1160px) {
-                    flex-direction:column;
-                    text-align:center;
+            }
+        }
+    }
+}
+.datepicker{
+    table{
+        tbody{
+            tr{
+                td{
+                    &.today,
+                    &.today.disabled,
+                    &.today:hover,
+                    &.today:hover:hover{
+                        // background:var(--gray30);
+                        background:var(--table-bg);
+                        color:var(--color-red);
+                    }                    
+                    &.today.disabled:hover,
+                    &.today.disabled.day,
+                    &.today.disabled.day:hover{
+                        background:#d8d8d87b;
+                        color:var(--gray50)
+                    }
+                    &.active,
+                    &.active.disabled,
+                    &.active.disabled:hover,
+                    &.active:hover:hover,
+                    &.active.active{
+                        background:var(--color-red);
+                    }
                 }
             }
         }
