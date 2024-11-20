@@ -1,5 +1,5 @@
 $(function() {
-	// 메인 1단
+	// 메인 비주얼
     var visualSwiper = new Swiper(".visualSwiper", {
         pagination: {
             el: ".swiper-pagination",
@@ -30,16 +30,8 @@ $(function() {
         }
     });
 
-    // 메인 2단
-    var infoSwiper = new Swiper(".infoSwiper", {
-        navigation: {
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-        },
-    });
-
-    // 메인 3단
-    var serviceSwiper = new Swiper(".serviceSwiper", {
+    // 메인 콘텐츠 2단
+    var mainCont02 = new Swiper(".mainCont02", {
         navigation: {
             prevEl: ".swiper-button-prev",
             nextEl: ".swiper-button-next",
@@ -47,19 +39,27 @@ $(function() {
         slidesPerView: "auto", // 모바일
         spaceBetween: 10,
         breakpoints: {
-            768: { // 768px 이상
-                slidesPerView: "auto",
-                spaceBetween: 30,
-            },
-            1500: { // 1500px 이상
-                slidesPerView: 5,
+            1281: { // 1281px 이상
+                slidesPerView: 4,
                 spaceBetween: 54,
-            }
+            },
+            1161: { // 1161px ~ 1280px
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
+            // 768: { // 768px ~ 1280px
+            //     slidesPerView: 4,
+            //     spaceBetween: 30,
+            // }
         }
     });
 
-    // 메인 4단
+    // 메인 콘텐츠 3단
     var insightSwiper = new Swiper(".insightSwiper", {
+        navigation: {
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+        },
         scrollbar: {
             el: ".swiper-scrollbar",
             draggable: true,
@@ -75,16 +75,5 @@ $(function() {
                 spaceBetween: 40,
             }
         }
-    });
-
-    // 메인 5단
-    var cmntySwiper = new Swiper(".cmntySwiper", {
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        // centeredSlides: false,
-        // freeMode: true,
-        // freeModeSticky: true,
     });
 });

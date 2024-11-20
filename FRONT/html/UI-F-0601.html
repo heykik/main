@@ -90,7 +90,7 @@
                                 <img src="../assets/images/sample-img-cardList01.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button><!-- 2024-11-20 - 텍스트 수정 -->
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -148,7 +148,7 @@
                                 <img src="../assets/images/sample-img-cardList02.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button><!-- 2024-11-20 - 텍스트 수정 -->
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -206,7 +206,7 @@
                                 <img src="../assets/images/sample-img-cardList03.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button><!-- 2024-11-20 - 텍스트 수정 -->
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -264,7 +264,7 @@
                                 <img src="../assets/images/sample-img-cardList01.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button><!-- 2024-11-20 - 텍스트 수정 -->
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -322,7 +322,7 @@
                                 <img src="../assets/images/sample-img-cardList02.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button><!-- 2024-11-20 - 텍스트 수정 -->
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -380,7 +380,7 @@
                                 <img src="../assets/images/sample-img-cardList03.png" alt="샘플 이미지">
                                 <div class="linkWrap">
                                     <a href="javascript:void(0)" class="home">해당 기업 홈페이지로 이동하기(새 창 이동)</a>
-                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기</button>
+                                    <button type="button" href="javascript:void(0)" class="star on">즐겨찾기 해제</button><!-- 2024-11-20 - 텍스트 수정 -->
                                 </div>
                             </div>
                             <!-- imgWrap -->
@@ -473,13 +473,20 @@
     <script src="../assets/js/jquery.mCustomScrollbar.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/main.js"></script>
+    <!-- 2024-11-20 - 수정 -->
     <script>
         $(document).ready(()=>{
             $('.star').on('click', ((e)=>{
                 $(e.currentTarget).toggleClass('on');
+                if($(e.currentTarget).hasClass('on')){
+                    $(e.currentTarget).text('즐겨찾기 해제');
+                }else{
+                    $(e.currentTarget).text('즐겨찾기 등록');
+                }
             }))
         })
     </script>
+    <!--// 2024-11-20 - 수정 -->
 </body>
 
 </html>

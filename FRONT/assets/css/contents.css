@@ -37,6 +37,11 @@ h3 {
 
 @media (max-width: 767px) {
   h3 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 390px) {
+  h3 {
     font-size: 30px;
   }
 }
@@ -158,6 +163,7 @@ button[class*=btn][type=button] {
   justify-content: center;
   padding: 16px 12px;
   border-radius: 8px;
+  width: -moz-max-content;
   width: max-content;
   height: 48px;
   line-height: 1.5;
@@ -274,6 +280,7 @@ button[class*=btn][type=button] {
   padding: 16px 20px;
   border: 1px solid #ccc;
   border-radius: 40px;
+  width: 232px;
   line-height: 26px;
 }
 .btnLink span {
@@ -357,6 +364,9 @@ button[class*=btn][type=button] {
 
 /* //버튼 */
 @media (max-width: 767px) {
+  .btnLink {
+    width: 200px;
+  }
   .btnLink span {
     font-size: 21px;
   }
@@ -414,7 +424,9 @@ button[class*=btn][type=button] {
 }
 .inputBox select {
   background: url(../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .inputBox input {
   display: flex;
@@ -492,7 +504,9 @@ button[class*=btn][type=button] {
   width: 1px;
   height: 1px;
   opacity: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .radioBox [type=radio]:focus + label {
   outline: 2px solid #000;
@@ -560,7 +574,9 @@ button[class*=btn][type=button] {
   height: 1px;
   opacity: 0;
   border-style: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .checkBox input[type=checkbox]:focus + label {
   outline: 2px solid #000;
@@ -620,6 +636,8 @@ button[class*=btn][type=button] {
 
 /* 탭 */
 .tabTit {
+  position: relative;
+  z-index: 5;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -646,7 +664,7 @@ button[class*=btn][type=button] {
 }
 .tabTit li a {
   display: block;
-  padding: 0 38px;
+  padding: 0 10px;
   color: #888;
 }
 .tabTit li.curr {
@@ -663,7 +681,13 @@ button[class*=btn][type=button] {
 
 @media (max-width: 767px) {
   .tabTit li {
-    min-width: 120px;
+    min-width: 170px;
+  }
+}
+@media (max-width: 390px) {
+  .tabTit li {
+    min-width: 160px;
+    font-size: 17px;
   }
 }
 /* flex box */
@@ -1555,6 +1579,9 @@ button[class*=btn][type=button] {
   color: var(--color-dark);
   box-sizing: border-box;
 }
+.tableDefault tbody tr td input::-moz-placeholder, .tableDefault tbody tr td select::-moz-placeholder, .tableDefault tbody tr td textarea::-moz-placeholder {
+  color: var(--color-text);
+}
 .tableDefault tbody tr td input::placeholder,
 .tableDefault tbody tr td select::placeholder,
 .tableDefault tbody tr td textarea::placeholder {
@@ -1568,7 +1595,9 @@ button[class*=btn][type=button] {
 }
 .tableDefault tbody tr td .timeInput {
   padding: 6px 10px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center/auto;
 }
 @media screen and (max-width: 1159px) {
@@ -1683,7 +1712,9 @@ button[class*=btn][type=button] {
   width: 72px;
   height: 32px;
   border-style: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .tableDefault tbody tr td .withFileBtn [type=file]::before {
   display: inline-flex;
@@ -2570,23 +2601,24 @@ input[disabled] {
     gap: 32px;
   }
 }
-.cardListCont .card {
+
+.card {
   display: block;
   border: 1px solid var(--gray30);
   border-radius: 20px;
   overflow: hidden;
 }
 @media screen and (min-width: 767px) {
-  .cardListCont .card {
+  .card {
     flex: 0 0 calc((100% - 32px) / 2);
   }
 }
 @media screen and (min-width: 1161px) {
-  .cardListCont .card {
+  .card {
     flex: 0 0 calc((100% - 32px - 32px) / 3);
   }
 }
-.cardListCont .card .imgWrap {
+.card .imgWrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2594,13 +2626,13 @@ input[disabled] {
   overflow: hidden;
   height: 240px;
 }
-.cardListCont .card .imgWrap.leftSort {
+.card .imgWrap.leftSort {
   justify-content: flex-start;
 }
-.cardListCont .card .imgWrap img {
+.card .imgWrap img {
   max-width: initial;
 }
-.cardListCont .card .imgWrap .linkWrap {
+.card .imgWrap .linkWrap {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -2609,7 +2641,7 @@ input[disabled] {
   top: 20px;
   right: 24px;
 }
-.cardListCont .card .imgWrap .linkWrap * {
+.card .imgWrap .linkWrap * {
   display: block;
   overflow: hidden;
   border-radius: 100%;
@@ -2617,28 +2649,28 @@ input[disabled] {
   height: 32px;
   text-indent: -9999px;
 }
-.cardListCont .card .imgWrap .linkWrap .home {
+.card .imgWrap .linkWrap .home {
   background: url(../images/icon/ico-home-empty-26.svg) no-repeat #fff center center/auto;
 }
-.cardListCont .card .imgWrap .linkWrap .star {
+.card .imgWrap .linkWrap .star {
   padding: 0;
   background: url(../images/icon/ico-star-empty-16.svg) no-repeat #fff center center/auto;
 }
-.cardListCont .card .imgWrap .linkWrap .star.on {
+.card .imgWrap .linkWrap .star.on {
   background: url(../images/icon/ico-star-yellow-16.svg) no-repeat #fff center center/auto;
 }
-.cardListCont .card .titWrap {
+.card .titWrap {
   margin: 0 24px;
   padding: 16px 0 20px;
   border-bottom: 1px solid var(--gray30);
 }
 @media screen and (min-width: 1161px) {
-  .cardListCont .card .titWrap {
+  .card .titWrap {
     margin: 0 40px;
     padding: 24px 0 20px;
   }
 }
-.cardListCont .card .titWrap * {
+.card .titWrap * {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2648,28 +2680,28 @@ input[disabled] {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
 }
-.cardListCont .card .titWrap strong {
+.card .titWrap strong {
   margin-bottom: 8px;
   font-size: 20px;
   font-weight: var(--bold);
   color: var(--color-dark);
 }
 @media screen and (min-width: 767px) {
-  .cardListCont .card .titWrap strong {
+  .card .titWrap strong {
     height: 64px;
   }
 }
-.cardListCont .card .titWrap p {
+.card .titWrap p {
   font-size: 17px;
   font-weight: var(--regular);
   color: var(--text-color);
 }
 @media screen and (min-width: 767px) {
-  .cardListCont .card .titWrap p {
+  .card .titWrap p {
     height: 52px;
   }
 }
-.cardListCont .card .infoWrap {
+.card .infoWrap {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -2678,32 +2710,32 @@ input[disabled] {
   padding: 20px 0 24px;
 }
 @media screen and (min-width: 1161px) {
-  .cardListCont .card .infoWrap {
+  .card .infoWrap {
     gap: 32px;
     margin: 0 40px;
     padding: 24px 0 20px;
   }
 }
-.cardListCont .card .infoWrap .logoWrap {
+.card .infoWrap .logoWrap {
   display: flex;
   flex: 0 0 56px;
   overflow: hidden;
   border-radius: 4px;
   height: 56px;
 }
-.cardListCont .card .infoWrap .infoList {
+.card .infoWrap .infoList {
   flex: 1 0 calc(100% - 56px - 16px);
   margin: 0;
   max-width: calc(100% - 56px - 16px);
 }
 @media screen and (min-width: 1161px) {
-  .cardListCont .card .infoWrap .infoList {
+  .card .infoWrap .infoList {
     flex: 0 0 calc(100% - 56px - 32px);
     max-width: calc(100% - 56px - 32px);
   }
 }
 @media screen and (min-width: 1161px) {
-  .cardListCont .card .infoWrap .infoList ul {
+  .card .infoWrap .infoList ul {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -2712,59 +2744,59 @@ input[disabled] {
     width: 100%;
   }
 }
-.cardListCont .card .infoWrap .infoList li {
+.card .infoWrap .infoList li {
   width: 100%;
 }
-.cardListCont .card .infoWrap .infoList li:not(:last-child) {
+.card .infoWrap .infoList li:not(:last-child) {
   margin-bottom: 8px;
 }
 @media screen and (min-width: 1161px) {
-  .cardListCont .card .infoWrap .infoList li:not(:last-child) {
+  .card .infoWrap .infoList li:not(:last-child) {
     margin: 0;
   }
 }
 @media screen and (min-width: 1161px) {
-  .cardListCont .card .infoWrap .infoList li:nth-child(odd) {
+  .card .infoWrap .infoList li:nth-child(odd) {
     flex: 0 0 96px;
   }
 }
 @media screen and (min-width: 1161px) {
-  .cardListCont .card .infoWrap .infoList li:nth-child(even) {
+  .card .infoWrap .infoList li:nth-child(even) {
     flex: 0 0 calc(100% - 96px - 8px);
     max-width: calc(100% - 96px - 8px);
   }
 }
 @media screen and (min-width: 1161px) {
-  .cardListCont .card .infoWrap .infoList span {
+  .card .infoWrap .infoList span {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
   }
 }
-.cardListCont .card .compInfoWrap {
+.card .compInfoWrap {
   margin: 0 24px;
   padding: 20px 0 24px;
 }
 @media screen and (min-width: 1160px) {
-  .cardListCont .card .compInfoWrap {
+  .card .compInfoWrap {
     margin: 0 40px;
   }
 }
-.cardListCont .card .compInfoWrap li {
+.card .compInfoWrap li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
 }
-.cardListCont .card .compInfoWrap li:first-child {
+.card .compInfoWrap li:first-child {
   margin-bottom: 8px;
 }
-.cardListCont .card:not(:last-child) {
+.card:not(:last-child) {
   margin-bottom: 24px;
 }
 @media screen and (min-width: 767px) {
-  .cardListCont .card:not(:last-child) {
+  .card:not(:last-child) {
     margin-bottom: 0;
   }
 }
@@ -3165,6 +3197,7 @@ input[disabled] {
 }
 .consultingCont .arrowCont .grayBox {
   position: relative;
+  max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
 }
