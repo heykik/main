@@ -646,6 +646,9 @@ button[class*="btn"][type="button"]{
             padding: 0 10px;
             color: #888;
         }
+        &:not(:first-child){
+            margin-left:-1px;
+        }
     }
     li.curr {
         border-color: var(--color-red);

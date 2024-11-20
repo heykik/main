@@ -64,6 +64,7 @@ $(function() {
             el: ".swiper-scrollbar",
             draggable: true,
         },
+        slidesPerView: "auto",
         spaceBetween: 10,
         observeParents: true,
         observer: true,

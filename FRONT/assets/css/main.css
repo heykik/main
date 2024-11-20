@@ -66,8 +66,7 @@
 .visualSwiper .swiper-slide .imgBox-main img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .visualSwiper .swiper-slide .txtBox-main {
   position: absolute;
@@ -233,8 +232,7 @@
 .mainCont01 .imgBox-main img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .mainCont01 .imgBox-main .txtBox-main {
   position: absolute;
@@ -406,10 +404,12 @@
   position: relative;
   overflow: hidden;
   margin-top: -120px;
+  margin-right: calc(var(--right) * -1);
   padding: 120px 0 80px;
 }
 .mainCont03 .insightSwiper .swiperBtn {
   top: 5px;
+  right: calc((100vw - 1680px - 15px) / 2);
 }
 .mainCont03 .swiper-slide {
   flex: none;
@@ -440,6 +440,11 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
+@media screen and (min-width: 1720px) {
+  .mainCont03 .insightSwiper {
+    margin-right: calc((var(--right) - 9px) * -1);
+  }
+}
 @media (max-width: 1160px) {
   .mainCont03 .insightTit {
     width: 190px;
@@ -460,11 +465,12 @@
     display: none;
   }
   .mainCont03 .insightSwiper {
-    margin-top: -190px;
-    padding: 190px 0 80px;
+    margin: -190px -20px 0;
+    padding: 190px 20px 80px;
   }
   .mainCont03 .insightSwiper .swiperBtn {
     top: 0;
+    right: 20px;
   }
   .mainCont03 .swiper-slide {
     width: 340px !important;

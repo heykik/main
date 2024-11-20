@@ -46,4 +46,6 @@
     --bold:700;
     --exBold:800;
     --black:900;
+
+    --right:calc((100vw - 100%) / 2);
 }
