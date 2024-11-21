@@ -2627,7 +2627,6 @@ input {
             -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
         }
         strong{
-            margin-bottom:8px;
             font-size:20px;
             font-weight:var(--bold);
             color:var(--color-dark);
@@ -2636,6 +2635,7 @@ input {
             }
         }
         p{
+            margin-top:8px;
             font-size:17px;
             font-weight:var(--regular);
             color:var(--text-color);
@@ -2715,7 +2715,7 @@ input {
     }
     .compInfoWrap{
         margin:0 24px;   
-        padding:20px 0 24px;
+        padding:20px 0;
         @media screen and (min-width:1160px) {
             margin:0 40px;
         }
@@ -2724,9 +2724,6 @@ input {
             align-items:center;
             justify-content:space-between;
             gap:8px;
-            &:first-child{
-                margin-bottom:8px;
-            }
         }
     }
     &:not(:last-child){

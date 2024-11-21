@@ -163,7 +163,6 @@ button[class*=btn][type=button] {
   justify-content: center;
   padding: 16px 12px;
   border-radius: 8px;
-  width: -moz-max-content;
   width: max-content;
   height: 48px;
   line-height: 1.5;
@@ -424,9 +423,7 @@ button[class*=btn][type=button] {
 }
 .inputBox select {
   background: url(../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .inputBox input {
   display: flex;
@@ -504,9 +501,7 @@ button[class*=btn][type=button] {
   width: 1px;
   height: 1px;
   opacity: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .radioBox [type=radio]:focus + label {
   outline: 2px solid #000;
@@ -574,9 +569,7 @@ button[class*=btn][type=button] {
   height: 1px;
   opacity: 0;
   border-style: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .checkBox input[type=checkbox]:focus + label {
   outline: 2px solid #000;
@@ -1582,9 +1575,6 @@ button[class*=btn][type=button] {
   color: var(--color-dark);
   box-sizing: border-box;
 }
-.tableDefault tbody tr td input::-moz-placeholder, .tableDefault tbody tr td select::-moz-placeholder, .tableDefault tbody tr td textarea::-moz-placeholder {
-  color: var(--color-text);
-}
 .tableDefault tbody tr td input::placeholder,
 .tableDefault tbody tr td select::placeholder,
 .tableDefault tbody tr td textarea::placeholder {
@@ -1598,9 +1588,7 @@ button[class*=btn][type=button] {
 }
 .tableDefault tbody tr td .timeInput {
   padding: 6px 10px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center/auto;
 }
 @media screen and (max-width: 1159px) {
@@ -1715,9 +1703,7 @@ button[class*=btn][type=button] {
   width: 72px;
   height: 32px;
   border-style: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .tableDefault tbody tr td .withFileBtn [type=file]::before {
   display: inline-flex;
@@ -2684,7 +2670,6 @@ input[disabled] {
   -webkit-box-orient: vertical; /* 박스 방향을 수직으로 설정 */
 }
 .card .titWrap strong {
-  margin-bottom: 8px;
   font-size: 20px;
   font-weight: var(--bold);
   color: var(--color-dark);
@@ -2695,6 +2680,7 @@ input[disabled] {
   }
 }
 .card .titWrap p {
+  margin-top: 8px;
   font-size: 17px;
   font-weight: var(--regular);
   color: var(--text-color);
@@ -2779,7 +2765,7 @@ input[disabled] {
 }
 .card .compInfoWrap {
   margin: 0 24px;
-  padding: 20px 0 24px;
+  padding: 20px 0;
 }
 @media screen and (min-width: 1160px) {
   .card .compInfoWrap {
@@ -2791,9 +2777,6 @@ input[disabled] {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-}
-.card .compInfoWrap li:first-child {
-  margin-bottom: 8px;
 }
 .card:not(:last-child) {
   margin-bottom: 24px;
@@ -3200,7 +3183,6 @@ input[disabled] {
 }
 .consultingCont .arrowCont .grayBox {
   position: relative;
-  max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
 }
