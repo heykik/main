@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>과제평가시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+$(function(){
+	fn_gnb(0,0);
+})
+</script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<h1><a href=""><img src="../assets/images/logo.svg" alt="경남 디지털혁신거점 GYUNGNAM DIGITAL INNOVATION HUB"></a></h1>
+			<!-- util -->
+            <div class="util">
+                <a href="" class="tid"><strong>퍼블관리자</strong> 님</a>
+                <a href="" class="mybtn">로그아웃</a>
+            </div>
+            <!--// util -->
+		</div>
+		<!--// inner -->
+	</div>
+	<!--// header -->
+
+	<!-- gnb -->
+	<div id="gnb">
+		<!-- inner -->
+		<div class="inner">
+			<ul class="depth01">
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0101.svg" alt="">
+						<span>과제평가 관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0102.svg" alt="">
+						<span>사용자 관리</span>
+					</a>
+				</li>
+                <li>
+					<a href="">
+                        <img src="../assets/images/ico-0103.svg" alt="">
+						<span>평가위원관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0104.svg" alt="">
+						<span>공지사항 관리</span>
+					</a>
+                    <ul class="depth02">
+                        <li>
+                            <a href="">DEPTH0301</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0302</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0303</a>
+                        </li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<!--// inner -->
+		<button type="button" class="btnMenu">메뉴 닫기</button>
+	</div>
+	<!--// gnb -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+            <!-- titArea -->
+            <div class="titArea">
+                <div class="tit">
+                    <h2>과제평가</h2>
+                    <div class="titInfo">관리 작업을 수행 할 수 있습니다.</div>
+                </div>
+                <ol class="location">
+                    <li>홈</li>
+                    <li>과제평가</li>
+                    <li>과제평가</li>
+                </ol>
+            </div>
+            <!--// titArea -->
+            <!-- searchArea -->
+            <div class="searchArea">
+                <div class="lt">
+                    <span>공고명</span>
+                    <select name="" id="" title="공고명" class="w120">
+                        <option value="">선택</option>
+                        <option value="">CCCC 공고</option>
+                    </select>
+                </div>
+                <div class="rt">
+                    <span>전문분야</span>
+                    <select name="" id="" title="전문분야" class="w120">
+                        <option value="">선택</option>
+                    </select>
+                    <span>학력</span>
+                    <select name="" id="" title="학력" class="w120">
+                        <option value="">선택</option>
+                        <option value="">학사</option>
+                        <option value="">석사</option>
+                        <option value="">박사</option>
+                    </select>
+                    <span>경력</span>
+                    <select name="" id="" title="경력" class="w120">
+                        <option value="">선택</option>
+                        <option value="">10년 이상</option>
+                        <option value="">15년 이상</option>
+                        <option value="">20년 이상</option>
+                    </select>
+                    <input type="text" title="검색어">
+                    <button type="button" class="btn btnNavy">검색</button>
+                </div>
+            </div>
+            <!--// searchArea -->
+			<!-- contWrap -->
+			<div class="contWrap">
+				<!-- cont -->
+				<div class="cont">
+                    <!-- tableTop -->
+                    <div class="tableTop">
+                        <div class="lt">
+                            <p class="allNum">전체 <strong>24</strong>건</p>
+                        </div>
+                    </div>
+                    <!--// tableTop -->
+                    <div style="height: 200px; background: #f1f1f1">그리드 영역입니다. 개발 시 스타일 삭제해 주세요.</div>
+                    <!-- btnBottom -->
+                    <div class="btnBottom">
+                        <!--// paging -->
+                        <div class="lt">
+                            <button type="button" class="btn btnGray">삭제</button>
+                        </div>
+                        <div class="rt">
+                            <button type="button" class="btn btnlNavy">과제평가위원 선정</button>
+                            <button type="button" class="btn btnNavy">신규등록</button>
+                        </div>
+                    </div>
+                    <!--// btnBottom -->
+				</div>
+				<!--// cont -->
+			</div>
+			<!--// contWrap -->
+		</div>
+		<!--// contents -->
+	</div>
+	<!--// container -->
+</div>
+<!--// wrap -->
+</body>
+</html>
