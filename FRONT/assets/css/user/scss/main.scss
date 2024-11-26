@@ -332,6 +332,9 @@
     overflow: hidden;
     margin: 0 -20px 0;
     padding: 0 20px 60px;
+    .swiper-wrapper {
+        height: auto;
+    }
     .swiper-slide {
         display: flex;
         flex-direction: column;
