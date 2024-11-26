@@ -244,7 +244,7 @@ button[class*="btn"][type="button"]{
         padding-right: 50px;
         font-size: 21px;
         color: var(--color-white);
-        background: url("../images/common/btn-arrow.png") no-repeat center right/20px auto;
+        background: url("../../images/common/btn-arrow.png") no-repeat center right/20px auto;
     }
 }
 .btnRemove{
@@ -256,7 +256,7 @@ button[class*="btn"][type="button"]{
     width:20px;
     height:20px;
     text-indent:-9999px;
-    background:url(../images/icon/ico-file-remove.svg) no-repeat center center / contain;
+    background:url(../../images/icon/ico-file-remove.svg) no-repeat center center / contain;
     transform:translateY(-50%);
 }
 .btnLocation{
@@ -266,7 +266,7 @@ button[class*="btn"][type="button"]{
     width:48px;
     height:48px;
     text-indent:-9999px;
-    background:url(../images/icon/ico-location.svg) no-repeat var(--color-red) center center / auto;
+    background:url(../../images/icon/ico-location.svg) no-repeat var(--color-red) center center / auto;
     &:hover,
     &:focus{
         background-color:#B9131E;
@@ -285,7 +285,7 @@ button[class*="btn"][type="button"]{
     width:20px;
     height:20px;
     text-indent:-9999px;
-    background:url(../images/icon/ico-arrow-up-dark-20.svg) no-repeat center center / contain;
+    background:url(../../images/icon/ico-arrow-up-dark-20.svg) no-repeat center center / contain;
     transition:transform .2s;
     &.on{
         transform:rotate(180deg);
@@ -302,12 +302,12 @@ button[class*="btn"][type="button"]{
     }
     &[class*="Link"]{
         &::before{
-            background:url(../images/icon/ico-go-to-link.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-go-to-link.svg) no-repeat center center / contain;
         }
     }
     &[class*="Search"]{
         &::before{
-            background:url(../images/icon/ico-search-wide-white-20.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-search-wide-white-20.svg) no-repeat center center / contain;
         }
     }
     &[class*="Cycle"]{
@@ -315,7 +315,7 @@ button[class*="btn"][type="button"]{
         text-indent:-9999px;
         &::before{
             margin:0;
-            background:url(../images/icon/ico-recycle-20.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-recycle-20.svg) no-repeat center center / contain;
         }
     }
 }
@@ -360,7 +360,7 @@ button[class*="btn"][type="button"]{
     }
     &.bgInput{
         input{
-            background:url(../images/icon/ico-search-24.svg) no-repeat calc(100% - 10px) center / auto;
+            background:url(../../images/icon/ico-search-24.svg) no-repeat calc(100% - 10px) center / auto;
         }
     }   
     input,
@@ -382,7 +382,7 @@ button[class*="btn"][type="button"]{
         }
     }
     select{
-        background:url(../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center / auto;
+        background:url(../../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center / auto;
         appearance:none;
     }
     input{
@@ -570,7 +570,7 @@ button[class*="btn"][type="button"]{
                 left:10px;
                 width:16px;
                 height:16px;
-                background:url(../images/icon/ico-checked.svg) no-repeat center center / contain;
+                background:url(../../images/icon/ico-checked.svg) no-repeat center center / contain;
                 opacity:0;
                 transform:translate(-50%, -50%);
             }
@@ -861,17 +861,12 @@ button[class*="btn"][type="button"]{
             width:24px;
             height:24px;
             text-indent:-9999px;
-            background:url(../images/common/ico-sitemap-home.svg) no-repeat center center / contain;
+            background:url(../../images/common/ico-sitemap-home.svg) no-repeat center center / contain;
         }
     }
     @media screen and (min-width:1161px){
         padding: 40px 0;
     }
-}
-
-/* content */
-.content{
-    
 }
 
 /* titles */
@@ -947,88 +942,88 @@ button[class*="btn"][type="button"]{
             height:50px;
         }
         &[class*="Puzzle"]::before{
-            background:url(../images/icon/ico-puzzle-50.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-puzzle-50.svg) no-repeat center center / contain;
         }
         &[class*="GiveFile"]::before{
-            background:url(../images/icon/ico-giveFile-50.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-giveFile-50.svg) no-repeat center center / contain;
         }
         &[class*="CycleMedal"]::before{
-            background:url(../images/icon/ico-cycleMedal-50.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-cycleMedal-50.svg) no-repeat center center / contain;
         }
         &[class*="Airplane"]::before{
-            background:url(../images/icon/ico-airplane-50.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-airplane-50.svg) no-repeat center center / contain;
         }
         &[class*="Train"]::before{
-           background:url(../images/icon/ico-train-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-train-50.svg) no-repeat center center / contain;
         }
         &[class*="Bus"]::before{
-           background:url(../images/icon/ico-bus-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-bus-50.svg) no-repeat center center / contain;
         }
         &[class*="SearchFile"]::before{
-            background:url(../images/icon/ico-search-file-50.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-search-file-50.svg) no-repeat center center / contain;
          }        
         &[class*="BubbleInPeople"]::before{
-           background:url(../images/icon/ico-bubble-in-people-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-bubble-in-people-50.svg) no-repeat center center / contain;
         }
         &[class*="Factory"]::before{
-           background:url(../images/icon/ico-factory-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-factory-50.svg) no-repeat center center / contain;
         }
         &[class*="Bookmark"]::before{
-           background:url(../images/icon/ico-bookmark-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-bookmark-50.svg) no-repeat center center / contain;
         }
         &[class*="TechSupport"]::before{
-           background:url(../images/icon/ico-tech-support-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-tech-support-50.svg) no-repeat center center / contain;
         }
         &[class*="FileArchitecture"]::before{
-           background:url(../images/icon/ico-file-architecture-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-file-architecture-50.svg) no-repeat center center / contain;
         }
         &[class*="FileWithPen"]::before{
-           background:url(../images/icon/ico-file-with-pen-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-file-with-pen-50.svg) no-repeat center center / contain;
         }
         &[class*="ChartFindArrow"]::before{
-            background:url(../images/icon/ico-chart-find-arrow-50.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-chart-find-arrow-50.svg) no-repeat center center / contain;
         }
         &[class*="SecurityComplete"]::before{
-            background:url(../images/icon/ico-security-complete-50.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-security-complete-50.svg) no-repeat center center / contain;
         }
         &[class*="Server"]::before{
-            background:url(../images/icon/ico-server-50.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-server-50.svg) no-repeat center center / contain;
         }
         &[class*="ChartOnHand"]::before{
-           background:url(../images/icon/ico-chart-on-hand-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-chart-on-hand-50.svg) no-repeat center center / contain;
         }
         &[class*="VideoCall"]::before{
-           background:url(../images/icon/ico-video-call-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-video-call-50.svg) no-repeat center center / contain;
         }
         &[class*="Teamwork"]::before{
-           background:url(../images/icon/ico-teamwork-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-teamwork-50.svg) no-repeat center center / contain;
         }
         &[class*="FileOnMoniter"]::before{
-           background:url(../images/icon/ico-file-on-moniter-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-file-on-moniter-50.svg) no-repeat center center / contain;
         }
         &[class*="Notice"]::before{
-           background:url(../images/icon/ico-notice-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-notice-50.svg) no-repeat center center / contain;
         }
         &[class*="InfoFile"]::before{
-           background:url(../images/icon/ico-info-file-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-info-file-50.svg) no-repeat center center / contain;
         }
         &[class*="Bubbles"]::before{
-           background:url(../images/icon/ico-bubbles-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-bubbles-50.svg) no-repeat center center / contain;
         }
         &[class*="GlobalSettings"]::before{
-           background:url(../images/icon/ico-global-settings-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-global-settings-50.svg) no-repeat center center / contain;
         }
         &[class*="EditFile"]::before{
-           background:url(../images/icon/ico-edit-file-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-edit-file-50.svg) no-repeat center center / contain;
         }
         &[class*="List"]::before{
-           background:url(../images/icon/ico-list-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-list-50.svg) no-repeat center center / contain;
         }
         &[class*="PersonCheck"]::before{
-           background:url(../images/icon/ico-person-check-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-person-check-50.svg) no-repeat center center / contain;
         }
         &[class*="Navigation"]::before{
-           background:url(../images/icon/ico-navigation-50.svg) no-repeat center center / contain;
+           background:url(../../images/icon/ico-navigation-50.svg) no-repeat center center / contain;
         }
     }
 }
@@ -1075,7 +1070,7 @@ button[class*="btn"][type="button"]{
             padding:0;
             border-radius:40px;
             width:100%;
-            background:url(../images/sample-bg.png) no-repeat #000 center center / 100% auto;
+            background:url(../../images/sample-bg.png) no-repeat #000 center center / 100% auto;
         }
         @media screen and (min-width:1161px) {
             margin:0 0 120px;
@@ -1172,7 +1167,7 @@ button[class*="btn"][type="button"]{
 
 // sample-remove
 .sample{
-    background:url(../images/sample-ico.png) no-repeat var(--gray30) center center / auto;
+    background:url(../../images/sample-ico.png) no-repeat var(--gray30) center center / auto;
 }
 
 /* text description */
@@ -1273,13 +1268,13 @@ button[class*="btn"][type="button"]{
             &.icoLoca{
                 strong{
                     &::before{
-                        background:url(../images/icon/ico-location-red-20.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-location-red-20.svg) no-repeat center center / contain;
                     }
                 }
                 &.lg{
                     strong{
                         &::before{
-                            background:url(../images/icon/ico-location-red-24.svg) no-repeat center center / contain;
+                            background:url(../../images/icon/ico-location-red-24.svg) no-repeat center center / contain;
                         }
                     }    
                 }
@@ -1287,14 +1282,14 @@ button[class*="btn"][type="button"]{
             &.icoCall{
                 strong{
                     &::before{
-                        background:url(../images/icon/ico-call-red-20.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-call-red-20.svg) no-repeat center center / contain;
                     }
                 }
             }
             &.icoBag{
                 strong{
                     &::before{
-                        background:url(../images/icon/ico-bag-red-20.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-bag-red-20.svg) no-repeat center center / contain;
                     }
                 }
             }
@@ -1307,7 +1302,7 @@ button[class*="btn"][type="button"]{
                 &.lg{
                     strong{
                         &::before{
-                        background:url(../images/icon/ico-time-red-24.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-time-red-24.svg) no-repeat center center / contain;
                         }
                     }
                 }
@@ -1321,7 +1316,7 @@ button[class*="btn"][type="button"]{
                 &.lg{
                     strong{
                         &::before{
-                        background:url(../images/icon/ico-calendar-red-24.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-calendar-red-24.svg) no-repeat center center / contain;
                         }
                     }
                 }
@@ -1329,7 +1324,7 @@ button[class*="btn"][type="button"]{
             &.icoPerson{
                 strong{
                     &::before{
-                        background:url(../images/icon/ico-person-red-20.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-person-red-20.svg) no-repeat center center / contain;
                     }
                 }
             }
@@ -1436,16 +1431,16 @@ button[class*="btn"][type="button"]{
             height:30px;
             text-indent:-9999px;
             &[class*="First"]{
-                background:url(../images/icon/ico-dubbleArrow-gray-left.svg) no-repeat center / auto;
+                background:url(../../images/icon/ico-dubbleArrow-gray-left.svg) no-repeat center / auto;
             }
             &[class*="Prev"]{
-                background:url(../images/icon/ico-arrow-gray-left-20.svg) no-repeat center / auto;
+                background:url(../../images/icon/ico-arrow-gray-left-20.svg) no-repeat center / auto;
             }
             &[class*="Next"]{
-                background:url(../images/icon/ico-arrow-gray-right-20.svg) no-repeat center / auto;
+                background:url(../../images/icon/ico-arrow-gray-right-20.svg) no-repeat center / auto;
             }
             &[class*="Last"]{
-                background:url(../images/icon/ico-dubbleArrow-gray-right.svg) no-repeat center / auto;
+                background:url(../../images/icon/ico-dubbleArrow-gray-right.svg) no-repeat center / auto;
             }
             @media screen and (min-width:1161px) {
                 width:40px;
@@ -1476,7 +1471,7 @@ button[class*="btn"][type="button"]{
             }
             .omission {
                 text-indent: -9999px;
-                background: url("../images/icon/ico-omission.svg") no-repeat center / auto;
+                background: url("../../images/icon/ico-omission.svg") no-repeat center / auto;
             }
         }
     }
@@ -1591,13 +1586,13 @@ button[class*="btn"][type="button"]{
                 input{
                     padding:6px 10px;
                     &.dateInput{
-                        background:url(../images/icon/ico-calendar-20.svg) no-repeat calc(100% - 10px) center  / auto;
+                        background:url(../../images/icon/ico-calendar-20.svg) no-repeat calc(100% - 10px) center  / auto;
                     }
                 }
                 .timeInput{
                     padding:6px 10px;
                     appearance:none;
-                    background:url(../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center  / auto;
+                    background:url(../../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center  / auto;
                 }
                 &:has(.email){
                     @media screen and (max-width:1159px) {
@@ -1973,7 +1968,7 @@ button[class*="btn"][type="button"]{
                         }
                     }
                     select{
-                        background:url(../images/icon/ico-arrow-gray80-20.svg) no-repeat #fff calc(100% - 10px) center / auto;
+                        background:url(../../images/icon/ico-arrow-gray80-20.svg) no-repeat #fff calc(100% - 10px) center / auto;
                     }
                 }
             }
@@ -2271,9 +2266,9 @@ input {
 /* 디지털 혁신 인프라 > 혁신거점 허브 */
 .hubCont{
     .imgTit{
-        background:url(../images/bg-hub-img-title-mo.png) no-repeat #000 center center / cover;
+        background:url(../../images/bg-hub-img-title-mo.png) no-repeat #000 center center / cover;
         @media screen and (min-width:767px){
-            background:url(../images/bg-hub-img-title.png) no-repeat #000 center center / cover;
+            background:url(../../images/bg-hub-img-title.png) no-repeat #000 center center / cover;
         }
     }
 }
@@ -2320,9 +2315,9 @@ input {
         padding:10px 0 40px;
     }
     .imgTit{
-        background:url(../images/bg-bridge-img-title-mo.png) no-repeat #000 center center / cover;
+        background:url(../../images/bg-bridge-img-title-mo.png) no-repeat #000 center center / cover;
         @media screen and (min-width:767px){
-            background:url(../images/bg-bridge-img-title.png) no-repeat #000 center center / cover;
+            background:url(../../images/bg-bridge-img-title.png) no-repeat #000 center center / cover;
         }
     }
     .imgBox{
@@ -2334,15 +2329,15 @@ input {
             margin:56px 0 0;
         }
         &.mainBox{
-            background:url(../images/visual-main-bridge-img-mo.png) no-repeat center center / contain;
+            background:url(../../images/visual-main-bridge-img-mo.png) no-repeat center center / contain;
             @media screen and (min-width:1161px){
-                background:url(../images/visual-main-bridge-img.png) no-repeat center center / contain;
+                background:url(../../images/visual-main-bridge-img.png) no-repeat center center / contain;
             }
         }
         &.subBox{
-            background:url(../images/visual-sub-bridge-img-mo.png) no-repeat center center / contain;
+            background:url(../../images/visual-sub-bridge-img-mo.png) no-repeat center center / contain;
             @media screen and (min-width:1161px){
-                background:url(../images/visual-sub-bridge-img.png) no-repeat center center / contain;
+                background:url(../../images/visual-sub-bridge-img.png) no-repeat center center / contain;
             }
         }
     }
@@ -2379,18 +2374,18 @@ input {
 /* 디지털 혁신 인프라 > SW 미래채움 */
 .swCont{
     .imgTit{
-        background:url(../images/bg-sw-img-title-mo.png) no-repeat center center / cover;
+        background:url(../../images/bg-sw-img-title-mo.png) no-repeat center center / cover;
         @media screen and (min-width:767px){
-            background:url(../images/bg-sw-img-title.png) no-repeat center center / cover;
+            background:url(../../images/bg-sw-img-title.png) no-repeat center center / cover;
         }
     }
 }
 /* 디지털 혁신 인프라 > AX 랩 */
 .axCont{
     .imgTit{
-        background:url(../images/bg-ax-img-title-mo.png) no-repeat center center / cover;
+        background:url(../../images/bg-ax-img-title-mo.png) no-repeat center center / cover;
         @media screen and (min-width:767px){
-            background:url(../images/bg-ax-img-title.png) no-repeat center center / cover;
+            background:url(../../images/bg-ax-img-title.png) no-repeat center center / cover;
         }
     }
     .txtBold{
@@ -2409,9 +2404,9 @@ input {
 /* 디지털 혁신 인프라 > 경남메타버스지원센터 운영 사업 */
 .vrCont{
     .imgTit{
-        background:url(../images/bg-vr-img-title-mo.png) no-repeat center center / cover;
+        background:url(../../images/bg-vr-img-title-mo.png) no-repeat center center / cover;
         @media screen and (min-width:767px){
-            background:url(../images/bg-vr-img-title.png) no-repeat center center / cover;
+            background:url(../../images/bg-vr-img-title.png) no-repeat center center / cover;
         }
     }
 }
@@ -2444,9 +2439,9 @@ input {
 /* 디지털 혁신 인프라 > 동남권 품질역량강화센터 */
 .qualityCont{
     .imgTit{
-        background:url(../images/bg-quality-img-title-mo.png) no-repeat center center / cover;
+        background:url(../../images/bg-quality-img-title-mo.png) no-repeat center center / cover;
         @media screen and (min-width:767px){
-            background:url(../images/bg-quality-img-title.png) no-repeat center center / cover;
+            background:url(../../images/bg-quality-img-title.png) no-repeat center center / cover;
         }
     }
     .ruleCont{
@@ -2526,9 +2521,9 @@ input {
 /* 디지털 혁신 인프라 > 정보보안 테스트베드 */
 .testCont{
     .imgTit{
-        background:url(../images/bg-test-img-title-mo.png) no-repeat center center / cover;
+        background:url(../../images/bg-test-img-title-mo.png) no-repeat center center / cover;
         @media screen and (min-width:767px){
-            background:url(../images/bg-test-img-title.png) no-repeat center center / cover;
+            background:url(../../images/bg-test-img-title.png) no-repeat center center / cover;
         }
     }
 }
@@ -2597,13 +2592,13 @@ input {
                 text-indent:-9999px;
             }
             .home{
-                background:url(../images/icon/ico-home-empty-26.svg) no-repeat #fff center center / auto;
+                background:url(../../images/icon/ico-home-empty-26.svg) no-repeat #fff center center / auto;
             }
             .star{
                 padding:0;
-                background:url(../images/icon/ico-star-empty-16.svg) no-repeat #fff center center / auto;
+                background:url(../../images/icon/ico-star-empty-16.svg) no-repeat #fff center center / auto;
                 &.on{
-                    background:url(../images/icon/ico-star-yellow-16.svg) no-repeat #fff center center / auto;
+                    background:url(../../images/icon/ico-star-yellow-16.svg) no-repeat #fff center center / auto;
                 }
             }
         }            
@@ -2736,9 +2731,9 @@ input {
 /* 알림마당 > 교육프로그램 > AI 노바투스 아카데미아 교육 */
 .aiAcademyCont{
     .imgTit{
-        background:url(../images/bg-ai-academy-img-title-mo.png) no-repeat center center / cover;
+        background:url(../../images/bg-ai-academy-img-title-mo.png) no-repeat center center / cover;
         @media screen and (min-width:767px){
-            background:url(../images/bg-ai-academy-img-title.png) no-repeat center center / cover;
+            background:url(../../images/bg-ai-academy-img-title.png) no-repeat center center / cover;
         }
     }
     ul{
@@ -2771,7 +2766,7 @@ input {
                     margin:0 auto 4px;
                     width:8px;
                     height:57px;
-                    background:url(../images/visual-arrow-angle-red.svg) no-repeat center bottom / 100% auto;
+                    background:url(../../images/visual-arrow-angle-red.svg) no-repeat center bottom / 100% auto;
                     @media screen and (min-width:1161px) {
                         margin:-6px auto 4px;
                         height:68px;
@@ -2837,7 +2832,7 @@ input {
             }
             &:first-child{
                 &::after{
-                    background:url(../images/icon/ico-hands-circle-100.svg) no-repeat center center / contain;
+                    background:url(../../images/icon/ico-hands-circle-100.svg) no-repeat center center / contain;
                 }
             }
             &:last-child{
@@ -2853,7 +2848,7 @@ input {
                     left:50%;
                     width:32px;
                     height:28px;
-                    background:url(../images/visual-arrow-dot-red.svg) no-repeat center center / contain;
+                    background:url(../../images/visual-arrow-dot-red.svg) no-repeat center center / contain;
                     transform:translate(-50%, -100%);
                     @media screen and (min-width:1161px) {
                         top:50%;
@@ -2862,7 +2857,7 @@ input {
                     }
                 }
                 &::after{
-                    background:url(../images/icon/ico-light-circle-100.svg) no-repeat center center / contain;
+                    background:url(../../images/icon/ico-light-circle-100.svg) no-repeat center center / contain;
                 }
             }
             strong{
@@ -2914,12 +2909,12 @@ input {
                 display:block;
                 width:153px;
                 height:289px;
-                background:url(../images/visual-line-long-red-mo.svg)no-repeat center center / contain;
+                background:url(../../images/visual-line-long-red-mo.svg)no-repeat center center / contain;
                 transform:translate(50%, 0);
                 @media screen and (min-width:1161px) {
                     width:86px;
                     height:328px;
-                    background:url(../images/visual-arrow-gray-dash-middle-pc.svg)no-repeat center center / contain;
+                    background:url(../../images/visual-arrow-gray-dash-middle-pc.svg)no-repeat center center / contain;
                     transform:translate(100%, -50%);
                 }
             }
@@ -2958,7 +2953,7 @@ input {
                 position:absolute;
                 width:14px;
                 height:50px;
-                background:url(../images/visual-arrow-line-angle-red.svg) no-repeat top center / auto;
+                background:url(../../images/visual-arrow-line-angle-red.svg) no-repeat top center / auto;
                 @media screen and (min-width:1161px) {
                     height:74px;
                 }
@@ -3072,7 +3067,7 @@ input {
                 content:"";
                 width:14px;
                 height:50px;
-                background:url(../images/visual-arrow-line-angle-darkRed.svg) no-repeat center top / auto;
+                background:url(../../images/visual-arrow-line-angle-darkRed.svg) no-repeat center top / auto;
                 @media screen and (min-width:1161px) {
                     height:74px;
                 }
@@ -3093,12 +3088,12 @@ input {
                 display:block;
                 width:46px;
                 height:118px;
-                background:url(../images/visual-arrow-gray-dash-short-mo.svg)no-repeat center center / contain;
+                background:url(../../images/visual-arrow-gray-dash-short-mo.svg)no-repeat center center / contain;
                 transform:translate(-100%, -100%);
                 @media screen and (min-width:1161px) {
                     width:106px;
                     height:178px;
-                    background:url(../images/visual-arrow-gray-dash-middle.svg)no-repeat center center / contain;
+                    background:url(../../images/visual-arrow-gray-dash-middle.svg)no-repeat center center / contain;
                 }
             }          
         }
@@ -3121,13 +3116,13 @@ input {
                 width:82px;
                 height:357px;
                 transform:translateX(-100%);
-                background:url(../images/visual-arrow-gray-dash-mo.svg)no-repeat center center / contain;
+                background:url(../../images/visual-arrow-gray-dash-mo.svg)no-repeat center center / contain;
                 @media screen and (min-width:1161px) {
                     bottom:58%;
                     left:-12px;
                     width:112px;
                     height:14px;
-                    background:url(../images/visual-arrow-angle-red-long.svg)no-repeat center center / auto;
+                    background:url(../../images/visual-arrow-angle-red-long.svg)no-repeat center center / auto;
                     transform:translate(-100%, -100%);
                 }
             }
@@ -3140,7 +3135,7 @@ input {
                     content:"";
                     width:335px;
                     height:87px;
-                    background:url(../images/visual-arrow-gray-dash-under-pc.svg) no-repeat center center / contain;
+                    background:url(../../images/visual-arrow-gray-dash-under-pc.svg) no-repeat center center / contain;
                     transform:translate(0, 100%);
                 }
             }
@@ -3158,7 +3153,7 @@ input {
                 margin:0 auto 6px;
                 width:80px;
                 height:80px;
-                background:url(../images/visual-unist-80.svg) no-repeat center center / contain;
+                background:url(../../images/visual-unist-80.svg) no-repeat center center / contain;
             }
             p{
                 line-height:1.5;
@@ -3174,7 +3169,7 @@ input {
                 margin:2px auto 8px;
                 width:14px;
                 height:36px;
-                background:url(../images/visual-arrow-line-angle-red.svg) no-repeat center top / auto;
+                background:url(../../images/visual-arrow-line-angle-red.svg) no-repeat center top / auto;
                 @media screen and (min-width:1161px) {
                     position:absolute;
                     top:40px;
@@ -3183,7 +3178,7 @@ input {
                     width:83px;
                     height:14px;
                     transform:translate(100%, -50%);
-                    background:url(../images/visual-arrow-angle-red-long.svg) no-repeat right center / auto;
+                    background:url(../../images/visual-arrow-angle-red-long.svg) no-repeat right center / auto;
                 }
             }            
         }
@@ -3195,7 +3190,7 @@ input {
                 margin:0 auto 6px;
                 width:80px;
                 height:80px;
-                background:url(../images/visual-light-book-80.svg) no-repeat center center / contain;
+                background:url(../../images/visual-light-book-80.svg) no-repeat center center / contain;
             }
             p{
                 line-height:1.5;
@@ -3356,7 +3351,7 @@ input {
         position:relative;
         margin:0 -16px 0;
         padding:64px 16px 0;
-        background:url(../images/bg-structure.png) no-repeat top center / 100%;
+        background:url(../../images/bg-structure.png) no-repeat top center / 100%;
         @media screen and (min-width:1161px) {
             margin:0 auto 68px;
             padding:80px 0 0;
@@ -3370,7 +3365,7 @@ input {
                 z-index:-1;
                 width:100vw;
                 height:552px;
-                background:url(../images/bg-servicemap-header.png) no-repeat center center / auto;
+                background:url(../../images/bg-servicemap-header.png) no-repeat center center / auto;
                 transform:translateX(-50%);
                 @media screen and (min-width:1520px) {
                     left:calc(((-100vw) + 1520px) / 2);
@@ -3384,7 +3379,7 @@ input {
             margin:0 0 0 -16px;
             width:100vw;
             height:78px;
-            background:url(../images/visual-arrow-large.svg) no-repeat center top / auto;
+            background:url(../../images/visual-arrow-large.svg) no-repeat center top / auto;
             @media screen and (min-width:1161px) {
                 margin:0 auto;
                 width:726px;
@@ -3498,7 +3493,7 @@ input {
                     content:"";
                     width:24px;
                     height:24px;
-                    background:url(../images/icon/ico-coin-24.svg) no-repeat center center / contain;
+                    background:url(../../images/icon/ico-coin-24.svg) no-repeat center center / contain;
                 }
             }
         }
@@ -3550,24 +3545,24 @@ input {
                 }
             }
             &:nth-child(1)::before{
-                background:url(../images/visual-cardList-01.svg) no-repeat #fff center center / auto;
+                background:url(../../images/visual-cardList-01.svg) no-repeat #fff center center / auto;
             }
             &:nth-child(2)::before{
-                background:url(../images/visual-cardList-02.svg) no-repeat #fff center center / auto;
+                background:url(../../images/visual-cardList-02.svg) no-repeat #fff center center / auto;
 
             }
             &:nth-child(3)::before{
-                background:url(../images/visual-cardList-03.svg) no-repeat #fff center center / auto;
+                background:url(../../images/visual-cardList-03.svg) no-repeat #fff center center / auto;
 
             }
             &:nth-child(4)::before{
-                background:url(../images/visual-cardList-04.svg) no-repeat #fff center center / auto;
+                background:url(../../images/visual-cardList-04.svg) no-repeat #fff center center / auto;
             }
             &:nth-child(5)::before{
-                background:url(../images/visual-cardList-05.svg) no-repeat #fff center center / auto;
+                background:url(../../images/visual-cardList-05.svg) no-repeat #fff center center / auto;
             }
             &:nth-child(6)::before{
-                background:url(../images/visual-cardList-06.svg) no-repeat #fff center center / auto;
+                background:url(../../images/visual-cardList-06.svg) no-repeat #fff center center / auto;
             }
         }
     }
@@ -3586,14 +3581,14 @@ input {
                 left:50%;
                 width:6px;
                 height:40px;
-                background:url(../images/visual-shCard-dash.svg) no-repeat center bottom / auto;
+                background:url(../../images/visual-shCard-dash.svg) no-repeat center bottom / auto;
                 transform:translate(-50%, 100%);
                 @media screen and (min-width:1161px) {
                     position:static;
                     margin:24px auto 18px;
                     width:1036px;
                     height:34px;
-                    background:url(../images/visual-shCard-dash-pc.svg) no-repeat center bottom / auto;
+                    background:url(../../images/visual-shCard-dash-pc.svg) no-repeat center bottom / auto;
                     transform:initial;
                 }
             }
@@ -3656,7 +3651,7 @@ input {
                         left:50%;
                         width:6px;
                         height:25px;
-                        background:url(../images/visual-shCard-dash.svg) no-repeat center bottom / auto;
+                        background:url(../../images/visual-shCard-dash.svg) no-repeat center bottom / auto;
                         transform:translate(-50%, 100%);
                         @media screen and (min-width:1161px) {
                             content:none;
@@ -3822,72 +3817,72 @@ input {
             &[class*="bgIco"]{
                 &[class*="Fix"]{
                     &::after{
-                        background:url(../images/icon/ico-fix-tool-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-fix-tool-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="CloudeServer"]{
                     &::after{
-                        background:url(../images/icon/ico-cloud-server-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-cloud-server-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="MoniterSetting"]{
                     &::after{
-                    background:url(../images/icon/ico-moniter-setting-80.svg) no-repeat center center / contain;
+                    background:url(../../images/icon/ico-moniter-setting-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="FileCheck"]{
                     &::after{
-                        background:url(../images/icon/ico-file-check-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-file-check-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="NotebookTool"]{
                     &::after{
-                        background:url(../images/icon/ico-notebook-tool-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-notebook-tool-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="UserBubble"]{
                     &::after{
-                        background:url(../images/icon/ico-user-bubble-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-user-bubble-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="Apple"]{
                     &::after{
-                        background:url(../images/icon/ico-apple-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-apple-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="AxHand"]{
                     &::after{
-                        background:url(../images/icon/ico-ax-hand-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-ax-hand-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="Bankbook"]{
                     &::after{
-                        background:url(../images/icon/ico-bankbook-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-bankbook-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="IdeaGear"]{
                     &::after{
-                        background:url(../images/icon/ico-idea-gear-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-idea-gear-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="PlayDoc"]{
                     &::after{
-                        background:url(../images/icon/ico-play-doc-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-play-doc-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="Puzzle"]{
                     &::after{
-                        background:url(../images/icon/ico-puzzle-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-puzzle-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="DoubleBubble"]{
                     &::after{
-                        background:url(../images/icon/ico-double-bubble-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-double-bubble-80.svg) no-repeat center center / contain;
                     }
                 }
                 &[class*="FileTarget"]{
                     &::after{
-                        background:url(../images/icon/ico-file-target-80.svg) no-repeat center center / contain;
+                        background:url(../../images/icon/ico-file-target-80.svg) no-repeat center center / contain;
                     }
                 }
             }
@@ -3990,27 +3985,27 @@ input {
         }
         &:nth-child(2){
             .imgWrap{
-                background:url(../images/visual-service-wrap-01.png) no-repeat center left / 100%;
+                background:url(../../images/visual-service-wrap-01.png) no-repeat center left / 100%;
             }
         }
         &:nth-child(3){
             .imgWrap{
-                background:url(../images/visual-service-wrap-02.png) no-repeat center left / 100%;
+                background:url(../../images/visual-service-wrap-02.png) no-repeat center left / 100%;
             }
         }
         &:nth-child(4){
             .imgWrap{
-                background:url(../images/visual-service-wrap-03.png) no-repeat center left / 100%;
+                background:url(../../images/visual-service-wrap-03.png) no-repeat center left / 100%;
             }
         }
         &:nth-child(5){
             .imgWrap{
-                background:url(../images/visual-service-wrap-04.png) no-repeat center left / 100%;
+                background:url(../../images/visual-service-wrap-04.png) no-repeat center left / 100%;
             }
         }
         &:nth-child(6){
             .imgWrap{
-                background:url(../images/visual-service-wrap-05.png) no-repeat center left / 100%;
+                background:url(../../images/visual-service-wrap-05.png) no-repeat center left / 100%;
             }
         }
         &:nth-child(odd){
@@ -4878,7 +4873,7 @@ input {
     .swiper-button-prev{
         width:40px;
         height:40px;
-        background:url(../images/icon/ico-swiper-arrow-left-40.svg) no-repeat center center / contain;
+        background:url(../../images/icon/ico-swiper-arrow-left-40.svg) no-repeat center center / contain;
         &::after{
             opacity:0;
         }
@@ -4886,7 +4881,7 @@ input {
     .swiper-button-next{
         width:40px;
         height:40px;
-        background:url(../images/icon/ico-swiper-arrow-right-40.svg) no-repeat center center / contain;
+        background:url(../../images/icon/ico-swiper-arrow-right-40.svg) no-repeat center center / contain;
         &::after{
             opacity:0;
         }
@@ -5022,7 +5017,7 @@ input {
                     margin:24px auto;
                     width:32px;
                     height:32px;
-                    background:url(../images/visual-arrow-dot.svg) no-repeat center center / auto;
+                    background:url(../../images/visual-arrow-dot.svg) no-repeat center center / auto;
                     transform:rotate(90deg);
                     @media screen and (min-width:1161px) {
                         margin:36px 0 0 32px;
@@ -5041,13 +5036,13 @@ input {
                 }
             }
             &:first-child p::before{
-                background:url(../images/visual-file-with-pen.svg) no-repeat #fff center center / auto;
+                background:url(../../images/visual-file-with-pen.svg) no-repeat #fff center center / auto;
             }
             &:nth-child(2) p::before{
-                background:url(../images/visual-file-in-letter.svg) no-repeat #fff center center / auto;
+                background:url(../../images/visual-file-in-letter.svg) no-repeat #fff center center / auto;
             }
             &:last-child p::before{
-                background:url(../images/visual-file-with-medal.svg) no-repeat #fff center center / auto;
+                background:url(../../images/visual-file-with-medal.svg) no-repeat #fff center center / auto;
             }
         }
     }
@@ -5083,7 +5078,7 @@ input {
             margin-right:4px;
             width:20px;
             height:20px;
-            background:url(../images/icon/ico-search-white-20.svg) no-repeat center center / contain;
+            background:url(../../images/icon/ico-search-white-20.svg) no-repeat center center / contain;
         }
         @media screen and (min-width:1161px) {
             &::before{
@@ -5097,7 +5092,7 @@ input {
             width:24px;
             height:24px;
             text-indent:-9999px;
-            background:url(../images/icon/ico-search-24.svg) #fff no-repeat center center / contain;
+            background:url(../../images/icon/ico-search-24.svg) #fff no-repeat center center / contain;
         }
     }
 }
@@ -5201,7 +5196,7 @@ input {
         top: 0;
         width: 100%;
         height: 100%;
-        background: url("../images/visual-goal-pc.svg") no-repeat center/666px auto;
+        background: url("../../images/visual-goal-pc.svg") no-repeat center/666px auto;
     }
     .opeGoal {
             display: flex;
@@ -5222,7 +5217,7 @@ input {
                 top: 0;
                 width: 80px;
                 height: 80px;
-                background: url("../images/icon/ico-goal.svg") no-repeat center/100% auto;
+                background: url("../../images/icon/ico-goal.svg") no-repeat center/100% auto;
             }    
     }
     .top,
@@ -5283,22 +5278,22 @@ input {
         }
         &:nth-child(2) {
             .imgWrap {
-                background: url("../images/visual-field-wrap-01.png") no-repeat center left/100%;
+                background: url("../../images/visual-field-wrap-01.png") no-repeat center left/100%;
             }
         }
         &:nth-child(3) {
             .imgWrap {
-                background: url("../images/visual-field-wrap-02.png") no-repeat center left/100%;
+                background: url("../../images/visual-field-wrap-02.png") no-repeat center left/100%;
             }
         }
         &:nth-child(4) {
             .imgWrap {
-                background: url("../images/visual-field-wrap-03.png") no-repeat center left/100%;
+                background: url("../../images/visual-field-wrap-03.png") no-repeat center left/100%;
             }
         }
         &:nth-child(5) {
             .imgWrap {
-                background: url("../images/visual-field-wrap-04.png") no-repeat center left/100%;
+                background: url("../../images/visual-field-wrap-04.png") no-repeat center left/100%;
             }
         }
     }
@@ -5333,16 +5328,16 @@ input {
     .borderBoxes.goal {
         .borderBox {
             &:nth-child(1)::before {
-                background: var(--gray5) url("../images/icon/ico-goals05.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-goals05.svg") no-repeat center/50px auto;
             }
             &:nth-child(2)::before {
-                background: var(--gray5) url("../images/icon/ico-goals06.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-goals06.svg") no-repeat center/50px auto;
             }
             &:nth-child(3)::before {
-                background: var(--gray5) url("../images/icon/ico-goals07.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-goals07.svg") no-repeat center/50px auto;
             }
             &:nth-child(4)::before {
-                background: var(--gray5) url("../images/icon/ico-goals08.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-goals08.svg") no-repeat center/50px auto;
             }
         }
     }
@@ -5416,7 +5411,7 @@ input {
         padding-top: 296px;
         height: auto;
         &::before {
-            background: url("../images/visual-goal-mo.svg") no-repeat top/256px auto;
+            background: url("../../images/visual-goal-mo.svg") no-repeat top/256px auto;
         }
         .opeGoal {
             top: 83px;
@@ -5460,16 +5455,16 @@ input {
             }
         }
         .goal01::before {
-            background: var(--color-white) url("../images/icon/ico-goal01.svg") no-repeat center;
+            background: var(--color-white) url("../../images/icon/ico-goal01.svg") no-repeat center;
         }
         .goal02::before {
-            background: var(--color-white) url("../images/icon/ico-goal02.svg") no-repeat center;
+            background: var(--color-white) url("../../images/icon/ico-goal02.svg") no-repeat center;
         }
         .goal03::before {
-            background: var(--color-white) url("../images/icon/ico-goal03.svg") no-repeat center;
+            background: var(--color-white) url("../../images/icon/ico-goal03.svg") no-repeat center;
         }
         .goal04::before {
-            background: var(--color-white) url("../images/icon/ico-goal04.svg") no-repeat center;
+            background: var(--color-white) url("../../images/icon/ico-goal04.svg") no-repeat center;
         }
     }
     .serviceWrap.v2 {
@@ -5551,7 +5546,7 @@ input {
         left: 50%;
         width: 100vw;
         height: 552px;
-        background: url("../images/visual-portal-introduce.png") no-repeat center/cover;
+        background: url("../../images/visual-portal-introduce.png") no-repeat center/cover;
         transform: translateX(-50%);
     }
     .borderBoxes.introduce {
@@ -5560,22 +5555,22 @@ input {
             flex: inherit;
             width: calc(33.333% - 32px);
             &:nth-child(1)::before {
-                background: var(--gray5) url("../images/icon/ico-introduce01.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-introduce01.svg") no-repeat center/50px auto;
             }
             &:nth-child(2)::before {
-                background: var(--gray5) url("../images/icon/ico-introduce02.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-introduce02.svg") no-repeat center/50px auto;
             }
             &:nth-child(3)::before {
-                background: var(--gray5) url("../images/icon/ico-introduce03.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-introduce03.svg") no-repeat center/50px auto;
             }
             &:nth-child(4)::before {
-                background: var(--gray5) url("../images/icon/ico-introduce04.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-introduce04.svg") no-repeat center/50px auto;
             }
             &:nth-child(5)::before {
-                background: var(--gray5) url("../images/icon/ico-introduce05.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-introduce05.svg") no-repeat center/50px auto;
             }
             &:nth-child(6)::before {
-                background: var(--gray5) url("../images/icon/ico-introduce06.svg") no-repeat center/50px auto;
+                background: var(--gray5) url("../../images/icon/ico-introduce06.svg") no-repeat center/50px auto;
             }
         }
     }
@@ -5604,7 +5599,7 @@ input {
                 width: 100%;
                 height: 182px;
                 text-indent: -9999px;
-                background: url("../images/visual-portal-text-pc.svg") no-repeat center left/100% auto;
+                background: url("../../images/visual-portal-text-pc.svg") no-repeat center left/100% auto;
             }
         }
         strong {
@@ -5680,7 +5675,7 @@ input {
                 &::before {
                     top: -25px;
                     height: 85px;
-                    background: url("../images/visual-portal-text-mo.svg") no-repeat center left/100% auto;
+                    background: url("../../images/visual-portal-text-mo.svg") no-repeat center left/100% auto;
                 }
             }
             strong {
@@ -5742,17 +5737,17 @@ input {
                 }
                 .loc {
                     &::before {
-                        background: url("../images/icon/ico-loc-red.svg") no-repeat center/100% auto;
+                        background: url("../../images/icon/ico-loc-red.svg") no-repeat center/100% auto;
                     }
                 }
                 .cal {
                     &::before {
-                        background: url("../images/icon/ico-cal.svg") no-repeat center/100% auto;
+                        background: url("../../images/icon/ico-cal.svg") no-repeat center/100% auto;
                     }
                 }
                 .fax {
                     &::before {
-                        background: url("../images/icon/ico-fax.svg") no-repeat center/100% auto;
+                        background: url("../../images/icon/ico-fax.svg") no-repeat center/100% auto;
                     }
                 }
             }
@@ -5761,7 +5756,7 @@ input {
             span {
                 position: relative;
                 padding-left: 28px;
-                background: url("../images/icon/ico-loc-white.svg") no-repeat center left/24px auto;
+                background: url("../../images/icon/ico-loc-white.svg") no-repeat center left/24px auto;
             }
         }
     }
@@ -5798,17 +5793,17 @@ input {
         }
         .airplane {
             &::before {
-                background: url("../images/icon/ico-airplane-50.svg") no-repeat center left/100% auto;
+                background: url("../../images/icon/ico-airplane-50.svg") no-repeat center left/100% auto;
             }
         }
         .rail {
             &::before {
-                background: url("../images/icon/ico-train-50.svg") no-repeat center left/100% auto;
+                background: url("../../images/icon/ico-train-50.svg") no-repeat center left/100% auto;
             }
         }
         .bus {
             &::before {
-                background: url("../images/icon/ico-bus-50.svg") no-repeat center left/100% auto;
+                background: url("../../images/icon/ico-bus-50.svg") no-repeat center left/100% auto;
             }
         }
         dd {
@@ -6003,9 +5998,9 @@ input {
                         width: 24px;
                         height: 24px;
                         text-indent: -9999px;
-                        background: url("../images/icon/ico-hidden.svg") no-repeat center/100% auto;
+                        background: url("../../images/icon/ico-hidden.svg") no-repeat center/100% auto;
                         &.on {
-                            background-image: url("../images/icon/ico-visible.svg");
+                            background-image: url("../../images/icon/ico-visible.svg");
                         }
                     }
                 }
@@ -6130,7 +6125,7 @@ input {
             width: 24px;
             height: 24px;
             text-indent: -9999px;
-            background: url("../images/icon/ico-close.svg") no-repeat center;
+            background: url("../../images/icon/ico-close.svg") no-repeat center;
         }
     }
     .btnBox {
@@ -6232,23 +6227,23 @@ input {
         }
         .step1 {
             &::before {
-                background: var(--color-white) url("../images/icon/ico-list-50.svg") no-repeat center/50px auto;
+                background: var(--color-white) url("../../images/icon/ico-list-50.svg") no-repeat center/50px auto;
             }
         }
         .step2 {
             &::before {
-                background: var(--color-white) url("../images/icon/ico-edit-file-50-gray.svg") no-repeat center/50px auto;
+                background: var(--color-white) url("../../images/icon/ico-edit-file-50-gray.svg") no-repeat center/50px auto;
             }
             &.curr::before {
-                background-image: url("../images/icon/ico-edit-file-50.svg");
+                background-image: url("../../images/icon/ico-edit-file-50.svg");
             }
         }
         .step3 {
             &::before {
-                background: var(--color-white) url("../images/icon/ico-person-check-50-gray.svg") no-repeat center/50px auto;
+                background: var(--color-white) url("../../images/icon/ico-person-check-50-gray.svg") no-repeat center/50px auto;
             }
             &.curr::before {
-                background-image: url("../images/icon/ico-person-check-50.svg");
+                background-image: url("../../images/icon/ico-person-check-50.svg");
             }
         }
     }
@@ -6574,7 +6569,7 @@ input {
             position:relative;
             padding:0 36px 0 35px;
             width: 100%;
-            background: url("../images/common/ico-acco-q.png") no-repeat left 2px /16px auto;
+            background: url("../../images/common/ico-acco-q.png") no-repeat left 2px /16px auto;
             line-height: 1.5;
             font-weight: var(--regular);
             font-size: 17px;
@@ -6615,7 +6610,7 @@ input {
 
         & > div {
             padding-left: 36px;
-            background: url("../images/common/ico-acco-a.png") no-repeat top left/ 17px auto;
+            background: url("../../images/common/ico-acco-a.png") no-repeat top left/ 17px auto;
         }
     }
 }
