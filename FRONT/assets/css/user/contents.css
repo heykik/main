@@ -67,6 +67,18 @@ h3 {
   text-align: right;
 }
 
+/* font-size */
+@media screen and (max-width: 1160px) {
+  .fs20 {
+    font-size: 17px !important;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .fs20 {
+    font-size: 20px !important;
+  }
+}
+
 /* text ellipsis */
 @media screen and (min-width: 1161px) {
   .txtElip {
@@ -118,6 +130,11 @@ h3 {
 .w320 {
   width: 100% !important;
   max-width: 320px !important;
+}
+
+.underline {
+  text-decoration: underline;
+  word-break: break-all;
 }
 
 /* 버튼 */
