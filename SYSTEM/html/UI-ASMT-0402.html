@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>과제평가시스템</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-3.7.1.js"></script>
+<script src="../assets/js/jquery-ui.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+<script src="../assets/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+$(function(){
+	fn_gnb(0,0);
+})
+</script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			<h1><a href=""><img src="../assets/images/logo.svg" alt="경남 디지털혁신거점 GYUNGNAM DIGITAL INNOVATION HUB"></a></h1>
+			<!-- util -->
+            <div class="util">
+                <a href="" class="tid"><strong>퍼블관리자</strong> 님</a>
+                <a href="" class="mybtn">로그아웃</a>
+            </div>
+            <!--// util -->
+		</div>
+		<!--// inner -->
+	</div>
+	<!--// header -->
+
+	<!-- gnb -->
+	<div id="gnb">
+		<!-- inner -->
+		<div class="inner">
+			<ul class="depth01">
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0101.svg" alt="">
+						<span>과제평가 관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0102.svg" alt="">
+						<span>사용자 관리</span>
+					</a>
+				</li>
+                <li>
+					<a href="">
+                        <img src="../assets/images/ico-0103.svg" alt="">
+						<span>평가위원관리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+                        <img src="../assets/images/ico-0104.svg" alt="">
+						<span>공지사항 관리</span>
+					</a>
+                    <ul class="depth02">
+                        <li>
+                            <a href="">DEPTH0301</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0302</a>
+                        </li>
+                        <li>
+                            <a href="">DEPTH0303</a>
+                        </li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<!--// inner -->
+		<button type="button" class="btnMenu">메뉴 닫기</button>
+	</div>
+	<!--// gnb -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div class="contents">
+            <!-- titArea -->
+            <div class="titArea">
+                <div class="tit">
+                    <h2>과제평가관리</h2>
+                    <div class="titInfo">관리 작업을 수행 할 수 있습니다.</div>
+                </div>
+                <ol class="location">
+                    <li>홈</li>
+                    <li>과제평가관리</li>
+                    <li>과제평가관리</li>
+                </ol>
+            </div>
+            <!--// titArea -->
+            <!-- tabWrap -->
+            <div class="tabWrap tabFunc">
+                <ul>
+                    <li class="curr"><a href="">기본정보</a></li>
+                    <li><a href="">평가항목 및 배점</a></li>
+                    <li><a href="">제안업체</a></li>
+                    <li><a href="">평가하기</a></li>
+                </ul>
+                <!-- tabBox -->
+                <div class="tabBox">
+                    <!-- 기본정보 -->
+                    <div>
+                        <!-- contWrap -->
+                        <div class="contWrap">
+                            <!-- cont -->
+                            <div class="cont">
+                                <!-- rowTable -->
+                                <div class="rowTable">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:200px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">공고종류</th>
+                                                <td>사업용역</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">공고번호</th>
+                                                <td>00003</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">공고명</th>
+                                                <td>CCCC 공고</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">공고게시일</th>
+                                                <td>2024-00-00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">평가일</th>
+                                                <td>2024-00-00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">부서</th>
+                                                <td>경남테크노파크 정보산업진흥본부</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">담당자</th>
+                                                <td>홍길동</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--// rowTable -->
+                                <!-- btnBottom -->
+                                <div class="btnBottom">
+                                    <!--// paging -->
+                                    <div class="rt">
+                                        <button type="button" class="btn btnNavy">평가하기</button>
+                                    </div>
+                                </div>
+                                <!--// btnBottom -->
+                            </div>
+                            <!--// cont -->
+                        </div>
+                        <!--// contWrap -->
+                    </div>
+                    <!--// 기본정보 -->
+
+                    <!-- 평가항목 및 배점 -->
+                    <div>
+                        <!-- contWrap -->
+                        <div class="contWrap">
+                            <!-- cont -->
+                            <div class="cont">
+
+                                <!-- rowTable -->
+                                <div class="rowTable">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:200px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">정성평가</th>
+                                                <td>
+                                                    전체 합산 평균
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--// rowTable -->
+
+                                <!-- 영역만 필요시 하기 colTable 삭제 -->
+                                <!-- colTable -->
+                                <div class="colTable">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:200px">
+                                            <col style="width:200px">
+                                            <col style="width:auto">
+                                            <col style="width:200px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>평가부문</th>
+                                                <th>평가항목</th>
+                                                <th>평가기준</th>
+                                                <th>배점한도</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">전략 및<br> 방법론</td>
+                                                <td>사업이해도</td>
+                                                <td>사업의 특성 및 목표에 부합하는 사업전략을 제시하고 있는지를 평가</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>추진전략</td>
+                                                <td>개발업무 수행 시 일정 및 위험요소를 고려하고 얼마나 타당한지</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">기술 및<br> 기능</td>
+                                                <td>시스템<br> 요구사항</td>
+                                                <td>요구 규격을 충족하는 장비 제안여부와 현시스템과의 인터페이스</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>기능요구사항</td>
+                                                <td>기능 요구사항 기대사항 제약사항 등 파악 후 구현 방안 제시</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">총점</td>
+                                                <td>90</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--// colTable -->
+                                <!-- // 영역만 필요시 하기 colTable 삭제 -->
+                                 
+                                <!-- 영역만 필요시 아래 div영역 사용 -->
+                                <div style="height: 200px; background: #f1f1f1">그리드 영역입니다. 개발 시 스타일 삭제해 주세요.</div>
+                                <!-- // 영역만 필요시 아래 div영역 사용 -->
+
+                                <!-- btnBottom -->
+                                <div class="btnBottom">
+                                    <div class="lt">
+                                        <button type="button" class="btn btnGray">이전</button>
+                                    </div>
+                                </div>
+                                <!--// btnBottom -->
+                            </div>
+                            <!--// cont -->
+                        </div>
+                        <!--// contWrap -->
+                    </div>
+                    <!--// 평가항목 및 배점 -->
+
+                    <!-- 제안업체 -->
+                    <div>
+                        <!-- contWrap -->
+                        <div class="contWrap">
+                            <!-- cont -->
+                            <div class="cont">                               
+                                
+                                <!-- 영역만 필요시 하기 colTable 삭제 -->
+                                <!-- colTable -->
+                                <div class="colTable">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:200px">
+                                            <col style="width:380px">
+                                            <col style="width:auto">
+                                            <col style="width:380px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>발표 순서</th>
+                                                <th>업체명</th>
+                                                <th>첨부파일</th>
+                                                <th>평가시간</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">1</td>
+                                                <td rowspan="2">A 업체</td>
+                                                <td><a href="javascript:void(0)" onclick="fn_layer('layer01', this, 400)">정성제안서.pdf</a></td>
+                                                <td rowspan="2">2024-10-10 13:00 ~ 2024-10-10 13:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javscript:void(0)">발표자료. pdf</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">2</td>
+                                                <td rowspan="2">B 업체</td>
+                                                <td><a href="javascript:void(0)">정성제안서.pdf</a></td>
+                                                <td rowspan="2">2024-10-10 13:00 ~ 2024-10-10 13:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javscript:void(0)">발표자료. pdf</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">3</td>
+                                                <td rowspan="2">C 업체</td>
+                                                <td><a href="javascript:void(0)">정성제안서.pdf</a></td>
+                                                <td rowspan="2">2024-10-10 13:00 ~ 2024-10-10 13:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javscript:void(0)">발표자료. pdf</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--// colTable -->
+                                <!-- // 영역만 필요시 하기 colTable 삭제 -->
+                                 
+                                <!-- 영역만 필요시 아래 div영역 사용 -->
+                                <div style="height: 200px; background: #f1f1f1">그리드 영역입니다. 개발 시 스타일 삭제해 주세요.</div>
+                                <!-- // 영역만 필요시 아래 div영역 사용 -->
+
+                                <!-- 팝업 -->
+                                <div class="layerPop alert" id="layer01">
+                                    <div class="inner">
+                                        <!-- layerCont -->
+                                        <div class="layerCont">
+                                            <p>정성 제안서 다운로드</p>
+                                            <!-- btnBottom -->
+                                            <div class="btnBottom center">
+                                                <div class="ct">
+                                                    <button type="button" class="btn btnGray" onclick="fn_layer_close(this)">취소</button>
+                                                    <button type="button" class="btn btnNavy" onclick="fn_layer_close(this)">확인</button>
+                                                </div>
+                                            </div>
+                                            <!--// btnBottom -->
+                                        </div>
+                                        <!--// layerCont -->
+                                        <a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+                                    </div>
+                                </div>
+                                <!--// 팝업-->
+
+                                <!-- btnBottom -->
+                                <div class="btnBottom">
+                                    <div class="lt">
+                                        <button type="button" class="btn btnlNavy">이전</button>
+                                    </div>
+                                    <!-- paging -->
+                                    <div class="paging">
+                                        <a href="" class="btnFirst">첫 페이지</a>
+                                        <a href="" class="btnPrev">이전 페이지</a>
+                                        <a href="">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <strong>5</strong>
+                                        <a href="">6</a>
+                                        <a href="">7</a>
+                                        <a href="">8</a>
+                                        <a href="">9</a>
+                                        <a href="">10</a>
+                                        <a href="" class="btnNext">다음 페이지</a>
+                                        <a href="" class="btnLast">마지막 페이지</a>
+                                    </div>
+                                    <!--// paging -->
+                                    <div class="rt">
+                                        <button type="button" class="btn btnNavy">과제평가</button>
+                                    </div>
+                                </div>
+                                <!--// btnBottom -->
+                            </div>
+                            <!--// cont -->
+                        </div>
+                        <!--// contWrap -->
+                    </div>
+                    <!--// 제안업체 -->
+
+                    <!-- 평가하기 -->
+                    <div>
+                        <!-- contWrap -->
+                        <div class="contWrap">
+                            <!-- cont -->
+                            <div class="cont">
+                                <!-- 영역만 필요시 하기 colTable 삭제 -->
+                                <!-- colTable -->
+                                <div class="colTable">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col style="width:180px">
+                                            <col style="width:auto">
+                                            <col style="width:100px">
+                                            <col style="width:120px">
+                                            <col style="width:120px">
+                                            <col style="width:120px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2">평가부문</th>
+                                                <th rowspan="2">평가항목</th>
+                                                <th rowspan="2">평가기준</th>
+                                                <th rowspan="2">배점한도</th>
+                                                <th colspan="3">평가점수</th>
+                                            </tr>
+                                            <tr>
+                                                <th>A업체</th>
+                                                <th>B업체</th>
+                                                <th>C업체</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">전략 및<br />방법론</td>
+                                                <td>사업이해도</td>
+                                                <td>사업의 특성 및 목표에 부합하는 사업전략을 제시하고 있는지를 평가</td>
+                                                <td>10</td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>추진전략</td>
+                                                <td>개발업무 수행 시 일정 및 위험요소를 고려하고 얼마나 타당한지</td>
+                                                <td>20</td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">기술 및 기능</td>
+                                                <td>시스템<br>요구사항</td>
+                                                <td>요구 규격을 충족하는 장비 제안 여부와 현시스템과의 인터페이스</td>
+                                                <td>30</td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>기능요구사항</td>
+                                                <td>기능 요구사항 기대사항 제약사항 등 파악 후 구현 방안 제시</td>
+                                                <td>30</td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                                <td>
+                                                    <input type="text" title="평가점수">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">총점</td>
+                                                <td colspan="4">90</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--// colTable -->                                
+                                <!-- // 영역만 필요시 하기 colTable 삭제 -->
+                                 
+                                <!-- 영역만 필요시 아래 div영역 사용 -->
+                                <div style="height: 200px; background: #f1f1f1">그리드 영역입니다. 개발 시 스타일 삭제해 주세요.</div>
+                                <!-- // 영역만 필요시 아래 div영역 사용 -->
+                                
+                                <!-- tableTop -->
+                                <div class="tableTop">
+                                    <div class="lt">
+                                        <h3>의견</h3>
+                                    </div>
+                                </div>
+                                <textarea title="의견" value="본 평가는..."></textarea>
+                                <!--// tableTop -->
+
+                                <div class="btnBottom">
+                                    <div class="lt">
+                                        <button type="button" class="btn btnGray">이전</button>
+                                    </div>
+                                    <div class="rt">
+                                        <button type="button" class="btn btnlNavy" onclick="fn_layer('layer02', this, 400)">임시저장</button>
+                                        <button type="button" class="btn btnNavy" onclick="fn_layer('layer03', this, 400)">평가완료</button>
+                                    </div>
+                                </div>
+                                <!-- 팝업 -->
+                                <div class="layerPop alert" id="layer02">
+                                    <div class="inner">
+                                        <!-- layerCont -->
+                                        <div class="layerCont">
+                                            <p>임시저장 해주세요</p>
+                                            <!-- btnBottom -->
+                                            <div class="btnBottom center">
+                                                <div class="ct">
+                                                    <button type="button" class="btn btnGray" onclick="fn_layer_close(this)">취소</button>
+                                                    <button type="button" class="btn btnNavy" onclick="fn_layer_close(this)">확인</button>
+                                                </div>
+                                            </div>
+                                            <!--// btnBottom -->
+                                        </div>
+                                        <!--// layerCont -->
+                                        <a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+                                    </div>
+                                </div>
+                                <!--// 팝업-->
+                                 <!-- 팝업 -->
+                                 <div class="layerPop alert" id="layer03">
+                                    <div class="inner">
+                                        <!-- layerCont -->
+                                        <div class="layerCont">
+                                            <p>최종 평가를 완료하시겠습니까?</p>
+                                            <!-- btnBottom -->
+                                            <div class="btnBottom center">
+                                                <div class="ct">
+                                                    <button type="button" class="btn btnGray" onclick="fn_layer_close(this)">취소</button>
+                                                    <button type="button" class="btn btnNavy" onclick="fn_layer_close(this)">확인</button>
+                                                </div>
+                                            </div>
+                                            <!--// btnBottom -->
+                                        </div>
+                                        <!--// layerCont -->
+                                        <a href="javascript:void(0)" onclick="fn_layer_close(this)">닫기</a>
+                                    </div>
+                                </div>
+                                <!--// 팝업-->
+                            </div>
+                            <!--// cont -->
+                        </div>
+                        <!--// contWrap -->
+                    </div>
+                    <!--// 평가하기 -->
+                </div>
+                <!--// tabBox -->
+            </div>
+            <!--// tabWrap -->
+		</div>
+		<!--// contents -->
+	</div>
+	<!--// container -->
+</div>
+<!--// wrap -->
+</body>
+</html>

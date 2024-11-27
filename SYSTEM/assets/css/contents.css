@@ -101,6 +101,8 @@ div[class$="Table"] + div[class$="Table"] {margin-top: 20px;}
 .colTable table td {padding: 8px; border-bottom: 1px solid var(--border-color); height: 48px; text-align: center; font-size: 16px; color: var(--color-placeholder);}
 .colTable table th {background: #F7F7FA;}
 .colTable table a {text-decoration: underline; color: var(--color-primary);}
+.colTable table th,
+.colTable table td[rowspan]{vertical-align:middle}
 
 /* row 테이블 */
 .rowTable {border-top: 2px solid var(--color-input)}
