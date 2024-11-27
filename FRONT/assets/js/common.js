@@ -162,6 +162,7 @@ const fn_contents = () => {
 
     // 데이트피커
 	if($(".date").length){
+        if(!$('.date input').length) return;
 		$(".date input").datepicker({
 			dateFormat: 'yy-mm-dd',
 			showOtherMonths: true,

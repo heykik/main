@@ -163,7 +163,6 @@ button[class*=btn][type=button] {
   justify-content: center;
   padding: 16px 12px;
   border-radius: 8px;
-  width: -moz-max-content;
   width: max-content;
   height: 48px;
   line-height: 1.5;
@@ -424,9 +423,7 @@ button[class*=btn][type=button] {
 }
 .inputBox select {
   background: url(../../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .inputBox input {
   display: flex;
@@ -504,9 +501,7 @@ button[class*=btn][type=button] {
   width: 1px;
   height: 1px;
   opacity: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .radioBox [type=radio]:focus + label {
   outline: 2px solid #000;
@@ -574,9 +569,7 @@ button[class*=btn][type=button] {
   height: 1px;
   opacity: 0;
   border-style: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .checkBox input[type=checkbox]:focus + label {
   outline: 2px solid #000;
@@ -1581,9 +1574,6 @@ button[class*=btn][type=button] {
   color: var(--color-dark);
   box-sizing: border-box;
 }
-.tableDefault tbody tr td input::-moz-placeholder, .tableDefault tbody tr td select::-moz-placeholder, .tableDefault tbody tr td textarea::-moz-placeholder {
-  color: var(--color-text);
-}
 .tableDefault tbody tr td input::placeholder,
 .tableDefault tbody tr td select::placeholder,
 .tableDefault tbody tr td textarea::placeholder {
@@ -1597,9 +1587,7 @@ button[class*=btn][type=button] {
 }
 .tableDefault tbody tr td .timeInput {
   padding: 6px 10px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: url(../../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center/auto;
 }
 @media screen and (max-width: 1159px) {
@@ -1714,9 +1702,7 @@ button[class*=btn][type=button] {
   width: 72px;
   height: 32px;
   border-style: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .tableDefault tbody tr td .withFileBtn [type=file]::before {
   display: inline-flex;
@@ -1968,10 +1954,20 @@ button[class*=btn][type=button] {
 [class*=table][class*=boardList] tbody tr td .email {
   margin: 0 0 8px;
 }
-@media screen and (min-width: 1161px) {
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr td .email {
+    flex: 0 1 calc((100% - 40px) / 3);
+  }
+}
+@media screen and (min-width: 1560px) {
   [class*=table][class*=boardList] tbody tr td .email {
     flex: 1 1 132px;
     margin: 0;
+  }
+}
+@media screen and (min-width: 1160px) {
+  [class*=table][class*=boardList] tbody tr td .email:first-child {
+    flex: 0 1 calc((100% - 40px) / 3 + 24px);
   }
 }
 [class*=table][class*=boardList] tbody tr td .email input,
@@ -1986,7 +1982,7 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td .email input,
   [class*=table][class*=boardList] tbody tr td .email select {
-    width: 132px;
+    width: 100%;
   }
 }
 [class*=table][class*=boardList] tbody tr td .email.idInput {
@@ -3196,7 +3192,6 @@ input[disabled] {
 }
 .consultingCont .arrowCont .grayBox {
   position: relative;
-  max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
 }
@@ -4642,7 +4637,7 @@ input[disabled] {
   }
 }
 .categoryCont .cateWrap .inputBox:has(input[type=text]) {
-  display: block;
+  display: block !important;
 }
 
 .resultCont .cntWrap {
@@ -4852,18 +4847,31 @@ input[disabled] {
 .facilityResWrap .wrap {
   padding: 0;
 }
-@media screen and (min-width: 1161px) {
+@media screen and (min-width: 767px) {
   .facilityResWrap .wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px 0;
+    gap: 0;
     margin: 0;
     padding: 0 0 40px;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .facilityResWrap .wrap {
+    gap: 40px 0;
   }
 }
 @media screen and (min-width: 1161px) {
   .facilityResWrap .wrap * {
     margin: 0;
     height: auto;
+  }
+}
+@media screen and (min-width: 767px) {
+  .facilityResWrap .wrap > li {
+    width: calc(50% - 16px);
   }
 }
 .facilityResWrap .wrap > li:last-child {
