@@ -3320,12 +3320,18 @@ input {
         }
     }
     .imgBox{
+        display:flex;
+        align-items:flex-end;
+        justify-content:center;
+        overflow:hidden;
         margin:16px auto 0;
         height:200px;   
-        background: var(--gray30);
         border-radius:20px;
         @media screen and (min-width:1161px) {
             height:360px;
+        }
+        img{
+            width:100%;
         }
     }
 }
