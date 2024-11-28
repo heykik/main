@@ -67,18 +67,6 @@ h3 {
   text-align: right;
 }
 
-/* font-size */
-@media screen and (max-width: 1160px) {
-  .fs20 {
-    font-size: 17px !important;
-  }
-}
-@media screen and (min-width: 1161px) {
-  .fs20 {
-    font-size: 20px !important;
-  }
-}
-
 /* text ellipsis */
 @media screen and (min-width: 1161px) {
   .txtElip {
@@ -130,11 +118,6 @@ h3 {
 .w320 {
   width: 100% !important;
   max-width: 320px !important;
-}
-
-.underline {
-  text-decoration: underline;
-  word-break: break-all;
 }
 
 /* 버튼 */
@@ -1971,20 +1954,10 @@ button[class*=btn][type=button] {
 [class*=table][class*=boardList] tbody tr td .email {
   margin: 0 0 8px;
 }
-@media screen and (min-width: 1160px) {
-  [class*=table][class*=boardList] tbody tr td .email {
-    flex: 0 1 calc((100% - 40px) / 3);
-  }
-}
-@media screen and (min-width: 1560px) {
+@media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td .email {
     flex: 1 1 132px;
     margin: 0;
-  }
-}
-@media screen and (min-width: 1160px) {
-  [class*=table][class*=boardList] tbody tr td .email:first-child {
-    flex: 0 1 calc((100% - 40px) / 3 + 24px);
   }
 }
 [class*=table][class*=boardList] tbody tr td .email input,
@@ -1999,7 +1972,7 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1161px) {
   [class*=table][class*=boardList] tbody tr td .email input,
   [class*=table][class*=boardList] tbody tr td .email select {
-    width: 100%;
+    width: 132px;
   }
 }
 [class*=table][class*=boardList] tbody tr td .email.idInput {
@@ -2739,8 +2712,15 @@ input[disabled] {
   height: 56px;
 }
 .card .infoWrap .infoList {
+  flex: 1 0 calc(100% - 56px - 16px);
   margin: 0;
-  width: 100%;
+  max-width: calc(100% - 56px - 16px);
+}
+@media screen and (min-width: 1161px) {
+  .card .infoWrap .infoList {
+    flex: 0 0 calc(100% - 56px - 32px);
+    max-width: calc(100% - 56px - 32px);
+  }
 }
 @media screen and (min-width: 1161px) {
   .card .infoWrap .infoList ul {
@@ -2752,11 +2732,8 @@ input[disabled] {
     width: 100%;
   }
 }
-@media screen and (min-width: 1161px) {
-  .card .infoWrap .infoList li {
-    flex: 1 1 calc((100% - 8px) / 2);
-    width: calc((100% - 8px) / 2);
-  }
+.card .infoWrap .infoList li {
+  width: 100%;
 }
 .card .infoWrap .infoList li:not(:last-child) {
   margin-bottom: 8px;
@@ -2764,6 +2741,17 @@ input[disabled] {
 @media screen and (min-width: 1161px) {
   .card .infoWrap .infoList li:not(:last-child) {
     margin: 0;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .card .infoWrap .infoList li:nth-child(odd) {
+    flex: 0 0 96px;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .card .infoWrap .infoList li:nth-child(even) {
+    flex: 0 0 calc(100% - 96px - 8px);
+    max-width: calc(100% - 96px - 8px);
   }
 }
 @media screen and (min-width: 1161px) {
@@ -2865,7 +2853,6 @@ input[disabled] {
 
 .consultingCont .topCont {
   margin: 0 auto 24px;
-  white-space: nowrap;
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .topCont {
@@ -2874,7 +2861,6 @@ input[disabled] {
     justify-content: space-between;
     gap: 112px;
     padding: 20px 0;
-    white-space: initial;
   }
 }
 .consultingCont .topCont .innerBox {
@@ -3356,7 +3342,6 @@ input[disabled] {
 @media screen and (min-width: 1161px) {
   .consultingCont .listBox li {
     font-size: 17px;
-    white-space: nowrap;
   }
 }
 .consultingCont .listBox li::before {
@@ -3418,21 +3403,15 @@ input[disabled] {
   }
 }
 .cohortCont .imgBox {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
   margin: 16px auto 0;
   height: 200px;
+  background: var(--gray30);
   border-radius: 20px;
 }
 @media screen and (min-width: 1161px) {
   .cohortCont .imgBox {
     height: 360px;
   }
-}
-.cohortCont .imgBox img {
-  width: 100%;
 }
 
 /* 디지털 혁신 지원 서비스 > 서비스 지원제도 */
@@ -4648,7 +4627,7 @@ input[disabled] {
   }
 }
 .categoryCont .cateWrap .inputBox:has(input[type=text]) {
-  display: block !important;
+  display: block;
 }
 
 .resultCont .cntWrap {
@@ -4858,20 +4837,12 @@ input[disabled] {
 .facilityResWrap .wrap {
   padding: 0;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1161px) {
   .facilityResWrap .wrap {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 0;
+    gap: 40px 0;
     margin: 0;
     padding: 0 0 40px;
-  }
-}
-@media screen and (min-width: 1160px) {
-  .facilityResWrap .wrap {
-    gap: 40px 0;
   }
 }
 @media screen and (min-width: 1161px) {

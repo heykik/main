@@ -249,8 +249,17 @@ function fn_layer_close(t){
 const fn_layoutImport = () => {
     const _importHeader = $('#headerImport');
     const _importFooter = $('#footerImport');
+    const _mypage = $('.sitemap').find('li:nth-child(2) a').text();
 
-    if (_importHeader.length > 0 && _importFooter.length > 0) {
+    if(_importHeader.length > 0 && _importFooter.length > 0 && _mypage === '마이페이지'){
+        _importFooter.load('UI-F-0101.html #footer');
+        _importHeader.load('UI-F-0101.html #header', (() => {
+            fn_layout()
+            if($('#container').length > 0) $('#header').addClass('scroll');
+            return false;
+        }));
+    }
+    else if (_importHeader.length > 0 && _importFooter.length > 0) {
         _importFooter.load('UI-F-0100.html #footer');
         _importHeader.load('UI-F-0100.html #header', (() => {
             fn_layout()

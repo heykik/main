@@ -501,6 +501,9 @@
         }
         .swiper-slide {
             width: 340px !important;
+            &:not(:last-child){
+                margin:0;
+            }
             .infoWrap {
                 padding: 16px 0;
                 .infoList {
@@ -508,7 +511,8 @@
                         display: flex;
                         flex-wrap: wrap;
                         li {
-                            width: 90px;
+                            flex: 1 1 50%;
+                            width:50%;
                             span {
                                 overflow: hidden;
                                 text-overflow:ellipsis;
@@ -516,7 +520,8 @@
                             }
                         }
                         li:nth-child(even) {
-                            flex: 1;
+                            flex: 1 1 50%;
+                            width:50%;
                         }
                     }
                     

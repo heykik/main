@@ -2680,13 +2680,8 @@ input {
             height:56px;
         }
         .infoList{
-            flex:1 0 calc(100% - 56px - 16px);
             margin:0;
-            max-width:calc(100% - 56px - 16px);
-            @media screen and (min-width:1161px) {
-                flex:0 0 calc(100% - 56px - 32px);
-                max-width:calc(100% - 56px - 32px);
-            }
+            width:100%;
             ul{
                 @media screen and (min-width:1161px) {
                     display:flex;
@@ -2698,26 +2693,16 @@ input {
                 }
             }
             li{
-                width:100%;
                 @media screen and (min-width:1161px) {
+                    flex:1 1 calc((100% - 8px) / 2);
+                    width:calc((100% - 8px) / 2);
                 }
                 &:not(:last-child){
                     margin-bottom:8px;
                     @media screen and (min-width:1161px) {
                         margin:0;
                     }
-                }
-                &:nth-child(odd){
-                    @media screen and (min-width:1161px) {
-                        flex:0 0 96px;
-                    }
-                }
-                &:nth-child(even){
-                    @media screen and (min-width:1161px) {
-                        flex:0 0 calc(100% - 96px - 8px);
-                        max-width:calc(100% - 96px - 8px);
-                    }
-                }                 
+                }           
             }
             span{
                 @media screen and (min-width:1161px) {
@@ -2824,12 +2809,14 @@ input {
 .consultingCont{
     .topCont{
         margin:0 auto 24px;
+        white-space:nowrap;
         @media screen and (min-width:1161px) {
             display:flex;
             align-items:center;
             justify-content:space-between;
             gap:112px;
             padding:20px 0;
+            white-space:initial;
         }
         .innerBox{
             position:relative;
@@ -3264,6 +3251,7 @@ input {
             color:var(--text-color);
             @media screen and (min-width:1161px) {
                 font-size:17px;
+                white-space:nowrap;
             }
             &::before{
                 flex:0 0 30px;

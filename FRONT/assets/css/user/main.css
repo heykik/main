@@ -66,8 +66,7 @@
 .visualSwiper .swiper-slide .imgBox-main img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .visualSwiper .swiper-slide .txtBox-main {
   position: absolute;
@@ -233,8 +232,7 @@
 .mainCont01 .imgBox-main img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .mainCont01 .imgBox-main .txtBox-main {
   position: absolute;
@@ -480,6 +478,9 @@
   .mainCont03 .swiper-slide {
     width: 340px !important;
   }
+  .mainCont03 .swiper-slide:not(:last-child) {
+    margin: 0;
+  }
   .mainCont03 .swiper-slide .infoWrap {
     padding: 16px 0;
   }
@@ -488,7 +489,8 @@
     flex-wrap: wrap;
   }
   .mainCont03 .swiper-slide .infoWrap .infoList ul li {
-    width: 90px;
+    flex: 1 1 50%;
+    width: 50%;
   }
   .mainCont03 .swiper-slide .infoWrap .infoList ul li span {
     overflow: hidden;
@@ -496,7 +498,8 @@
     white-space: nowrap;
   }
   .mainCont03 .swiper-slide .infoWrap .infoList ul li:nth-child(even) {
-    flex: 1;
+    flex: 1 1 50%;
+    width: 50%;
   }
 }
 /* 메인 콘텐츠 4단 */
