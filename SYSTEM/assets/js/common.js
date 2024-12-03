@@ -434,7 +434,32 @@
 			fn_noti_pop(e, i);
 		}
 	}
+	// 선택한 파일 삭제 기능추가 2024-12-03 - s
+	function fn_file_select(input) {
+		var fileArea = $(input).closest('div');
+		var fileNameInput = fileArea.find('input[type="text"]');
+		var fileDelBtn = fileArea.find('.btnFileDel');
+		
+		if (input.files.length > 0) {
+			fileNameInput.val(input.files[0].name);
+			fileDelBtn.show();
+		}
+	}
+	function fn_del_file(obj) {
+		var fileArea = $(obj).closest('div');
+		var fileInput = fileArea.find('input[type="file"]');
+		var fileNameInput = fileArea.find('input[type="text"]');
+		var fileDelBtn = fileArea.find('.btnFileDel');
+		
+		fileInput.val('');
+		fileNameInput.val('');
+
+		fileDelBtn.hide();
+	}
+	// 선택한 파일 삭제 기능추가 2024-12-03 - e
 /*** 추가/삭제 끝 ***/
+
+
 
 $(function() {
 	/*>>>>>>>>>> 공통 <<<<<<<<<<*/
