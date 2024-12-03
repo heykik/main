@@ -331,6 +331,29 @@
 			
 			function fn_add_unit(){
 				$this.append(c[0]+">"+inHtml+c[c.length - 2]+">").promise().done(function(){
+					var newElement = $this.find("> *:last-child");
+
+					// 추가된 요소 초기화 2024-12-03 - s
+					newElement.find('input[type="file"]').val(""); // 파일 초기화
+					newElement.find('input[type="text"]').val(""); // 파일명 초기화
+					newElement.find('.btnFileDel').hide(); // 파일 삭제 버튼 숨기기
+
+					if (newElement.find("*[id]").length) {
+						var index = newElement.index();
+						newElement.find("*[id]").each(function () {
+							var id = $(this).attr("id");
+							$(this).attr("id", id + index).removeClass("first");
+						});
+					}
+
+					// 라벨 값이 있을 경우
+					if (newElement.find("label").length) {
+						newElement.find("label").each(function () {
+							var lFor = $(this).attr("for");
+							$(this).attr("for", lFor + index);
+						});
+					}
+					
 					if($(this).find("*[id]").length){
 						var index = $(this).find("> *:last-child").index();
 						$(this).find("> *:last-child *[id]").each(function(){
@@ -356,16 +379,16 @@
 			}
 
 			// 파일 추가일 경우
-			if($(e).closest(".addArea").hasClass("fileWrap")){
+			if ($(e).closest(".addArea").hasClass("fileWrap")) {
 				fn_file_change();
 				var fileWrap = $(e).closest(".fileWrap"),
 					max = fileWrap.attr("max");
-				if(max < fileWrap.find(".fileArea").length + 1){
-					fn_noti_pop(fileWrap, "파일은 최대 "+max+"개까지 추가 가능합니다.");
-				}else{
+				if (max < fileWrap.find(".fileArea").length + 1) {
+					fn_noti_pop(fileWrap, "파일은 최대 " + max + "개까지 추가 가능합니다.");
+				} else {
 					fn_add_unit();
 				}
-			}else{
+			} else {
 				fn_add_unit();
 			}
 		});
@@ -439,10 +462,11 @@
 		var fileArea = $(input).closest('div');
 		var fileNameInput = fileArea.find('input[type="text"]');
 		var fileDelBtn = fileArea.find('.btnFileDel');
-		
+	
 		if (input.files.length > 0) {
-			fileNameInput.val(input.files[0].name);
-			fileDelBtn.show();
+			var fileName = input.files[0].name; 
+			fileNameInput.val(fileName);
+			fileDelBtn.show(); 
 		}
 	}
 	function fn_del_file(obj) {
