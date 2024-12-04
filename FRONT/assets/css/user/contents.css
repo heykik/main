@@ -2645,7 +2645,10 @@ input[disabled] {
   justify-content: flex-start;
 }
 .card .imgWrap img {
+  width: 100%;
   max-width: initial;
+  height: 100%;
+  object-fit: cover;
 }
 .card .imgWrap .linkWrap {
   display: flex;

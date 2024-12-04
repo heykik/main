@@ -2594,7 +2594,10 @@ input {
             justify-content:flex-start;
         }
         img{
+            width:100%;
             max-width:initial;
+            height:100%;
+            object-fit:cover;
         }
         .linkWrap{
             display:flex;
