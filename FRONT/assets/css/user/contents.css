@@ -4880,7 +4880,11 @@ input[disabled] {
 @media screen and (min-width: 1161px) {
   .facilityResWrap .wrap * {
     margin: 0;
-    height: auto;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .facilityResWrap .wrap .imgWrap {
+    height: 440px;
   }
 }
 @media screen and (min-width: 767px) {
@@ -4904,7 +4908,10 @@ input[disabled] {
   justify-content: center;
 }
 .facilityResWrap a .imgWrap img {
+  width: 100%;
   max-width: initial;
+  height: 100%;
+  object-fit: cover;
 }
 .facilityResWrap a .txtBox {
   position: absolute;
