@@ -12,3 +12,6 @@
 @import url('./jquery.timepicker.min.css');
 @import url('./bootstrap-datepicker.min.css');
 /*-- 데이터피커 & 타임피커 */
+
+/* DATA AOS */
+@import url('./aos.css');

@@ -8,7 +8,49 @@ $(function () {
     // heaer, footer import
     // 퍼블리싱을 위한 작업이며 개발 시 하기 스크립트 주석처리 또는 제거 후 상단 fn_layout()만 실행
     fn_layoutImport();
+    fn_gnbAnimation();
 })
+
+const fn_gnbAnimation = () => {
+    const frames = $('.imgWrap .layer');
+
+    frames.each(function () {
+        const frame = $(this); // 현재 img 요소
+        const animation = frame.attr('data-animation'); // data-animation 속성 값 가져오기
+        const timing = frame.attr('data-time');
+        const delay = frame.attr('data-animation-delay');
+
+        if (animation === 'up') {
+            frame.addClass('up');
+        } else if (animation === 'down') {
+            frame.addClass('down');
+        }else if (animation === 'left') {
+            frame.addClass('left');
+        }else if (animation === 'right') {
+            frame.addClass('right');
+        } else {
+            console.warn('Unknown animation type:', animation);
+        }
+
+        if(timing === '500'){
+            frame.addClass('time05s');
+        }else if(timing === '1000'){
+            frame.addClass('time1s');
+        }else if(timing === '1500'){
+            frame.addClass('time15s');
+        }
+
+        if(delay === '200'){
+            frame.addClass('delay200');
+        }else if(delay === '500'){
+            frame.addClass('delay500');
+        }else if(delay === '1000'){
+            frame.addClass('delay1000');
+        }
+    });
+};
+
+
 
 const fn_gnb = () => {
     // 0105 gnb event
@@ -25,11 +67,31 @@ const fn_gnb = () => {
     // 	$(this).children("div").stop().slideUp(200);
     // });
     if (1160 >= $(window).width()) {
+        $('nav').hide();
+        $('#header .util').hide();
         $('nav .gnbOpen').hide();
         $('.mMenuBtn').on('click', (() => {
-            $('html').toggleClass('unscroll');
-            $('#header').toggleClass('active');
-            $('nav').toggleClass('active');
+
+            if(!$('#header').hasClass('active')){
+                $('nav').show();
+                $('#header .util').show();
+                setTimeout(()=>{
+                    $('html').addClass('unscroll');
+                    $('#header').addClass('active');
+                    $('nav').addClass('active');
+                    $('nav .depth01 > li:first-child > a').focus();
+                }, 10)
+            }else{
+                $('nav').hide();
+                $('#header .util').hide();
+                setTimeout(()=>{
+                    $('html').removeClass('unscroll');
+                    $('#header').removeClass('active');
+                }, 10)
+                setTimeout(()=>{
+                    $('nav').removeClass('active');
+                }, 15)
+            }
         }))
         $('.depth01 > li > a').on('click', ((e) => {
             e.preventDefault();
@@ -44,13 +106,21 @@ const fn_gnb = () => {
                 $(target).removeClass('active').find('.gnbOpen').slideUp(200);
             }
         }));
+        $('#header .util a:last-child').on('keydown', ((e)=>{
+            if(e.key === 'Tab'){    
+                $('nav .depth01 > li:nth-child(1) > a:first-child').focus();
+                $('nav').scrollTop(0)
+            }
+        }))
     } else if ($(window).width() > 1160) {
         gnb.find(' > li > a').on('mouseenter hover focus', ((e) => {
             const depth = $(e.currentTarget).parent('li').find('.gnbOpen');
             $('#header').addClass('scroll');
             gnb.addClass('open');
-            $(e.currentTarget).parent('li').siblings().find('.gnbOpen').slideUp();
-            $(depth).slideDown(200);
+            $(e.currentTarget).parent('li').siblings().find('.gnbOpen').removeClass('active').find('a').attr('tabindex', '-1');
+            $(e.currentTarget).parent('li').siblings().find('.gnbOpen').find('.layer').removeClass('layerShow');
+            depth.addClass('active').find('a').removeAttr('tabindex');
+            depth.find('.layer').addClass('layerShow')
         }))
         gnb.find('.gnbOpen').on('mouseleave focusout', ((e) => {
             if(!$('#container'.length > 0)){
@@ -58,8 +128,7 @@ const fn_gnb = () => {
             }
             setTimeout(() => {
                 if (!gnb.find(':focus').length) {
-                    gnb.removeClass('open');
-                    $('.gnbOpen').slideUp(200);
+                    gnb.removeClass('open').find('.gnbOpen.active').removeClass('active').find('a').removeAttr('tabindex');
                 }
             }, 10); // 지연 시간 추가
         }))
