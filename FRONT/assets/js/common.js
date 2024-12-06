@@ -16,7 +16,7 @@ const fn_gnbAnimation = () => {
 
     frames.each(function () {
         const frame = $(this); // 현재 img 요소
-        const animation = frame.attr('data-animation'); // data-animation 속성 값 가져오기
+        const animation = frame.attr('data-animation');
         const timing = frame.attr('data-time');
         const delay = frame.attr('data-animation-delay');
 
