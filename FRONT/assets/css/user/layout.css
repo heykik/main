@@ -106,45 +106,31 @@
   height: 3px;
   background: var(--color-red);
 }
-.gnb > li:nth-child(2) .imgWrap::before {
+.gnb > li .imgWrap::before {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   display: block;
   content: "";
   width: 480px;
   height: 320px;
+}
+.gnb > li:nth-child(2) .imgWrap::before {
   background: url(../../images/common/visual-gnb-list02-bg.png) no-repeat center center/contain;
 }
 .gnb > li:nth-child(3) .imgWrap::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  content: "";
-  width: 480px;
-  height: 320px;
   background: url(../../images/common/visual-gnb-list03-bg.png) no-repeat center center/contain;
 }
 .gnb > li:nth-child(4) .imgWrap::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  content: "";
-  width: 480px;
-  height: 320px;
   background: url(../../images/common/visual-gnb-list04-bg.png) no-repeat center center/contain;
 }
 .gnb > li:nth-child(5) .imgWrap::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  content: "";
-  width: 480px;
-  height: 320px;
   background: url(../../images/common/visual-gnb-list05-bg.png) no-repeat center center/contain;
+}
+@media screen and (min-width: 1161px) {
+  .gnb .gnbOpen.zoomIn.active {
+    height: 460px;
+  }
 }
 .gnb .gnbOpen {
   display: none;
@@ -164,12 +150,14 @@
     gap: 32px;
     height: 0;
     overflow: hidden;
+    border-style: none;
     transition: height 0.3s;
   }
 }
 @media screen and (min-width: 1161px) {
   .gnb .gnbOpen.active {
     height: 320px;
+    border-top: 1px solid var(--border-color);
   }
 }
 .gnb .gnbOpen > ul {
@@ -211,8 +199,10 @@
 }
 @media screen and (min-width: 1161px) {
   .gnb .gnbOpen .imgWrap img {
-    display: block;
     position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
   }
 }
 .gnb .gnbOpen .depth02 {
@@ -225,6 +215,8 @@
 }
 @media screen and (min-width: 1161px) {
   .gnb .gnbOpen .depth02 {
+    align-content: flex-start;
+    height: 100%;
     overflow: hidden;
     gap: 24px;
   }
@@ -278,6 +270,12 @@
   font-size: 17px;
   font-weight: var(--regular);
   color: var(--color-lightGray);
+}
+@media screen and (min-width: 1161px) {
+  .gnb .gnbOpen .depth03 li a {
+    margin: 0 0 0 4px;
+    padding: 0 0 0 16px;
+  }
 }
 .gnb .gnbOpen .depth03 li a:hover, .gnb .gnbOpen .depth03 li a:focus, .gnb .gnbOpen .depth03 li a:active, .gnb .gnbOpen .depth03 li a:focus-within {
   color: var(--color-red);

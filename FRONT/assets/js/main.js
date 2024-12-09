@@ -10,11 +10,12 @@ $(function() {
             prevEl: ".swiper-button-prev",
         },
         autoplay: {
-            delay: 2500,
+            delay: 4500,
             disableOnInteraction: false,
         },
         loop: true,
         slidesPerView: 1,
+        speed:1000,
     });
 
     let sw = 0;
