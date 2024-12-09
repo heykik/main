@@ -6434,14 +6434,11 @@ input[disabled] {
 .joinProcess ol .step2::before {
   background: var(--color-white) url("../../images/icon/ico-edit-file-50-gray.svg") no-repeat center/50px auto;
 }
-.joinProcess ol .step2.curr::before {
-  background-image: url("../../images/icon/ico-edit-file-50.svg");
-}
 .joinProcess ol .step3::before {
   background: var(--color-white) url("../../images/icon/ico-person-check-50-gray.svg") no-repeat center/50px auto;
 }
-.joinProcess ol .step3.curr::before {
-  background-image: url("../../images/icon/ico-person-check-50.svg");
+.joinProcess ol .curr::before {
+  background: url("../../images/icon/ico-step-complete-80.svg") no-repeat center center/contain !important;
 }
 
 .policyWrap .policyTit {

@@ -6307,17 +6307,20 @@ input {
             &::before {
                 background: var(--color-white) url("../../images/icon/ico-edit-file-50-gray.svg") no-repeat center/50px auto;
             }
-            &.curr::before {
-                background-image: url("../../images/icon/ico-edit-file-50.svg");
-            }
+            // &.curr::before {
+            //     background-image: url("../../images/icon/ico-edit-file-50.svg");
+            // }
         }
         .step3 {
             &::before {
                 background: var(--color-white) url("../../images/icon/ico-person-check-50-gray.svg") no-repeat center/50px auto;
             }
-            &.curr::before {
-                background-image: url("../../images/icon/ico-person-check-50.svg");
-            }
+            // &.curr::before {
+            //     background-image: url("../../images/icon/ico-person-check-50.svg");
+            // }
+        }
+        .curr::before {
+            background: url("../../images/icon/ico-step-complete-80.svg") no-repeat center center / contain !important;
         }
     }
 }
