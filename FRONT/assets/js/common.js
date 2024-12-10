@@ -9,7 +9,18 @@ $(function () {
     // 퍼블리싱을 위한 작업이며 개발 시 하기 스크립트 주석처리 또는 제거 후 상단 fn_layout()만 실행
     fn_layoutImport();
     fn_gnbAnimation();
+    fn_updateZoomClass();
 })
+
+const fn_updateZoomClass = () => {
+    const zoomLevel = window.devicePixelRatio;
+
+    if (zoomLevel > 1) {
+        $('.depth01 .gnbOpen').addClass('zoomIn')
+    } else {
+        return false;
+    }
+}
 
 const fn_gnbAnimation = () => {
     const frames = $('.imgWrap .layer');
