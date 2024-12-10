@@ -134,15 +134,15 @@ const fn_gnb = () => {
             depth.find('.layer').addClass('layerShow')
         }))
         gnb.find('.gnbOpen').on('mouseleave focusout', ((e) => {
-            if(!$('#container'.length > 0)){
+            if(!$('#container').length > 0){
                 $('#header').removeClass('scroll');
             }
             setTimeout(() => {
                 if (!gnb.find(':focus').length) {
-                    gnb.removeClass('open').find('.gnbOpen.active').removeClass('active').find('a').removeAttr('tabindex');
+                    gnb.removeClass('open').find('.gnbOpen.active').removeClass('active').find('a').attr('tabindex', '-1');
                     gnb.removeClass('open').find('.gnbOpen .layer').removeClass('layerShow');
                 }
-            }, 10); // 지연 시간 추가
+            }, 50); // 지연 시간 추가
         }))
     }
 }
