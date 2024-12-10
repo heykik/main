@@ -105,6 +105,9 @@ img {
 #skipNav dt {overflow:hidden; position:absolute !important; width:1px; height:1px}
 #skipNav dd a {overflow:hidden; display:block; position:absolute; top:-10000px; left:0; z-index:999999; width:100%; font-size:16px; text-align:center}
 #skipNav dd a.on {overflow:hidden; position:absolute; top:0; left:0; padding:15px 0; background:#272727; font-weight:bold; color:#fff}
+@media screen and (max-width:1160px){
+	#skipNav{display:none}
+}
 
 /* 디자인스크롤 */
 .mCustomScrollbar .mCustomScrollBox {position:relative; overflow:hidden; height:100%; max-width:100%; outline:none; direction:ltr}

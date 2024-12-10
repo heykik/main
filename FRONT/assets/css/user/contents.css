@@ -459,8 +459,8 @@ button[class*=btn][type=button] {
   margin-top: 8px;
 }
 .inputBox.success p {
-  font-size: 15px;
   margin-top: 4px;
+  font-size: 15px;
   color: var(--success);
 }
 @media screen and (min-width: 1161px) {
@@ -472,8 +472,8 @@ button[class*=btn][type=button] {
   border: 1px solid #D50136;
 }
 .inputBox.error p {
-  font-size: 15px;
   margin-top: 4px;
+  font-size: 15px;
   color: #D50136;
 }
 @media screen and (min-width: 1161px) {
@@ -592,10 +592,10 @@ button[class*=btn][type=button] {
   outline: 2px solid #000;
 }
 .checkBox input[type=checkbox] + label {
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-shrink: 0;
   gap: 0 6px;
   line-height: 1.5;
   letter-spacing: -0.03em;
@@ -1091,6 +1091,36 @@ button[class*=btn][type=button] {
 
 .cGray {
   color: var(--gray60) !important;
+}
+
+/* zoom controller */
+.zoomController {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+.zoomController [class*=zoom] {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.zoomController [class*=zoom] i {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.zoomController .zoomIn {
+  background: url(../../images/icon/ico-zoom-in.svg) no-repeat #fff center center/auto;
+}
+.zoomController .zoomOut {
+  background: url(../../images/icon/ico-zoom-out.svg) no-repeat #fff center center/auto;
 }
 
 /* Layout Default */
@@ -1604,8 +1634,8 @@ button[class*=btn][type=button] {
 }
 .tableDefault tbody tr td .timeInput {
   padding: 6px 10px;
-  appearance: none;
   background: url(../../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center/auto;
+  appearance: none;
 }
 @media screen and (max-width: 1159px) {
   .tableDefault tbody tr td:has(.email) {
@@ -1629,8 +1659,8 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .email {
-    margin: 0;
     flex: 0 0 146px;
+    margin: 0;
   }
 }
 .tableDefault tbody tr td .email:first-child {
@@ -1712,8 +1742,8 @@ button[class*=btn][type=button] {
   max-width: 320px;
 }
 .tableDefault tbody tr td .withFileBtn [type=file] {
-  position: relative;
   display: flex;
+  position: relative;
   margin: 0;
   padding: 0;
   width: 72px;
@@ -1726,13 +1756,13 @@ button[class*=btn][type=button] {
   align-items: center;
   justify-content: center;
   content: "파일 선택";
+  border-radius: 4px;
   width: 100%;
   height: 100%;
-  background: var(--color-red);
   font-size: 15px;
   font-weight: var(--bold);
   color: var(--color-white);
-  border-radius: 4px;
+  background: var(--color-red);
   cursor: pointer;
 }
 .tableDefault tbody tr td .withFileBtn [type=file]:hover::before, .tableDefault tbody tr td .withFileBtn [type=file]:focus::before {
@@ -1804,25 +1834,25 @@ button[class*=btn][type=button] {
   }
 }
 .tableDefault tbody tr td .imgThmb {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 12px;
+  position: relative;
 }
 @media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .imgThmb {
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .tableDefault tbody tr td .imgThmb img {
   display: block;
+  border-radius: 20px;
   width: 100%;
   max-width: 360px;
   max-height: 240px;
-  border-radius: 20px;
 }
 .tableDefault tbody tr td .imgThmb .btnRemove {
   top: 12px;
@@ -2332,28 +2362,38 @@ input[disabled] {
     padding: 0;
   }
 }
+.mapCont .mapBoxWrap {
+  height: 200px;
+}
+@media screen and (min-width: 1161px) {
+  .mapCont .mapBoxWrap {
+    position: relative;
+    flex: 0 0 760px;
+    margin: 0;
+    height: 360px;
+  }
+}
 .mapCont .mapBox {
+  position: relative;
   overflow: hidden;
-  margin: 0 auto 20px;
+  margin: 0 auto;
   border-radius: 20px;
   width: 100%;
-  height: 200px;
+  height: 100%;
   min-height: initial;
   background: var(--gray30);
 }
 @media screen and (min-width: 1161px) {
   .mapCont .mapBox {
-    flex: 0 0 760px;
     margin: 0 auto 0;
-    height: 360px;
   }
 }
-.mapCont div:nth-child(2) {
+.mapCont div:nth-child(2):not(.zoomController) {
   margin: 0 auto 0;
   height: initial;
 }
 @media screen and (min-width: 1161px) {
-  .mapCont div:nth-child(2) {
+  .mapCont div:nth-child(2):not(.zoomController) {
     min-height: 360px;
   }
 }
@@ -2619,9 +2659,9 @@ input[disabled] {
 
 .card {
   display: block;
+  overflow: hidden;
   border: 1px solid var(--gray30);
   border-radius: 20px;
-  overflow: hidden;
 }
 @media screen and (min-width: 767px) {
   .card {
@@ -2645,7 +2685,10 @@ input[disabled] {
   justify-content: flex-start;
 }
 .card .imgWrap img {
+  width: 100%;
   max-width: initial;
+  height: 100%;
+  object-fit: cover;
 }
 .card .imgWrap .linkWrap {
   display: flex;
@@ -2672,7 +2715,7 @@ input[disabled] {
   background: url(../../images/icon/ico-star-empty-16.svg) no-repeat #fff center center/auto;
 }
 .card .imgWrap .linkWrap .star.on {
-  background: url(../../images/icon/ico-star-yellow-16.svg) no-repeat #fff center center/auto;
+  background: url(../../images/icon/ico-star-red-16.svg) no-repeat #fff center center/auto;
 }
 .card .titWrap {
   margin: 0 24px;
@@ -2864,8 +2907,8 @@ input[disabled] {
 }
 
 .consultingCont .topCont {
-  margin: 0 auto 24px;
   white-space: nowrap;
+  margin: 0 auto 24px;
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .topCont {
@@ -2873,16 +2916,16 @@ input[disabled] {
     align-items: center;
     justify-content: space-between;
     gap: 112px;
-    padding: 20px 0;
     white-space: initial;
+    padding: 20px 0;
   }
 }
 .consultingCont .topCont .innerBox {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  position: relative;
   position: relative;
   padding: 24px;
   border-radius: 20px;
@@ -2954,12 +2997,12 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .centerBox {
-    flex: 1 0 744px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 106px;
+    flex: 1 0 744px;
     gap: 118px;
+    padding-left: 106px;
     height: 495px;
   }
 }
@@ -2971,18 +3014,18 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .redBox {
-    width: 220px;
-    height: 92px;
     margin: 0;
     margin-top: -68px;
+    width: 220px;
+    height: 92px;
   }
 }
 .consultingCont .arrowCont .redBox::after {
+  display: block;
+  content: "";
   position: absolute;
   top: 50%;
   right: 0;
-  content: "";
-  display: block;
   width: 153px;
   height: 289px;
   background: url(../../images/visual-line-long-red-mo.svg) no-repeat center center/contain;
@@ -3010,9 +3053,9 @@ input[disabled] {
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .centerTxt {
     margin: 0 auto 0;
+    border-radius: 20px;
     width: 220px;
     height: 92px;
-    border-radius: 20px;
   }
 }
 .consultingCont .arrowCont .centerTxt p {
@@ -3055,13 +3098,13 @@ input[disabled] {
 .consultingCont .arrowCont [class*=Arr][class*=Txt],
 .consultingCont .arrowCont [class*=bot][class*=Txt] {
   position: absolute;
+  white-space: nowrap;
   text-align: center;
   line-height: 1.5;
   letter-spacing: -0.03em;
   font-size: 15px;
   font-weight: var(--regular);
   color: var(--text-color);
-  white-space: nowrap;
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont [class*=top][class*=Txt],
@@ -3071,23 +3114,23 @@ input[disabled] {
   }
 }
 .consultingCont .arrowCont .topTxt {
-  top: -50px;
-  left: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  top: -50px;
+  left: 50%;
   border-radius: 12px;
   width: 150px;
   height: 68px;
-  transform: translate(-50%, -100%);
   background: var(--gray5);
+  transform: translate(-50%, -100%);
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .topTxt {
     top: -75px;
+    border-radius: 20px;
     width: 220px;
     height: 92px;
-    border-radius: 20px;
   }
 }
 .consultingCont .arrowCont .topTxt p {
@@ -3111,8 +3154,8 @@ input[disabled] {
   transform: translate(0, 100%);
 }
 .consultingCont .arrowCont .botUpArrTxt {
-  bottom: -8px;
   right: -70px;
+  bottom: -8px;
   transform: translate(0, 100%);
 }
 .consultingCont .arrowCont .botLtArrTxt {
@@ -3131,35 +3174,35 @@ input[disabled] {
   }
 }
 .consultingCont .arrowCont .botTxt {
-  bottom: -50px;
-  left: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  bottom: -50px;
+  left: 50%;
   border-radius: 12px;
   width: 150px;
   height: 68px;
-  transform: translate(-50%, 100%);
   background: var(--gray5);
+  transform: translate(-50%, 100%);
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .botTxt {
     bottom: -75px;
+    border-radius: 20px;
     width: 220px;
     height: 92px;
-    border-radius: 20px;
   }
 }
 .consultingCont .arrowCont .botTxt::before {
+  display: block;
+  content: "";
   position: absolute;
   top: -4px;
   right: 50%;
-  transform: translate(100%, -100%);
-  display: block;
-  content: "";
   width: 14px;
   height: 50px;
   background: url(../../images/visual-arrow-line-angle-darkRed.svg) no-repeat center top/auto;
+  transform: translate(100%, -100%);
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .botTxt::before {
@@ -3177,11 +3220,11 @@ input[disabled] {
   }
 }
 .consultingCont .arrowCont .botTxt::after {
+  display: block;
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
-  content: "";
-  display: block;
   width: 46px;
   height: 118px;
   background: url(../../images/visual-arrow-gray-dash-short-mo.svg) no-repeat center center/contain;
@@ -3196,8 +3239,8 @@ input[disabled] {
 }
 .consultingCont .arrowCont .grayBox {
   position: relative;
-  max-width: fit-content;
   margin: 0 auto;
+  max-width: fit-content;
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .grayBox {
@@ -3208,15 +3251,15 @@ input[disabled] {
   }
 }
 .consultingCont .arrowCont .grayBox::before {
+  display: block;
+  content: "";
   position: absolute;
   bottom: 96px;
   left: 34px;
-  content: "";
-  display: block;
   width: 82px;
   height: 357px;
-  transform: translateX(-100%);
   background: url(../../images/visual-arrow-gray-dash-mo.svg) no-repeat center center/contain;
+  transform: translateX(-100%);
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .grayBox::before {
@@ -3230,11 +3273,11 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .grayBox::after {
-    position: absolute;
-    bottom: 0;
-    right: 71px;
     display: block;
     content: "";
+    position: absolute;
+    right: 71px;
+    bottom: 0;
     width: 335px;
     height: 87px;
     background: url(../../images/visual-arrow-gray-dash-under-pc.svg) no-repeat center center/contain;
@@ -3267,13 +3310,13 @@ input[disabled] {
   color: var(--color-dark);
 }
 .consultingCont .arrowCont .unistTxt::after {
-  transform: rotate(180deg);
   display: block;
   content: "";
   margin: 2px auto 8px;
   width: 14px;
   height: 36px;
   background: url(../../images/visual-arrow-line-angle-red.svg) no-repeat center top/auto;
+  transform: rotate(180deg);
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .unistTxt::after {
@@ -3283,8 +3326,8 @@ input[disabled] {
     margin: 0;
     width: 83px;
     height: 14px;
-    transform: translate(100%, -50%);
     background: url(../../images/visual-arrow-angle-red-long.svg) no-repeat right center/auto;
+    transform: translate(100%, -50%);
   }
 }
 .consultingCont .arrowCont .lightTxt {
@@ -3311,9 +3354,9 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .arrowCont .unistArrTxt {
+    right: 48px;
     bottom: -38px;
     left: auto;
-    right: 48px;
     transform: translate(-50%, 100%);
   }
 }
@@ -3326,12 +3369,12 @@ input[disabled] {
   }
 }
 .consultingCont .listBox::before {
+  display: block;
+  content: "";
   position: absolute;
   top: 0;
   left: 15px;
   z-index: -1;
-  content: "";
-  display: block;
   width: 1px;
   height: calc(100% - 50px);
   background: var(--color-red);
@@ -3355,21 +3398,21 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .consultingCont .listBox li {
-    font-size: 17px;
     white-space: nowrap;
+    font-size: 17px;
   }
 }
 .consultingCont .listBox li::before {
-  flex: 0 0 30px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 30px;
+  border-radius: 100%;
   height: 30px;
   font-size: 16px;
   font-weight: var(--bold);
   color: var(--color-white);
   background: var(--color-red);
-  border-radius: 100%;
 }
 .consultingCont .listBox li:nth-child(1)::before {
   content: "1";
@@ -3423,8 +3466,8 @@ input[disabled] {
   justify-content: center;
   overflow: hidden;
   margin: 16px auto 0;
-  height: 200px;
   border-radius: 20px;
+  height: 200px;
 }
 @media screen and (min-width: 1161px) {
   .cohortCont .imgBox {
@@ -4861,9 +4904,9 @@ input[disabled] {
 @media screen and (min-width: 767px) {
   .facilityResWrap .wrap {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 0;
     margin: 0;
     padding: 0 0 40px;
@@ -4877,7 +4920,11 @@ input[disabled] {
 @media screen and (min-width: 1161px) {
   .facilityResWrap .wrap * {
     margin: 0;
-    height: auto;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .facilityResWrap .wrap .imgWrap {
+    height: 440px;
   }
 }
 @media screen and (min-width: 767px) {
@@ -4901,7 +4948,10 @@ input[disabled] {
   justify-content: center;
 }
 .facilityResWrap a .imgWrap img {
+  width: 100%;
   max-width: initial;
+  height: 100%;
+  object-fit: cover;
 }
 .facilityResWrap a .txtBox {
   position: absolute;
@@ -5369,8 +5419,8 @@ input[disabled] {
   justify-content: flex-start;
 }
 .infoTxtSub .noteSymbol::before {
-  flex: 0 0 auto;
   display: block;
+  flex: 0 0 auto;
   content: "※";
   margin-right: 4px;
 }
@@ -5378,8 +5428,8 @@ input[disabled] {
 /* 본부 소개 */
 .titInfo {
   margin-top: 32px;
-  letter-spacing: -0.6px;
   line-height: 1.5;
+  letter-spacing: -0.6px;
   letter-spacing: -0.6px;
   font-size: 20px;
   color: var(--text-color);
@@ -5874,6 +5924,7 @@ input[disabled] {
 }
 /* 오시는 길 */
 .mapInfoWrap .map {
+  position: relative;
   border-radius: 16px 16px 0 0;
   height: 540px;
 }
@@ -6235,10 +6286,10 @@ input[disabled] {
   background: rgba(0, 0, 0, 0.7);
 }
 .layerPop .inner {
-  overflow: hidden;
   position: fixed;
   top: 50%;
   left: 50%;
+  overflow: hidden;
   padding: 72px 0 0;
   border-radius: 20px;
   max-width: 90%;
@@ -6342,12 +6393,12 @@ input[disabled] {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 80px;
-  height: 80px;
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
   transform: translateX(-50%);
+  box-sizing: border-box;
 }
 .joinProcess ol li + li::after {
   content: "";
@@ -6383,14 +6434,11 @@ input[disabled] {
 .joinProcess ol .step2::before {
   background: var(--color-white) url("../../images/icon/ico-edit-file-50-gray.svg") no-repeat center/50px auto;
 }
-.joinProcess ol .step2.curr::before {
-  background-image: url("../../images/icon/ico-edit-file-50.svg");
-}
 .joinProcess ol .step3::before {
   background: var(--color-white) url("../../images/icon/ico-person-check-50-gray.svg") no-repeat center/50px auto;
 }
-.joinProcess ol .step3.curr::before {
-  background-image: url("../../images/icon/ico-person-check-50.svg");
+.joinProcess ol .curr::before {
+  background: url("../../images/icon/ico-step-complete-80.svg") no-repeat center center/contain !important;
 }
 
 .policyWrap .policyTit {
@@ -6502,6 +6550,7 @@ input[disabled] {
   line-height: 1.2;
   letter-spacing: -1.08px;
   font-size: 36px;
+  white-space: nowrap;
 }
 .icoInfo p {
   margin-bottom: 20px;
@@ -6538,9 +6587,9 @@ input[disabled] {
 /* 개인정보처리방침 */
 .grayBgBox {
   padding: 24px;
-  background-color: #F8F8F8;
   border-radius: 16px;
   text-align: center;
+  background-color: #F8F8F8;
 }
 .grayBgBox p {
   line-height: 1.5;
@@ -6557,10 +6606,10 @@ input[disabled] {
 }
 .psPolicyArea dl dt {
   margin-bottom: 24px;
-  font-weight: 700;
-  font-size: 24px;
   line-height: 1.8;
   letter-spacing: -0.03em;
+  font-size: 24px;
+  font-weight: 700;
   color: var(--color-red);
 }
 .psPolicyArea dl dd .titXS strong {
@@ -6569,8 +6618,8 @@ input[disabled] {
   margin-bottom: 20px;
   line-height: 1.5;
   letter-spacing: -0.6px;
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
   color: var(--color-dark);
 }
 .psPolicyArea dl dd .txtDotList {
@@ -6585,8 +6634,8 @@ input[disabled] {
   margin-bottom: 130px;
 }
 .psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault tbody tr td {
-  vertical-align: top;
   text-align: left;
+  vertical-align: top;
 }
 .psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault tbody tr td p {
   line-height: 1.5;
@@ -6606,23 +6655,23 @@ input[disabled] {
     margin-top: 60px;
   }
   .psPolicyArea dl dt {
-    font-size: 20px;
     line-height: 1.5;
+    font-size: 20px;
   }
   .psPolicyArea dl dd .titXS strong {
     margin-top: 30px;
     margin-bottom: 24px;
   }
   .psPolicyArea dl dd .txtDotList {
-    padding: 0;
     margin-left: 0;
+    padding: 0;
   }
   .psPolicyArea dl dd .txtDotList + .descDeft {
     margin-top: 20px;
   }
   .psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault tbody tr td + td {
-    background-color: #fff;
     border-top: 1px solid var(--color-dark);
+    background-color: #fff;
   }
   .psPolicyArea dl dd .txtDotList + .descDeft + .tableDefault tbody tr td .cellTit {
     align-items: center;
@@ -6634,17 +6683,17 @@ input[disabled] {
 /* 유관배너 목록 */
 .ciList {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
 }
 .ciList > * {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  height: 200px;
   border: 1px solid var(--border-color);
   border-radius: 20px;
+  height: 200px;
 }
 
 @media (max-width: 1160px) {
@@ -6664,9 +6713,9 @@ input[disabled] {
   justify-content: space-between;
 }
 .titM.flex button {
+  letter-spacing: 0;
   font-size: 17px;
   color: var(--color-white);
-  letter-spacing: 0;
 }
 
 .tabTit.acco {
@@ -6685,18 +6734,18 @@ input[disabled] {
   position: relative;
   padding: 0 36px 0 35px;
   width: 100%;
-  background: url("../../images/common/ico-acco-q.png") no-repeat left 2px/16px auto;
-  line-height: 1.5;
-  font-weight: var(--regular);
-  font-size: 17px;
-  letter-spacing: -0.03rem;
-  cursor: pointer;
   text-align: left;
+  line-height: 1.5;
+  letter-spacing: -0.03rem;
+  font-size: 17px;
+  font-weight: var(--regular);
   color: var(--text-color);
+  background: url("../../images/common/ico-acco-q.png") no-repeat left 2px/16px auto;
+  cursor: pointer;
 }
 .accoItem h4 button:before {
-  position: absolute;
   content: "펼치기";
+  position: absolute;
   top: 3px;
   right: 0;
   width: 20px;
@@ -6713,13 +6762,13 @@ input[disabled] {
 .accoItem .accoCon {
   display: none;
   padding: 24px 12px;
-  background: var(--gray5);
   border-bottom: 1px solid var(--border-color);
   line-height: 20px;
   letter-spacing: -0.03rem;
-  font-weight: var(--regular);
   font-size: 17px;
+  font-weight: var(--regular);
   color: var(--text-color);
+  background: var(--gray5);
 }
 .accoItem .accoCon > div {
   padding-left: 36px;
@@ -6739,9 +6788,9 @@ input[disabled] {
 /* datepicker */
 .datepicker {
   position: absolute;
-  background: var(--color-white);
-  border: 1px solid var(--gray30);
   padding: 4px;
+  border: 1px solid var(--gray30);
+  background: var(--color-white);
 }
 .datepicker table th,
 .datepicker table td {
@@ -6770,12 +6819,12 @@ table tbody tr td .dateSelector {
 }
 
 .datepicker table tbody tr td.today, .datepicker table tbody tr td.today.disabled, .datepicker table tbody tr td.today:hover, .datepicker table tbody tr td.today:hover:hover {
-  background: var(--table-bg);
   color: var(--color-red);
+  background: var(--table-bg);
 }
 .datepicker table tbody tr td.today.disabled:hover, .datepicker table tbody tr td.today.disabled.day, .datepicker table tbody tr td.today.disabled.day:hover {
-  background: rgba(216, 216, 216, 0.4823529412);
   color: var(--gray50);
+  background: rgba(216, 216, 216, 0.4823529412);
 }
 .datepicker table tbody tr td.active, .datepicker table tbody tr td.active.disabled, .datepicker table tbody tr td.active.disabled:hover, .datepicker table tbody tr td.active:hover:hover, .datepicker table tbody tr td.active.active {
   background: var(--color-red);

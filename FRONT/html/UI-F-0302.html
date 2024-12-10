@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    
     <meta name="format-detection" content="telephone=no, address=no, email=no">
     <!-- E : mobile -->
     <title>경남디지털혁신튜브</title>
@@ -53,7 +53,17 @@
                 <!-- // titL -->
                 <!-- mapInfoWrap -->
                 <div class="mapInfoWrap">
-                    <div class="map" style="background: #F8F8F8">지도 영역</div><!-- 개발 시 스타일 삭제 -->
+                    <!-- 2024-12-06 줌 컨트롤러 위치 변경 -->
+                    <div class="pRel">
+                        <div class="map" style="background: #F8F8F8"><!-- 개발 시 스타일 삭제 -->지도 영역</div>
+                        <!-- 2024-12-05 > 줌 컨트롤러 추가 -->
+                        <div class="zoomController">
+                            <button type="button" class="zoomIn"><i>확대하기</i></button>
+                            <button type="button" class="zoomOut"><i>축소하기</i></button>
+                        </div>
+                        <!-- // 2024-12-05 > 줌 컨트롤러 추가 -->
+                    </div>
+                    <!-- // 2024-12-06 줌 컨트롤러 위치 변경 -->
                     <!-- mapInfo -->
                     <div class="mapInfo">
                         <div class="lt">
