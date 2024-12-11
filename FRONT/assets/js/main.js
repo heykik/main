@@ -39,6 +39,10 @@ $(function() {
         },
         slidesPerView: "auto", // 모바일
         spaceBetween: 10,
+        loop : true,
+        autoplay : true,
+        speed:1500,
+        loopAdditionalSlides :2,
         breakpoints: {
             1281: { // 1281px 이상
                 slidesPerView: 4,

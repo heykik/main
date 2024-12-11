@@ -204,6 +204,9 @@
                         height:20px;
                         background:url(../../images/main/ico-arrow-white-20.svg)no-repeat center center / contain;
                     }
+                    &:focus{
+                        background:var(--color-red);
+                    }
                 }
                 li:nth-child(1){
                     @media screen and (max-width:767px) {
@@ -584,7 +587,6 @@
 /* 메인 콘텐츠 2단 */
 .mainCont02 {
     position: relative;
-    overflow: hidden;
     margin: 0 -20px 0;
     padding: 0 20px 60px;
     .swiper-wrapper {
@@ -603,6 +605,7 @@
         height: 340px;
         box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
         @media screen and (min-width:1161px) {
+            flex:0 0 380px;
             border:8px solid rgba(255, 255, 255, 0);
             transition:all .3s;
             &:hover,
@@ -630,12 +633,18 @@
         }
     }
     .swiperBtn {
+        top:0px;
         right: 20px;
+        @media screen and (min-width:1161px) {
+            top:-48px;
+            transform:translateY(-100%);        
+        }
     }
 }
 @media (max-width: 1280px) {
     .mainCont02 {
         .swiper-slide {
+            height:300px;
             p {
                 font-size: 26px;
             }
