@@ -178,13 +178,14 @@
   font-size: 19px;
   font-weight: var(--bold);
   color: var(--color-white);
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 100%;
   transition: all 0.8s;
   transform-origin: bottom;
 }
 @media screen and (max-width: 1160px) {
   .visualSwiper .swiper-slide .botWrap ul a {
+    padding: 0;
     font-size: 17px;
     line-height: 1.25;
     width: 110px;
@@ -374,9 +375,6 @@
   .visualSwiper .swiper-slide .txtBox-main strong {
     min-height: 216px;
     font-size: 60px;
-  }
-  .visualSwiper .swiper-slide .txtBox-main .btnLink {
-    bottom: 492px;
   }
   .visualSwiper .scrollDown {
     display: none;
@@ -914,3 +912,5 @@
     height: 100px;
   }
 }
+
+/*# sourceMappingURL=main.css.map */

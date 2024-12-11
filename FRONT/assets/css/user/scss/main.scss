@@ -177,11 +177,12 @@
                     font-size:19px;
                     font-weight:var(--bold);
                     color:var(--color-white);
-                    border:1px solid #fff;
+                    border:2px solid #fff;
                     border-radius:100%;
                     transition:all .8s;
                     transform-origin: bottom;
                     @media screen and (max-width:1160px) {
+                        padding:0;
                         font-size:17px;
                         line-height:1.25;
                         width:110px;
@@ -388,9 +389,10 @@
                     min-height:216px;
                     font-size: 60px;
                 }
-                .btnLink {
-                    bottom: 492px;
-                }
+                // 20241211 삭제 ljn
+                // .btnLink {
+                //     bottom: 492px; 
+                // }
             }
         }
         .scrollDown {

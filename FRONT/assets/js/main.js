@@ -15,7 +15,7 @@ $(function() {
         },
         loop: true,
         slidesPerView: 1,
-        speed:1000,
+        speed:2000,
     });
 
     let sw = 0;
