@@ -132,6 +132,10 @@ h3 {
   max-width: 320px !important;
 }
 
+.w140 {
+  width: 140px !important;
+}
+
 .underline {
   text-decoration: underline;
   word-break: break-all;
@@ -6834,4 +6838,35 @@ table tbody tr td .dateSelector {
 }
 .datepicker table tbody tr td.active, .datepicker table tbody tr td.active.disabled, .datepicker table tbody tr td.active.disabled:hover, .datepicker table tbody tr td.active:hover:hover, .datepicker table tbody tr td.active.active {
   background: var(--color-red);
+}
+
+/* 에러페이지 */
+.errorWrap {
+  padding: 140px 0 0;
+}
+@media screen and (min-width: 1161px) {
+  .errorWrap {
+    padding: 160px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .errorWrap img {
+    width: 100px;
+    height: 100px;
+  }
+}
+.errorWrap .errorTit {
+  margin: 20px auto 0;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-size: 36px;
+  font-weight: var(--regular);
+  color: var(--color-dark);
+}
+.errorWrap .errorTxt {
+  margin: 24px auto 0;
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--text-color);
 }

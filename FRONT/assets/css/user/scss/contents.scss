@@ -93,6 +93,9 @@ h3 {
     width: 100% !important;
     max-width: 320px !important;
 }
+.w140{
+    width:140px !important;
+}
 
 .underline{text-decoration:underline;word-break:break-all}
 
@@ -6775,5 +6778,34 @@ table{
                 }
             }
         }
+    }
+}
+
+/* 에러페이지 */
+.errorWrap{
+    padding:140px 0 0;
+    @media screen and (min-width:1161px) {
+        padding:160px 0 0;    
+    }
+    img{
+        @media screen and (max-width:767px) {
+            width:100px;
+            height:100px;        
+        }
+    }
+    .errorTit{
+        margin:20px auto 0;
+        line-height:1.2;
+        letter-spacing:-0.03em;
+        font-size:36px;
+        font-weight:var(--regular);
+        color:var(--color-dark);
+    }
+    .errorTxt{
+        margin:24px auto 0;
+        line-height:1.5;
+        font-size:17px;
+        font-weight:var(--regular);
+        color:var(--text-color);
     }
 }
