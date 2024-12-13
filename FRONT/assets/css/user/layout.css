@@ -251,6 +251,7 @@
 }
 @media screen and (min-width: 1161px) {
   .gnb .gnbOpen .depth02 > li > a {
+    justify-content: center;
     border: 1px solid var(--table-border);
     transition: all 0.3s;
   }

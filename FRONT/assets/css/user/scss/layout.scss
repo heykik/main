@@ -260,8 +260,9 @@
                 font-weight: var(--medium);
                 color: var(--color-gray);
                 @media screen and (min-width:1161px) {
+                    justify-content:center;
                     border:1px solid var(--table-border);
-                    transition:all 0.3s;
+                    transition:all .3s;
                 }
             }
         }
