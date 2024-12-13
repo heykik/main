@@ -172,6 +172,10 @@
         }
         &.active{
             @media screen and (min-width:1161px) {
+                height:480px;
+                border-top: 1px solid var(--border-color);
+            }
+            @media screen and (min-width:1540px) {
                 height:320px;
                 border-top: 1px solid var(--border-color);
             }

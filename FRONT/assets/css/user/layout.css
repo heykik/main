@@ -156,6 +156,12 @@
 }
 @media screen and (min-width: 1161px) {
   .gnb .gnbOpen.active {
+    height: 480px;
+    border-top: 1px solid var(--border-color);
+  }
+}
+@media screen and (min-width: 1540px) {
+  .gnb .gnbOpen.active {
     height: 320px;
     border-top: 1px solid var(--border-color);
   }
