@@ -4441,7 +4441,7 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .matchChat .chatWrap {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
   }
 }
 .matchChat .chatWrap .chatTit {
