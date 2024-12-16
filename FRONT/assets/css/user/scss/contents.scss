@@ -4292,7 +4292,7 @@ input {
             padding:16px 24px;
             border-top:1px solid var(--gray30);
             border-bottom:1px solid var(--gray30);            
-            background:vaR(--color-white);
+            background:var(--color-white);
             box-sizing:border-box;
             @media screen and (min-width:1161px) {
                 padding:24px 32px;
@@ -4603,16 +4603,32 @@ input {
                 margin:0 0 20px;
                 padding:0 0 20px;
                 border-bottom:1px solid var(--gray30);
-                strong{
+                .name{
+                    display:block;
+                    overflow:hidden;
                     margin-bottom:8px;
+                    width:100%;
                     line-height:1.5;
                     letter-spacing:-0.03em;
                     font-size:20px;
                     font-weight:var(--bold);
                     color:var(--color-dark);
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
                     @media screen and (min-width:1161px) {
                         font-size:20px;
                     }
+                }
+                .txt{
+                    overflow:hidden;
+                    width:100%;
+                    line-height:1.5;
+                    letter-spacing:-0.03em;
+                    font-size:17px;
+                    font-weight:var(--regular);
+                    color:var(--gray70);
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
                 }
                 span{
                     display:inline-block;
@@ -4681,6 +4697,7 @@ input {
         }
         p{
            margin-bottom:24px; 
+           word-break:break-all;
            @media screen and (min-width:1161px) {
                 font-size:20px;
            }
