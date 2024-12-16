@@ -56,45 +56,30 @@
 
                     <!-- companyWrap -->
                     <div class="companyWrap">
-                        <!-- 2024-12-16 수/발신인 추가 -->
-                        <!-- receiver -->
-                        <div class="compWholeinfo receiver">
-                            <div class="badgeBox">
-                                <div class="badge"><span>수신</span></div>
-                            </div>
-                            <div class="compInfo">
-                                <div>
-                                    <strong class="compNm">(주)자동차제조기업(주)자동차제조기업</strong>
-                                    <p class="txt">
-                                        기업소개 부분 최대 100자까지 보여줍니다. 100자 이후 말줄임으로 표시합니다. 
-                                        기업소개 부분 최대 100자까지 보여줍니다. 100자 이후 말줄임으로 표시합니다.
-                                        기업소개 부분 최대 100자까지 보여줍니다. 100자 이후 말줄임으로 표시합니다.
-                                        기업소개 부분 최대 100자까지 보여줍니다. 100자 이후 말줄임으로 표시합니다.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="compLoca">
-                                <div class="descDeft tag">
-                                    <p class="icoLoca">
-                                        <strong>위치</strong>
-                                        경남 김해시 계동로 23번길(관동동)
-                                    </p>
-                                    <p class="icoCall">
-                                        <strong>전화</strong>
-                                        055-000-0000
-                                    </p>
-                                    <p class="icoBag">
-                                        <strong>업종</strong>
-                                        자동차용 신품 전기장치 제조업
-                                    </p>
-                                </div>
+                        <div class="compInfo">
+                            <div>
+                                <img src="../assets/images/icon/ico-profile-sample-80.svg" alt="샘플 이미지">
+                                <strong class="compNm">(주)자동차제조기업</strong>
+                                <p class="compInfo">자동차 전자기기 및 운송장비<br /> 부품 제조기업입니다.</p>
                             </div>
                             <button type="button" class="btnDropdown info">정보 숨기기</button>
                         </div>
-                        <!-- // receiver -->
-
-                        <!-- // 2024-12-16 수/발신인 추가 -->
-
+                        <div class="compLoca">
+                            <div class="descDeft tag">
+                                <p class="icoLoca">
+                                    <strong>위치</strong>
+                                    경남 김해시 계동로 23번길(관동동)
+                                </p>
+                                <p class="icoCall">
+                                    <strong>전화</strong>
+                                    055-000-0000
+                                </p>
+                                <p class="icoBag">
+                                    <strong>업종</strong>
+                                    자동차용 신품 전기장치 제조업
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <!-- // companyWrap -->
 
@@ -148,48 +133,12 @@
                                     <p>
                                         답변드립니다.<br />
                                         프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
                                     </p>
 
                                     <div class="condition">
                                         <span class="read">읽음</span>
                                         <span class="time">오후 7:29</span>
                                     </div>
-                                </div>
-                                <!-- // detail -->
-
-                                <!-- detail -->
-                                <div class="detail">
-                                    <p>
-                                        답변드립니다.<br />
-                                        프로젝트 내용과 구체적인 일정을 알려주세요.
-                                    </p>
                                 </div>
                                 <!-- // detail -->
 
@@ -289,31 +238,6 @@
         //         }))
         //     }
         // })
-        const handleGetChatHeight = () =>{
-            const _getBox = document.querySelector('.companyWrap').clientHeight;
-            const getChatTit = document.querySelector('.chatWrap .chatTit').clientHeight;
-            const getInput = document.querySelector('.chatWrap .messageInput').clientHeight;
-            const getChatBox = document.querySelector('.chatWrap .chatLogWrap');
-            getChatBox.style = `height : ${_getBox - getChatTit - getInput}px`;
-            
-        }
-        const replaceInnerText = () => {
-            const _target = document.querySelectorAll('.compInfo .txt');
-            _target.forEach((el)=>{
-                const _txt = el.textContent.replace(/\s+/g, '').trim();
-                if(_txt.length > 100){
-                    const _rep = _txt.slice(0, 100);
-                    el.textContent = `${_rep}...`;
-                }
-            });
-        }
-        replaceInnerText();
-        if(window.innerWidth > 1160){
-            const getBox = document.querySelector('.companyWrap').clientHeight;
-            if(getBox > 624){
-                handleGetChatHeight();
-            }
-        }
     </script>
 </body>
 

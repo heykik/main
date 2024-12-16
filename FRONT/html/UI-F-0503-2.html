@@ -93,6 +93,50 @@
                         </div>
                         <!-- // receiver -->
 
+                        <!-- sender -->
+                        <div class="compWholeinfo sender">
+                            <div class="badgeBox">
+                                <div class="badge"><span>발신</span></div>
+                            </div>
+                            <div class="compInfo">
+                                <div>
+                                    <strong class="compNm">(주)자동차제조기업(주)자동차제조기업</strong>
+                                    <p class="txt">
+                                        기업소개 부분 최대 100자까지 보여줍니다. 100자 이후 말줄임으로 표시합니다. 
+                                        기업소개 부분 최대 100자까지 보여줍니다. 100자 이후 말줄임으로 표시합니다.
+                                        기업소개 부분 최대 100자까지 보여줍니다. 100자 이후 말줄임으로 표시합니다.
+                                        기업소개 부분 최대 100자까지 보여줍니다. 100자 이후 말줄임으로 표시합니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="compLoca">
+                                <div class="descDeft tag">
+                                    <p class="icoLoca">
+                                        <strong>위치</strong>
+                                        경남 김해시 계동로 23번길(관동동)
+                                        경남 김해시 계동로 23번길(관동동)
+                                        경남 김해시 계동로 23번길(관동동)
+                                        경남 김해시 계동로 23번길(관동동)
+                                    </p>
+                                    <p class="icoCall">
+                                        <strong>전화</strong>
+                                        055-000-0000
+                                        055-000-0000
+                                        055-000-0000
+                                        055-000-0000
+                                    </p>
+                                    <p class="icoBag">
+                                        <strong>업종</strong>
+                                        자동차용 신품 전기장치 제조업
+                                        자동차용 신품 전기장치 제조업
+                                        자동차용 신품 전기장치 제조업
+                                        자동차용 신품 전기장치 제조업
+                                    </p>
+                                </div>
+                            </div>
+                            <button type="button" class="btnDropdown info">정보 숨기기</button>
+                        </div>
+                        <!-- // sender -->
                         <!-- // 2024-12-16 수/발신인 추가 -->
 
                     </div>
@@ -290,11 +334,11 @@
         //     }
         // })
         const handleGetChatHeight = () =>{
-            const _getBox = document.querySelector('.companyWrap').clientHeight;
+            const getBox = document.querySelector('.companyWrap').clientHeight;
             const getChatTit = document.querySelector('.chatWrap .chatTit').clientHeight;
             const getInput = document.querySelector('.chatWrap .messageInput').clientHeight;
             const getChatBox = document.querySelector('.chatWrap .chatLogWrap');
-            getChatBox.style = `height : ${_getBox - getChatTit - getInput}px`;
+            getChatBox.style = `height : ${getBox - getChatTit - getInput}px`;
             
         }
         const replaceInnerText = () => {
@@ -309,10 +353,7 @@
         }
         replaceInnerText();
         if(window.innerWidth > 1160){
-            const getBox = document.querySelector('.companyWrap').clientHeight;
-            if(getBox > 624){
-                handleGetChatHeight();
-            }
+            handleGetChatHeight();
         }
     </script>
 </body>
