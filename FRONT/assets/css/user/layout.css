@@ -160,7 +160,7 @@
     border-top: 1px solid var(--border-color);
   }
 }
-@media screen and (min-width: 1540px) {
+@media screen and (min-width: 1620px) {
   .gnb .gnbOpen.active {
     height: 320px;
     border-top: 1px solid var(--border-color);
