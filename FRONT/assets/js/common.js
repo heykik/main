@@ -10,6 +10,7 @@ $(function () {
     fn_layoutImport();
     fn_gnbAnimation();
     fn_updateZoomClass();
+    // fn_homeClick();
 })
 
 const fn_updateZoomClass = () => {
@@ -351,4 +352,16 @@ const fn_layoutImport = () => {
         // import 된 div 없어도 gnb 스크립트 실행
         fn_layout()
     }
+}
+
+const fn_homeClick = () =>{
+    $('.sitemap .home').on('focus', function () {
+        const currentScrollTop = $(window).scrollTop();
+    
+        if (currentScrollTop >= 110) {
+          $('html, body').animate({ scrollTop: 50 }, 300, function () {
+            $('.sitemap .home').focus();
+          });
+        }
+      });
 }
