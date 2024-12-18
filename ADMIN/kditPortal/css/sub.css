@@ -150,6 +150,19 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {pad
 .tcenter {display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 30px;}
 #d_pop_alert .pop_tit {display: none;}
 #d_pop_alert .pop_cont {padding: 64px 30px 40px;}
+/* 레이어팝업 */
+.layerPop {display: none; position: fixed; top: 0; left: 0; z-index: 1000; width: 100%; height: 100%; background: rgba(0,0,0,0.70);}
+.layerPop > .inner {overflow: hidden; position: fixed; top: 50%; left: 50%; padding: 65px 0 0; border-radius: 20px; max-width: 90%; max-height: 90%; background: #fff; transform: translate(-50%, -50%) scale(0); -webkit-transform: translate(-50%, -50%) scale(0); -moz-tansform: translate(-50%, -50%) scale(0); transition: all 0.2s; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; box-sizing: border-box;}
+.layerPop > .inner .tit {display: block; position: absolute; top: 0; right: 30px; left: 30px; padding: 20px 30px 20px 0; border-bottom: 1px solid var(--border-color); line-height: 24px; font-size: 22px; font-weight: 700; color: var(--color-base); background: var(--color-white);}
+.layerPop > .inner .cont {overflow-y: auto; padding: 20px 30px 40px;}
+.layerPop > .inner .cont > p {line-height:1.5; font-size: 16px; color: var(--color-base);}
+.layerPop > .inner > a {display: block; position: absolute; top: 20px; right: 30px; width: 24px; height: 24px; text-indent: -9999px; background: url("../img/btn-close-pop.svg") no-repeat center;}
+.layerPop.on > .inner {transform: translate(-50%, -50%) scale(1); -webkit-transform: translate(-50%, -50%) scale(1); -moz-transform: translate(-50%, -50%) scale(1);}
+.layerPop.alert > .inner {padding: 44px 0 0;}
+.layerPop.alert > .inner .cont > p {text-align: center;}
+/* 버튼 정렬 */
+.layerPop .btnBottom {display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 30px;}
+.layerPop .btnBottom button {min-width: 80px;}
 
 /*>>>>>>>>>> 페이지 <<<<<<<<<<*/
 /* 게시판관리 */
